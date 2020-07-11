@@ -18,6 +18,8 @@
   
   SEL OnCloseFun;                                          // Metodo que se llama cuando se selecciona un Item
   id  CloseTarget;                                         // Objeto al que pertence el metodo de notificación seleccion de un item
+  
+  float H;
   }
 @end
 
@@ -54,7 +56,15 @@
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Implementacion de popiedades del control
-- (float)Height { return STUS_H + LineHeight; }
+- (float)Height
+  {
+  float h = STUS_H + LineHeight;
+  
+  return h>H? h : H;
+  }
+
+- (void)setHeight:(float)Height { H = Height; }
+
 - (void)setText:(NSString *)Text { ModLabel.text = Text; }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -67,6 +77,8 @@
   
   ModLabel = [self CreateLabel];
   btnClose = [self CreateButtonWithImage:@"BntCloseMod"];
+  
+  self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------

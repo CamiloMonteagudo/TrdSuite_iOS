@@ -71,6 +71,7 @@ extern int        LGInferedDes( int lng );
 extern int        LGFirstSrc();
 extern int        LGNextDes();
 
+extern int        LGInstCount();
 extern BOOL       LGIsInstDir( int src, int des );
 extern void       LGSetInstDir( int src, int des );
 

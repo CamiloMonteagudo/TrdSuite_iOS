@@ -15,6 +15,7 @@
 "TitleRoots"     = "Racines";
 "TitleMeans"     = "Significations";
 "TitleEdit"      = "Modifier";
+"TitleWeb"       = "Internet";
 "Traslate"       = "Traduire à:";
 
 "TrdTip"   = "Écrire un texte est ";
@@ -40,13 +41,19 @@
 "Group2"   = "Deux chiffres";
 "Group3"   = "Trois chiffres";
 
-"NoInternet" = "Connexion à l'iTunes Store impossible";
+"NoInternet" = "Connexion à l'Internet impossible";
+"NoAppStore" = "Connexion à l'App Store impossible";
 "lbClose"    = "OK";
 "Error"      = "Erreur";
 "Restore"    = "Restaurer achats";
 "TransError" = "Il y a eu une erreur dans la transaction";
 "lbFontSize" = "Taille du texte: ";
-"lbLangs"    = "Langues disponibles";
+"lbLangs"    = "Langues et Achats";
+"lbHelp"     = "Aider en ligne";
+"LngsInts"   = "Traductions disponibles";
+"SiteName"   = "Site Internet BigXSoft";
+"SiteURL"    = "http://bigxsoft.byethost32.com/Guide%20Tanslator%20Suite.html";
+"SiteURL_"   = "Site/Guide Tanslator Suite.html";
 
 "lbCardinal" = "Nombre cardinal:";
 "lbOrdinal"  = "Nombre ordinal: ";

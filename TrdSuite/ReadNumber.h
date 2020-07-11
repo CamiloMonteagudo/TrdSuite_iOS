@@ -62,7 +62,7 @@ struct CentLangInfo
 
   +(id) InfoWithString:(NSString*) sNum FromIndex:(int) ini;
 
-  -(void) SetRegularReadForLang:(CentLangInfo) info;
+  - (void) SetRegularReadForLang:(CentLangInfo) info;
 
   -(NSString*) Read;
 
@@ -76,8 +76,9 @@ struct CentLangInfo
 
   -(NSAttributedString*) ReadCardinalAll;
   -(NSAttributedString*) ReadCardinalByGroup:(int) grp;
-  -(NSString*) ReadOrdinal;
+  -(NSString*) ReadOrdinalString;
   -(NSString*) ReadRomano;
 
+//-(NSString*) ReadOrdinal;
 @end
 //=========================================================================================================================================================

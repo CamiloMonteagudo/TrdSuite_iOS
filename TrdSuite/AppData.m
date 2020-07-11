@@ -231,6 +231,24 @@ NSString* LGFlagFile( int lng, NSString* Suxfix )
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Determina las cantidad de direcciones de traducción instaladas
+int LGInstCount()
+  {
+  int count = 0;
+  
+  for( int src=0; src<LGCount; ++src )
+    {
+    for( int des=0; des<LGCount; ++des )
+      {
+      if( src==des ) continue;
+      if( _Inst[src][des] != 0 ) ++count;
+      }
+    }
+  
+  return count;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Determina si el lenguaje fuente 'lng' esta instalado
 BOOL LGIsInstSrc( int lng )
   {

@@ -21,7 +21,7 @@
   +(void) RequestProdInfo;
   +(void) SetPurchasedItem:(int) idx;
   +(BOOL) PurchaseProdIndex:(int) idx;
-  +(void) CalculateParameters;
+  +(void) SetViewParameters;
 
   +(void)setView:(PurchasesView*) view;
 

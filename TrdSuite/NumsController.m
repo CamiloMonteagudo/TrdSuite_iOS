@@ -22,9 +22,9 @@
   }
 
   @property (weak, nonatomic) IBOutlet ModuleHdrView *ModuleLabel;
-  @property (weak, nonatomic) IBOutlet NumGroupView *GrpNum;
-  @property (weak, nonatomic) IBOutlet UILabel *lbNum;
-  @property (weak, nonatomic) IBOutlet LangsBar *LangBar;
+  @property (weak, nonatomic) IBOutlet NumGroupView  *GrpNum;
+  @property (weak, nonatomic) IBOutlet UILabel       *lbNum;
+  @property (weak, nonatomic) IBOutlet LangsBar      *LangBar;
   @property (weak, nonatomic) IBOutlet NumResultView *NumResult;
 
 @end

@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B0507821C2A18EB00887782 /* ShowInWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0507811C2A18EB00887782 /* ShowInWebView.m */; };
+		9B0507831C2A18EB00887782 /* ShowInWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0507811C2A18EB00887782 /* ShowInWebView.m */; };
+		9B0507841C2A18EB00887782 /* ShowInWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0507811C2A18EB00887782 /* ShowInWebView.m */; };
+		9B0507851C2A18EB00887782 /* ShowInWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0507811C2A18EB00887782 /* ShowInWebView.m */; };
+		9B0507861C2A18EB00887782 /* ShowInWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0507811C2A18EB00887782 /* ShowInWebView.m */; };
+		9B0507871C2A18EB00887782 /* ShowInWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0507811C2A18EB00887782 /* ShowInWebView.m */; };
+		9B0507881C2A18EB00887782 /* ShowInWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0507811C2A18EB00887782 /* ShowInWebView.m */; };
+		9B0507891C2A18EB00887782 /* ShowInWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0507811C2A18EB00887782 /* ShowInWebView.m */; };
+		9B05078A1C2A18EB00887782 /* ShowInWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0507811C2A18EB00887782 /* ShowInWebView.m */; };
+		9B05078B1C2A18EB00887782 /* ShowInWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0507811C2A18EB00887782 /* ShowInWebView.m */; };
+		9B05078C1C2A18EB00887782 /* ShowInWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0507811C2A18EB00887782 /* ShowInWebView.m */; };
 		F00C80911B7E745C00946322 /* PanelRigthView.m in Sources */ = {isa = PBXBuildFile; fileRef = F00C80901B7E745C00946322 /* PanelRigthView.m */; };
 		F00D9EF91B32887D00B8B21D /* ConjDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D9EF81B32887D00B8B21D /* ConjDataView.m */; };
 		F017F4091B21381600650DFF /* BtnMeans2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F017F4071B21381600650DFF /* BtnMeans2@2x.png */; };
@@ -3475,6 +3486,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B0507801C2A18EB00887782 /* ShowInWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowInWebView.h; sourceTree = "<group>"; };
+		9B0507811C2A18EB00887782 /* ShowInWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowInWebView.m; sourceTree = "<group>"; };
 		F00C808F1B7E745C00946322 /* PanelRigthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelRigthView.h; sourceTree = "<group>"; };
 		F00C80901B7E745C00946322 /* PanelRigthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelRigthView.m; sourceTree = "<group>"; };
 		F00D9EF71B32887D00B8B21D /* ConjDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConjDataView.h; sourceTree = "<group>"; };
@@ -4313,6 +4326,8 @@
 		F0E2BDCA1B0D2E0B009F625A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9B0507801C2A18EB00887782 /* ShowInWebView.h */,
+				9B0507811C2A18EB00887782 /* ShowInWebView.m */,
 				F0E57AB11B9161CE001A56E9 /* PanelTrdView.h */,
 				F0E57AB21B9161CE001A56E9 /* PanelTrdView.m */,
 				F00C808F1B7E745C00946322 /* PanelRigthView.h */,
@@ -7718,6 +7733,7 @@
 				F0D910E01AE0684300C6871A /* AppData.m in Sources */,
 				F0FDD4DE1B1515F10035CAB4 /* Orafun.cpp in Sources */,
 				F0E39A4D1BF14AA700110B5A /* RowSentenceView.m in Sources */,
+				9B0507821C2A18EB00887782 /* ShowInWebView.m in Sources */,
 				F0E032AB1BB8782A00347EE0 /* NumGroupView.m in Sources */,
 				F0FDD6621B15246F0035CAB4 /* ProxyDict.mm in Sources */,
 				F0E9D1E81BC3314600DE66D9 /* PurchasesView.m in Sources */,
@@ -7804,6 +7820,7 @@
 				F0E381FE1BCDC81A002AF2B0 /* AppData.m in Sources */,
 				F0E381FF1BCDC81A002AF2B0 /* Orafun.cpp in Sources */,
 				F0E39A4E1BF14AA700110B5A /* RowSentenceView.m in Sources */,
+				9B0507831C2A18EB00887782 /* ShowInWebView.m in Sources */,
 				F0E382001BCDC81A002AF2B0 /* NumGroupView.m in Sources */,
 				F0E382011BCDC81A002AF2B0 /* ProxyDict.mm in Sources */,
 				F0E382021BCDC81A002AF2B0 /* PurchasesView.m in Sources */,
@@ -7890,6 +7907,7 @@
 				F0E383411BCDC832002AF2B0 /* AppData.m in Sources */,
 				F0E383421BCDC832002AF2B0 /* Orafun.cpp in Sources */,
 				F0E39A4F1BF14AA700110B5A /* RowSentenceView.m in Sources */,
+				9B0507841C2A18EB00887782 /* ShowInWebView.m in Sources */,
 				F0E383431BCDC832002AF2B0 /* NumGroupView.m in Sources */,
 				F0E383441BCDC832002AF2B0 /* ProxyDict.mm in Sources */,
 				F0E383451BCDC832002AF2B0 /* PurchasesView.m in Sources */,
@@ -7976,6 +7994,7 @@
 				F0E384841BCDC849002AF2B0 /* AppData.m in Sources */,
 				F0E384851BCDC849002AF2B0 /* Orafun.cpp in Sources */,
 				F0E39A501BF14AA700110B5A /* RowSentenceView.m in Sources */,
+				9B0507851C2A18EB00887782 /* ShowInWebView.m in Sources */,
 				F0E384861BCDC849002AF2B0 /* NumGroupView.m in Sources */,
 				F0E384871BCDC849002AF2B0 /* ProxyDict.mm in Sources */,
 				F0E384881BCDC849002AF2B0 /* PurchasesView.m in Sources */,
@@ -8062,6 +8081,7 @@
 				F0E385C71BCDC859002AF2B0 /* AppData.m in Sources */,
 				F0E385C81BCDC859002AF2B0 /* Orafun.cpp in Sources */,
 				F0E39A511BF14AA700110B5A /* RowSentenceView.m in Sources */,
+				9B0507861C2A18EB00887782 /* ShowInWebView.m in Sources */,
 				F0E385C91BCDC859002AF2B0 /* NumGroupView.m in Sources */,
 				F0E385CA1BCDC859002AF2B0 /* ProxyDict.mm in Sources */,
 				F0E385CB1BCDC859002AF2B0 /* PurchasesView.m in Sources */,
@@ -8148,6 +8168,7 @@
 				F0E3870A1BCDC867002AF2B0 /* AppData.m in Sources */,
 				F0E3870B1BCDC867002AF2B0 /* Orafun.cpp in Sources */,
 				F0E39A521BF14AA700110B5A /* RowSentenceView.m in Sources */,
+				9B0507871C2A18EB00887782 /* ShowInWebView.m in Sources */,
 				F0E3870C1BCDC867002AF2B0 /* NumGroupView.m in Sources */,
 				F0E3870D1BCDC867002AF2B0 /* ProxyDict.mm in Sources */,
 				F0E3870E1BCDC867002AF2B0 /* PurchasesView.m in Sources */,
@@ -8234,6 +8255,7 @@
 				F0E3884D1BCDC878002AF2B0 /* AppData.m in Sources */,
 				F0E3884E1BCDC878002AF2B0 /* Orafun.cpp in Sources */,
 				F0E39A531BF14AA700110B5A /* RowSentenceView.m in Sources */,
+				9B0507881C2A18EB00887782 /* ShowInWebView.m in Sources */,
 				F0E3884F1BCDC878002AF2B0 /* NumGroupView.m in Sources */,
 				F0E388501BCDC878002AF2B0 /* ProxyDict.mm in Sources */,
 				F0E388511BCDC878002AF2B0 /* PurchasesView.m in Sources */,
@@ -8320,6 +8342,7 @@
 				F0E389901BCDC88B002AF2B0 /* AppData.m in Sources */,
 				F0E389911BCDC88B002AF2B0 /* Orafun.cpp in Sources */,
 				F0E39A541BF14AA700110B5A /* RowSentenceView.m in Sources */,
+				9B0507891C2A18EB00887782 /* ShowInWebView.m in Sources */,
 				F0E389921BCDC88B002AF2B0 /* NumGroupView.m in Sources */,
 				F0E389931BCDC88B002AF2B0 /* ProxyDict.mm in Sources */,
 				F0E389941BCDC88B002AF2B0 /* PurchasesView.m in Sources */,
@@ -8406,6 +8429,7 @@
 				F0E38AD31BCDC89C002AF2B0 /* AppData.m in Sources */,
 				F0E38AD41BCDC89C002AF2B0 /* Orafun.cpp in Sources */,
 				F0E39A551BF14AA800110B5A /* RowSentenceView.m in Sources */,
+				9B05078A1C2A18EB00887782 /* ShowInWebView.m in Sources */,
 				F0E38AD51BCDC89C002AF2B0 /* NumGroupView.m in Sources */,
 				F0E38AD61BCDC89C002AF2B0 /* ProxyDict.mm in Sources */,
 				F0E38AD71BCDC89C002AF2B0 /* PurchasesView.m in Sources */,
@@ -8492,6 +8516,7 @@
 				F0E38C161BCDC8A9002AF2B0 /* AppData.m in Sources */,
 				F0E38C171BCDC8A9002AF2B0 /* Orafun.cpp in Sources */,
 				F0E39A561BF14AA800110B5A /* RowSentenceView.m in Sources */,
+				9B05078B1C2A18EB00887782 /* ShowInWebView.m in Sources */,
 				F0E38C181BCDC8A9002AF2B0 /* NumGroupView.m in Sources */,
 				F0E38C191BCDC8A9002AF2B0 /* ProxyDict.mm in Sources */,
 				F0E38C1A1BCDC8A9002AF2B0 /* PurchasesView.m in Sources */,
@@ -8578,6 +8603,7 @@
 				F0E38D591BCDC8B8002AF2B0 /* AppData.m in Sources */,
 				F0E38D5A1BCDC8B8002AF2B0 /* Orafun.cpp in Sources */,
 				F0E39A571BF14AA800110B5A /* RowSentenceView.m in Sources */,
+				9B05078C1C2A18EB00887782 /* ShowInWebView.m in Sources */,
 				F0E38D5B1BCDC8B8002AF2B0 /* NumGroupView.m in Sources */,
 				F0E38D5C1BCDC8B8002AF2B0 /* ProxyDict.mm in Sources */,
 				F0E38D5D1BCDC8B8002AF2B0 /* PurchasesView.m in Sources */,
@@ -8626,7 +8652,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -8642,7 +8668,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WARNING_CFLAGS = "-Wno-invalid-source-encoding";
@@ -8665,7 +8691,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -8676,7 +8702,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -8689,6 +8715,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconEn;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageEn;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -8697,9 +8724,9 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8709,13 +8736,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconEn;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageEn;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8733,9 +8761,9 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8749,9 +8777,9 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8769,9 +8797,9 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8785,9 +8813,9 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8805,9 +8833,9 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8821,9 +8849,9 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8841,9 +8869,9 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8857,9 +8885,9 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8877,9 +8905,9 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8893,9 +8921,9 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8913,9 +8941,9 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8929,9 +8957,9 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8949,9 +8977,9 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8965,9 +8993,9 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8985,9 +9013,9 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -9001,9 +9029,9 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -9021,9 +9049,9 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -9037,9 +9065,9 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -9057,9 +9085,9 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -9073,9 +9101,9 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
+				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

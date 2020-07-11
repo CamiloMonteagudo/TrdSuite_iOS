@@ -15,6 +15,7 @@
 "TitleRoots"     = "Raíces";
 "TitleMeans"     = "Significados";
 "TitleEdit"      = "Modificar";
+"TitleWeb"       = "Internet";
 "Traslate"       = "Traducir a:";
 
 "TrdTip"   = "Escribir un Texto en ";
@@ -40,13 +41,19 @@
 "Group2"   = "Dos dígitos";
 "Group3"   = "Tres dígitos";
 
-"NoInternet" = "Imposible conectarse a iTunes Store";
+"NoInternet" = "Imposible conectarse a Internet";
+"NoAppStore" = "Imposible conectarse a App Store";
 "lbClose"    = "OK";
 "Error"      = "Error";
 "Restore"    = "Restaurar las compras";
 "TransError" = "Se produjo un error en la transacción";
 "lbFontSize" = "Tamaño del texto: ";
-"lbLangs"    = "Idiomas disponibles";
+"lbLangs"    = "Idiomas y Compras";
+"lbHelp"     = "Ayuda en línea";
+"LngsInts"   = "traduciones disponibles";
+"SiteName"   = "Página Web de BigXSoft";
+"SiteURL"    = "http://bigxsoft.byethost32.com/Es/Guide%20Tanslator%20Suite.html";
+"SiteURL_"   = "Site/Es/Guide Tanslator Suite.html";
 
 "lbCardinal" = "Número cardinal:";
 "lbOrdinal"  = "Número ordinal: ";

@@ -15,6 +15,7 @@
 "TitleRoots"     = "Roots";
 "TitleMeans"     = "Meanings";
 "TitleEdit"      = "Modify";
+"TitleWeb"       = "Internet";
 "Traslate"       = "Translate to:";
 
 "TrdTip"   = "Type a text in ";
@@ -40,13 +41,19 @@
 "Group2"   = "Two digits";
 "Group3"   = "Tres digits";
 
-"NoInternet" = "Cannot connect to iTunes Store";
+"NoInternet" = "Cannot connect to Internet";
+"NoAppStore" = "Cannot connect to App Store";
 "lbClose"    = "OK";
 "Error"      = "Error";
 "Restore"    = "Restore purcheses";
 "TransError" = "There was an error in the transaction";
 "lbFontSize" = "Text Size: ";
-"lbLangs"    = "Available languages";
+"lbLangs"    = "Languages & Purchases";
+"lbHelp"     = "Help on line";
+"LngsInts"   = "Available translations";
+"SiteName"   = "BigXSoft Website";
+"SiteURL"    = "http://bigxsoft.byethost32.com/Guide%20Tanslator%20Suite.html";
+"SiteURL_"   = "Site/Guide Tanslator Suite.html";
 
 "lbCardinal" = "Cardinal number:";
 "lbOrdinal"  = "Ordinal number: ";

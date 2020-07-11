@@ -43,9 +43,9 @@
   @property (nonatomic) BOOL TextMark;                   // Si marcar el texto seleccionado o no
   @property (nonatomic) UIReturnKeyType ReturnType;      // Pone el tipo de retorno del teclado
 
-  @property (nonatomic, weak) NSString* Text;           // Texto traducido
-  
-  @property (nonatomic, readonly ) float StaticHeight;  // Retorna altura de la vista que no varia
+  @property (nonatomic, weak ) NSString* Text;           // Texto que se esta editando en el control
+
+  @property (nonatomic, readonly ) float StaticHeight;   // Retorna altura de la vista que no varia
 
 - (NSRange)   GetMarkText;
 - (void)      SetMarkText:(NSRange) range;

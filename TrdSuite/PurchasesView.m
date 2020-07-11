@@ -24,7 +24,7 @@ struct PurchItem
   int lang2;                                  // El otro idioma asociado al item
   
   NSString *strDir1;                          // Descripción de una de las direcciones asociadas con el item
-  NSString *strDir2;                          // Descripción de otras de las direcciones asociadas con el item
+  NSString *strDir2;                          // Descripción de la otra direccione asociadas con el item
   
   BOOL NoInst;                                // Si el producto no esta instalado, osea se puede comprar
   
@@ -66,112 +66,112 @@ static int            RequestStatus;                                // Estado de
 //=========================================================================================================================================
 
 #ifdef TrdSuiteEn
-#define ITEM_EnEs       @"com.FMontSoft.TrdSuiteEn.EnEs"
-#define ITEM_EnIt       @"com.FMontSoft.TrdSuiteEn.EnIt"
-#define ITEM_EnFr       @"com.FMontSoft.TrdSuiteEn.EnFr"
-#define ITEM_EsIt       @"com.FMontSoft.TrdSuiteEn.EsIt"
-#define ITEM_EsFr       @"com.FMontSoft.TrdSuiteEn.EsFr"
-#define ITEM_ItFr       @"com.FMontSoft.TrdSuiteEn.ItFr"
+#define ITEM_EnEs       @"com.BigXSoft.TrdSuiteEn.EnEs"
+#define ITEM_EnIt       @"com.BigXSoft.TrdSuiteEn.EnIt"
+#define ITEM_EnFr       @"com.BigXSoft.TrdSuiteEn.EnFr"
+#define ITEM_EsIt       @"com.BigXSoft.TrdSuiteEn.EsIt"
+#define ITEM_EsFr       @"com.BigXSoft.TrdSuiteEn.EsFr"
+#define ITEM_ItFr       @"com.BigXSoft.TrdSuiteEn.ItFr"
 
 NSSet* LstProds = [NSSet setWithObjects:ITEM_EsIt,ITEM_EsFr,ITEM_ItFr,nil];
 #endif
 #ifdef TrdSuiteEnEs
-#define ITEM_EnEs       @"com.FMontSoft.TrdSuiteEnEs.EnEs"
-#define ITEM_EnIt       @"com.FMontSoft.TrdSuiteEnEs.EnIt"
-#define ITEM_EnFr       @"com.FMontSoft.TrdSuiteEnEs.EnFr"
-#define ITEM_EsIt       @"com.FMontSoft.TrdSuiteEnEs.EsIt"
-#define ITEM_EsFr       @"com.FMontSoft.TrdSuiteEnEs.EsFr"
-#define ITEM_ItFr       @"com.FMontSoft.TrdSuiteEnEs.ItFr"
+#define ITEM_EnEs       @"com.BigXSoft.TrdSuiteEnEs.EnEs"
+#define ITEM_EnIt       @"com.BigXSoft.TrdSuiteEnEs.EnIt"
+#define ITEM_EnFr       @"com.BigXSoft.TrdSuiteEnEs.EnFr"
+#define ITEM_EsIt       @"com.BigXSoft.TrdSuiteEnEs.EsIt"
+#define ITEM_EsFr       @"com.BigXSoft.TrdSuiteEnEs.EsFr"
+#define ITEM_ItFr       @"com.BigXSoft.TrdSuiteEnEs.ItFr"
 
 NSSet* LstProds = [NSSet setWithObjects:ITEM_EnIt,ITEM_EnFr,ITEM_EsIt,ITEM_EsFr,ITEM_ItFr,nil];
 #endif
 #ifdef TrdSuiteEnIt
-#define ITEM_EnEs       @"com.FMontSoft.TrdSuiteEnIt.EnEs"
-#define ITEM_EnIt       @"com.FMontSoft.TrdSuiteEnIt.EnIt"
-#define ITEM_EnFr       @"com.FMontSoft.TrdSuiteEnIt.EnFr"
-#define ITEM_EsIt       @"com.FMontSoft.TrdSuiteEnIt.EsIt"
-#define ITEM_EsFr       @"com.FMontSoft.TrdSuiteEnIt.EsFr"
-#define ITEM_ItFr       @"com.FMontSoft.TrdSuiteEnIt.ItFr"
+#define ITEM_EnEs       @"com.BigXSoft.TrdSuiteEnIt.EnEs"
+#define ITEM_EnIt       @"com.BigXSoft.TrdSuiteEnIt.EnIt"
+#define ITEM_EnFr       @"com.BigXSoft.TrdSuiteEnIt.EnFr"
+#define ITEM_EsIt       @"com.BigXSoft.TrdSuiteEnIt.EsIt"
+#define ITEM_EsFr       @"com.BigXSoft.TrdSuiteEnIt.EsFr"
+#define ITEM_ItFr       @"com.BigXSoft.TrdSuiteEnIt.ItFr"
 
 NSSet* LstProds = [NSSet setWithObjects:ITEM_EnEs,ITEM_EnFr,ITEM_EsIt,ITEM_EsFr,ITEM_ItFr,nil];
 #endif
 #ifdef TrdSuiteEnFr
-#define ITEM_EnEs       @"com.FMontSoft.TrdSuiteEnFr.EnEs"
-#define ITEM_EnIt       @"com.FMontSoft.TrdSuiteEnFr.EnIt"
-#define ITEM_EnFr       @"com.FMontSoft.TrdSuiteEnFr.EnFr"
-#define ITEM_EsIt       @"com.FMontSoft.TrdSuiteEnFr.EsIt"
-#define ITEM_EsFr       @"com.FMontSoft.TrdSuiteEnFr.EsFr"
-#define ITEM_ItFr       @"com.FMontSoft.TrdSuiteEnFr.ItFr"
+#define ITEM_EnEs       @"com.BigXSoft.TrdSuiteEnFr.EnEs"
+#define ITEM_EnIt       @"com.BigXSoft.TrdSuiteEnFr.EnIt"
+#define ITEM_EnFr       @"com.BigXSoft.TrdSuiteEnFr.EnFr"
+#define ITEM_EsIt       @"com.BigXSoft.TrdSuiteEnFr.EsIt"
+#define ITEM_EsFr       @"com.BigXSoft.TrdSuiteEnFr.EsFr"
+#define ITEM_ItFr       @"com.BigXSoft.TrdSuiteEnFr.ItFr"
 
 NSSet* LstProds = [NSSet setWithObjects:ITEM_EnEs,ITEM_EnIt,ITEM_EsIt,ITEM_EsFr,ITEM_ItFr,nil];
 #endif
 #ifdef TrdSuiteEs
-#define ITEM_EnEs       @"com.FMontSoft.TrdSuiteEs.EnEs"
-#define ITEM_EnIt       @"com.FMontSoft.TrdSuiteEs.EnIt"
-#define ITEM_EnFr       @"com.FMontSoft.TrdSuiteEs.EnFr"
-#define ITEM_EsIt       @"com.FMontSoft.TrdSuiteEs.EsIt"
-#define ITEM_EsFr       @"com.FMontSoft.TrdSuiteEs.EsFr"
-#define ITEM_ItFr       @"com.FMontSoft.TrdSuiteEs.ItFr"
+#define ITEM_EnEs       @"com.BigXSoft.TrdSuiteEs.EnEs"
+#define ITEM_EnIt       @"com.BigXSoft.TrdSuiteEs.EnIt"
+#define ITEM_EnFr       @"com.BigXSoft.TrdSuiteEs.EnFr"
+#define ITEM_EsIt       @"com.BigXSoft.TrdSuiteEs.EsIt"
+#define ITEM_EsFr       @"com.BigXSoft.TrdSuiteEs.EsFr"
+#define ITEM_ItFr       @"com.BigXSoft.TrdSuiteEs.ItFr"
 
 NSSet* LstProds = [NSSet setWithObjects:ITEM_EnIt,ITEM_EnFr,ITEM_ItFr,nil];
 #endif
 #ifdef TrdSuiteEsIt
-#define ITEM_EnEs       @"com.FMontSoft.TrdSuiteEsIt.EnEs"
-#define ITEM_EnIt       @"com.FMontSoft.TrdSuiteEsIt.EnIt"
-#define ITEM_EnFr       @"com.FMontSoft.TrdSuiteEsIt.EnFr"
-#define ITEM_EsIt       @"com.FMontSoft.TrdSuiteEsIt.EsIt"
-#define ITEM_EsFr       @"com.FMontSoft.TrdSuiteEsIt.EsFr"
-#define ITEM_ItFr       @"com.FMontSoft.TrdSuiteEsIt.ItFr"
+#define ITEM_EnEs       @"com.BigXSoft.TrdSuiteEsIt.EnEs"
+#define ITEM_EnIt       @"com.BigXSoft.TrdSuiteEsIt.EnIt"
+#define ITEM_EnFr       @"com.BigXSoft.TrdSuiteEsIt.EnFr"
+#define ITEM_EsIt       @"com.BigXSoft.TrdSuiteEsIt.EsIt"
+#define ITEM_EsFr       @"com.BigXSoft.TrdSuiteEsIt.EsFr"
+#define ITEM_ItFr       @"com.BigXSoft.TrdSuiteEsIt.ItFr"
 
 NSSet* LstProds = [NSSet setWithObjects:ITEM_EnEs,ITEM_EnIt,ITEM_EnFr,ITEM_EsFr,ITEM_ItFr,nil];
 #endif
 #ifdef TrdSuiteEsFr
-#define ITEM_EnEs       @"com.FMontSoft.TrdSuiteEsFr.EnEs"
-#define ITEM_EnIt       @"com.FMontSoft.TrdSuiteEsFr.EnIt"
-#define ITEM_EnFr       @"com.FMontSoft.TrdSuiteEsFr.EnFr"
-#define ITEM_EsIt       @"com.FMontSoft.TrdSuiteEsFr.EsIt"
-#define ITEM_EsFr       @"com.FMontSoft.TrdSuiteEsFr.EsFr"
-#define ITEM_ItFr       @"com.FMontSoft.TrdSuiteEsFr.ItFr"
+#define ITEM_EnEs       @"com.BigXSoft.TrdSuiteEsFr.EnEs"
+#define ITEM_EnIt       @"com.BigXSoft.TrdSuiteEsFr.EnIt"
+#define ITEM_EnFr       @"com.BigXSoft.TrdSuiteEsFr.EnFr"
+#define ITEM_EsIt       @"com.BigXSoft.TrdSuiteEsFr.EsIt"
+#define ITEM_EsFr       @"com.BigXSoft.TrdSuiteEsFr.EsFr"
+#define ITEM_ItFr       @"com.BigXSoft.TrdSuiteEsFr.ItFr"
 
 NSSet* LstProds = [NSSet setWithObjects:ITEM_EnEs,ITEM_EnIt,ITEM_EnFr,ITEM_EsIt,ITEM_ItFr,nil];
 #endif
 #ifdef TrdSuiteIt
-#define ITEM_EnEs       @"com.FMontSoft.TrdSuiteIt.EnEs"
-#define ITEM_EnIt       @"com.FMontSoft.TrdSuiteIt.EnIt"
-#define ITEM_EnFr       @"com.FMontSoft.TrdSuiteIt.EnFr"
-#define ITEM_EsIt       @"com.FMontSoft.TrdSuiteIt.EsIt"
-#define ITEM_EsFr       @"com.FMontSoft.TrdSuiteIt.EsFr"
-#define ITEM_ItFr       @"com.FMontSoft.TrdSuiteIt.ItFr"
+#define ITEM_EnEs       @"com.BigXSoft.TrdSuiteIt.EnEs"
+#define ITEM_EnIt       @"com.BigXSoft.TrdSuiteIt.EnIt"
+#define ITEM_EnFr       @"com.BigXSoft.TrdSuiteIt.EnFr"
+#define ITEM_EsIt       @"com.BigXSoft.TrdSuiteIt.EsIt"
+#define ITEM_EsFr       @"com.BigXSoft.TrdSuiteIt.EsFr"
+#define ITEM_ItFr       @"com.BigXSoft.TrdSuiteIt.ItFr"
 
 NSSet* LstProds = [NSSet setWithObjects:ITEM_EnEs,ITEM_EnFr,ITEM_EsFr,nil];
 #endif
 #ifdef TrdSuiteItFr
-#define ITEM_EnEs       @"com.FMontSoft.TrdSuiteItFr.EnEs"
-#define ITEM_EnIt       @"com.FMontSoft.TrdSuiteItFr.EnIt"
-#define ITEM_EnFr       @"com.FMontSoft.TrdSuiteItFr.EnFr"
-#define ITEM_EsIt       @"com.FMontSoft.TrdSuiteItFr.EsIt"
-#define ITEM_EsFr       @"com.FMontSoft.TrdSuiteItFr.EsFr"
-#define ITEM_ItFr       @"com.FMontSoft.TrdSuiteItFr.ItFr"
+#define ITEM_EnEs       @"com.BigXSoft.TrdSuiteItFr.EnEs"
+#define ITEM_EnIt       @"com.BigXSoft.TrdSuiteItFr.EnIt"
+#define ITEM_EnFr       @"com.BigXSoft.TrdSuiteItFr.EnFr"
+#define ITEM_EsIt       @"com.BigXSoft.TrdSuiteItFr.EsIt"
+#define ITEM_EsFr       @"com.BigXSoft.TrdSuiteItFr.EsFr"
+#define ITEM_ItFr       @"com.BigXSoft.TrdSuiteItFr.ItFr"
 
 NSSet* LstProds = [NSSet setWithObjects:ITEM_EnEs,ITEM_EnIt,ITEM_EnFr,ITEM_EsIt,ITEM_EsFr,nil];
 #endif
 #ifdef TrdSuiteFr
-#define ITEM_EnEs       @"com.FMontSoft.TrdSuiteFr.EnEs"
-#define ITEM_EnIt       @"com.FMontSoft.TrdSuiteFr.EnIt"
-#define ITEM_EnFr       @"com.FMontSoft.TrdSuiteFr.EnFr"
-#define ITEM_EsIt       @"com.FMontSoft.TrdSuiteFr.EsIt"
-#define ITEM_EsFr       @"com.FMontSoft.TrdSuiteFr.EsFr"
-#define ITEM_ItFr       @"com.FMontSoft.TrdSuiteFr.ItFr"
+#define ITEM_EnEs       @"com.BigXSoft.TrdSuiteFr.EnEs"
+#define ITEM_EnIt       @"com.BigXSoft.TrdSuiteFr.EnIt"
+#define ITEM_EnFr       @"com.BigXSoft.TrdSuiteFr.EnFr"
+#define ITEM_EsIt       @"com.BigXSoft.TrdSuiteFr.EsIt"
+#define ITEM_EsFr       @"com.BigXSoft.TrdSuiteFr.EsFr"
+#define ITEM_ItFr       @"com.BigXSoft.TrdSuiteFr.ItFr"
 
 NSSet* LstProds = [NSSet setWithObjects:ITEM_EnEs,ITEM_EnIt,ITEM_EsIt,nil];
 #endif
 #ifdef TrdSuiteAll
-#define ITEM_EnEs       @"com.FMontSoft.TrdSuiteAll.EnEs"
-#define ITEM_EnIt       @"com.FMontSoft.TrdSuiteAll.EnIt"
-#define ITEM_EnFr       @"com.FMontSoft.TrdSuiteAll.EnFr"
-#define ITEM_EsIt       @"com.FMontSoft.TrdSuiteAll.EsIt"
-#define ITEM_EsFr       @"com.FMontSoft.TrdSuiteAll.EsFr"
-#define ITEM_ItFr       @"com.FMontSoft.TrdSuiteAll.ItFr"
+#define ITEM_EnEs       @"com.BigXSoft.TrdSuiteAll.EnEs"
+#define ITEM_EnIt       @"com.BigXSoft.TrdSuiteAll.EnIt"
+#define ITEM_EnFr       @"com.BigXSoft.TrdSuiteAll.EnFr"
+#define ITEM_EsIt       @"com.BigXSoft.TrdSuiteAll.EsIt"
+#define ITEM_EsFr       @"com.BigXSoft.TrdSuiteAll.EsFr"
+#define ITEM_ItFr       @"com.BigXSoft.TrdSuiteAll.ItFr"
 
 NSSet* LstProds = [NSSet setWithObjects:nil];
 #endif
@@ -185,7 +185,7 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   {
   _Purchases = [[Purchases alloc] init];
   
-  [self CalculateParameters];
+  [self SetViewParameters];
   
   [[SKPaymentQueue defaultQueue] addTransactionObserver:_Purchases];
   
@@ -362,7 +362,7 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   
     if( Prod == nil )
       {
-      [Purchases AlertMsg: @"NoInternet"];
+      [Purchases AlertMsg: @"NoAppStore"];
       return FALSE;
       }
     
@@ -483,34 +483,32 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   }
 
 //---------------------------------------------------------------------------------------------------------------------------------------------
-// Calcula los parametros geometricos relacionado con la lista de items de venta
-+(void) CalculateParameters
+// Calcula los parametros visuales relacionado con la lista de items de venta
++(void) SetViewParameters
   {
-  MaxDirWidth = 0;
-  Restore     = 0;
+  MaxDirWidth = 0;                            // Ancho maximo para la descripción de los items
+  Restore     = 0;                            // Indica si se muestra el items de restaurar las compras o no
   
-  for(int i=0; i<N_PURCH; ++i )
+  for(int i=0; i<N_PURCH; ++i )               // Recorre todos los items disponibles para la compra
     {
-    PurchItem &item = Items[i];
+    PurchItem &item = Items[i];               // Toma el items actual
     
-    item.strDir1 = [_Purchases GetDirWithSrc: item.lang1 AndDes: item.lang2];
-    item.strDir2 = [_Purchases GetDirWithSrc: item.lang2 AndDes: item.lang1];
+    item.strDir1 = [_Purchases GetDirWithSrc: item.lang1 AndDes: item.lang2];   // Obtiene descripción de la primera dirección
+    item.strDir2 = [_Purchases GetDirWithSrc: item.lang2 AndDes: item.lang1];   // Obtiene descripción de la segundo dirección
     
-    item.NoInst = ( !LGIsInstDir( item.lang1, item.lang2 ) ||
+    item.NoInst = ( !LGIsInstDir( item.lang1, item.lang2 ) ||   // Determina si el item esta indtalado o no
                     !LGIsInstDir( item.lang2, item.lang1 ) );
       
-    if( item.NoInst ) Restore = 1;
+    if( item.NoInst ) Restore = 1;                              // Si al menos hay uno sin instalar, se muestra restaural
     }
     
-  if( Restore == 0 )  RequestStatus = REQUEST_ENDED;
+  if( Restore == 0 )  RequestStatus = REQUEST_ENDED;            // Si todos los productos estan comprados, no nesecita solicitar información
   
-  CGSize sz = [@"$ 0.00" sizeWithAttributes:attrBuy];
-
-  PriceWidth = sz.width+1;
+  PriceWidth = [@"$ 0.00" sizeWithAttributes:attrBuy].width+1;  // Determina el ancho de la cadena con el precio
     
-  hRow  =  (7.0*LineHeight)/4.0;
-  wList = SEP_BRD + MaxDirWidth + SEP_BRD + BTN_W + SEP_BRD + PriceWidth + SEP_BRD;
-  hList = (N_PURCH+Restore) * (hRow+SEP_ROW) - SEP_ROW;
+  hRow  =  (7.0*LineHeight)/4.0;                                                    // Alto de una fila
+  wList = SEP_BRD + MaxDirWidth + SEP_BRD + BTN_W + SEP_BRD + PriceWidth + SEP_BRD; // Ancho de la lista de items
+  hList = (N_PURCH+Restore) * (hRow+SEP_ROW) - SEP_ROW;                             // Altura de la lista de items
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -531,6 +529,8 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
 @end
 
 //=========================================================================================================================================================
+// Maneja la lista de compras a pantalla completa
+//=========================================================================================================================================================
 @interface PurchasesScreen()
   {
   ModuleHdrView* Header;
@@ -541,16 +541,17 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
 //=========================================================================================================================================================
 @implementation PurchasesScreen
 
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------------------------------------------
+// Crea un objeto a partir de la vista 'view', a partir de ella se busca la 'vista top' que es la que tiene tag=999
 - (id)initWithFromView:(UIView*)view
   {
   UIView* TopView = [self FindTopView:view];
   if( !TopView ) return nil;
   
-  self = [super initWithFrame:TopView.frame];
+  self = [super initWithFrame:TopView.bounds];
   if( !self ) return self;
   
-  [Purchases CalculateParameters];
+  [Purchases SetViewParameters];
   
   self.backgroundColor = ColMainBck;
   self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -564,7 +565,7 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Encuentra la vista definida como el tope superior
+// Encuentra la vista definida como el tope superior, que se usa para definir el tamaño y posicion de la pantalla, todas las subviews quedan cubiertas
 - (UIView*) FindTopView:(UIView*) view
   {
   for( ; view!=nil; )                                                                     // Itera para encontrar la vista de mayor jerarquia
@@ -580,7 +581,7 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Crea la vista para mostrar el titulo
+// Crea la vista para mostrar el titulo el cual aparece en la parte superior
 - (void) CreateTitle
   {
   Header = [[ModuleHdrView alloc] initWithFrame: CGRectMake( 0, 0, 290, 20)];
@@ -599,7 +600,7 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Crea la vista para mostrar el titulo
+// Crea la vista que muestra el listado de Items para comprar
 - (void) CreateList
   {
   PurchList = [[PurchasesView alloc] initWithFrame: CGRectMake( 0, 0, wList, hList)];
@@ -608,7 +609,7 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Selecciona la dirección de traducción
+// Selecciona la dirección de traducción en la lista de Items
 - (void) SelPurchasesSrc:(int) src Des:(int) des
   {
   for( int i=0; i<N_PURCH; ++i )
@@ -629,18 +630,21 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   {
   CGSize   sz = self.bounds.size;                                      // Toda el arrea de la vista
   float hPurc = SEP_BRD + hList + SEP_BRD;                             // Calcula altura de la lista de items
-  float     y = Header.Height + SEP_BRD;                               // Posicion en y para iniciar a poner vistas
-  float hDisp = sz.height - Header.Height;                             // Calcula altura disponible para poner las vistas
+  float     y = Header.Height + SEP_BRD;                               // Posicion en Y, minima donde se puede poner la lista
+  float hDisp = sz.height - Header.Height;                             // Calcula altura disponible para poner la lista
   
   if( hPurc <= hDisp )                                                 // Si hay mas espacio del necesario
-    y = Header.Height + ((hDisp-hList)/2);                             // Las centra verticalmente
+    {
+    y = Header.Height + ((hDisp-hList)/2);                             // Centra la lista verticalmente
+    hPurc = hList;
+    }
   else                                                                 // No hay espacio
-    hPurc = sz.height- y - SEP_BRD;                                    // Acorta la lista de items
+    hPurc = sz.height - y - SEP_BRD;                                   // Acorta la lista de items
     
-  float w = SEP_BRD + wList + SEP_BRD;;                                 // Toma el ancho de la lista de items
-  float x = (sz.width - w)/2;                                           // Centra horizontalmente
+  float w = SEP_BRD + wList + SEP_BRD;;                                // Toma el ancho de la lista de items
+  float x = (sz.width - w)/2;                                          // Centra horizontalmente
   
-  PurchList.frame = CGRectMake( x, y, w, hPurc );                       // Pone la lista
+  PurchList.frame = CGRectMake( x, y, w, hPurc );                      // Pone la posición y tamaño de la lista
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -662,6 +666,8 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
 @end
 
 //=========================================================================================================================================================
+// Objeto que maneja la vista donde se muestra la lista de Item que se pueden compar
+//=========================================================================================================================================================
 @interface PurchasesView()
   {
   VirtualListView* ListItems;
@@ -672,6 +678,7 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
 @implementation PurchasesView
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Crea la vista desde storyboard o interface builder
 - (id)initWithCoder:(NSCoder *)aDecoder
   {
   self = [super initWithCoder:aDecoder];
@@ -683,6 +690,7 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Crea la vista desde código
 - (id)initWithFrame:(CGRect)frame
   {
   self = [super initWithFrame:frame];
@@ -697,43 +705,44 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
 // Crea la vista con la lista de productos
 -(void) CreateListItems
   {
-  [Purchases setView:self];
-  [Purchases RequestProdInfo];
+  [Purchases setView:self];                                   // Relaciona la esta vista con el los datos de las compras
+  [Purchases RequestProdInfo];                                // Solicita la informacion sobre los items de compra
 
-  self.backgroundColor = [UIColor clearColor];
-  self.clipsToBounds   = TRUE;
+  self.backgroundColor = [UIColor clearColor];                // Quita el color de fondo (el fondo lo establece una vista superior)
+  self.clipsToBounds   = TRUE;                                // No muestra los objetos fuera de la frontera de la vista
   
-  CGRect rc2 = CGRectMake( SEP_BRD, SEP_BRD, wList, hList );
+  CGRect rc2 = CGRectMake( SEP_BRD, SEP_BRD, wList, hList );  // Rectangulo para mostrar los items
   
-  ListItems = [[VirtualListView alloc] initWithFrame:rc2];
-  [self addSubview:ListItems];
+  ListItems = [[VirtualListView alloc] initWithFrame:rc2];    // Vista para mostrar los items
+  [self addSubview:ListItems];                                // La adiciona como subvista de ella misma
   
-  ListItems.VirtualListDelegate = self;
+  ListItems.VirtualListDelegate = self;                       // Se pne ella misma como delegado, de la lista de itemas
   
-  ListItems.MinHeight = 3*LineHeight;
+  ListItems.MinHeight = 3*LineHeight;                         // Pone latura por defecto para los items de compra
   
-  [self RefreshItems];
+  [self RefreshItems];                                        // Pone el contenido de los items de compra
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Pone o actualiza el contenido de los items de compra
 -(void) RefreshItems
   {
-  [Purchases CalculateParameters];
+  [Purchases SetViewParameters];                              // Actualiza los datos de las compras que se visualizan
 
-  int count = N_PURCH + Restore;
-  if( ListItems.Count != count )
+  int count = N_PURCH + Restore;                              // Obtiene la cantidad de items
+  if( ListItems.Count != count )                              // Si cambio la cantidad de items
     {
-    ListItems.Count = count;
+    ListItems.Count = count;                                  // Actualiza la cantidad en la lista que muestra los items
   
-    [self FillBackground];
+    [self FillBackground];                                    // Acomoda el fondo para que sea dek mismo color
   
-    [self setNeedsLayout];
-    [self.superview setNeedsLayout];
+    [self setNeedsLayout];                                    // Marca que se necesitan reposicionar las subvista de esta vista
+    [self.superview setNeedsLayout];                          // Marca que se necesitan reposicionar las subvista de la vista superior
     }
-  else
+  else                                                        // Si no cambio la cantidad de items
     {
-    [ListItems Refresh];
-    [self setNeedsLayout];
+    [ListItems Refresh];                                      // Actualiza el contenido de los items
+    [self setNeedsLayout];                                    // Marca que se necesitan reposicionar las subvista de esta vista
     }
   }
 
@@ -741,7 +750,7 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
 #define BckGrdSup          100
 #define BckGrdInf          200
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-//
+// Pone una vista en la parte superior e inferior, para que el fondo aparezca de manera homogenia con el fondo de los Items
 - (void) FillBackground
   {
   float w = ListItems.frame.size.width;

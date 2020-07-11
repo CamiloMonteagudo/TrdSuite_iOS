@@ -399,16 +399,34 @@
   
   if( _PanelTrd.NoShow==FALSE && _PanelTrd.NoText==FALSE )
     {
-    //OJO: aqui filtar la cadena de entrada
-    NSString *srcText = _PanelSrc.Text;                                     // Toma el texto de origen
-    //OJO: aqui filtar la cadena de entrada
-    NSString *trdText = _PanelTrd.Text;                                     // Texto traducido
+    NSString *srcText = [self CodText:_PanelSrc.Text];                     // Toma el texto de origen
+    NSString *trdText = [self CodText:_PanelTrd.Text];                     // Texto traducido
     
     hidden = [[Sentences Actual] ExistTrdSrc:srcText Trd:trdText];          // Determina si la traducción ya esta en la lista de oraciones
     }
   
   _TrdInfo.SaveHidden = hidden;                                            // Si existe no muestra el boton para guardar
   _TrdEdit.SaveHidden = hidden;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+static unichar cAsk = [@"¿" characterAtIndex:0];
+static unichar cExc = [@"¡" characterAtIndex:0];
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Obtiene el texto del control, codificado para la lista de oraciones (si '<', '¿' o '¡' aparecen al inicio los pone detras)
+- (NSString *)CodText:(NSString *) Txt
+  {
+  if( Txt.length == 0 ) return Txt;
+  
+  unichar c = [Txt characterAtIndex:0];
+  if( c=='<' || c==cAsk ||  c==cExc )
+    {
+    NSString *Ch1 = [Txt substringToIndex:1];
+      
+    Txt = [[Txt substringFromIndex:1] stringByAppendingString:Ch1];
+    }
+  
+  return Txt;
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -553,8 +571,8 @@
 // Guarda el texto traducido en la lista de oraciones
 - (void) OnBtnSaveTrd
   {
-  NSString *srcText = _PanelSrc.Text;                                     // Toma el texto de origen
-  NSString *trdText = _PanelTrd.Text;                                     // Toma el texto traducido
+  NSString *srcText = [self CodText:_PanelSrc.Text];                      // Toma el texto de origen
+  NSString *trdText = [self CodText:_PanelTrd.Text];                      // Toma el texto traducido
     
   Sentences* Oras = [Sentences Actual];                                   // Obtiene lista de oraciones
   int         idx = [Oras AddSrcText:srcText TrdText:trdText];            // Adiciona la fuente y la traducción a la lista
@@ -571,7 +589,7 @@
     [_ListOras SetAtTopRow: idx ];                                        // Pone la fila mas cercana en la parte de arriba de la lista
     }
     
-  [self SaveLastTrd:trdText];                                             // Guarda la ultima tradución
+  [self SaveLastTrd:_PanelTrd.Text];                                      // Guarda la ultima tradución
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -768,9 +786,8 @@
   [self.view layoutIfNeeded];
   
   Sentences* Oras = [self LoadSentences];                                 // Carga la lista de oraciones si es necesario
-  
-  //OJO: aqui filtar la cadena de entrada
-  NSString *srcText = _PanelSrc.Text;                                     // Obtiene el texto de origen
+
+  NSString *srcText = [self CodText:_PanelSrc.Text];                      // Obtiene el texto de origen
   
   int idx = [Oras IndexForSrcText:srcText];                               // Lo busca en la lista de oraciones
   if( idx<0 ) idx = 0;                                                    // No pudo buscar, pone la primera oración

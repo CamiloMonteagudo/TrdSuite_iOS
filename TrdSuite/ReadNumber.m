@@ -29,11 +29,11 @@ CentLangInfo LangEs =                             // Definiciones para ESPAÑOL
   @[ @"", @"once ", @"doce ", @"trece ", @"catorce ", @"quince " ],
   
   // Números ordinales
-  @[ @"", @"primero "  , @"segundo "    , @"tercero "     , @"cuarto "          , @"quinto "         , @"sexto "          , @"séptimo "        , @"octavo "        , @"noveno "         ],
-  @[ @"", @"decimo "   , @"vigésimo "   , @"trigésimo "   , @"cuadragésimo "    , @"quincuagésimo "  , @"sexagésimo "     , @"septuagésimo "   , @"octogésimo "    , @"nonagésimo "     ],
-  @[ @"", @"centesimo ", @"ducentésimo ", @"tricentésimo ", @"cuadringentésimo ", @"quintigentésimo ", @"sexcengentésimo ", @"septingentésimo ", @"octingentésimo ", @"noningentésimo " ],
+  @[ @"", @"primero "  , @"segundo "    , @"tercero "     , @"cuarto "          , @"quinto "       , @"sexto "       , @"séptimo "        , @"octavo "        , @"noveno "         ],
+  @[ @"", @"décimo "   , @"vigésimo "   , @"trigésimo "   , @"cuadragésimo "    , @"quincuagésimo ", @"sexagésimo "  , @"septuagésimo "   , @"octogésimo "    , @"nonagésimo "     ],
+  @[ @"", @"centésimo ", @"ducentésimo ", @"tricentésimo ", @"cuadringentésimo ", @"quingentésimo ", @"sexcentésimo ", @"septingentésimo ", @"octingentésimo ", @"noningentésimo " ],
 
-  @[ @"", @"milésimo ", @"millonésimo ", @"mil millonésimo ", @"billonésimo " ],
+  @[ @"", @"milésimo ", @"millonésimo ", @"mil millonésimo ", @"billonésimo ", @"mil billonésimo ", @"trillonésimo ", @"mil trillonésimo ", @"cuatrillonésimo ", @"mil cuatrillonésimo ", @"quintillonésimo ", @"mil quintillonésimo ", @"sextillonésimo ", @"mil sextillonésimo ", @"septillonésimo ", @"mil septillonésimo ", @"octillonésimo ", @"mil octillonésimo ", @"nonillonésimo ", @"mil nonillonésimo ", @"decillonécimo ", @"mil decillonésimo " ],
 
   @[ @"", @"undécimo ", @"duodécimo ", @"tredécimo " ],
 
@@ -42,7 +42,7 @@ CentLangInfo LangEs =                             // Definiciones para ESPAÑOL
   @[ @"", @"X", @"XX", @"XXX", @"XL", @"L", @"LX", @"LXX", @"LXXX", @"XC" ],
   @[ @"", @"C", @"CC", @"CCC", @"CD", @"D", @"DC", @"DCC", @"DCCC", @"CM" ],
 
-  @[ @"", @"M", @"MM", @"MMM", @"IV̅", @"V̅", @"V̅Ī", @"V̅ĪĪ", @"V̅ĪĪĪ" ],
+  @[ @"", @"M", @"MM", @"MMM" ],
   };
 
 
@@ -55,12 +55,12 @@ CentLangInfo LangEn =                             // Definiciones para INGLÉS
   @[ @"", @"one hundred ", @"two hundred ", @"three hundred ", @"four hundred ", @"five hundred ", @"six hundred ", @"seven hundred  ", @"eight hundred ", @"nine hundred "],
 
   // Casos especiales para las decenas y centenas exactas
-  @[ @"", @"ten "        , @"twenty "     , @"thirty "       , @"fourty "      , @"fifty "       , @"sixty "      , @"seventy "       , @"eighty "       , @"ninety "      ],
-  @[ @"", @"one hundred ", @"two hundred ", @"three hundred ", @"four hundred ", @"five hundred ", @"six hundred ", @"seven hundred  ", @"eight hundred ", @"nine hundred "],
+  @[ @"", @"ten "        , @"twenty "     , @"thirty "       , @"fourty "      , @"fifty "       , @"sixty "      , @"seventy "      , @"eighty "       , @"ninety "      ],
+  @[ @"", @"one hundred ", @"two hundred ", @"three hundred ", @"four hundred ", @"five hundred ", @"six hundred ", @"seven hundred ", @"eight hundred ", @"nine hundred "],
 
   // Sufijos utilizados para los multiplos de mil (10 a la 3) sistema corto
-  @[ @"", @"thousand "    , @"million "    , @"billion "    , @"trillion "    , @"quadrillion"     , @"quintillion "    , @"sixtillion "    , @"septillion "    , @"octillion "    , @"nonillion "   , @"decillion "    , @"undecillion "    , @"duodecillion "    , @"tredecillion "    , @"quattuordecillion "    , @"quindecillion "    , @"sexdecillion "    , @"septendecillion "    , @"octodecillion "    , @"novemdecillion "    , @"vigintillion "     ],
-  @[ @"", @"one thousand ", @"one million ", @"one billion ", @"one trillion ", @"one quadrillion ", @"one quintillion ", @"one sixtillion ", @"one septillion ", @"one octillion ", @"one nonillion", @"one decillion ", @"one undecillion ", @"one duodecillion ", @"one tredecillion ", @"one quattuordecillion ", @"one quindecillion ", @"one sexdecillion ", @"one septendecillion ", @"one octodecillion ", @"one nevemdecillion ", @"one vigintillion " ],
+  @[ @"", @"thousand "    , @"million "    , @"billion "    , @"trillion "    , @"quadrillion "     , @"quintillion "    , @"sixtillion "    , @"septillion "    , @"octillion "   , @"nonillion "    , @"decillion "    , @"undecillion "    , @"duodecillion "    , @"tredecillion "    , @"quattuordecillion "    , @"quindecillion "    , @"sexdecillion "    , @"septendecillion "    , @"octodecillion "    , @"novemdecillion "    , @"vigintillion "     ],
+  @[ @"", @"one thousand ", @"one million ", @"one billion ", @"one trillion ", @"one quadrillion ", @"one quintillion ", @"one sixtillion ", @"one septillion ", @"one octillion ", @"one nonillion ", @"one decillion ", @"one undecillion ", @"one duodecillion ", @"one tredecillion ", @"one quattuordecillion ", @"one quindecillion ", @"one sexdecillion ", @"one septendecillion ", @"one octodecillion ", @"one nevemdecillion ", @"one vigintillion " ],
  
   // Irregularidades en los numeros de la mitad inferior de las decenas
   @[ @"", @"eleven ", @"twelve ", @"thirteen ", @"fourteen", @"fiftheen ", @"sexteen ", @"seventeen ", @"eigtheen ", @"nineteen " ],
@@ -70,7 +70,7 @@ CentLangInfo LangEn =                             // Definiciones para INGLÉS
   @[ @"", @"tenth "    , @"twentieth "    , @"thirtieth "      , @"fortieth "      , @"fiftieth "      , @"sixtieth "     , @"seventieth "     , @"eightieth "      , @"ninetieth "      ],
   @[ @"", @"hundredth ", @"two hundredth ", @"three hundredth ", @"four hundredth ", @"five hundredth ", @"six hundredth ", @"seven hundredth ", @"eight hundredth ", @"nine hundredth " ],
 
-  @[ @"", @"thousandth ", @"millionth ", @"billionth ", @"trillionth " ],
+  @[ @"", @"thousandth ", @"millionth ", @"billionth ", @"trillionth ", @"quadrillonth ", @"quintillionth ", @"sixtillionth ", @"septillionth ", @"octillionth ", @"nonillionth ", @"decillionth ", @"undecillionth ", @"duodecillionth ", @"tredecillionth ", @"quattuordecillionth ", @"quindecillionth ", @"sexdicillionth ", @"septendecillionth ", @"octodecillionth ", @"novemdecillionth ", @"vigintillionth " ],
 
   @[ @"", @"eleventh ", @"twelfth ", @"thirteenth ", @"fourteenth ", @"fifteenth ", @"sixteenth ", @"seventeenth ", @"eighteenth ", @"nineteenth " ],
 
@@ -79,7 +79,7 @@ CentLangInfo LangEn =                             // Definiciones para INGLÉS
   @[ @"", @"X", @"XX", @"XXX", @"XL", @"L", @"LX", @"LXX", @"LXXX", @"XC" ],
   @[ @"", @"C", @"CC", @"CCC", @"CD", @"D", @"DC", @"DCC", @"DCCC", @"CM" ],
 
-  @[ @"", @"M", @"MM", @"MMM", @"IV̅", @"V̅", @"V̅Ī", @"V̅ĪĪ", @"V̅ĪĪĪ" ],
+  @[ @"", @"M", @"MM", @"MMM" ],
   };
 
 
@@ -107,7 +107,7 @@ CentLangInfo LangIt =                             // Definiciones para ITALIANO
   @[ @"", @"decimo "   , @"ventesimo "   , @"trentesimo "  , @"quarantesimo "   , @"cinquantesimo "  , @"sessantesimo " , @"settantesimo "  , @"ottantesimo "  , @"novantesimo "  ],
   @[ @"", @"centesimo ", @"duecentesimo ", @"trecentesimo ", @"cuatrocentesimo ", @"cinquecentesimo ", @"seicentesimo " , @"settecentesimo ", @"ottocentesimo ", @"novacentesimo" ],
 
-  @[ @"", @"millesimo" ],
+  @[ @"", @"millesimo", @"milionesimo ", @"miliardesimo ", @"bilionesimo ", @"biliardesimo ", @"trilionesimo ", @"triliardesimo ", @"quadrilionesimo ", @"quadriliardesimo ", @"quintilionesimo ", @"quintiliardesimo ", @"sestilionesimo ", @"sestiliardesimo ", @"settilionesimo ", @"settiliardesimo " ],
 
   @[ @"", @"undicesimo ", @"dodicesimo ", @"tredicesimo ", @"quattordicesimo ", @"quindicesimo ", @"sedicesimo ", @"diciassettesimo ", @"diciossettesimo ", @"diciannovesimo" ],
 
@@ -116,7 +116,7 @@ CentLangInfo LangIt =                             // Definiciones para ITALIANO
   @[ @"", @"X", @"XX", @"XXX", @"XL", @"L", @"LX", @"LXX", @"LXXX", @"XC" ],
   @[ @"", @"C", @"CC", @"CCC", @"CD", @"D", @"DC", @"DCC", @"DCCC", @"CM" ],
 
-  @[ @"", @"M", @"MM", @"MMM", @"IV̅", @"V̅", @"V̅Ī", @"V̅ĪĪ", @"V̅ĪĪĪ" ],
+  @[ @"", @"M", @"MM", @"MMM" ],
   };
 
 
@@ -144,7 +144,7 @@ CentLangInfo LangFr =                             // Definiciones para FRANCÉS
   @[ @"", @"dixième " , @"vingtième "    , @"trentième "     , @"quarantième "    , @"cinquantième " , @"soixantième " , @"soixante-dixième ", @"quatre-vingtième ", @"quatre-vingt-dixième " ],
   @[ @"", @"centième ", @"deux centième ", @"trois centième ", @"quatre centième ", @"cinq centième ", @"six centième ", @"sept centième "   , @"huit centième "   , @"neuf centième "        ],
 
-  @[ @"", @"milliéme " ],
+  @[ @"", @"milliéme ", @"millioniéme ", @"milliardiéme ", @"billioniéme ", @"billiardiéme ", @"trillioniéme ", @"trilliadiéme ", @"quadrillioniéme ", @"quadrilliardiéme ", @"quintillioniéme ", @"quintilliardiéme ", @"sextillioniéme ", @"sextilliardiéme ", @"septillioniéme ", @"octillioniéme ", @"octilliardiéme ", @"nonillioniéme ", @"nonilliardiéme ", @"decillioniéme ", @"decilliardiéme " ],
 
   @[ @"", @"onzième ", @"douzième ", @"treizième ", @"quatorzième ", @"quinzième ", @"seizième ", @"dix-septième", @"dix-huitième ", @"dix-neuvième " ],
 
@@ -153,7 +153,7 @@ CentLangInfo LangFr =                             // Definiciones para FRANCÉS
   @[ @"", @"X", @"XX", @"XXX", @"XL", @"L", @"LX", @"LXX", @"LXXX", @"XC" ],
   @[ @"", @"C", @"CC", @"CCC", @"CD", @"D", @"DC", @"DCC", @"DCCC", @"CM" ],
 
-  @[ @"", @"M", @"MM", @"MMM", @"IV̅", @"V̅", @"V̅Ī", @"V̅ĪĪ", @"V̅ĪĪĪ" ],
+  @[ @"", @"M", @"MM", @"MMM" ],
   };
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -190,25 +190,25 @@ NSArray* OneShort = @[@"un ", @"one ", @"uno ", @"un " ];
 // Pone la informacion de idioma para leer cada digito de la centena de forma regular
 -(void) SetRegularReadForLang:(CentLangInfo) info
   {
-  if( _AllCero ) return;                                                            // Todos los número son cero, no hace nada
+  if( _AllCero ) return;                                      // Todos los número son cero, no hace nada
 
-  if( _valDec==0 && _valUnid==0 )                                                   // Un número seguido de dos ceros
+  if( _valDec==0 && _valUnid==0 )                             // Un número seguido de dos ceros
     {
-    _sCent = info.CentExactas[_valCent];                                            // Pone pronuciación de las centenas solamente
-    return;                                                                         // y teramina
+    _sCent = info.CentExactas[_valCent];                      // Pone pronuciación de las centenas solamente
+    return;                                                   // y teramina
     }
 
-  if( _valUnid==0 )                                                                // El último número de la centena es cero
+  if( _valUnid==0 )                                           // El último número de la centena es cero
     {
-    _sDec = info.DeceExactas[_valDec];                                              // Pone pronuciación de las decenas (ignora las unidades)
+    _sDec = info.DeceExactas[_valDec];                        // Pone pronuciación de las decenas (ignora las unidades)
 
-    if( _valCent != NoDef )                                                        // Si el valor de las centenas esta definido
-      _sCent = info.Centenas[_valCent];                                             // Pone pronunciación de las centenas
+    if( _valCent != NoDef )                                   // Si el valor de las centenas esta definido
+      _sCent = info.Centenas[_valCent];                       // Pone pronunciación de las centenas
 
-    return;                                                                       // Termina
+    return;                                                   // Termina
     }
 
-  _sUnid = info.Unidades[_valUnid];                                                 // No hay terminaciones en cero, pone pronunciación de los 3 digitos
+  _sUnid = info.Unidades[_valUnid];                           // No hay terminaciones en cero, pone pronunciación de los 3 digitos
 
   if( _valDec  != NoDef ) _sDec  = info.Decenas[_valDec];
   if( _valCent != NoDef ) _sCent = info.Centenas[_valCent];
@@ -227,15 +227,15 @@ NSArray* OneShort = @[@"un ", @"one ", @"uno ", @"un " ];
 // Maneja como se lee un número en un idioma determinado
 @interface ReadNumber ()
   {
-  int       lng;                                             // Idioma que se esta trabajando
-  NSString* Num;                                             // Cadena con el número que se esta analizando
+  int       lng;                          // Idioma que se esta trabajando
+  NSString* Num;                          // Cadena con el número que se esta analizando
 
-  BOOL   ParCol;                                             // Define color par o inpar para el texto
+  BOOL   ParCol;                          // Define color par o inpar para el texto
   
-  // bool negative;                                          // Indica si el número es negativo
+  // bool negative;                                  // Indica si el número es negativo
 
-  CentLangInfo    LngInfo;                                   // Información de idioma para leer el número
-  NSMutableArray* NumInfo;                                   // Informacion sobre el número actual expresado como una lista de centenas
+  CentLangInfo    LngInfo;                // Información de idioma para leer el número
+  NSMutableArray* NumInfo;                // Informacion sobre el número actual expresado como una lista de centenas
   }
 @end
 
@@ -399,7 +399,7 @@ NSArray* sCeros = @[ @"cero ", @"zero ", @"zero ", @"zéro " ];                 
 
 //----------------------------------------------------------------------------------------------------------------------------------------------
 // Procesa el numero expresado a traves de la cadena 'sNum'
--(void) ProcessStrNum:(NSString*) num
+-(BOOL) ProcessStrNum:(NSString*) num
   {
   int len = (int)num.length;
   
@@ -414,7 +414,7 @@ NSArray* sCeros = @[ @"cero ", @"zero ", @"zero ", @"zéro " ];                 
     [NumInfo addObject: cent ];                                                   // Guarda la información en 'NumInfo' agrupada en centenas
     }
 
-  if( NumInfo.count == 0 ) return;
+  if( NumInfo.count == 0 ) return FALSE;
   
   [self FixLowDecenas];                                                           // Aregla la parte inferior de las decenas Ej: 12, 13, 14 ...
   [self SetLargeSufixes];                                                         // Pone los sifijos a las centenas de acuerdo a su posición en el número
@@ -422,6 +422,8 @@ NSArray* sCeros = @[ @"cero ", @"zero ", @"zero ", @"zéro " ];                 
   if( lng == 1 ) [self SetAnd];
   if( lng == 2 ) [self FixUnoOcho];
   if( lng == 3 ) [self FixFrenchDec];
+  
+  return TRUE;
   }
 
 //----------------------------------------------------------------------------------------------------------------------------------------------
@@ -489,11 +491,11 @@ NSArray* sCeros = @[ @"cero ", @"zero ", @"zero ", @"zéro " ];                 
     {
     CenteInfo* cent = NumInfo[i];
     
-    if( cent.valDec>1 && (cent.valUnid == 8 || cent.valUnid == 1) )
-        cent.sDec = [cent.sDec substringToIndex: cent.sDec.length-1 ];
+    if( cent.valDec>1 && (cent.valUnid == 8 || cent.valUnid == 1) )       // Si las decenas son mayor que 1 y termina en 1 o en 8 Ej: 21, 28, 31, 28, etc
+        cent.sDec = [cent.sDec substringToIndex: cent.sDec.length-1 ];    // Se le substrae la última letra al nombre de las decenas
       
-    if( cent.valDec>1 && cent.valUnid == 3 )
-        cent.sUnid = @"tré";
+    if( cent.valDec>1 && cent.valUnid == 3 )                              // Si el números es mayor que 20 y termina en 3 como: 23, 33, 43, 53...
+        cent.sUnid = @"tré";                                              // Si el números es mayor que 20 y termina en 3 como: 23, 33, 43, 53...
     }
   }
 
@@ -505,11 +507,15 @@ NSArray* sCeros = @[ @"cero ", @"zero ", @"zero ", @"zéro " ];                 
     {
     CenteInfo* cent = NumInfo[i];
     
-    if( cent.valDec > 1 && cent.valUnid == 1)
-        cent.sDec = [LngInfo.DeceExactas[cent.valDec] stringByAppendingString: @"et "];
+    if( cent.valDec > 1 && cent.valUnid == 1)                                           // Si el número es mayor que 20 y termina en 1, como: 21, 31, 41....
+        cent.sDec = [LngInfo.DeceExactas[cent.valDec] stringByAppendingString: @"et "]; // El nombre de las decenas es el mismo que el de las decenas exactas más "et"
       
-    if( cent.valDec == 7 || cent.valDec == 9 )
-       cent.sUnid = LngInfo.FixDecenas[cent.valUnid];
+    if( cent.valDec == 7 || cent.valDec == 9 )                                          // Si el valor de las decenas es 7 o 9
+      {
+      cent.sUnid = LngInfo.FixDecenas[cent.valUnid];                                    // El valor de las unidades es el de las decenas especiales como once, doce, trece
+      if( cent.valUnid != 0 )                                                           // Si no es una decena exacta
+        cent.sDec = LngInfo.Decenas[cent.valDec-1];                                     // El nombre de las decenas es el mismo que el de la decena anterior
+      }
     }
   }
 
@@ -517,10 +523,14 @@ NSArray* sCeros = @[ @"cero ", @"zero ", @"zero ", @"zéro " ];                 
 // Añade and en la última centena en los números en inglés
 -(void) SetAnd
   {
-  CenteInfo* cent = NumInfo[0];
+  if( NumInfo.count==0 ) return;
   
-  if( cent.valCent >= 1 )
-     cent.sCent = [cent.sCent stringByAppendingString: @"and "];
+  CenteInfo* cent = NumInfo[0];                                                  // Obtiene información de la centena actual
+  if( cent.valUnid != 0 || cent.valDec != 0 )
+    {
+    if( cent.valCent >= 0 )
+      cent.sCent = [cent.sCent stringByAppendingString:@"and "];
+    }
   }
 
 //----------------------------------------------------------------------------------------------------------------------------------------------
@@ -574,102 +584,144 @@ NSArray* sCeros = @[ @"cero ", @"zero ", @"zero ", @"zéro " ];                 
 //=============================================================================================================================================
 
 //----------------------------------------------------------------------------------------------------------------------------------------------
-// Obtiene la cadena resultante de leer la cadena númerica 'sNum'
--(NSString*) ReadOrdinal
+// Procesa la información de los números ordinales
+- (NSString*) ReadOrdinalString
   {
   NSString* sNum = [self StringClearIniCeros: false ];                            // Limpia la cadena de los caracteres no significativos
   [self ProcessStrNum:sNum];
   
-  [self SimpleOrd];                                                               // Controla la pronunciacion normal de los números ordinales
-  [self FixDecOrd];                                                               // Arregla los casos especiales de las decenas ordinales
-  [self SufixOrd ];                                                               // Añade los sugijos correspondientes a los números ordinales
-      
-  if( lng==2 )                                                                    // Si el idioma es italiano
-    [self EspecialOrdIT];                                                         // Arregla la pronunciacion de los números ordinales en italiano
-
-  if( lng==3 )                                                                    // Si el idioma es francés
-    [self EspecialOrdFR];                                                         // Arregla la pronunciación de los números ordinales en francés
-
+  if( NumInfo.count==0 ) return @"";
+  
+  [self RegularOrdinalIniCent];                                                  // Controla la pronunciacion normal de los números ordinales
+  [self FixPrimerosNum];                                                         // Arregla los primeros números ej: "primero ", "segundo ", "tercero"
+  
+  if( lng == 0 ) [self IrregES];                                                 // Si el idioma es Español
+  if( lng == 1 ) [self IrregEN];                                                 // Si el idioma es Inglés
+  if( lng == 2 ) [self IrregIT];                                                 // Si el idioma es Italiano
+  if( lng == 3 ) [self IrregFR];                                                 // Si el idioma es Francés
+  
+  [self SufixOrd];                                                               //Añade los sufijos correspondientes a los números ordinales
+  
   return [self StringNumber];
   }
-//----------------------------------------------------------------------------------------------------------------------------------------------
-// Pronunciación regular de los números ordinales hasta las centenas
--(void) SimpleOrd
-  {
-  for( int i = 0; i<NumInfo.count; ++i )
-    {
-    CenteInfo* cent = NumInfo[i];
-    cent.sUnid = LngInfo.UnOrd[cent.valUnid];                                       // Pronunciación de los unidades de los numeros ordinales
-       
-    if( cent.valDec>0 )                                                             // Si las decenas existen
-      cent.sDec = LngInfo.DecOrd[cent.valDec];                                      // Pronunciación de las decenas de los números ordinales
 
-    if( cent.valCent>0 )                                                            // Si las centenas existen
-      cent.sCent = LngInfo.CenOrd[cent.valCent];                                    // Pronunciación de las centenas
+//----------------------------------------------------------------------------------------------------------------------------------------------
+NSString* Term[] = {@"ésimo ", @"th ", @"esimo ", @"ième  "};                    // Terminación de los números ordinales
+//----------------------------------------------------------------------------------------------------------------------------------------------
+// Pronunciación regular de los números ordinales de la primera centena
+-(void) RegularOrdinalIniCent
+  {
+  CenteInfo* cent = NumInfo[0];
+  
+  if( cent.sUnid!=nil && cent.sUnid.length > 0 )                    // Si el existen unidades o el conjunto de las unidades no está vacio
+    {
+    NSString* s = cent.sUnid;
+    s = [s substringToIndex:s.length-1];                            // Quita el ultimo caracter (sepacio)
+    
+    cent.sUnid  = [s stringByAppendingString:Term[lng]];            // Le añade a las unidades la terminación de los números  ordinales
+    }
+  
+  else if( cent.sDec!=nil && cent.sDec.length>0 )                   // Sino hay decenas o el conjunto de las decenas no está vacia
+    {
+    NSString* s = cent.sDec;
+    
+    if( lng!=2 )                                                    // Menos el Italiano
+      s = [s substringToIndex:s.length-1];                          // Quita el ultimo caracter (espacio)
+    
+    cent.sDec = [s stringByAppendingString:Term[lng]];              // Le añade terminación de ordinales
+    }
+  
+  else if( cent.sCent!=nil && cent.sCent.length>0 )                 // Sino hay centenas o el conjunto de las centenas no está vacio
+    {
+    NSString* s = cent.sCent;
+    s = [s substringToIndex:s.length-1];                            // Quita el ultimo caracter (sepacio)
+    
+    cent.sCent  = [s stringByAppendingString:Term[lng]];            // Le añade terminación de ordinales
     }
   }
 
 //----------------------------------------------------------------------------------------------------------------------------------------------
-// Para los casos especiales de las decenas
--(void) FixDecOrd
+// Para arreglar los primeros números
+-(void) FixPrimerosNum
   {
-  for( int i=0; i<NumInfo.count; ++i )
+  CenteInfo* cent = NumInfo[0];
+  
+  if( cent.valDec<0 && cent.valUnid > 0 )                   // Ve si está entre los números del 1 al 10
+    cent.sUnid = LngInfo.UnOrd[cent.valUnid];               // Pone el nombre irregular de los primeros números como: primero, segundo, tercero etc..
+  }
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+// Arregla las irregularidades en Español
+- (void) IrregES
+  {
+  CenteInfo* cent = NumInfo[0];
+  
+  cent.sUnid = LngInfo.UnOrd[cent.valUnid];                             // Pone la pronunciación de las unidades en los números ordinales Ej: primero, segundo
+  
+  if(cent.valDec > 0)                                                   // Si hay decenas
+    cent.sDec = LngInfo.DecOrd[cent.valDec];                            // Pone el nombre especial de las decenas Ej: décimo, vigésimo, etc
+  
+  if(cent.valCent > 0)                                                  // Si hay centenas
+    cent.sCent = LngInfo.CenOrd[cent.valCent];                          // Pone el nombre de las centenas como: centésimo, vigentésimo, etc
+  
+  if(cent.valDec == 1 && cent.valUnid > 0 && cent.valUnid < LngInfo.FixDecOrd.count)       // Si es de los números 11, 12, 13, 14, etc
     {
-    CenteInfo* cent = NumInfo[i];
-    if( cent.valDec==1 && cent.valUnid>0 && cent.valUnid<LngInfo.FixDecOrd.count )  // Ve si el número está entre el 11 , 12, 13...
-      {
-      cent.sDec = LngInfo.FixDecOrd[cent.valUnid];                                  // Pone el nombre del número correspondiente
-      cent.sUnid = @"";                                                             // Borra el nombre de las unidades
-      }
+    cent.sUnid = @"";                                                   // Vacia las unidades
+    cent.sDec = LngInfo.FixDecOrd[cent.valUnid];                        // Pone la pronunciación de las decenas especiales en los num ordinales
     }
   }
 
-//----------------------------------------------------------------------------------------------------------------------------------------------
-// Casos especiales en italiano
--(void) EspecialOrdIT
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+// Arregla las irregularidades en inglés
+- (void) IrregEN
   {
-  for( int i = 0; i<NumInfo.count; ++i )
+  CenteInfo* cent = NumInfo[0];
+  
+  if( cent.valDec >= 0 || cent.valCent >=0 )                            // Si el número tiene decenas o centenas
+    cent.sUnid = LngInfo.UnOrd[cent.valUnid];                           // Pone en las unidades los números especiales Ej: first, second, third, etc
+  
+  if( cent.valDec == 1 && cent.valUnid < LngInfo.FixDecOrd.count )
     {
-    CenteInfo* cent = NumInfo[i];
-    if (cent.valDec >= 0 && cent.valDec !=1)                                        // Si existen las decenas y si no es el caso especial de 11, 12, 13, etc
-      {
-      cent.sDec = LngInfo.Decenas[cent.valDec];                                     // Las decenas toman el nombre del número regular
-      
-      if( cent.valCent>0 )                                                          // Si hay decenas
-        cent.sCent = LngInfo.Centenas[cent.valCent];                                // Las centenas toman su valor regular
-        
-     if( cent.valUnid>0 )
-       cent.sUnid = [cent.sUnid substringToIndex: cent.sUnid.length-1 ];            // A las unidades se le quita la última letra y se le añade la terminación "ésimo"
-     else
-       cent.sUnid = LngInfo.Unidades[cent.valUnid];                                 // Las unidades toman su valor regular
- 
-      
-     cent.sUnid = [cent.sUnid stringByAppendingString: @"esimo"];
-     }
+    cent.sUnid = @"";                                                   // Vacia las unidades
+    cent.sDec = LngInfo.FixDecOrd[cent.valUnid];                        // Pone la pronunciación de las decenas especiales en los num ordinales
     }
+  
+  if( cent.valUnid==0 )                                                 // Si es una decena exacta, si termina en cero
+    cent.sDec = LngInfo.DecOrd[cent.valDec];                            // Pone el nombre especial de las decenas en los números ordinales
   }
 
-//----------------------------------------------------------------------------------------------------------------------------------------------
-// Casos especiales en francés
--(void) EspecialOrdFR
+//---------------------------------------------------------------------------------------------------------------------------------------------------
+// Arregla las irregularidades en Italiano
+- (void) IrregIT
   {
-  for(int i = 0; i<NumInfo.count; ++i)
+  CenteInfo* cent0 = NumInfo[0];
+  
+  if( cent0.valDec == 1 && cent0.valUnid == 0 )                         // Si el número es 10
+    cent0.sDec = @"decimo ";                                            // Pone decimo
+  
+  if((cent0.valUnid == 3 || cent0.valUnid == 6) && cent0.valDec > 1)     // Si el número termina en 3 o 6 y es mayor que 20, como: 23, 26, 33, 36, 43, 46
+    cent0.sUnid = [LngInfo.Unidades[cent0.valUnid] stringByAppendingString:@"esimo "];  // Pone el nombre normal del número cardinal y le añade la terminación de los ordinales
+  }
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Arregla las irregularidades en Francés
+- (void) IrregFR
+  {
+  for(int i = 0; i < NumInfo.count; ++i)
     {
     CenteInfo* cent = NumInfo[i];
-    if( cent.valDec>1 && cent.valUnid>0 )                                           // Si las decenas existen y no son exactas ni el caso especial de 11, 12, 13, etc
-      cent.sDec = LngInfo.Decenas[cent.valDec];                                     // Para que las decenas tomen su valor regular
-       
-    if( cent.valUnid==1 && cent.valDec>1 )                                          // Si las unidades son 1 y las decenas son mayores que 1
-      cent.sUnid = @"et unième ";                                                   // Las unidades se pronuncian "et uniéme"
-      
-    if( cent.valUnid==1 && cent.valDec==0 )                                         // Caso especial si las unidades son 1 y exactas
-      cent.sUnid = @"unième ";                                                      // Las unidades se pronuncian "unieme"
-
-    if( cent.valDec==7 || cent.valDec==9 )
-      cent.sUnid = LngInfo.FixDecOrd[cent.valUnid];
-
-    if( cent.valCent>0 && cent.valUnid>0 )
-      cent.sCent = LngInfo.Centenas[cent.valCent];                                  // Las centenas toman su valor regular
+    
+    if(cent.valUnid > 1 && cent.valDec > 1)                             // Si el número no termina ni en 0 ni en 1 y es mayor que 20, como: 21, 21, 34, 35, 45, etc
+      cent.sUnid = LngInfo.UnOrd[cent.valUnid];                         // Las unidades cambian a su valor especial de los números ordinales
+    
+    if(cent.valDec == 1 && cent.valUnid > 0)                            // Si el número está entre 11 y 19
+      cent.sDec = LngInfo.FixDecOrd[cent.valUnid];                      // Las decenas toman el valor característicos de las decenas especiales ordinales
+    
+    if(cent.valDec == 7 || cent.valDec == 9)                            // Si las decenas son 7 o 9, si el número es 70 o 90
+      cent.sUnid = LngInfo.FixDecOrd[cent.valUnid];                     // Las unidades toman el valor de las decenas especiales ordinales como: once, doce, trece, etc
+    
+    if(cent.valUnid == 0 && cent.valDec > 1)                            // Si es una decena exacta
+      cent.sDec = LngInfo.DecOrd[cent.valDec];                          // Pone la pronunciación de las decenas ordinales
     }
   }
 
@@ -677,43 +729,37 @@ NSArray* sCeros = @[ @"cero ", @"zero ", @"zero ", @"zéro " ];                 
 // Para poner los sufijos a los números ordinales
 -(void) SufixOrd
   {
-  for( int i=1; i< NumInfo.count; ++i )                                             // Recorre todas las centenas (Saltandose la primera)
-    {
-    CenteInfo* cent = NumInfo[i];
-    
-    if( cent.AllCero ) continue;
-     
-    cent.sUnid = LngInfo.Unidades[cent.valUnid];                                    // Las unidades toman el valor de las del número regular
-    if( cent.valUnid>0 && lng==0 )
-      cent.sUnid = [cent.sUnid substringToIndex: cent.sUnid.length-1 ];             // Si el idioma es español se le borra el espacio al nombre del número
+  if( NumInfo.count <= 1 ) return;
   
-    if( cent.valDec>0 )
+  CenteInfo* centIni = NumInfo[0];
+  bool LstSufix     = !centIni.AllCero  ;
+  
+  for( int i=1; i< NumInfo.count; ++i )                                                    // Recorre todas las centenas (Saltandose la primera)
+    {
+    if( lng==0 && i>1 && i%2!=0 ) continue;
+    
+    CenteInfo* cent = NumInfo[i];
+    if( cent.Subfix==nil || cent.Subfix.length==0 ) continue;
+    
+    if( lng==0 )
       {
-      cent.sDec = LngInfo.Decenas[cent.valDec];                                     // Las decenas toman el valor del número regular
-      [self FixLowDecenas];                                                         // Para ajustar las decenas bien, en el caso especial de 11, 12, 13, etc
-
-      if( cent.valUnid==0 && cent.valCent<0 )                                       // Si las decenas son exactas, coomo en el caso de 10, 20, 30, etc
-        cent.sDec = LngInfo.DeceExactas[cent.valDec];                               // El valor de las decenas es exacto
-        
-      if( (cent.valDec == 1 || cent.valDec > 2) && lng==0 )                         // Si el idioma es español, y las decenas son iguales que 1 y mayor que 2(sin incluir el 2)
-       cent.sDec = [cent.sDec substringToIndex: cent.sDec.length-1 ];               // Se le quita el espacio a las decenas
-      }
-
-    if( cent.valCent>0 )
-      {
-      cent.sCent = LngInfo.Centenas[cent.valCent];                                  // Las centenas toman su valor regular
-
-      if( cent.valDec==0 && cent.valUnid==0 )                                       // Si son centenas exactas como: 100, 200, 300, etc
-       cent.sCent = LngInfo.CentExactas[cent.valCent];                              // Pone el valor de las decenas exactas
-
-      if( lng==0 )
-        cent.sCent = [cent.sCent substringToIndex: cent.sCent.length-1 ];           // Si el idioma es español quita el espacio de las centemas
-      }
+           if( cent.sUnid !=nil && cent.sUnid.length > 0 ) cent.sUnid = [cent.sUnid substringToIndex: cent.sUnid.length-1];
+      else if( cent.sDec  !=nil && cent.sDec.length  > 0 ) cent.sDec  = [cent.sDec  substringToIndex: cent.sDec.length-1 ];
+      else if( cent.sCent !=nil && cent.sCent.length > 0 ) cent.sCent = [cent.sCent substringToIndex: cent.sCent.length-1];
       
-    if( i<LngInfo.SufixOrd.count )
-      cent.Subfix = LngInfo.SufixOrd[i];                                              // Pone el sufijo correspondiente de los números ordinales
-    else
-      cent.Subfix = LngInfo.SufixPlural[i];                                           // Pone el sufijo correspondiente de los números ordinales
+      cent.Subfix = LngInfo.SufixOrd[i];                                                       //Pone el sufijo correspondiente de los números ordinales
+      }
+    
+    if( lng!=0 && LstSufix==false && !cent.AllCero)
+      {
+      if( lng == 1 && (cent.valCent <= 0 && cent.valDec <= 0 && cent.valUnid == 1) )
+        cent.sUnid = OneShort[lng];
+        
+      cent.Subfix = LngInfo.SufixOrd[i];                                                       //Pone el sufijo correspondiente de los números ordinales
+        
+      LstSufix = true;
+      }
+    
     }
   }
 
@@ -742,7 +788,7 @@ NSArray* sCeros = @[ @"cero ", @"zero ", @"zero ", @"zéro " ];                 
   return [self StringNumber];
   }
 
-//----------------------------------------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------------------------------------
 // Pronunciación simple de los números romanos
 -(void) SimpleRom
   {

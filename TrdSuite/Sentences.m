@@ -437,7 +437,7 @@ Sentences* NowOras;
 
 #define FindOpt    (NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch)
 //---------------------------------------------------------------------------------------------------------------------------
-// Busca una oración, se
+// Busca la oración 'sKey' en el arreglo 'Array', retorna en 'Idx' el indice mas cercano y retorna si la encontro
 -(BOOL) Find:(NSString*) sKey InIndex:(NSArray*) Array  ReturnIdx:(int*) Idx
 		{
 		NSComparisonResult ret = 0;                                         // Resultado de la comparación

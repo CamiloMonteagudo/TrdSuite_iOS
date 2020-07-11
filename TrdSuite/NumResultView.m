@@ -178,8 +178,9 @@
     }
   
   txtCardinal.attributedText = Text;
-  txtOrdinal.text  = [rn ReadOrdinal];
-  txtRomano.text   = [rn ReadRomano ];
+  
+  txtOrdinal.text = [rn ReadOrdinalString];
+  txtRomano.text  = [rn ReadRomano ];
   
   [self setNeedsLayout];
   }

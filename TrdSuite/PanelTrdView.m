@@ -343,13 +343,13 @@
   lstWidth = w;
     
   float xLabel = SEP_BRD + SEP_TXT;                           // Magnitud en la x donde se va a posicionar el label de traducir
+  CGSize sz    = lbTrd.attributedText.size;                   // Tamaño del label de traducción
   
   float yBar, xBar;
-  if( w>370 )                                                 // Si hay mucho espacio, pone el label al lado
+  if( w-(xLabel+sz.width+[LGBar ButtonsWidth]) > BTN_W )     // Si hay mucho espacio, pone el label al lado
     {
     yBar = 0;                                                 // Y, la barra en la parte superior de la vista
     
-    CGSize sz = lbTrd.attributedText.size;
     xBar = sz.width + xLabel;                                 // X, de la barra a continuación del label de traducción
     
     float hText = LGBar.frame.size.height- SEP_TXT;

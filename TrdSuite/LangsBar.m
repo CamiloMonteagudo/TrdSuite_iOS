@@ -535,6 +535,13 @@
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Retorna el ancho ocupado por los botones de idioma
+-(float) ButtonsWidth
+  {
+  return INI_SEP + nLngs*(BTN_H+BTN_SEP) - BTN_SEP + szTitle;            // Ancho total requerido para todos los botones
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Obtiene el desplazamiento del primer boton de la barra
 -(float) GetXOffset
   {
@@ -606,7 +613,6 @@
       [self CreateButtonMenu:Width];                                          // Crea el boton del menú
       }
     }
-  
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------

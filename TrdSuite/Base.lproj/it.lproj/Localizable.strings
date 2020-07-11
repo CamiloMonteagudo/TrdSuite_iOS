@@ -1,0 +1,53 @@
+/* 
+  En.strings
+  TrdSuite
+
+  Created by Camilo on 31/05/15.
+  Copyright (c) 2015 Softlingo. All rights reserved.
+*/
+"UserLang" = "2";
+
+"WrdNoFound" = "La parola non è stata trovata nel dizionario";
+"NoVerb"     = "Non sembra essere un verbo";
+"NoConjWord" = "La parola non si è potuta coniugare";
+
+"TitlePurchases" = "Shopping";
+"TitleRoots"     = "Radici";
+"TitleMeans"     = "Significati";
+"TitleEdit"      = "Modifica";
+"Traslate"       = "Traduci a:";
+
+"TrdTip"   = "Scrivi un testo è ";
+"ConjTip"  = "Scrivi un verbo è ";
+"DictTip"  = "Parola o Frase è ";
+"NumTip"   = "Scrivi un numero";
+
+"ConjMode0"    = "Coniugazioni (per parola)";
+"ConjMode1"    = "Coniugazioni (per modo)";
+"ConjMode2"    = "Coniugazioni (per persona)";
+
+"Options"    = "OPZIONI";
+"MnuDict"    = "Dizionario";
+"MnuConj"    = "Coniuga";
+"MnuNums"    = "Numeri";
+"MnuSetting" = "Impostazioni";
+
+"ModTranlation"  = "Traduzione";
+"ModConjugation" = "Coniugazione";
+
+"NumLabel" = "Lettura del numero:";
+"GroupAll" = "Tutto";
+"Group2"   = "Due cifre";
+"Group3"   = "Tre cifre";
+
+"NoInternet" = "Impossible connettersi a iTunes Store";
+"lbClose"    = "OK";
+"Error"      = "Errore";
+"Restore"    = "Ripristinare gli acquisti";
+"TransError" = "Si è verificato un errore nella transazione";
+"lbFontSize" = "Dimensione testo: ";
+"lbLangs"    = "Lingue disponibili";
+
+"lbCardinal" = "Numero cardinale:";
+"lbOrdinal"  = "Numero ordinale: ";
+"lbRomano"   = "Numeri romani:";

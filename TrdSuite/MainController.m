@@ -34,19 +34,14 @@
   BOOL OutSelf;                           // Bandera que indica que el controlador principal es otro
   id Observer;
   }
+  
+@property (weak, nonatomic) IBOutlet UIImageView *LaunchImage;
 
 @property (weak, nonatomic) IBOutlet LangsPanelView *PanelSrc;
-
 @property (weak, nonatomic) IBOutlet PanelTrdView *PanelTrd;
-
 @property (weak, nonatomic) IBOutlet MainView *FrameView;
-
 @property (weak, nonatomic) IBOutlet VirtualListView *ListOras;
-
 @property (weak, nonatomic) IBOutlet TrdInfoView* TrdInfo;
-
-@property (weak, nonatomic) IBOutlet ModuleLabelView *ModuleTitle;
-
 @property (weak, nonatomic) IBOutlet TrdEditView *TrdEdit;
 
 @end
@@ -119,32 +114,53 @@
                                           
                                             [History ClearItemsHeight];
                                             [_ListOras Refresh];
-                                            
-                                            [_ModuleTitle RefreshLabel];
                                             }
                                           }];
   _ParamWord = @"";
   _ParamSrc  = LGSrc;
   _ParamDes  = LGDes;
+
+  UIImage* img = LoadLaunchImage();
+  if( img != nil )
+    {
+    _LaunchImage.image = img;
+    
+    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(CloseLaunch:) userInfo:nil repeats:NO];
+    }
+  else
+    {
+    _LaunchImage.hidden = TRUE;
+    };
+  }
+
+//---------------------------------------------------------------------------------------------------------------------------------------------
+// Se llama cuando termina el tiempo de mustra de la imagen inicial
+- (void)CloseLaunch: (NSTimer *) timer
+  {
+  [UIView animateWithDuration:2
+                   animations:^{
+                               _LaunchImage.alpha = 0;
+                               }
+                   completion:^(BOOL finished)
+                               {
+                               _LaunchImage.hidden = TRUE;
+                               }];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-- (void)viewDidAppear:(BOOL)animated
+
+- (void)viewWillAppear:(BOOL)animated
   {
   _ListOras.MinHeight = LineHeight;                                   // Define la altura minima de las filas en la lista de oraciones
-  
-  NSString* Title = NSLocalizedString(@"ModTranlation", nil);         // Obtiene el titulo del módulo
-  
-  [_ModuleTitle ShowLabel:Title InFrame:self.view.bounds ];           // Pone un cartel temporal con el nombre del modulo
   
   [self FindOnHistory];                                               // Busca en la historia la oración actual
   }
 
-//- (void)viewDidDisappear:(BOOL)animated
-//  {
-//  NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
-//  [center removeObserver:Observer];
-//  }
+- (void)viewDidUnload
+  {
+  NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
+  [center removeObserver:Observer];
+  }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 - (void)CalculateEditMaxHeigth
@@ -185,11 +201,18 @@
   if( LGSrc == LGSrcOld ) return;                                     // Si es el mismo idioma no hace nada
     
   [self SaveLastTrd: nil];                                            // Guarda último texto traducido
-  lastLen = (int)_PanelSrc.Text.length;                                    // Longitud del texto actual
+  lastLen = (int)_PanelSrc.Text.length;                               // Longitud del texto actual
     
   _PanelTrd.SelLng = LGInferedDes(LGSrcOld);                          // Obtiene un idioma destino
   _PanelTrd.NoText = TRUE;                                            // Quita el idioma de traducción
   [_PanelTrd layoutIfNeeded];                                         // Fuerza a que la pantalla se actualice inmediatamente
+    
+  [self ClearMarkText];                                               // Quita las palabras que esten marcadas
+  if( _TrdInfo.Mode != MODE_CMDS )                                    // Si esta mostrando información las palabras
+    {
+    [self GetMarkedWord];                                             // Obtiene la palabra macada
+    [self ProcessMarkWord];                                           // La procesa
+    }
     
   [self LoadHistory];                                                 // Carga o inicializa la historia si es necesario
   [self FindOnHistory];                                               // Busca la oracion actual en la historia
@@ -286,8 +309,6 @@
 // Se llama cuando se toca una de la banderas de idiomas a traducir
 - (void) OnBtnTrd
   {
- // _TrdInfo.Mode = MODE_CMDS;
-  
   NSString *srcText = _PanelSrc.Text;                                     // Toma el texto de origen
   NSString *trdText = [self TranslateText: srcText];                      // Lo manda a traducir
 
@@ -298,7 +319,18 @@
   
   _TrdInfo.SaveHidden = exist;                                            // Si existe no muestra el boton para guardar
     
-  [self ClearMarkText];                                                   // Procesa las palabra marcada, si procede
+  if( _TrdInfo.ModeBtnCenter == BtnCenterInfoTrd )                        // Si se esta mostrando información sobre el texto trducido
+    {
+    [self GetMarkedWord];                                                 // Obtiene una nueva, a partir de la primera palabra
+    }
+  else
+    {
+    _TrdInfo.ModeBtnCenter = -1;                                          // Fuerza a que se redibuje el boton central
+    [_TrdInfo UpdateButtons];                                             // Recalacula y redibuja el boton central
+    }
+    
+  [self ProcessMarkWord];                                                 // Procesa las palabra marcada
+  
   [self FindOnHistory];                                                   // Busca en la historia la oreción traducida
     
   // Pone parametros por defecto para otras vistas
@@ -369,18 +401,19 @@
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Determina el modo que se debe mostrar el boton central
-// 0- No se muestra, 1- Muestra panel de traducción, 2- Información de texto fuente, 3-Información de texto traducido
+// BtnCenterHide    - No se muestra,               BtnCenterDown    - Muestra panel de traducción,
+// BtnCenterInfoSrc - Información de texto fuente, BtnCenterInfoTrd - Información de texto traducido
 - (int) GetBtnCenterMode
   {
-  if( _PanelTrd.NoShow ) return 1;
+  if( _PanelTrd.NoShow ) return BtnCenterDown;
   
   if( _TrdInfo.Mode != MODE_CMDS )
     {
-    if( _OnTextTrd ) return 3;
-    else             return 2;
+    if( _OnTextTrd ) return BtnCenterInfoTrd;
+    else             return BtnCenterInfoSrc;
     }
   
-  return 0;
+  return BtnCenterHide;
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -406,9 +439,9 @@
   {
   switch (_TrdInfo.ModeBtnCenter)
     {
-    case 1: _PanelTrd.NoShow = FALSE; break;
-    case 2: self.OnTextTrd   = TRUE ; break;
-    case 3: self.OnTextTrd   = FALSE; break;
+    case BtnCenterDown   : _PanelTrd.NoShow = FALSE; break;
+    case BtnCenterInfoSrc: self.OnTextTrd   = TRUE ; break;
+    case BtnCenterInfoTrd: self.OnTextTrd   = FALSE; break;
     }
   }
 
@@ -632,6 +665,7 @@
     
     ConjCtrller.Verb   = _ParamWord;
     ConjCtrller.lngSrc = _ParamSrc;
+    ConjCtrller.lngDes = _ParamDes;
     }
   else if( [sID isEqualToString:@"NumsSegue"] )
     {
@@ -871,11 +905,19 @@
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
+- (NSUInteger)supportedInterfaceOrientations
+  {
+  if( _LaunchImage.hidden )
+    return UIInterfaceOrientationMaskAll;
+  else
+    {
+    return UIInterfaceOrientationMaskPortrait;
+    }
+  }
+
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration
   {
   scrnWidth  = self.view.bounds.size.width;
-  
-  _ModuleTitle.hidden = TRUE;
   }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation

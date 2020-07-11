@@ -18,6 +18,7 @@
 @interface Purchases : NSObject <SKPaymentTransactionObserver, SKProductsRequestDelegate>
 
   +(void) Initialize;
+  +(void) RequestProdInfo;
   +(void) SetPurchasedItem:(int) idx;
   +(BOOL) PurchaseProdIndex:(int) idx;
   +(void) CalculateParameters;
@@ -31,7 +32,6 @@
 
   - (id)initWithFromView:(UIView*)view;
   - (void) SelPurchasesSrc:(int) src Des:(int) des;
-  - (void) Close;
 
 @end
 

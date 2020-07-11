@@ -296,7 +296,7 @@ CStringA ReduceWord(const CStringA& aVerbo, int Lang)
 // Obtiene el directorio donde estan todos los diccionarios
 CStringA getDictPath()
   {
-  return [[[NSBundle mainBundle] bundlePath] cStringUsingEncoding:NSUTF8StringEncoding ];
+  return [[[NSBundle mainBundle] bundlePath] cStringUsingEncoding:NSISOLatin1StringEncoding ];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -529,13 +529,13 @@ cjData FrConjData[] = {
   {mGERUNDIO,   PRESENTE , PRIMERAP, SINGULAR, false,  "Participe Pr\351sent"            , ""              },
   {mPARTICIPIO, PRESENTE , PRIMERAP, SINGULAR, false,  "Participe Pass\351"              , ""              },
   
-  {mINDICATIVO, PRESENTE , PRIMERAP, SINGULAR, false,  "Indicatif Pr\311sent"            , "je"            },
-  {mINDICATIVO, PRESENTE , SEGUNDAP, SINGULAR, false,  "Indicatif Pr\311sent"            , "tu"            },
-  {mINDICATIVO, PRESENTE , TERCERAP, SINGULAR, false,  "Indicatif Pr\311sent"            , "il/elle"       },
+  {mINDICATIVO, PRESENTE , PRIMERAP, SINGULAR, false,  "Indicatif Pr\351sent"            , "je"            },
+  {mINDICATIVO, PRESENTE , SEGUNDAP, SINGULAR, false,  "Indicatif Pr\351sent"            , "tu"            },
+  {mINDICATIVO, PRESENTE , TERCERAP, SINGULAR, false,  "Indicatif Pr\351sent"            , "il/elle"       },
   
-  {mINDICATIVO, PRESENTE , PRIMERAP, PLURAL  , false,  "Indicatif Pr\311sent"            , "nous"          },
-  {mINDICATIVO, PRESENTE , SEGUNDAP, PLURAL  , false,  "Indicatif Pr\311sent"            , "vous"          },
-  {mINDICATIVO, PRESENTE , TERCERAP, PLURAL  , false,  "Indicatif Pr\311sent"            , "ils/elles"     },
+  {mINDICATIVO, PRESENTE , PRIMERAP, PLURAL  , false,  "Indicatif Pr\351sent"            , "nous"          },
+  {mINDICATIVO, PRESENTE , SEGUNDAP, PLURAL  , false,  "Indicatif Pr\351sent"            , "vous"          },
+  {mINDICATIVO, PRESENTE , TERCERAP, PLURAL  , false,  "Indicatif Pr\351sent"            , "ils/elles"     },
   
   {mINDICATIVO, PASADOIMP, PRIMERAP, SINGULAR, false,  "Indicatif Imparfait"             , "je"            },
   {mINDICATIVO, PASADOIMP, SEGUNDAP, SINGULAR, false,  "Indicatif Imparfait"             , "tu"            },
@@ -545,13 +545,13 @@ cjData FrConjData[] = {
   {mINDICATIVO, PASADOIMP, SEGUNDAP, PLURAL  , false,  "Indicatif Imparfait"             , "vous"          },
   {mINDICATIVO, PASADOIMP, TERCERAP, PLURAL  , false,  "Indicatif Imparfait"             , "ils/elles"     },
   
-  {mINDICATIVO, PASADO   , PRIMERAP, SINGULAR, false,  "Indicatif Pass\311 simple"       , "je"            },
-  {mINDICATIVO, PASADO   , SEGUNDAP, SINGULAR, false,  "Indicatif Pass\311 simple"       , "tu"            },
-  {mINDICATIVO, PASADO   , TERCERAP, SINGULAR, false,  "Indicatif Pass\311 simple"       , "il/elle"       },
+  {mINDICATIVO, PASADO   , PRIMERAP, SINGULAR, false,  "Indicatif Pass\351 simple"       , "je"            },
+  {mINDICATIVO, PASADO   , SEGUNDAP, SINGULAR, false,  "Indicatif Pass\351 simple"       , "tu"            },
+  {mINDICATIVO, PASADO   , TERCERAP, SINGULAR, false,  "Indicatif Pass\351 simple"       , "il/elle"       },
   
-  {mINDICATIVO, PASADO   , PRIMERAP, PLURAL  , false,  "Indicatif Pass\311 simple"       , "nous"          },
-  {mINDICATIVO, PASADO   , SEGUNDAP, PLURAL  , false,  "Indicatif Pass\311 simple"       , "vous"          },
-  {mINDICATIVO, PASADO   , TERCERAP, PLURAL  , false,  "Indicatif Pass\311 simple"       , "ils/elles"     },
+  {mINDICATIVO, PASADO   , PRIMERAP, PLURAL  , false,  "Indicatif Pass\351 simple"       , "nous"          },
+  {mINDICATIVO, PASADO   , SEGUNDAP, PLURAL  , false,  "Indicatif Pass\351 simple"       , "vous"          },
+  {mINDICATIVO, PASADO   , TERCERAP, PLURAL  , false,  "Indicatif Pass\351 simple"       , "ils/elles"     },
   
   {mINDICATIVO, FUTURO   , PRIMERAP, SINGULAR, false,  "Indicativo Futuro Semplice"      , "je"            },
   {mINDICATIVO, FUTURO   , SEGUNDAP, SINGULAR, false,  "Indicativo Futuro Semplice"      , "tu"            },
@@ -561,13 +561,13 @@ cjData FrConjData[] = {
   {mINDICATIVO, FUTURO   , SEGUNDAP, PLURAL  , false,  "Indicativo Futuro Semplice"      , "vous"          },
   {mINDICATIVO, FUTURO   , TERCERAP, PLURAL  , false,  "Indicativo Futuro Semplice"      , "ils/elles"     },
   
-  {mSUBJUNTIVO, PRESENTE , PRIMERAP, SINGULAR, false,  "Subjonctif Pr\311sent"           , "que je"        },
-  {mSUBJUNTIVO, PRESENTE , SEGUNDAP, SINGULAR, false,  "Subjonctif Pr\311sent"           , "que tu"        },
-  {mSUBJUNTIVO, PRESENTE , TERCERAP, SINGULAR, false,  "Subjonctif Pr\311sent"           , "que il/elle"   },
+  {mSUBJUNTIVO, PRESENTE , PRIMERAP, SINGULAR, false,  "Subjonctif Pr\351sent"           , "que je"        },
+  {mSUBJUNTIVO, PRESENTE , SEGUNDAP, SINGULAR, false,  "Subjonctif Pr\351sent"           , "que tu"        },
+  {mSUBJUNTIVO, PRESENTE , TERCERAP, SINGULAR, false,  "Subjonctif Pr\351sent"           , "que il/elle"   },
   
-  {mSUBJUNTIVO, PRESENTE , PRIMERAP, PLURAL  , false,  "Subjonctif Pr\311sent"           , "que nous"      },
-  {mSUBJUNTIVO, PRESENTE , SEGUNDAP, PLURAL  , false,  "Subjonctif Pr\311sent"           , "que vous"      },
-  {mSUBJUNTIVO, PRESENTE , TERCERAP, PLURAL  , false,  "Subjonctif Pr\311sent"           , "que ils/elles" },
+  {mSUBJUNTIVO, PRESENTE , PRIMERAP, PLURAL  , false,  "Subjonctif Pr\351sent"           , "que nous"      },
+  {mSUBJUNTIVO, PRESENTE , SEGUNDAP, PLURAL  , false,  "Subjonctif Pr\351sent"           , "que vous"      },
+  {mSUBJUNTIVO, PRESENTE , TERCERAP, PLURAL  , false,  "Subjonctif Pr\351sent"           , "que ils/elles" },
   
   {mSUBJUNTIVO, PASADO   , PRIMERAP, SINGULAR, false,  "Subjonctif Imparfait"            , "que je"        },
   {mSUBJUNTIVO, PASADO   , SEGUNDAP, SINGULAR, false,  "Subjonctif Imparfait"            , "que tu"        },
@@ -577,13 +577,13 @@ cjData FrConjData[] = {
   {mSUBJUNTIVO, PASADO   , SEGUNDAP, PLURAL  , false,  "Subjonctif Imparfait"            , "que vous"      },
   {mSUBJUNTIVO, PASADO   , TERCERAP, PLURAL  , false,  "Subjonctif Imparfait"            , "que ils/elles" },
   
-  {mPOTENCIAL , PRESENTE , PRIMERAP, SINGULAR, false,  "Conditionnel Pr\311sent"         , "je"            },
-  {mPOTENCIAL , PRESENTE , SEGUNDAP, SINGULAR, false,  "Conditionnel Pr\311sent"         , "tu"            },
-  {mPOTENCIAL , PRESENTE , TERCERAP, SINGULAR, false,  "Conditionnel Pr\311sent"         , "il/elle"       },
+  {mPOTENCIAL , PRESENTE , PRIMERAP, SINGULAR, false,  "Conditionnel Pr\351sent"         , "je"            },
+  {mPOTENCIAL , PRESENTE , SEGUNDAP, SINGULAR, false,  "Conditionnel Pr\351sent"         , "tu"            },
+  {mPOTENCIAL , PRESENTE , TERCERAP, SINGULAR, false,  "Conditionnel Pr\351sent"         , "il/elle"       },
   
-  {mPOTENCIAL , PRESENTE , PRIMERAP, PLURAL  , false,  "Conditionnel Pr\311sent"         , "nous"          },
-  {mPOTENCIAL , PRESENTE , SEGUNDAP, PLURAL  , false,  "Conditionnel Pr\311sent"         , "vous"          },
-  {mPOTENCIAL , PRESENTE , TERCERAP, PLURAL  , false,  "Conditionnel Pr\311sent"         , "ils/elles"     },
+  {mPOTENCIAL , PRESENTE , PRIMERAP, PLURAL  , false,  "Conditionnel Pr\351sent"         , "nous"          },
+  {mPOTENCIAL , PRESENTE , SEGUNDAP, PLURAL  , false,  "Conditionnel Pr\351sent"         , "vous"          },
+  {mPOTENCIAL , PRESENTE , TERCERAP, PLURAL  , false,  "Conditionnel Pr\351sent"         , "ils/elles"     },
   
   {mIMPERATIVO, PRESENTE , PRIMERAP, SINGULAR, false,  "Imperatif"                       , ""              },
   {mIMPERATIVO, PRESENTE , SEGUNDAP, SINGULAR, false,  "Imperatif"                       , ""              },

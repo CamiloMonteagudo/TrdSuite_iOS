@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#define BtnCenterHide         0
+#define BtnCenterDown         1
+#define BtnCenterInfoSrc      2
+#define BtnCenterInfoTrd      3
+
 @class MainController;
 
 //=========================================================================================================================================================

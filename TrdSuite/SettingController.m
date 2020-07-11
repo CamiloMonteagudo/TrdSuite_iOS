@@ -7,10 +7,10 @@
 //=========================================================================================================================================================
 
 #import "SettingController.h"
-#import "ModuleLabelView.h"
 #import "AppData.h"
 #import "PurchasesView.h"
 #import "ColAndFont.h"
+#import "ModuleHdrView.h"
 
 //=========================================================================================================================================================
 @interface SettingController ()
@@ -20,14 +20,12 @@
   float LstVal;
   }
 
-  @property (weak, nonatomic) IBOutlet UIButton *btnClose;
-  @property (weak, nonatomic) IBOutlet PurchasesView *ListItems;
-  @property (weak, nonatomic) IBOutlet ModuleLabelView *ModuleTitle;
+  @property (weak, nonatomic) IBOutlet ModuleHdrView *ModuleLabel;
   @property (weak, nonatomic) IBOutlet UISlider *Slider;
   @property (weak, nonatomic) IBOutlet UILabel *lbSlider;
   @property (weak, nonatomic) IBOutlet UILabel *lbLangs;
+  @property (weak, nonatomic) IBOutlet PurchasesView *ListItems;
 
-- (IBAction)OnBtnClose:(id)sender;
 - (IBAction)OnChangeFonSize:(UISlider *)sender;
 
 @end
@@ -52,15 +50,9 @@
   _Slider.value = FontSize;
   
   [self SetSliderLabel];
-  }
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
-
-- (void)viewDidAppear:(BOOL)animated
-  {
-  NSString* Title = NSLocalizedString(@"ModSetting", nil);
   
-  [_ModuleTitle ShowLabel:Title InFrame:self.view.bounds ];
+  _ModuleLabel.Text = NSLocalizedString(@"MnuSetting", nil);
+  [_ModuleLabel OnCloseBtn:@selector(OnBtnClose:) Target:self];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -82,8 +74,6 @@
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration
   {
   scrnWidth  = self.view.bounds.size.width;
-  
-  _ModuleTitle.hidden = TRUE;
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -91,22 +81,31 @@
 - (void)viewDidLayoutSubviews
   {
   CGSize sz = self.view.bounds.size;
-  CGRect rc = _ListItems.frame;
+  float   y = _ModuleLabel.Height;
+  float   w = sz.width - (2*SEP_BRD);
   
-  float    h = sz.height - rc.origin.y - SEP_BRD;
+  float hLb1 = 1.4 * FontSize;
+  _lbSlider.frame = CGRectMake(SEP_BRD, y, w, hLb1);
+  y += hLb1 + SEP_BRD + SEP_BRD;
+  
+  float hSld = _lbSlider.frame.size.height;
+  _Slider.frame = CGRectMake(SEP_BRD, y, w-BTN_W, hSld);
+  y += hSld + SEP_BRD;
+  
+  float hLb2 =  1.4 * FontSize;;
+  _lbLangs.frame = CGRectMake(SEP_BRD, y, w, hLb2);
+  y += hLb2;
+  
+  float hRes = sz.height - y - SEP_BRD;
   float hMin = [PurchasesView MinHeight];
   
-  if( h > hMin  )
-    rc.size.height = hMin;
-  else
-    rc.size.height = h;
-    
-  _ListItems.frame = rc;
+  float hLst = (hRes > hMin)? hMin : hRes;
+  _ListItems.frame =  CGRectMake(SEP_BRD, y, w, hLst);
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Se llama cuando se toca el boton para cerrar la vista
-- (IBAction)OnBtnClose:(id)sender
+- (void)OnBtnClose:(id)sender
   {
   [self performSegueWithIdentifier: @"Back" sender: self];
   }
@@ -126,11 +125,12 @@
   {
   SetFontSize( LstVal );
    
+   [_ModuleLabel Refresh];
+   
   _lbSlider.font = fontEdit;
   _lbLangs.font = fontEdit;
   
   [_ListItems RefreshItems];
-  [_ModuleTitle RefreshLabel];
   
   [self.view setNeedsLayout];
   }

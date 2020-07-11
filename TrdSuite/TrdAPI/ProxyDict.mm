@@ -62,7 +62,7 @@ static CDictUserIndex* SaveIndex = NULL;
  	NSString *path = [[NSBundle mainBundle] bundlePath];	
             path = [path stringByAppendingPathComponent: dicName];
   
- 	CStringA dictPath = [path cStringUsingEncoding:NSUTF8StringEncoding ];
+ 	CStringA dictPath = [path cStringUsingEncoding:NSISOLatin1StringEncoding ];
     
  	if( !_Dict->Open(dictPath) ) 
     {
@@ -89,7 +89,7 @@ int LoadIndexFromFile()
   {
   NSString*  fName = [NSString stringWithFormat:@"Index%@%@", LGAbrv(_openSrc), LGAbrv(_openDes) ];
   NSString*   Path = GetFullAppPath( fName );
-  CStringA  csPath = [Path cStringUsingEncoding:NSUTF8StringEncoding ];
+  CStringA  csPath = [Path cStringUsingEncoding:NSISOLatin1StringEncoding ];
   
   Index = new CDictUserIndex();
   
@@ -220,7 +220,7 @@ int LoadIndexFromFile()
   int count = SaveIndex->Count();                           // Obtiene tamaño del indice original
   Index->SetSize( count );                                  // Reserva memoria, para el caso mas critico
   
- 	CStringA csFilter = [sFilter cStringUsingEncoding:NSUTF8StringEncoding ];
+ 	CStringA csFilter = [sFilter cStringUsingEncoding:NSISOLatin1StringEncoding ];
   
   CStringA csKey;
   for( int i=0; i<count; ++i )                              // Recorre todas las llaves del diccionario

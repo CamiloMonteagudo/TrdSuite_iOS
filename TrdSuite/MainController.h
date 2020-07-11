@@ -10,7 +10,6 @@
 #import "LangsPanelView.h"
 #import "VirtualListView.h"
 #import "TrdInfoView.h"
-#import "ModuleLabelView.h"
 #import "PanelTrdView.h"
 
 @class TrdInfoView;

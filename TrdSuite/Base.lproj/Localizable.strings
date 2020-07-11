@@ -5,61 +5,50 @@
   Created by Camilo on 31/05/15.
   Copyright (c) 2015 Softlingo. All rights reserved.
 */
-"WrdNoFound" = "No se encontro en el diccionario";
-"NoVerb"     = "No parece un verbo";
-"NoConjWord" = "La palabra no se puede conjugar";
-"ConjWarn"   = "La conjugaciones puede que no sean confiables";
+"UserLang" = "1";
 
-"TitlePurchases" = "Compras";
-"TitleRoots" = "Raises";
-"TitleMeans" = "Significados";
-"TitleEdit"  = "Modificar";
-"Traslate"   = "Traducir a:";
+"WrdNoFound" = "The word is not in the dictionary";
+"NoVerb"     = "It not seems to be a verb";
+"NoConjWord" = "The word could not be conjugate";
 
-"TrdTipEs"   = "Escriba texto en ESPAÑOL";
-"TrdTipEn"   = "Escriba texto en INGLËS";
-"TrdTipIt"   = "Escriba texto en ITALIANO";
-"TrdTipFr"   = "Escriba texto en FRANCÉS";
+"TitlePurchases" = "Purchases";
+"TitleRoots"     = "Roots";
+"TitleMeans"     = "Meanings";
+"TitleEdit"      = "Modify";
+"Traslate"       = "Translate to:";
 
-"ConjTipEs"  = "Verbo en ESPAÑOL";
-"ConjTipEn"  = "Verbo en INGLËS";
-"ConjTipIt"  = "Verbo en ITALIANO";
-"ConjTipFr"  = "Verbo en FRANCÉS";
+"TrdTip"   = "Type a text in ";
+"ConjTip"  = "Type a verb in ";
+"DictTip"  = "Type a <Word/Phrase in ";
+"NumTip"   = "Type a number";
 
-"DictTipEs"  = "Palabra o frase en ESPAÑOL";
-"DictTipEn"  = "Palabra o frase en INGLËS";
-"DictTipIt"  = "Palabra o frase en ITALIANO";
-"DictTipFr"  = "Palabra o frase en FRANCÉS";
+"ConjMode0"    = "Conjugations (by word)";
+"ConjMode1"    = "Conjugations (by mode)";
+"ConjMode2"    = "Conjugations (by person)";
 
-"btnConjugate" = "Conjugar";
-"ConjMode0"    = "Conjugaciones (por palabra)";
-"ConjMode1"    = "Conjugaciones (por modo)";
-"ConjMode2"    = "Conjugaciones (por persona)";
+"Options"    = "OPTIONS";
+"MnuDict"    = "Dictionary";
+"MnuConj"    = "Conjugate";
+"MnuNums"    = "Numbers";
+"MnuSetting" = "Settings";
 
-"Options"    = "OPCIONES";
-"MnuDict"    = "Diccionario";
-"MnuConj"    = "Conjugar";
-"MnuNums"    = "Números";
-"MnuSetting" = "Personalizar";
+"ModTranlation"  = "Translate";
+"ModConjugation" = "Conjugate";
 
-"ModTranlation"  = "Traducción";
-"ModConjugation" = "Conjugación";
-"ModDitionary"   = "Diccionario";
-"ModNumbers"     = "Números";
-"ModSetting"     = "Personalización";
+"NumLabel" = "Reading of the number:";
+"GroupAll" = "All";
+"Group2"   = "Two digits";
+"Group3"   = "Tres digits";
 
-"WriteNum" = "Escriba un número";
-"NumLabel" = "Lectura del número:";
-"GroupAll" = "Completo";
-"Group2"   = "Dos dígtos";
-"Group3"   = "Tres dígitos";
-
-"NoInternet" = "No se puede conectar a App Store";
+"NoInternet" = "Cannot connect to iTunes Store";
 "lbClose"    = "OK";
 "Error"      = "Error";
-"Restore"    = "Restaurar las compras";
-"TransError" = "Ocurrio un error en la transación";
-"lbFontSize" = "Tamaño de las letras: ";
-"lbLangs"    = "Idiomas disponibles";
+"Restore"    = "Restore purcheses";
+"TransError" = "There was an error in the transaction";
+"lbFontSize" = "Text Size: ";
+"lbLangs"    = "Available languages";
 
+"lbCardinal" = "Cardinal number:";
+"lbOrdinal"  = "Ordinal number: ";
+"lbRomano"   = "Roman numerals:";
 

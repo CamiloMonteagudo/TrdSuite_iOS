@@ -15,7 +15,6 @@
 		F0AC432C1ADF51E200A5089F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0AC432B1ADF51E200A5089F /* Foundation.framework */; };
 		F0AC432E1ADF51E200A5089F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0AC432D1ADF51E200A5089F /* CoreGraphics.framework */; };
 		F0AC43301ADF51E200A5089F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0AC432F1ADF51E200A5089F /* UIKit.framework */; };
-		F0AC43361ADF51E200A5089F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0AC43341ADF51E200A5089F /* InfoPlist.strings */; };
 		F0AC43381ADF51E200A5089F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AC43371ADF51E200A5089F /* main.m */; };
 		F0AC433C1ADF51E200A5089F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AC433B1ADF51E200A5089F /* AppDelegate.m */; };
 		F0AC433F1ADF51E200A5089F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0AC433D1ADF51E200A5089F /* Main_iPhone.storyboard */; };
@@ -72,7 +71,6 @@
 		F0DE63B31AF6C61900261762 /* NumsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63B21AF6C61900261762 /* NumsController.m */; };
 		F0DE63B71AF72FAA00261762 /* BtnBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0DE63B61AF72FAA00261762 /* BtnBack@2x.png */; };
 		F0E032AB1BB8782A00347EE0 /* NumGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E032AA1BB8782A00347EE0 /* NumGroupView.m */; };
-		F0E10AED1B83837000AF2C4F /* ModuleLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E10AEC1B83837000AF2C4F /* ModuleLabelView.m */; };
 		F0E145A11BC45F61006EC7C2 /* BuyItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E145A01BC45F61006EC7C2 /* BuyItem@2x.png */; };
 		F0E1BF081BAB205C0063CB24 /* ConjHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E1BF071BAB205C0063CB24 /* ConjHeaderView.m */; };
 		F0E1BF0A1BAB359E0063CB24 /* BntFind@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E1BF091BAB359E0063CB24 /* BntFind@2x.png */; };
@@ -145,7 +143,6 @@
 		F0E381F61BCDC81A002AF2B0 /* ApiTrd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4261B1515F10035CAB4 /* ApiTrd.cpp */; };
 		F0E381F71BCDC81A002AF2B0 /* ListOfRoots.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD46A1B1515F10035CAB4 /* ListOfRoots.cpp */; };
 		F0E381F81BCDC81A002AF2B0 /* FileUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4961B1515F10035CAB4 /* FileUtil.cpp */; };
-		F0E381F91BCDC81A002AF2B0 /* ModuleLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E10AEC1B83837000AF2C4F /* ModuleLabelView.m */; };
 		F0E381FA1BCDC81A002AF2B0 /* TopLeading.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DC5C6C1B34D115002F6D87 /* TopLeading.m */; };
 		F0E381FB1BCDC81A002AF2B0 /* ProxyTrd.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD6601B15246F0035CAB4 /* ProxyTrd.mm */; };
 		F0E381FC1BCDC81A002AF2B0 /* StrUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4A21B1515F10035CAB4 /* StrUtil.cpp */; };
@@ -344,7 +341,6 @@
 		F0E382C01BCDC81A002AF2B0 /* En2It.dax in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD51C1B15166C0035CAB4 /* En2It.dax */; };
 		F0E382C11BCDC81A002AF2B0 /* RWDataIt.dat in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5AD1B15166C0035CAB4 /* RWDataIt.dat */; };
 		F0E382C21BCDC81A002AF2B0 /* Es2EnICT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5361B15166C0035CAB4 /* Es2EnICT.dcx */; };
-		F0E382C31BCDC81A002AF2B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0AC43341ADF51E200A5089F /* InfoPlist.strings */; };
 		F0E382C41BCDC81A002AF2B0 /* ItPNoun.dic in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5A31B15166C0035CAB4 /* ItPNoun.dic */; };
 		F0E382C51BCDC81A002AF2B0 /* Fr2Es.dax in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5631B15166C0035CAB4 /* Fr2Es.dax */; };
 		F0E382C61BCDC81A002AF2B0 /* En2FrICT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5181B15166C0035CAB4 /* En2FrICT.dcx */; };
@@ -459,7 +455,6 @@
 		F0E383391BCDC832002AF2B0 /* ApiTrd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4261B1515F10035CAB4 /* ApiTrd.cpp */; };
 		F0E3833A1BCDC832002AF2B0 /* ListOfRoots.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD46A1B1515F10035CAB4 /* ListOfRoots.cpp */; };
 		F0E3833B1BCDC832002AF2B0 /* FileUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4961B1515F10035CAB4 /* FileUtil.cpp */; };
-		F0E3833C1BCDC832002AF2B0 /* ModuleLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E10AEC1B83837000AF2C4F /* ModuleLabelView.m */; };
 		F0E3833D1BCDC832002AF2B0 /* TopLeading.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DC5C6C1B34D115002F6D87 /* TopLeading.m */; };
 		F0E3833E1BCDC832002AF2B0 /* ProxyTrd.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD6601B15246F0035CAB4 /* ProxyTrd.mm */; };
 		F0E3833F1BCDC832002AF2B0 /* StrUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4A21B1515F10035CAB4 /* StrUtil.cpp */; };
@@ -658,7 +653,6 @@
 		F0E384031BCDC832002AF2B0 /* En2It.dax in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD51C1B15166C0035CAB4 /* En2It.dax */; };
 		F0E384041BCDC832002AF2B0 /* RWDataIt.dat in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5AD1B15166C0035CAB4 /* RWDataIt.dat */; };
 		F0E384051BCDC832002AF2B0 /* Es2EnICT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5361B15166C0035CAB4 /* Es2EnICT.dcx */; };
-		F0E384061BCDC832002AF2B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0AC43341ADF51E200A5089F /* InfoPlist.strings */; };
 		F0E384071BCDC832002AF2B0 /* ItPNoun.dic in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5A31B15166C0035CAB4 /* ItPNoun.dic */; };
 		F0E384081BCDC832002AF2B0 /* Fr2Es.dax in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5631B15166C0035CAB4 /* Fr2Es.dax */; };
 		F0E384091BCDC832002AF2B0 /* En2FrICT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5181B15166C0035CAB4 /* En2FrICT.dcx */; };
@@ -773,7 +767,6 @@
 		F0E3847C1BCDC849002AF2B0 /* ApiTrd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4261B1515F10035CAB4 /* ApiTrd.cpp */; };
 		F0E3847D1BCDC849002AF2B0 /* ListOfRoots.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD46A1B1515F10035CAB4 /* ListOfRoots.cpp */; };
 		F0E3847E1BCDC849002AF2B0 /* FileUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4961B1515F10035CAB4 /* FileUtil.cpp */; };
-		F0E3847F1BCDC849002AF2B0 /* ModuleLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E10AEC1B83837000AF2C4F /* ModuleLabelView.m */; };
 		F0E384801BCDC849002AF2B0 /* TopLeading.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DC5C6C1B34D115002F6D87 /* TopLeading.m */; };
 		F0E384811BCDC849002AF2B0 /* ProxyTrd.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD6601B15246F0035CAB4 /* ProxyTrd.mm */; };
 		F0E384821BCDC849002AF2B0 /* StrUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4A21B1515F10035CAB4 /* StrUtil.cpp */; };
@@ -972,7 +965,6 @@
 		F0E385461BCDC849002AF2B0 /* En2It.dax in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD51C1B15166C0035CAB4 /* En2It.dax */; };
 		F0E385471BCDC849002AF2B0 /* RWDataIt.dat in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5AD1B15166C0035CAB4 /* RWDataIt.dat */; };
 		F0E385481BCDC849002AF2B0 /* Es2EnICT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5361B15166C0035CAB4 /* Es2EnICT.dcx */; };
-		F0E385491BCDC849002AF2B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0AC43341ADF51E200A5089F /* InfoPlist.strings */; };
 		F0E3854A1BCDC849002AF2B0 /* ItPNoun.dic in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5A31B15166C0035CAB4 /* ItPNoun.dic */; };
 		F0E3854B1BCDC849002AF2B0 /* Fr2Es.dax in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5631B15166C0035CAB4 /* Fr2Es.dax */; };
 		F0E3854C1BCDC849002AF2B0 /* En2FrICT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5181B15166C0035CAB4 /* En2FrICT.dcx */; };
@@ -1087,7 +1079,6 @@
 		F0E385BF1BCDC859002AF2B0 /* ApiTrd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4261B1515F10035CAB4 /* ApiTrd.cpp */; };
 		F0E385C01BCDC859002AF2B0 /* ListOfRoots.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD46A1B1515F10035CAB4 /* ListOfRoots.cpp */; };
 		F0E385C11BCDC859002AF2B0 /* FileUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4961B1515F10035CAB4 /* FileUtil.cpp */; };
-		F0E385C21BCDC859002AF2B0 /* ModuleLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E10AEC1B83837000AF2C4F /* ModuleLabelView.m */; };
 		F0E385C31BCDC859002AF2B0 /* TopLeading.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DC5C6C1B34D115002F6D87 /* TopLeading.m */; };
 		F0E385C41BCDC859002AF2B0 /* ProxyTrd.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD6601B15246F0035CAB4 /* ProxyTrd.mm */; };
 		F0E385C51BCDC859002AF2B0 /* StrUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4A21B1515F10035CAB4 /* StrUtil.cpp */; };
@@ -1286,7 +1277,6 @@
 		F0E386891BCDC859002AF2B0 /* En2It.dax in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD51C1B15166C0035CAB4 /* En2It.dax */; };
 		F0E3868A1BCDC859002AF2B0 /* RWDataIt.dat in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5AD1B15166C0035CAB4 /* RWDataIt.dat */; };
 		F0E3868B1BCDC859002AF2B0 /* Es2EnICT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5361B15166C0035CAB4 /* Es2EnICT.dcx */; };
-		F0E3868C1BCDC859002AF2B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0AC43341ADF51E200A5089F /* InfoPlist.strings */; };
 		F0E3868D1BCDC859002AF2B0 /* ItPNoun.dic in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5A31B15166C0035CAB4 /* ItPNoun.dic */; };
 		F0E3868E1BCDC859002AF2B0 /* Fr2Es.dax in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5631B15166C0035CAB4 /* Fr2Es.dax */; };
 		F0E3868F1BCDC859002AF2B0 /* En2FrICT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5181B15166C0035CAB4 /* En2FrICT.dcx */; };
@@ -1401,7 +1391,6 @@
 		F0E387021BCDC867002AF2B0 /* ApiTrd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4261B1515F10035CAB4 /* ApiTrd.cpp */; };
 		F0E387031BCDC867002AF2B0 /* ListOfRoots.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD46A1B1515F10035CAB4 /* ListOfRoots.cpp */; };
 		F0E387041BCDC867002AF2B0 /* FileUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4961B1515F10035CAB4 /* FileUtil.cpp */; };
-		F0E387051BCDC867002AF2B0 /* ModuleLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E10AEC1B83837000AF2C4F /* ModuleLabelView.m */; };
 		F0E387061BCDC867002AF2B0 /* TopLeading.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DC5C6C1B34D115002F6D87 /* TopLeading.m */; };
 		F0E387071BCDC867002AF2B0 /* ProxyTrd.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD6601B15246F0035CAB4 /* ProxyTrd.mm */; };
 		F0E387081BCDC867002AF2B0 /* StrUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4A21B1515F10035CAB4 /* StrUtil.cpp */; };
@@ -1600,7 +1589,6 @@
 		F0E387CC1BCDC867002AF2B0 /* En2It.dax in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD51C1B15166C0035CAB4 /* En2It.dax */; };
 		F0E387CD1BCDC867002AF2B0 /* RWDataIt.dat in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5AD1B15166C0035CAB4 /* RWDataIt.dat */; };
 		F0E387CE1BCDC867002AF2B0 /* Es2EnICT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5361B15166C0035CAB4 /* Es2EnICT.dcx */; };
-		F0E387CF1BCDC867002AF2B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0AC43341ADF51E200A5089F /* InfoPlist.strings */; };
 		F0E387D01BCDC867002AF2B0 /* ItPNoun.dic in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5A31B15166C0035CAB4 /* ItPNoun.dic */; };
 		F0E387D11BCDC867002AF2B0 /* Fr2Es.dax in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5631B15166C0035CAB4 /* Fr2Es.dax */; };
 		F0E387D21BCDC867002AF2B0 /* En2FrICT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5181B15166C0035CAB4 /* En2FrICT.dcx */; };
@@ -1715,7 +1703,6 @@
 		F0E388451BCDC878002AF2B0 /* ApiTrd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4261B1515F10035CAB4 /* ApiTrd.cpp */; };
 		F0E388461BCDC878002AF2B0 /* ListOfRoots.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD46A1B1515F10035CAB4 /* ListOfRoots.cpp */; };
 		F0E388471BCDC878002AF2B0 /* FileUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4961B1515F10035CAB4 /* FileUtil.cpp */; };
-		F0E388481BCDC878002AF2B0 /* ModuleLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E10AEC1B83837000AF2C4F /* ModuleLabelView.m */; };
 		F0E388491BCDC878002AF2B0 /* TopLeading.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DC5C6C1B34D115002F6D87 /* TopLeading.m */; };
 		F0E3884A1BCDC878002AF2B0 /* ProxyTrd.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD6601B15246F0035CAB4 /* ProxyTrd.mm */; };
 		F0E3884B1BCDC878002AF2B0 /* StrUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4A21B1515F10035CAB4 /* StrUtil.cpp */; };
@@ -1914,7 +1901,6 @@
 		F0E3890F1BCDC878002AF2B0 /* En2It.dax in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD51C1B15166C0035CAB4 /* En2It.dax */; };
 		F0E389101BCDC878002AF2B0 /* RWDataIt.dat in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5AD1B15166C0035CAB4 /* RWDataIt.dat */; };
 		F0E389111BCDC878002AF2B0 /* Es2EnICT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5361B15166C0035CAB4 /* Es2EnICT.dcx */; };
-		F0E389121BCDC878002AF2B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0AC43341ADF51E200A5089F /* InfoPlist.strings */; };
 		F0E389131BCDC878002AF2B0 /* ItPNoun.dic in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5A31B15166C0035CAB4 /* ItPNoun.dic */; };
 		F0E389141BCDC878002AF2B0 /* Fr2Es.dax in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5631B15166C0035CAB4 /* Fr2Es.dax */; };
 		F0E389151BCDC878002AF2B0 /* En2FrICT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5181B15166C0035CAB4 /* En2FrICT.dcx */; };
@@ -2029,7 +2015,6 @@
 		F0E389881BCDC88B002AF2B0 /* ApiTrd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4261B1515F10035CAB4 /* ApiTrd.cpp */; };
 		F0E389891BCDC88B002AF2B0 /* ListOfRoots.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD46A1B1515F10035CAB4 /* ListOfRoots.cpp */; };
 		F0E3898A1BCDC88B002AF2B0 /* FileUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4961B1515F10035CAB4 /* FileUtil.cpp */; };
-		F0E3898B1BCDC88B002AF2B0 /* ModuleLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E10AEC1B83837000AF2C4F /* ModuleLabelView.m */; };
 		F0E3898C1BCDC88B002AF2B0 /* TopLeading.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DC5C6C1B34D115002F6D87 /* TopLeading.m */; };
 		F0E3898D1BCDC88B002AF2B0 /* ProxyTrd.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD6601B15246F0035CAB4 /* ProxyTrd.mm */; };
 		F0E3898E1BCDC88B002AF2B0 /* StrUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4A21B1515F10035CAB4 /* StrUtil.cpp */; };
@@ -2228,7 +2213,6 @@
 		F0E38A521BCDC88B002AF2B0 /* En2It.dax in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD51C1B15166C0035CAB4 /* En2It.dax */; };
 		F0E38A531BCDC88B002AF2B0 /* RWDataIt.dat in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5AD1B15166C0035CAB4 /* RWDataIt.dat */; };
 		F0E38A541BCDC88B002AF2B0 /* Es2EnICT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5361B15166C0035CAB4 /* Es2EnICT.dcx */; };
-		F0E38A551BCDC88B002AF2B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0AC43341ADF51E200A5089F /* InfoPlist.strings */; };
 		F0E38A561BCDC88B002AF2B0 /* ItPNoun.dic in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5A31B15166C0035CAB4 /* ItPNoun.dic */; };
 		F0E38A571BCDC88B002AF2B0 /* Fr2Es.dax in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5631B15166C0035CAB4 /* Fr2Es.dax */; };
 		F0E38A581BCDC88B002AF2B0 /* En2FrICT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5181B15166C0035CAB4 /* En2FrICT.dcx */; };
@@ -2343,7 +2327,6 @@
 		F0E38ACB1BCDC89C002AF2B0 /* ApiTrd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4261B1515F10035CAB4 /* ApiTrd.cpp */; };
 		F0E38ACC1BCDC89C002AF2B0 /* ListOfRoots.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD46A1B1515F10035CAB4 /* ListOfRoots.cpp */; };
 		F0E38ACD1BCDC89C002AF2B0 /* FileUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4961B1515F10035CAB4 /* FileUtil.cpp */; };
-		F0E38ACE1BCDC89C002AF2B0 /* ModuleLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E10AEC1B83837000AF2C4F /* ModuleLabelView.m */; };
 		F0E38ACF1BCDC89C002AF2B0 /* TopLeading.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DC5C6C1B34D115002F6D87 /* TopLeading.m */; };
 		F0E38AD01BCDC89C002AF2B0 /* ProxyTrd.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD6601B15246F0035CAB4 /* ProxyTrd.mm */; };
 		F0E38AD11BCDC89C002AF2B0 /* StrUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4A21B1515F10035CAB4 /* StrUtil.cpp */; };
@@ -2542,7 +2525,6 @@
 		F0E38B951BCDC89C002AF2B0 /* En2It.dax in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD51C1B15166C0035CAB4 /* En2It.dax */; };
 		F0E38B961BCDC89C002AF2B0 /* RWDataIt.dat in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5AD1B15166C0035CAB4 /* RWDataIt.dat */; };
 		F0E38B971BCDC89C002AF2B0 /* Es2EnICT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5361B15166C0035CAB4 /* Es2EnICT.dcx */; };
-		F0E38B981BCDC89C002AF2B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0AC43341ADF51E200A5089F /* InfoPlist.strings */; };
 		F0E38B991BCDC89C002AF2B0 /* ItPNoun.dic in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5A31B15166C0035CAB4 /* ItPNoun.dic */; };
 		F0E38B9A1BCDC89C002AF2B0 /* Fr2Es.dax in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5631B15166C0035CAB4 /* Fr2Es.dax */; };
 		F0E38B9B1BCDC89C002AF2B0 /* En2FrICT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5181B15166C0035CAB4 /* En2FrICT.dcx */; };
@@ -2657,7 +2639,6 @@
 		F0E38C0E1BCDC8A9002AF2B0 /* ApiTrd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4261B1515F10035CAB4 /* ApiTrd.cpp */; };
 		F0E38C0F1BCDC8A9002AF2B0 /* ListOfRoots.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD46A1B1515F10035CAB4 /* ListOfRoots.cpp */; };
 		F0E38C101BCDC8A9002AF2B0 /* FileUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4961B1515F10035CAB4 /* FileUtil.cpp */; };
-		F0E38C111BCDC8A9002AF2B0 /* ModuleLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E10AEC1B83837000AF2C4F /* ModuleLabelView.m */; };
 		F0E38C121BCDC8A9002AF2B0 /* TopLeading.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DC5C6C1B34D115002F6D87 /* TopLeading.m */; };
 		F0E38C131BCDC8A9002AF2B0 /* ProxyTrd.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD6601B15246F0035CAB4 /* ProxyTrd.mm */; };
 		F0E38C141BCDC8A9002AF2B0 /* StrUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4A21B1515F10035CAB4 /* StrUtil.cpp */; };
@@ -2856,7 +2837,6 @@
 		F0E38CD81BCDC8A9002AF2B0 /* En2It.dax in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD51C1B15166C0035CAB4 /* En2It.dax */; };
 		F0E38CD91BCDC8A9002AF2B0 /* RWDataIt.dat in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5AD1B15166C0035CAB4 /* RWDataIt.dat */; };
 		F0E38CDA1BCDC8A9002AF2B0 /* Es2EnICT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5361B15166C0035CAB4 /* Es2EnICT.dcx */; };
-		F0E38CDB1BCDC8A9002AF2B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0AC43341ADF51E200A5089F /* InfoPlist.strings */; };
 		F0E38CDC1BCDC8A9002AF2B0 /* ItPNoun.dic in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5A31B15166C0035CAB4 /* ItPNoun.dic */; };
 		F0E38CDD1BCDC8A9002AF2B0 /* Fr2Es.dax in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5631B15166C0035CAB4 /* Fr2Es.dax */; };
 		F0E38CDE1BCDC8A9002AF2B0 /* En2FrICT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5181B15166C0035CAB4 /* En2FrICT.dcx */; };
@@ -2971,7 +2951,6 @@
 		F0E38D511BCDC8B8002AF2B0 /* ApiTrd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4261B1515F10035CAB4 /* ApiTrd.cpp */; };
 		F0E38D521BCDC8B8002AF2B0 /* ListOfRoots.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD46A1B1515F10035CAB4 /* ListOfRoots.cpp */; };
 		F0E38D531BCDC8B8002AF2B0 /* FileUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4961B1515F10035CAB4 /* FileUtil.cpp */; };
-		F0E38D541BCDC8B8002AF2B0 /* ModuleLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E10AEC1B83837000AF2C4F /* ModuleLabelView.m */; };
 		F0E38D551BCDC8B8002AF2B0 /* TopLeading.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DC5C6C1B34D115002F6D87 /* TopLeading.m */; };
 		F0E38D561BCDC8B8002AF2B0 /* ProxyTrd.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD6601B15246F0035CAB4 /* ProxyTrd.mm */; };
 		F0E38D571BCDC8B8002AF2B0 /* StrUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4A21B1515F10035CAB4 /* StrUtil.cpp */; };
@@ -3170,7 +3149,6 @@
 		F0E38E1B1BCDC8B8002AF2B0 /* En2It.dax in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD51C1B15166C0035CAB4 /* En2It.dax */; };
 		F0E38E1C1BCDC8B8002AF2B0 /* RWDataIt.dat in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5AD1B15166C0035CAB4 /* RWDataIt.dat */; };
 		F0E38E1D1BCDC8B8002AF2B0 /* Es2EnICT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5361B15166C0035CAB4 /* Es2EnICT.dcx */; };
-		F0E38E1E1BCDC8B8002AF2B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0AC43341ADF51E200A5089F /* InfoPlist.strings */; };
 		F0E38E1F1BCDC8B8002AF2B0 /* ItPNoun.dic in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5A31B15166C0035CAB4 /* ItPNoun.dic */; };
 		F0E38E201BCDC8B8002AF2B0 /* Fr2Es.dax in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5631B15166C0035CAB4 /* Fr2Es.dax */; };
 		F0E38E211BCDC8B8002AF2B0 /* En2FrICT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5181B15166C0035CAB4 /* En2FrICT.dcx */; };
@@ -3218,17 +3196,6 @@
 		F0E38E4B1BCDC8B8002AF2B0 /* Fr2ItQCT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5761B15166C0035CAB4 /* Fr2ItQCT.dcx */; };
 		F0E38E4C1BCDC8B8002AF2B0 /* Fr2ItFCT.dcx in Resources */ = {isa = PBXBuildFile; fileRef = F0FDD5741B15166C0035CAB4 /* Fr2ItFCT.dcx */; };
 		F0E38E5D1BCDD4B4002AF2B0 /* ImagesEn.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E38E521BCDD4B4002AF2B0 /* ImagesEn.xcassets */; };
-		F0E38E731BCDD4E5002AF2B0 /* TrdSuiteEn-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E38E681BCDD4E5002AF2B0 /* TrdSuiteEn-Info.plist */; };
-		F0E38E881BCDD529002AF2B0 /* TrdSuiteAll-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E38E671BCDD4E5002AF2B0 /* TrdSuiteAll-Info.plist */; };
-		F0E38E891BCDD53A002AF2B0 /* TrdSuiteEnEs-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E38E691BCDD4E5002AF2B0 /* TrdSuiteEnEs-Info.plist */; };
-		F0E38E8A1BCDD546002AF2B0 /* TrdSuiteEnFr-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E38E6A1BCDD4E5002AF2B0 /* TrdSuiteEnFr-Info.plist */; };
-		F0E38E8B1BCDD54E002AF2B0 /* TrdSuiteEnIt-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E38E6B1BCDD4E5002AF2B0 /* TrdSuiteEnIt-Info.plist */; };
-		F0E38E8C1BCDD557002AF2B0 /* TrdSuiteEs-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E38E6C1BCDD4E5002AF2B0 /* TrdSuiteEs-Info.plist */; };
-		F0E38E8D1BCDD565002AF2B0 /* TrdSuiteEsFr-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E38E6D1BCDD4E5002AF2B0 /* TrdSuiteEsFr-Info.plist */; };
-		F0E38E8E1BCDD56C002AF2B0 /* TrdSuiteEsIt-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E38E6E1BCDD4E5002AF2B0 /* TrdSuiteEsIt-Info.plist */; };
-		F0E38E8F1BCDD578002AF2B0 /* TrdSuiteFr-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E38E6F1BCDD4E5002AF2B0 /* TrdSuiteFr-Info.plist */; };
-		F0E38E901BCDD580002AF2B0 /* TrdSuiteIt-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E38E701BCDD4E5002AF2B0 /* TrdSuiteIt-Info.plist */; };
-		F0E38E911BCDD592002AF2B0 /* TrdSuiteItFr-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0E38E711BCDD4E5002AF2B0 /* TrdSuiteItFr-Info.plist */; };
 		F0E38E921BCDD599002AF2B0 /* ImagesAll.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E38E511BCDD4B4002AF2B0 /* ImagesAll.xcassets */; };
 		F0E38E931BCDD5C0002AF2B0 /* ImagesEnEs.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E38E531BCDD4B4002AF2B0 /* ImagesEnEs.xcassets */; };
 		F0E38E941BCDD5CD002AF2B0 /* ImagesEnFr.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E38E541BCDD4B4002AF2B0 /* ImagesEnFr.xcassets */; };
@@ -3242,6 +3209,17 @@
 		F0E403041BC766CD0045B553 /* BuyOk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E403031BC766CD0045B553 /* BuyOk@2x.png */; };
 		F0E449CD1AE40C7B00C0698A /* RowHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E449CC1AE40C7B00C0698A /* RowHistoryView.m */; };
 		F0E46D1F1BB48DFA000F1633 /* ReadNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E46D1E1BB48DFA000F1633 /* ReadNumber.m */; };
+		F0E4CB6A1BDB11C90052A99F /* ModuleHdrView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E4CB691BDB11C90052A99F /* ModuleHdrView.m */; };
+		F0E4CB6B1BDB11C90052A99F /* ModuleHdrView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E4CB691BDB11C90052A99F /* ModuleHdrView.m */; };
+		F0E4CB6C1BDB11C90052A99F /* ModuleHdrView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E4CB691BDB11C90052A99F /* ModuleHdrView.m */; };
+		F0E4CB6D1BDB11C90052A99F /* ModuleHdrView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E4CB691BDB11C90052A99F /* ModuleHdrView.m */; };
+		F0E4CB6E1BDB11C90052A99F /* ModuleHdrView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E4CB691BDB11C90052A99F /* ModuleHdrView.m */; };
+		F0E4CB6F1BDB11C90052A99F /* ModuleHdrView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E4CB691BDB11C90052A99F /* ModuleHdrView.m */; };
+		F0E4CB701BDB11C90052A99F /* ModuleHdrView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E4CB691BDB11C90052A99F /* ModuleHdrView.m */; };
+		F0E4CB711BDB11C90052A99F /* ModuleHdrView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E4CB691BDB11C90052A99F /* ModuleHdrView.m */; };
+		F0E4CB721BDB11C90052A99F /* ModuleHdrView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E4CB691BDB11C90052A99F /* ModuleHdrView.m */; };
+		F0E4CB731BDB11C90052A99F /* ModuleHdrView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E4CB691BDB11C90052A99F /* ModuleHdrView.m */; };
+		F0E4CB741BDB11C90052A99F /* ModuleHdrView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E4CB691BDB11C90052A99F /* ModuleHdrView.m */; };
 		F0E4E1341BCB0FA900FC8248 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E4E1331BCB0FA900FC8248 /* StoreKit.framework */; };
 		F0E57AB31B9161CE001A56E9 /* PanelTrdView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E57AB21B9161CE001A56E9 /* PanelTrdView.m */; };
 		F0E801701BBDF15900C6ACF6 /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E8016F1BBDF15900C6ACF6 /* SettingController.m */; };
@@ -3497,7 +3475,6 @@
 		F0AC432B1ADF51E200A5089F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F0AC432D1ADF51E200A5089F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F0AC432F1ADF51E200A5089F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		F0AC43351ADF51E200A5089F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F0AC43371ADF51E200A5089F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0AC433A1ADF51E200A5089F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F0AC433B1ADF51E200A5089F /* AppDelegate.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -3521,6 +3498,9 @@
 		F0B233101B45C192002246C8 /* IndexItFr */ = {isa = PBXFileReference; lastKnownFileType = file; path = IndexItFr; sourceTree = "<group>"; };
 		F0B2331D1B45D4B9002246C8 /* WaitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaitView.h; sourceTree = "<group>"; };
 		F0B2331E1B45D4B9002246C8 /* WaitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitView.m; sourceTree = "<group>"; };
+		F0B8A66D1BD14CD6002BABE6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F0B8A66E1BD14CE4002BABE6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F0B8A66F1BD14CF1002BABE6 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F0D6070E1B2000B80091411A /* TrdInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrdInfoView.h; sourceTree = "<group>"; };
 		F0D6070F1B2000B80091411A /* TrdInfoView.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = TrdInfoView.m; sourceTree = "<group>"; };
 		F0D910B91AE065D200C6871A /* Delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Delete@2x.png"; path = "Images/Delete@2x.png"; sourceTree = "<group>"; };
@@ -3572,8 +3552,6 @@
 		F0DE63B61AF72FAA00261762 /* BtnBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BtnBack@2x.png"; path = "Images/BtnBack@2x.png"; sourceTree = "<group>"; };
 		F0E032A91BB8782A00347EE0 /* NumGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumGroupView.h; sourceTree = "<group>"; };
 		F0E032AA1BB8782A00347EE0 /* NumGroupView.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = NumGroupView.m; sourceTree = "<group>"; };
-		F0E10AEB1B83837000AF2C4F /* ModuleLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleLabelView.h; sourceTree = "<group>"; };
-		F0E10AEC1B83837000AF2C4F /* ModuleLabelView.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = ModuleLabelView.m; sourceTree = "<group>"; };
 		F0E145A01BC45F61006EC7C2 /* BuyItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BuyItem@2x.png"; path = "Images/BuyItem@2x.png"; sourceTree = "<group>"; };
 		F0E1BF061BAB205C0063CB24 /* ConjHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConjHeaderView.h; sourceTree = "<group>"; };
 		F0E1BF071BAB205C0063CB24 /* ConjHeaderView.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = ConjHeaderView.m; sourceTree = "<group>"; };
@@ -3628,6 +3606,9 @@
 		F0E449CC1AE40C7B00C0698A /* RowHistoryView.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = RowHistoryView.m; sourceTree = "<group>"; };
 		F0E46D1D1BB48DFA000F1633 /* ReadNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadNumber.h; sourceTree = "<group>"; };
 		F0E46D1E1BB48DFA000F1633 /* ReadNumber.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = ReadNumber.m; sourceTree = "<group>"; };
+		F0E4CB651BDA956F0052A99F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F0E4CB681BDB11C90052A99F /* ModuleHdrView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleHdrView.h; sourceTree = "<group>"; };
+		F0E4CB691BDB11C90052A99F /* ModuleHdrView.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = ModuleHdrView.m; sourceTree = "<group>"; };
 		F0E4E1331BCB0FA900FC8248 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F0E57AB11B9161CE001A56E9 /* PanelTrdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelTrdView.h; sourceTree = "<group>"; };
 		F0E57AB21B9161CE001A56E9 /* PanelTrdView.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = PanelTrdView.m; sourceTree = "<group>"; };
@@ -4138,6 +4119,7 @@
 		F0AC432A1ADF51E200A5089F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F0E4CB651BDA956F0052A99F /* AVFoundation.framework */,
 				F0E4E1331BCB0FA900FC8248 /* StoreKit.framework */,
 				F0AC432B1ADF51E200A5089F /* Foundation.framework */,
 				F0AC432D1ADF51E200A5089F /* CoreGraphics.framework */,
@@ -4166,6 +4148,18 @@
 		F0AC43321ADF51E200A5089F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F0B8A6701BD14D81002BABE6 /* Precompiled Header */,
+				F0B8A6711BD14DB3002BABE6 /* Info PLists */,
+				F0B8A6721BD14DE6002BABE6 /* Iconos y Launch images */,
+				F0DCAEE61B1B8E4A0081D11F /* Base.lproj */,
+				F0AC43371ADF51E200A5089F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F0B8A6701BD14D81002BABE6 /* Precompiled Header */ = {
+			isa = PBXGroup;
+			children = (
 				F0E38E7D1BCDD502002AF2B0 /* TrdSuiteAll-Prefix.pch */,
 				F0E38E7E1BCDD502002AF2B0 /* TrdSuiteEn-Prefix.pch */,
 				F0E38E7F1BCDD502002AF2B0 /* TrdSuiteEnEs-Prefix.pch */,
@@ -4177,6 +4171,13 @@
 				F0E38E851BCDD502002AF2B0 /* TrdSuiteFr-Prefix.pch */,
 				F0E38E861BCDD502002AF2B0 /* TrdSuiteIt-Prefix.pch */,
 				F0E38E871BCDD502002AF2B0 /* TrdSuiteItFr-Prefix.pch */,
+			);
+			name = "Precompiled Header";
+			sourceTree = "<group>";
+		};
+		F0B8A6711BD14DB3002BABE6 /* Info PLists */ = {
+			isa = PBXGroup;
+			children = (
 				F0E38E671BCDD4E5002AF2B0 /* TrdSuiteAll-Info.plist */,
 				F0E38E681BCDD4E5002AF2B0 /* TrdSuiteEn-Info.plist */,
 				F0E38E691BCDD4E5002AF2B0 /* TrdSuiteEnEs-Info.plist */,
@@ -4188,6 +4189,13 @@
 				F0E38E6F1BCDD4E5002AF2B0 /* TrdSuiteFr-Info.plist */,
 				F0E38E701BCDD4E5002AF2B0 /* TrdSuiteIt-Info.plist */,
 				F0E38E711BCDD4E5002AF2B0 /* TrdSuiteItFr-Info.plist */,
+			);
+			name = "Info PLists";
+			sourceTree = "<group>";
+		};
+		F0B8A6721BD14DE6002BABE6 /* Iconos y Launch images */ = {
+			isa = PBXGroup;
+			children = (
 				F0E38E511BCDD4B4002AF2B0 /* ImagesAll.xcassets */,
 				F0E38E521BCDD4B4002AF2B0 /* ImagesEn.xcassets */,
 				F0E38E531BCDD4B4002AF2B0 /* ImagesEnEs.xcassets */,
@@ -4199,11 +4207,8 @@
 				F0E38E591BCDD4B4002AF2B0 /* ImagesFr.xcassets */,
 				F0E38E5A1BCDD4B4002AF2B0 /* ImagesIt.xcassets */,
 				F0E38E5B1BCDD4B4002AF2B0 /* ImagesItFr.xcassets */,
-				F0DCAEE61B1B8E4A0081D11F /* Base.lproj */,
-				F0AC43341ADF51E200A5089F /* InfoPlist.strings */,
-				F0AC43371ADF51E200A5089F /* main.m */,
 			);
-			name = "Supporting Files";
+			name = "Iconos y Launch images";
 			sourceTree = "<group>";
 		};
 		F0D910B81AE0656F00C6871A /* Images */ = {
@@ -4317,8 +4322,6 @@
 				F00D9EF81B32887D00B8B21D /* ConjDataView.m */,
 				F0DC5C6B1B34D115002F6D87 /* TopLeading.h */,
 				F0DC5C6C1B34D115002F6D87 /* TopLeading.m */,
-				F0E10AEB1B83837000AF2C4F /* ModuleLabelView.h */,
-				F0E10AEC1B83837000AF2C4F /* ModuleLabelView.m */,
 				F0F436361B961842002DE0CA /* TrdEditView.h */,
 				F0F436371B961842002DE0CA /* TrdEditView.m */,
 				F0E032A91BB8782A00347EE0 /* NumGroupView.h */,
@@ -4327,6 +4330,8 @@
 				F0E26D461BBA18D900479ED7 /* NumResultView.m */,
 				F0E9D1E61BC3314600DE66D9 /* PurchasesView.h */,
 				F0E9D1E71BC3314600DE66D9 /* PurchasesView.m */,
+				F0E4CB681BDB11C90052A99F /* ModuleHdrView.h */,
+				F0E4CB691BDB11C90052A99F /* ModuleHdrView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -4964,6 +4969,9 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				fr,
+				it,
 			);
 			mainGroup = F0AC431F1ADF51E200A5089F;
 			productRefGroup = F0AC43291ADF51E200A5089F /* Products */;
@@ -5096,7 +5104,6 @@
 				F0FDD6081B15166C0035CAB4 /* Fr2EnCC.dcx in Resources */,
 				F0FDD5EC1B15166C0035CAB4 /* Es2FrCT.dcx in Resources */,
 				F0FDD5FC1B15166C0035CAB4 /* Es2ItVCT.dcx in Resources */,
-				F0E38E731BCDD4E5002AF2B0 /* TrdSuiteEn-Info.plist in Resources */,
 				F0FDD6351B15166C0035CAB4 /* It2EnQCT.dcx in Resources */,
 				F0DCE4531B0F9FBB0097041A /* BtnNext2@2x.png in Resources */,
 				F0FDD5FD1B15166C0035CAB4 /* EsData.dax in Resources */,
@@ -5176,7 +5183,6 @@
 				F0FDD5C91B15166C0035CAB4 /* En2It.dax in Resources */,
 				F0FDD65A1B15166C0035CAB4 /* RWDataIt.dat in Resources */,
 				F0FDD5E31B15166C0035CAB4 /* Es2EnICT.dcx in Resources */,
-				F0AC43361ADF51E200A5089F /* InfoPlist.strings in Resources */,
 				F0FDD6501B15166C0035CAB4 /* ItPNoun.dic in Resources */,
 				F0FDD6101B15166C0035CAB4 /* Fr2Es.dax in Resources */,
 				F0FDD5C51B15166C0035CAB4 /* En2FrICT.dcx in Resources */,
@@ -5287,7 +5293,6 @@
 				F0E382401BCDC81A002AF2B0 /* En2FrCC.dcx in Resources */,
 				F0E382421BCDC81A002AF2B0 /* FlagFr50@2x.png in Resources */,
 				F0E382431BCDC81A002AF2B0 /* It2FrCCD.dcx in Resources */,
-				F0E38E891BCDD53A002AF2B0 /* TrdSuiteEnEs-Info.plist in Resources */,
 				F0E382441BCDC81A002AF2B0 /* Es2It.dax in Resources */,
 				F0E382451BCDC81A002AF2B0 /* It2EsFCT.dcx in Resources */,
 				F0E382461BCDC81A002AF2B0 /* IndexItEn in Resources */,
@@ -5416,7 +5421,6 @@
 				F0E382C01BCDC81A002AF2B0 /* En2It.dax in Resources */,
 				F0E382C11BCDC81A002AF2B0 /* RWDataIt.dat in Resources */,
 				F0E382C21BCDC81A002AF2B0 /* Es2EnICT.dcx in Resources */,
-				F0E382C31BCDC81A002AF2B0 /* InfoPlist.strings in Resources */,
 				F0E382C41BCDC81A002AF2B0 /* ItPNoun.dic in Resources */,
 				F0E382C51BCDC81A002AF2B0 /* Fr2Es.dax in Resources */,
 				F0E382C61BCDC81A002AF2B0 /* En2FrICT.dcx in Resources */,
@@ -5645,7 +5649,6 @@
 				F0E383F91BCDC832002AF2B0 /* FlagFr30@2x.png in Resources */,
 				F0E383FA1BCDC832002AF2B0 /* Es2EnFCT.dcx in Resources */,
 				F0E383FB1BCDC832002AF2B0 /* Es2It.dic in Resources */,
-				F0E38E8B1BCDD54E002AF2B0 /* TrdSuiteEnIt-Info.plist in Resources */,
 				F0E383FC1BCDC832002AF2B0 /* Fr2En.idx in Resources */,
 				F0E383FD1BCDC832002AF2B0 /* Es2Fr.dic in Resources */,
 				F0E383FE1BCDC832002AF2B0 /* Es2FrCCD.dcx in Resources */,
@@ -5656,7 +5659,6 @@
 				F0E384031BCDC832002AF2B0 /* En2It.dax in Resources */,
 				F0E384041BCDC832002AF2B0 /* RWDataIt.dat in Resources */,
 				F0E384051BCDC832002AF2B0 /* Es2EnICT.dcx in Resources */,
-				F0E384061BCDC832002AF2B0 /* InfoPlist.strings in Resources */,
 				F0E384071BCDC832002AF2B0 /* ItPNoun.dic in Resources */,
 				F0E384081BCDC832002AF2B0 /* Fr2Es.dax in Resources */,
 				F0E384091BCDC832002AF2B0 /* En2FrICT.dcx in Resources */,
@@ -5719,7 +5721,6 @@
 				F0E384961BCDC849002AF2B0 /* Es2FrICT.dcx in Resources */,
 				F0E384971BCDC849002AF2B0 /* It2FrCC.dcx in Resources */,
 				F0E384981BCDC849002AF2B0 /* BtnDict@2x.png in Resources */,
-				F0E38E8A1BCDD546002AF2B0 /* TrdSuiteEnFr-Info.plist in Resources */,
 				F0E384991BCDC849002AF2B0 /* EnData.dax in Resources */,
 				F0E3849A1BCDC849002AF2B0 /* FrPNoun.dic in Resources */,
 				F0E3849B1BCDC849002AF2B0 /* FlagIt@2x.png in Resources */,
@@ -5895,7 +5896,6 @@
 				F0E385461BCDC849002AF2B0 /* En2It.dax in Resources */,
 				F0E385471BCDC849002AF2B0 /* RWDataIt.dat in Resources */,
 				F0E385481BCDC849002AF2B0 /* Es2EnICT.dcx in Resources */,
-				F0E385491BCDC849002AF2B0 /* InfoPlist.strings in Resources */,
 				F0E3854A1BCDC849002AF2B0 /* ItPNoun.dic in Resources */,
 				F0E3854B1BCDC849002AF2B0 /* Fr2Es.dax in Resources */,
 				F0E3854C1BCDC849002AF2B0 /* En2FrICT.dcx in Resources */,
@@ -6131,12 +6131,10 @@
 				F0E386851BCDC859002AF2B0 /* Fr2ItVCT.dcx in Resources */,
 				F0E386861BCDC859002AF2B0 /* Fr2EsTCT.dcx in Resources */,
 				F0E386871BCDC859002AF2B0 /* Fr2En.dic in Resources */,
-				F0E38E8C1BCDD557002AF2B0 /* TrdSuiteEs-Info.plist in Resources */,
 				F0E386881BCDC859002AF2B0 /* ItTGrFun.dcx in Resources */,
 				F0E386891BCDC859002AF2B0 /* En2It.dax in Resources */,
 				F0E3868A1BCDC859002AF2B0 /* RWDataIt.dat in Resources */,
 				F0E3868B1BCDC859002AF2B0 /* Es2EnICT.dcx in Resources */,
-				F0E3868C1BCDC859002AF2B0 /* InfoPlist.strings in Resources */,
 				F0E3868D1BCDC859002AF2B0 /* ItPNoun.dic in Resources */,
 				F0E3868E1BCDC859002AF2B0 /* Fr2Es.dax in Resources */,
 				F0E3868F1BCDC859002AF2B0 /* En2FrICT.dcx in Resources */,
@@ -6241,7 +6239,6 @@
 				F0E387461BCDC867002AF2B0 /* Fr2EnCCD.dcx in Resources */,
 				F0E387471BCDC867002AF2B0 /* Es2FrVCT.dcx in Resources */,
 				F0E387481BCDC867002AF2B0 /* BtnClose1@2x.png in Resources */,
-				F0E38E8E1BCDD56C002AF2B0 /* TrdSuiteEsIt-Info.plist in Resources */,
 				F0E387491BCDC867002AF2B0 /* EnSGrFun.dcx in Resources */,
 				F0E3874A1BCDC867002AF2B0 /* Fr2ItTCT.dcx in Resources */,
 				F0E3874B1BCDC867002AF2B0 /* En2ItTCT.dcx in Resources */,
@@ -6375,7 +6372,6 @@
 				F0E387CC1BCDC867002AF2B0 /* En2It.dax in Resources */,
 				F0E387CD1BCDC867002AF2B0 /* RWDataIt.dat in Resources */,
 				F0E387CE1BCDC867002AF2B0 /* Es2EnICT.dcx in Resources */,
-				F0E387CF1BCDC867002AF2B0 /* InfoPlist.strings in Resources */,
 				F0E387D01BCDC867002AF2B0 /* ItPNoun.dic in Resources */,
 				F0E387D11BCDC867002AF2B0 /* Fr2Es.dax in Resources */,
 				F0E387D21BCDC867002AF2B0 /* En2FrICT.dcx in Resources */,
@@ -6549,7 +6545,6 @@
 				F0E388CD1BCDC878002AF2B0 /* FlagEs@2x.png in Resources */,
 				F0E388CE1BCDC878002AF2B0 /* It2EnVCT.dcx in Resources */,
 				F0E388CF1BCDC878002AF2B0 /* It2EsVCT.dcx in Resources */,
-				F0E38E8D1BCDD565002AF2B0 /* TrdSuiteEsFr-Info.plist in Resources */,
 				F0E388D01BCDC878002AF2B0 /* Fr2EsCCD.dcx in Resources */,
 				F0E388D11BCDC878002AF2B0 /* BtnSetting@2x.png in Resources */,
 				F0E388D21BCDC878002AF2B0 /* HistoryEn-Es.txt in Resources */,
@@ -6616,7 +6611,6 @@
 				F0E3890F1BCDC878002AF2B0 /* En2It.dax in Resources */,
 				F0E389101BCDC878002AF2B0 /* RWDataIt.dat in Resources */,
 				F0E389111BCDC878002AF2B0 /* Es2EnICT.dcx in Resources */,
-				F0E389121BCDC878002AF2B0 /* InfoPlist.strings in Resources */,
 				F0E389131BCDC878002AF2B0 /* ItPNoun.dic in Resources */,
 				F0E389141BCDC878002AF2B0 /* Fr2Es.dax in Resources */,
 				F0E389151BCDC878002AF2B0 /* En2FrICT.dcx in Resources */,
@@ -6703,7 +6697,6 @@
 				F0E389BA1BCDC88B002AF2B0 /* Fr2EsQCT.dcx in Resources */,
 				F0E389BB1BCDC88B002AF2B0 /* En2EsICT.dcx in Resources */,
 				F0E389BC1BCDC88B002AF2B0 /* It2Fr.dic in Resources */,
-				F0E38E901BCDD580002AF2B0 /* TrdSuiteIt-Info.plist in Resources */,
 				F0E389BD1BCDC88B002AF2B0 /* FrSGrFun.dcx in Resources */,
 				F0E389BE1BCDC88B002AF2B0 /* It2EnCT.dcx in Resources */,
 				F0E38E9A1BCDD609002AF2B0 /* ImagesIt.xcassets in Resources */,
@@ -6856,7 +6849,6 @@
 				F0E38A521BCDC88B002AF2B0 /* En2It.dax in Resources */,
 				F0E38A531BCDC88B002AF2B0 /* RWDataIt.dat in Resources */,
 				F0E38A541BCDC88B002AF2B0 /* Es2EnICT.dcx in Resources */,
-				F0E38A551BCDC88B002AF2B0 /* InfoPlist.strings in Resources */,
 				F0E38A561BCDC88B002AF2B0 /* ItPNoun.dic in Resources */,
 				F0E38A571BCDC88B002AF2B0 /* Fr2Es.dax in Resources */,
 				F0E38A581BCDC88B002AF2B0 /* En2FrICT.dcx in Resources */,
@@ -6937,7 +6929,6 @@
 				F0E38AF71BCDC89C002AF2B0 /* IndexItFr in Resources */,
 				F0E38AF81BCDC89C002AF2B0 /* FrData.dax in Resources */,
 				F0E38AF91BCDC89C002AF2B0 /* RWDataEs.dat in Resources */,
-				F0E38E911BCDD592002AF2B0 /* TrdSuiteItFr-Info.plist in Resources */,
 				F0E38AFA1BCDC89C002AF2B0 /* Es2EnQCT.dcx in Resources */,
 				F0E38AFB1BCDC89C002AF2B0 /* En2EsVCT.dcx in Resources */,
 				F0E38AFC1BCDC89C002AF2B0 /* En2FrFCT.dcx in Resources */,
@@ -7096,7 +7087,6 @@
 				F0E38B951BCDC89C002AF2B0 /* En2It.dax in Resources */,
 				F0E38B961BCDC89C002AF2B0 /* RWDataIt.dat in Resources */,
 				F0E38B971BCDC89C002AF2B0 /* Es2EnICT.dcx in Resources */,
-				F0E38B981BCDC89C002AF2B0 /* InfoPlist.strings in Resources */,
 				F0E38B991BCDC89C002AF2B0 /* ItPNoun.dic in Resources */,
 				F0E38B9A1BCDC89C002AF2B0 /* Fr2Es.dax in Resources */,
 				F0E38B9B1BCDC89C002AF2B0 /* En2FrICT.dcx in Resources */,
@@ -7335,11 +7325,9 @@
 				F0E38CD81BCDC8A9002AF2B0 /* En2It.dax in Resources */,
 				F0E38CD91BCDC8A9002AF2B0 /* RWDataIt.dat in Resources */,
 				F0E38CDA1BCDC8A9002AF2B0 /* Es2EnICT.dcx in Resources */,
-				F0E38CDB1BCDC8A9002AF2B0 /* InfoPlist.strings in Resources */,
 				F0E38CDC1BCDC8A9002AF2B0 /* ItPNoun.dic in Resources */,
 				F0E38CDD1BCDC8A9002AF2B0 /* Fr2Es.dax in Resources */,
 				F0E38CDE1BCDC8A9002AF2B0 /* En2FrICT.dcx in Resources */,
-				F0E38E8F1BCDD578002AF2B0 /* TrdSuiteFr-Info.plist in Resources */,
 				F0E38CDF1BCDC8A9002AF2B0 /* Fr2EnFCT.dcx in Resources */,
 				F0E38CE01BCDC8A9002AF2B0 /* IndexEsIt in Resources */,
 				F0E38CE11BCDC8A9002AF2B0 /* EnTGrFun.dcx in Resources */,
@@ -7575,7 +7563,6 @@
 				F0E38E1B1BCDC8B8002AF2B0 /* En2It.dax in Resources */,
 				F0E38E1C1BCDC8B8002AF2B0 /* RWDataIt.dat in Resources */,
 				F0E38E1D1BCDC8B8002AF2B0 /* Es2EnICT.dcx in Resources */,
-				F0E38E1E1BCDC8B8002AF2B0 /* InfoPlist.strings in Resources */,
 				F0E38E1F1BCDC8B8002AF2B0 /* ItPNoun.dic in Resources */,
 				F0E38E201BCDC8B8002AF2B0 /* Fr2Es.dax in Resources */,
 				F0E38E211BCDC8B8002AF2B0 /* En2FrICT.dcx in Resources */,
@@ -7613,7 +7600,6 @@
 				F0E38E411BCDC8B8002AF2B0 /* Fr2ItICT.dcx in Resources */,
 				F0E38E421BCDC8B8002AF2B0 /* BntCloseMod@2x.png in Resources */,
 				F0E38E431BCDC8B8002AF2B0 /* FlagIt30@2x.png in Resources */,
-				F0E38E881BCDD529002AF2B0 /* TrdSuiteAll-Info.plist in Resources */,
 				F0E38E441BCDC8B8002AF2B0 /* En2EsCCD.dcx in Resources */,
 				F0E38E451BCDC8B8002AF2B0 /* Fr2EsFCT.dcx in Resources */,
 				F0E38E461BCDC8B8002AF2B0 /* ItQGrFun.dcx in Resources */,
@@ -7658,6 +7644,7 @@
 				F0D948651B4070360031404C /* VirtualDictRowView.m in Sources */,
 				F0D910E61AE0B0CF00C6871A /* MainView.m in Sources */,
 				F0FDD4DF1B1515F10035CAB4 /* ReflexiveVerbInSentence.cpp in Sources */,
+				F0E4CB6A1BDB11C90052A99F /* ModuleHdrView.m in Sources */,
 				F0FDD4F21B1515F10035CAB4 /* ApiConj.cpp in Sources */,
 				F0DDDF551AED3573000F9159 /* LangsBar.m in Sources */,
 				F00C80911B7E745C00946322 /* PanelRigthView.m in Sources */,
@@ -7701,7 +7688,6 @@
 				F0FDD4CA1B1515F10035CAB4 /* ApiTrd.cpp in Sources */,
 				F0FDD4DB1B1515F10035CAB4 /* ListOfRoots.cpp in Sources */,
 				F0FDD4EB1B1515F10035CAB4 /* FileUtil.cpp in Sources */,
-				F0E10AED1B83837000AF2C4F /* ModuleLabelView.m in Sources */,
 				F0DC5C6D1B34D115002F6D87 /* TopLeading.m in Sources */,
 				F0FDD6631B15246F0035CAB4 /* ProxyTrd.mm in Sources */,
 				F0FDD4EF1B1515F10035CAB4 /* StrUtil.cpp in Sources */,
@@ -7744,6 +7730,7 @@
 				F0E381CB1BCDC81A002AF2B0 /* VirtualDictRowView.m in Sources */,
 				F0E381CC1BCDC81A002AF2B0 /* MainView.m in Sources */,
 				F0E381CD1BCDC81A002AF2B0 /* ReflexiveVerbInSentence.cpp in Sources */,
+				F0E4CB6B1BDB11C90052A99F /* ModuleHdrView.m in Sources */,
 				F0E381CE1BCDC81A002AF2B0 /* ApiConj.cpp in Sources */,
 				F0E381CF1BCDC81A002AF2B0 /* LangsBar.m in Sources */,
 				F0E381D01BCDC81A002AF2B0 /* PanelRigthView.m in Sources */,
@@ -7787,7 +7774,6 @@
 				F0E381F61BCDC81A002AF2B0 /* ApiTrd.cpp in Sources */,
 				F0E381F71BCDC81A002AF2B0 /* ListOfRoots.cpp in Sources */,
 				F0E381F81BCDC81A002AF2B0 /* FileUtil.cpp in Sources */,
-				F0E381F91BCDC81A002AF2B0 /* ModuleLabelView.m in Sources */,
 				F0E381FA1BCDC81A002AF2B0 /* TopLeading.m in Sources */,
 				F0E381FB1BCDC81A002AF2B0 /* ProxyTrd.mm in Sources */,
 				F0E381FC1BCDC81A002AF2B0 /* StrUtil.cpp in Sources */,
@@ -7830,6 +7816,7 @@
 				F0E3830E1BCDC832002AF2B0 /* VirtualDictRowView.m in Sources */,
 				F0E3830F1BCDC832002AF2B0 /* MainView.m in Sources */,
 				F0E383101BCDC832002AF2B0 /* ReflexiveVerbInSentence.cpp in Sources */,
+				F0E4CB6C1BDB11C90052A99F /* ModuleHdrView.m in Sources */,
 				F0E383111BCDC832002AF2B0 /* ApiConj.cpp in Sources */,
 				F0E383121BCDC832002AF2B0 /* LangsBar.m in Sources */,
 				F0E383131BCDC832002AF2B0 /* PanelRigthView.m in Sources */,
@@ -7873,7 +7860,6 @@
 				F0E383391BCDC832002AF2B0 /* ApiTrd.cpp in Sources */,
 				F0E3833A1BCDC832002AF2B0 /* ListOfRoots.cpp in Sources */,
 				F0E3833B1BCDC832002AF2B0 /* FileUtil.cpp in Sources */,
-				F0E3833C1BCDC832002AF2B0 /* ModuleLabelView.m in Sources */,
 				F0E3833D1BCDC832002AF2B0 /* TopLeading.m in Sources */,
 				F0E3833E1BCDC832002AF2B0 /* ProxyTrd.mm in Sources */,
 				F0E3833F1BCDC832002AF2B0 /* StrUtil.cpp in Sources */,
@@ -7916,6 +7902,7 @@
 				F0E384511BCDC849002AF2B0 /* VirtualDictRowView.m in Sources */,
 				F0E384521BCDC849002AF2B0 /* MainView.m in Sources */,
 				F0E384531BCDC849002AF2B0 /* ReflexiveVerbInSentence.cpp in Sources */,
+				F0E4CB6D1BDB11C90052A99F /* ModuleHdrView.m in Sources */,
 				F0E384541BCDC849002AF2B0 /* ApiConj.cpp in Sources */,
 				F0E384551BCDC849002AF2B0 /* LangsBar.m in Sources */,
 				F0E384561BCDC849002AF2B0 /* PanelRigthView.m in Sources */,
@@ -7959,7 +7946,6 @@
 				F0E3847C1BCDC849002AF2B0 /* ApiTrd.cpp in Sources */,
 				F0E3847D1BCDC849002AF2B0 /* ListOfRoots.cpp in Sources */,
 				F0E3847E1BCDC849002AF2B0 /* FileUtil.cpp in Sources */,
-				F0E3847F1BCDC849002AF2B0 /* ModuleLabelView.m in Sources */,
 				F0E384801BCDC849002AF2B0 /* TopLeading.m in Sources */,
 				F0E384811BCDC849002AF2B0 /* ProxyTrd.mm in Sources */,
 				F0E384821BCDC849002AF2B0 /* StrUtil.cpp in Sources */,
@@ -8002,6 +7988,7 @@
 				F0E385941BCDC859002AF2B0 /* VirtualDictRowView.m in Sources */,
 				F0E385951BCDC859002AF2B0 /* MainView.m in Sources */,
 				F0E385961BCDC859002AF2B0 /* ReflexiveVerbInSentence.cpp in Sources */,
+				F0E4CB6E1BDB11C90052A99F /* ModuleHdrView.m in Sources */,
 				F0E385971BCDC859002AF2B0 /* ApiConj.cpp in Sources */,
 				F0E385981BCDC859002AF2B0 /* LangsBar.m in Sources */,
 				F0E385991BCDC859002AF2B0 /* PanelRigthView.m in Sources */,
@@ -8045,7 +8032,6 @@
 				F0E385BF1BCDC859002AF2B0 /* ApiTrd.cpp in Sources */,
 				F0E385C01BCDC859002AF2B0 /* ListOfRoots.cpp in Sources */,
 				F0E385C11BCDC859002AF2B0 /* FileUtil.cpp in Sources */,
-				F0E385C21BCDC859002AF2B0 /* ModuleLabelView.m in Sources */,
 				F0E385C31BCDC859002AF2B0 /* TopLeading.m in Sources */,
 				F0E385C41BCDC859002AF2B0 /* ProxyTrd.mm in Sources */,
 				F0E385C51BCDC859002AF2B0 /* StrUtil.cpp in Sources */,
@@ -8088,6 +8074,7 @@
 				F0E386D71BCDC867002AF2B0 /* VirtualDictRowView.m in Sources */,
 				F0E386D81BCDC867002AF2B0 /* MainView.m in Sources */,
 				F0E386D91BCDC867002AF2B0 /* ReflexiveVerbInSentence.cpp in Sources */,
+				F0E4CB6F1BDB11C90052A99F /* ModuleHdrView.m in Sources */,
 				F0E386DA1BCDC867002AF2B0 /* ApiConj.cpp in Sources */,
 				F0E386DB1BCDC867002AF2B0 /* LangsBar.m in Sources */,
 				F0E386DC1BCDC867002AF2B0 /* PanelRigthView.m in Sources */,
@@ -8131,7 +8118,6 @@
 				F0E387021BCDC867002AF2B0 /* ApiTrd.cpp in Sources */,
 				F0E387031BCDC867002AF2B0 /* ListOfRoots.cpp in Sources */,
 				F0E387041BCDC867002AF2B0 /* FileUtil.cpp in Sources */,
-				F0E387051BCDC867002AF2B0 /* ModuleLabelView.m in Sources */,
 				F0E387061BCDC867002AF2B0 /* TopLeading.m in Sources */,
 				F0E387071BCDC867002AF2B0 /* ProxyTrd.mm in Sources */,
 				F0E387081BCDC867002AF2B0 /* StrUtil.cpp in Sources */,
@@ -8174,6 +8160,7 @@
 				F0E3881A1BCDC878002AF2B0 /* VirtualDictRowView.m in Sources */,
 				F0E3881B1BCDC878002AF2B0 /* MainView.m in Sources */,
 				F0E3881C1BCDC878002AF2B0 /* ReflexiveVerbInSentence.cpp in Sources */,
+				F0E4CB701BDB11C90052A99F /* ModuleHdrView.m in Sources */,
 				F0E3881D1BCDC878002AF2B0 /* ApiConj.cpp in Sources */,
 				F0E3881E1BCDC878002AF2B0 /* LangsBar.m in Sources */,
 				F0E3881F1BCDC878002AF2B0 /* PanelRigthView.m in Sources */,
@@ -8217,7 +8204,6 @@
 				F0E388451BCDC878002AF2B0 /* ApiTrd.cpp in Sources */,
 				F0E388461BCDC878002AF2B0 /* ListOfRoots.cpp in Sources */,
 				F0E388471BCDC878002AF2B0 /* FileUtil.cpp in Sources */,
-				F0E388481BCDC878002AF2B0 /* ModuleLabelView.m in Sources */,
 				F0E388491BCDC878002AF2B0 /* TopLeading.m in Sources */,
 				F0E3884A1BCDC878002AF2B0 /* ProxyTrd.mm in Sources */,
 				F0E3884B1BCDC878002AF2B0 /* StrUtil.cpp in Sources */,
@@ -8260,6 +8246,7 @@
 				F0E3895D1BCDC88B002AF2B0 /* VirtualDictRowView.m in Sources */,
 				F0E3895E1BCDC88B002AF2B0 /* MainView.m in Sources */,
 				F0E3895F1BCDC88B002AF2B0 /* ReflexiveVerbInSentence.cpp in Sources */,
+				F0E4CB711BDB11C90052A99F /* ModuleHdrView.m in Sources */,
 				F0E389601BCDC88B002AF2B0 /* ApiConj.cpp in Sources */,
 				F0E389611BCDC88B002AF2B0 /* LangsBar.m in Sources */,
 				F0E389621BCDC88B002AF2B0 /* PanelRigthView.m in Sources */,
@@ -8303,7 +8290,6 @@
 				F0E389881BCDC88B002AF2B0 /* ApiTrd.cpp in Sources */,
 				F0E389891BCDC88B002AF2B0 /* ListOfRoots.cpp in Sources */,
 				F0E3898A1BCDC88B002AF2B0 /* FileUtil.cpp in Sources */,
-				F0E3898B1BCDC88B002AF2B0 /* ModuleLabelView.m in Sources */,
 				F0E3898C1BCDC88B002AF2B0 /* TopLeading.m in Sources */,
 				F0E3898D1BCDC88B002AF2B0 /* ProxyTrd.mm in Sources */,
 				F0E3898E1BCDC88B002AF2B0 /* StrUtil.cpp in Sources */,
@@ -8346,6 +8332,7 @@
 				F0E38AA01BCDC89C002AF2B0 /* VirtualDictRowView.m in Sources */,
 				F0E38AA11BCDC89C002AF2B0 /* MainView.m in Sources */,
 				F0E38AA21BCDC89C002AF2B0 /* ReflexiveVerbInSentence.cpp in Sources */,
+				F0E4CB721BDB11C90052A99F /* ModuleHdrView.m in Sources */,
 				F0E38AA31BCDC89C002AF2B0 /* ApiConj.cpp in Sources */,
 				F0E38AA41BCDC89C002AF2B0 /* LangsBar.m in Sources */,
 				F0E38AA51BCDC89C002AF2B0 /* PanelRigthView.m in Sources */,
@@ -8389,7 +8376,6 @@
 				F0E38ACB1BCDC89C002AF2B0 /* ApiTrd.cpp in Sources */,
 				F0E38ACC1BCDC89C002AF2B0 /* ListOfRoots.cpp in Sources */,
 				F0E38ACD1BCDC89C002AF2B0 /* FileUtil.cpp in Sources */,
-				F0E38ACE1BCDC89C002AF2B0 /* ModuleLabelView.m in Sources */,
 				F0E38ACF1BCDC89C002AF2B0 /* TopLeading.m in Sources */,
 				F0E38AD01BCDC89C002AF2B0 /* ProxyTrd.mm in Sources */,
 				F0E38AD11BCDC89C002AF2B0 /* StrUtil.cpp in Sources */,
@@ -8432,6 +8418,7 @@
 				F0E38BE31BCDC8A9002AF2B0 /* VirtualDictRowView.m in Sources */,
 				F0E38BE41BCDC8A9002AF2B0 /* MainView.m in Sources */,
 				F0E38BE51BCDC8A9002AF2B0 /* ReflexiveVerbInSentence.cpp in Sources */,
+				F0E4CB731BDB11C90052A99F /* ModuleHdrView.m in Sources */,
 				F0E38BE61BCDC8A9002AF2B0 /* ApiConj.cpp in Sources */,
 				F0E38BE71BCDC8A9002AF2B0 /* LangsBar.m in Sources */,
 				F0E38BE81BCDC8A9002AF2B0 /* PanelRigthView.m in Sources */,
@@ -8475,7 +8462,6 @@
 				F0E38C0E1BCDC8A9002AF2B0 /* ApiTrd.cpp in Sources */,
 				F0E38C0F1BCDC8A9002AF2B0 /* ListOfRoots.cpp in Sources */,
 				F0E38C101BCDC8A9002AF2B0 /* FileUtil.cpp in Sources */,
-				F0E38C111BCDC8A9002AF2B0 /* ModuleLabelView.m in Sources */,
 				F0E38C121BCDC8A9002AF2B0 /* TopLeading.m in Sources */,
 				F0E38C131BCDC8A9002AF2B0 /* ProxyTrd.mm in Sources */,
 				F0E38C141BCDC8A9002AF2B0 /* StrUtil.cpp in Sources */,
@@ -8518,6 +8504,7 @@
 				F0E38D261BCDC8B8002AF2B0 /* VirtualDictRowView.m in Sources */,
 				F0E38D271BCDC8B8002AF2B0 /* MainView.m in Sources */,
 				F0E38D281BCDC8B8002AF2B0 /* ReflexiveVerbInSentence.cpp in Sources */,
+				F0E4CB741BDB11C90052A99F /* ModuleHdrView.m in Sources */,
 				F0E38D291BCDC8B8002AF2B0 /* ApiConj.cpp in Sources */,
 				F0E38D2A1BCDC8B8002AF2B0 /* LangsBar.m in Sources */,
 				F0E38D2B1BCDC8B8002AF2B0 /* PanelRigthView.m in Sources */,
@@ -8561,7 +8548,6 @@
 				F0E38D511BCDC8B8002AF2B0 /* ApiTrd.cpp in Sources */,
 				F0E38D521BCDC8B8002AF2B0 /* ListOfRoots.cpp in Sources */,
 				F0E38D531BCDC8B8002AF2B0 /* FileUtil.cpp in Sources */,
-				F0E38D541BCDC8B8002AF2B0 /* ModuleLabelView.m in Sources */,
 				F0E38D551BCDC8B8002AF2B0 /* TopLeading.m in Sources */,
 				F0E38D561BCDC8B8002AF2B0 /* ProxyTrd.mm in Sources */,
 				F0E38D571BCDC8B8002AF2B0 /* StrUtil.cpp in Sources */,
@@ -8578,14 +8564,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F0AC43341ADF51E200A5089F /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F0AC43351ADF51E200A5089F /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		F0AC433D1ADF51E200A5089F /* Main_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -8598,6 +8576,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				F0DCAEE81B1B8E4A0081D11F /* Base */,
+				F0B8A66D1BD14CD6002BABE6 /* es */,
+				F0B8A66E1BD14CE4002BABE6 /* fr */,
+				F0B8A66F1BD14CF1002BABE6 /* it */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -8691,6 +8672,7 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -8706,6 +8688,7 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;

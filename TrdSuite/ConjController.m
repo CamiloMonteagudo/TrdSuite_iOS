@@ -12,9 +12,9 @@
 #import "ProxyConj.h"
 #import "ConjDataView.h"
 #import "TopLeading.h"
-#import "ModuleLabelView.h"
 #import "ColAndFont.h"
 #import "ConjHeaderView.h"
+#import "ModuleHdrView.h"
 
 //=========================================================================================================================================================
 @interface ConjController ()
@@ -25,13 +25,11 @@
   @property (weak, nonatomic) IBOutlet LangsPanelView *PanelSrc;
   @property (weak, nonatomic) IBOutlet ConjHeaderView *HdrConjs;
   @property (weak, nonatomic) IBOutlet ConjDataView   *LstConjs;
+  @property (weak, nonatomic) IBOutlet ModuleHdrView *ModuleLabel;
 
   @property (weak, nonatomic) IBOutlet UIButton *btnConj;
 
-  @property (weak, nonatomic) IBOutlet ModuleLabelView *ModuleTitle;
-
 - (IBAction)OnConjugate:(id)sender;
-- (IBAction)OnBtnBack:(id)sender;
 
 @end
 
@@ -54,6 +52,7 @@
   _PanelSrc.ReturnType  = UIReturnKeySearch;              // Pone el botón de buscar el teclado
   _PanelSrc.SelLng = _lngSrc;                             // Fuerza a que se inicialice con el idioma de origen
  
+  LGDes = _lngDes;
   [ProxyConj LoadConjLang:_PanelSrc.SelLng];              // Carga la conjugacion para el idiom actual
  
   if( [ProxyConj IsVerbWord:_Verb InLang:_lngSrc] )       // Si el parameto recibido es un verbo
@@ -67,14 +66,10 @@
     {
     [self ClearConjData];
     }
-  }
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
-- (void)viewDidAppear:(BOOL)animated
-  {
-  NSString* Title = NSLocalizedString(@"ModConjugation", nil);
   
-  [_ModuleTitle ShowLabel:Title InFrame:self.view.bounds ];
+  _ModuleLabel.Text = NSLocalizedString(@"ModConjugation", nil);
+  
+  [_ModuleLabel OnCloseBtn:@selector(OnBtnBack:) Target:self];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -88,14 +83,26 @@
 // Reorganiza todas las subvistas que estan dentro de la vista del viewcontroller
 - (void)viewDidLayoutSubviews
   {
-  float y = _PanelSrc.frame.origin.y + _PanelSrc.frame.size.height;
   float w = self.view.bounds.size.width;
+  float y = _ModuleLabel.Height;
+  
+  float hSrc = _PanelSrc.frame.size.height;
+  
+  _PanelSrc.frame = CGRectMake(0, y, w-50, hSrc);
+  
+  float xc = w-25;
+  float yc = y + BTN_H + LineHeight/2 + 10;
+
+  _btnConj.center  = CGPointMake(xc, yc);
+
+  y += hSrc;
+  
   float h = _HdrConjs.frame.size.height;
   
   _HdrConjs.frame = CGRectMake(0, y, w, h);
   
   y += (h-BRD_W);
-  h  = self.view.frame.size.height - y;
+  h  = self.view.bounds.size.height - y;
   
   _LstConjs.frame = CGRectMake(SEP_BRD, y, w-(2*SEP_BRD), h);
   }
@@ -157,7 +164,7 @@
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Se llama cuando se oprime el botón de retroceder
-- (IBAction)OnBtnBack:(id)sender
+- (void)OnBtnBack:(id)sender
   {
   [self performSegueWithIdentifier: @"Back" sender: self];  // Retorna a la vista anterior
   }
@@ -219,8 +226,6 @@
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration
   {
   scrnWidth  = self.view.bounds.size.width;
-  
-  _ModuleTitle.hidden = TRUE;
   }
 
 @end

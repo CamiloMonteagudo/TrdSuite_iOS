@@ -51,16 +51,19 @@
   [LGBar OnSelLang:@selector(OnSelLang:) Target:self];  // Pone callback para cuando se seleccione un idioma
   [LGBar OnSelItem:@selector(OnSelItem:) Target:self];  // Pone callback para cuando se seleccione un boton adicional
   
-  TextCtl     = (UITextView*)[self viewWithTag:10];     // Obtiene el control que representa al editor de texto
-  PlaceHolder = (UILabel*   )[self viewWithTag:20];     // Obtiene el control que representa al placa holder
+  TextCtl = (UITextView*)[self viewWithTag:10];         // Obtiene el control que representa al editor de texto
   
-  // Pone la letra que usarén el texto y el placehorder
-  TextCtl.font          = fontEdit;
+  TextCtl.font = fontEdit;
+  
+  float mVert = (FontSize-1)/2;
+  TextCtl.textContainerInset = UIEdgeInsetsMake(mVert, 0, mVert, 0);
+  
+  TextCtl.delegate               = self;                // Pone delegado para el control de texto
+  TextCtl.layoutManager.delegate = self;                // Pone delegado para el layoutManager del control de texto
+  
+  PlaceHolder = (UILabel*   )[self viewWithTag:20];     // Obtiene el control que representa al placa holder
   PlaceHolder.font      = fontEdit;
   PlaceHolder.textColor = ColHolder;
-  
-  TextCtl.delegate = self;                              // Pone delegado para el control de texto
-  TextCtl.layoutManager.delegate = self;                // Pone delegado para el layoutManager del control de texto
   
   oldLng = LGBar.SelLng;                                // Guarda el idioma actual
   
@@ -74,6 +77,9 @@
   {
   TextCtl.font     = fontEdit;
   PlaceHolder.font = fontEdit;
+  
+  float mVert = (FontSize-1)/2;
+  TextCtl.textContainerInset = UIEdgeInsetsMake(mVert, 0, mVert, 0);
   
   [LGBar RefreshView];
   
@@ -322,16 +328,9 @@
     CGRect rc = TextCtl.frame;
     PlaceHolder.frame = CGRectMake(rc.origin.x+5, rc.origin.y, rc.size.width-3, rc.size.height);
     
-    NSString* sKey = @"";
-    switch( LGBar.SelLng )                              // Muestra texto según el idioma actual
-      {
-      case 0: sKey = [_PlaceHolderKey stringByAppendingString:@"Es"]; break;
-      case 1: sKey = [_PlaceHolderKey stringByAppendingString:@"En"]; break;
-      case 2: sKey = [_PlaceHolderKey stringByAppendingString:@"It"]; break;
-      case 4: sKey = [_PlaceHolderKey stringByAppendingString:@"Fr"]; break;
-      }
-      
-    PlaceHolder.text = NSLocalizedString( sKey , nil );
+    NSString* sKey   = NSLocalizedString( _PlaceHolderKey, nil );
+    NSString* sLang  = LGName( LGBar.SelLng );
+    PlaceHolder.text = [sKey stringByAppendingString: [sLang uppercaseString]];
     }
   }
 
@@ -357,7 +356,7 @@
     {
     CGRect rcTxt = [TextCtl.layoutManager usedRectForTextContainer:TextCtl.textContainer];          // Obtiene el tamaño del texto
   
-    hText = rcTxt.size.height + FontSize;                                         // Obtiene altura del control, con 8 de margen arriba y abajo
+    hText = rcTxt.size.height + FontSize;                                         // Obtiene altura del control, mas un de margen arriba y abajo
     if( hText>EditMaxHeigth )                                                     // Chequea si sobrepasa el tamaño maximo
       hText = EditMaxHeigth;                                                      // Lo pone al tamaño máximo
     

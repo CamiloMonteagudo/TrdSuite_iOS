@@ -15,6 +15,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
   {
+  iUser = [NSLocalizedString(@"UserLang", nil) intValue];
+  
   NSUserDefaults* def = [NSUserDefaults standardUserDefaults];
   
   for( int i=0; i<N_PURCH; ++i)

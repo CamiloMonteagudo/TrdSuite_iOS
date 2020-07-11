@@ -10,9 +10,9 @@
 #import "AppData.h"
 #import "ColAndFont.h"
 #import "VirtualListView.h"
+#import "ModuleHdrView.h"
 
-//#define PRU_PRURCHASE                     // Para probar que la compra se hace correctamente
-#define SIMULATE                          // Simula que se esta conectando a internet
+//#define SIMULATE                          // Simula que se esta conectando a internet
 
 //=========================================================================================================================================================
 // Almacena los datos relacionado con un item
@@ -43,7 +43,7 @@ static PurchItem Items[] =  { {@"", 1, 0, @"", @"", FALSE, nil, FALSE },        
 
 static float MaxDirWidth;                     // Ancho maximo de la descrición de los items
 static float PriceWidth;                      // Ancho para poner el precio
-static int   Retore;                          // 1 Si perece la opcion de restaurar, 0 no aparece
+static int   Restore;                         // 1 Si perece la opcion de restaurar, 0 no aparece
 
 static float  hRow;                           // Alto de las filas, con la informacion de un item
 static float  wList;                          // Ancho de lista con los items
@@ -52,9 +52,16 @@ static float  hList;                          // Alto de las filas con los items
 static UIImage* imgBuyItem = [UIImage imageNamed: @"BuyItem"];      // Icono que indica que el item se puede comprar
 static UIImage* imgBuyOk   = [UIImage imageNamed: @"BuyOk"];        // Icono que indica que el item ya fue comprado
 
-static Purchases* _Purchases;
+static Purchases*     _Purchases;                                   // Objeto para manejar las compras dentros de la aplicacion
 static PurchasesView* ShowView;                                     // Vista donde se muestran los items
 static BOOL           InProcessRest;                                // Indica que la restauración de las compras esta en proceso
+static int            RequestStatus;                                // Estado de la solicitud de productos a AppStore
+
+//---------------------------------------------------------------------------------------------------------------------------------------------
+// Posibles valores para 'RequestStatus'
+#define REQUEST_NOSTART    0                                         // La solicitud no ha comenzado
+#define REQUEST_INPROCESS  1                                         // La solicitud no esta en proceso
+#define REQUEST_ENDED      2                                         // La solicitud termino satisfactoriamente
 
 //=========================================================================================================================================
 
@@ -180,9 +187,9 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   
   [self CalculateParameters];
   
-  [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
+  [[SKPaymentQueue defaultQueue] addTransactionObserver:_Purchases];
   
-  [_Purchases RequestProdInfo];
+  [Purchases RequestProdInfo];
   }
 
 //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -193,9 +200,11 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   }
 
 //---------------------------------------------------------------------------------------------------------------------------------------------
-// Solicita la información sobre los productos que hay en AppStore
-- (void) RequestProdInfo
+// Solicita la información sobre los productos a AppStore
++(void) RequestProdInfo
   {
+  if( RequestStatus != REQUEST_NOSTART ) return;
+  
   #ifndef SIMULATE
     SKProductsRequest* request = [[SKProductsRequest alloc] initWithProductIdentifiers:LstProds ];
     [request setDelegate:_Purchases];
@@ -205,10 +214,12 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
     int tm = 3 + rand()%27;
     [NSTimer scheduledTimerWithTimeInterval:tm target:self selector:@selector(productsRequest_:) userInfo:nil repeats:NO];
   #endif
+  
+  RequestStatus = REQUEST_INPROCESS;
   }
 
 //---------------------------------------------------------------------------------------------------------------------------------------------
-// Función que retorna los produtos que estan listo para la compra dentro de la aplicación
+// Retorno desde AppStore de la información de los productos solicitados
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response
   {
   for( SKProduct* Prod in response.products )
@@ -216,16 +227,26 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
     int index = [Purchases IndexOfProductId: Prod.productIdentifier];
     if( index<0 ) continue;
     
-    [self SetItem:index WithProd:Prod];
+    [Purchases SetItem:index WithProd:Prod];
     }
   
+  RequestStatus = REQUEST_ENDED;
+  
   if( ShowView) [ShowView RefreshItems];
+  }
+
+//---------------------------------------------------------------------------------------------------------------------------------------------
+// Llamada cuando se produce un error en la solicitud de información de los productos
+-(void)request:(SKRequest *)request didFailWithError:(NSError *)error
+  {
+  RequestStatus = REQUEST_NOSTART;
+  [request cancel];
   }
 
 #ifdef SIMULATE
 //---------------------------------------------------------------------------------------------------------------------------------------------
 // Simula la función 'productsRequest' pero es llamada desde un timer
-- (void)productsRequest_: (NSTimer *) timer
++ (void)productsRequest_: (NSTimer *) timer
   {
   for( NSString* ProdId in LstProds )
     {
@@ -234,6 +255,8 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
     
     [self SetItem:index WithProd:nil];
     }
+  
+  RequestStatus = REQUEST_ENDED;
   
   if( ShowView) [ShowView RefreshItems];
   }
@@ -266,7 +289,7 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
 // Asocia el Item con indice 'idx' con el producto 'prod'
-- (void) SetItem:(int) idx WithProd:(SKProduct*) prod
++ (void) SetItem:(int) idx WithProd:(SKProduct*) prod
   {
   #ifndef SIMULATE
     if( prod == nil ) return;
@@ -303,6 +326,16 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
     int tm = 3 + rand()%27;
     [NSTimer scheduledTimerWithTimeInterval:tm target:self selector:@selector(EndRestore:) userInfo:nil repeats:NO];
   #endif
+  }
+
+//---------------------------------------------------------------------------------------------------------------------------------------------
+// Se llama cuando se produce un error al tratar de restaurar las compras realizadas
+- (void)paymentQueue:(SKPaymentQueue *)queue restoreCompletedTransactionsFailedWithError:(NSError *)error
+  {
+  InProcessRest = FALSE;
+  if( ShowView) [ShowView RefreshItems];                                                // Refresca la lista de productos
+  
+  [Purchases AlertMsg: @"TransError"];
   }
 
 #ifdef SIMULATE
@@ -351,24 +384,27 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   {
   for( SKPaymentTransaction* Transation in transactions )                               // Recorre todas la transaciones pendientes
     {
-    if( Transation.transactionState == SKPaymentTransactionStateFailed )
+    if( Transation.transactionState == SKPaymentTransactionStatePurchasing ) continue;
+    
+    SKPayment * Pay = Transation.payment;
+    
+    if( Transation.transactionState == SKPaymentTransactionStateFailed )                // Hubo un error en el poceso de pago
       {
+      [Purchases CancelPayment:Pay];
       [Purchases AlertMsg: @"TransError"];
       }
-    else if( Transation.transactionState != SKPaymentTransactionStatePurchased )
+    else if( Transation.transactionState == SKPaymentTransactionStatePurchased )        // El producto fue comprado satisfactoriamente
       {
-      [Purchases ProcessPayment:Transation.payment ];
-      
-      [queue finishTransaction:Transation];                                               // Quita la transación de la cola
+      [Purchases ProcessPayment: Pay];
       }
-    else if( Transation.transactionState != SKPaymentTransactionStateRestored  )
+    else if( Transation.transactionState == SKPaymentTransactionStateRestored  )        // El producto fue restaurado de una compra anterior
       {
-      [Purchases ProcessPayment:Transation.payment ];
-      
-      [queue finishTransaction:Transation];                                               // Quita la transación de la cola
+      [Purchases ProcessPayment: Pay];
       
       InProcessRest = FALSE;
       }
+      
+    [queue finishTransaction:Transation];                                               // Quita la transación de la cola
     }
     
   if( ShowView) [ShowView RefreshItems];                                                // Refresca la lista de productos
@@ -383,7 +419,9 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   
   SKMutablePayment *myPayment = [SKMutablePayment paymentWithProductIdentifier: ProdId];
   
-  [Purchases ProcessPayment:myPayment ];
+  [[SKPaymentQueue defaultQueue] addPayment:myPayment];
+  
+//  [Purchases ProcessPayment:myPayment ];
     
   if( ShowView) [ShowView RefreshItems];                                                // Refresca la lista de productos
   }
@@ -420,6 +458,17 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   [center postNotificationName:RefreshNotification object:self];
   }
 
+//---------------------------------------------------------------------------------------------------------------------------------------------
+// Cancela el proceso de pago para un producto
++ (void) CancelPayment: (SKPayment *) Pay
+  {
+  NSString* ProdId = Pay.productIdentifier;
+  int idx = [Purchases IndexOfProductId: ProdId];                                       // Obtiene el indice la producto según el ID
+  if( idx<0 ) return;
+  
+  Items[idx].InProcess = FALSE;
+  }
+
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Pone el item con indice 'idx' como comprado
 +(void) SetPurchasedItem:(int) idx
@@ -431,15 +480,6 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
 
   LGSetInstDir( item.lang1 , item.lang2 );
   LGSetInstDir( item.lang2 , item.lang1 );
-
-  #ifdef PRU_PRURCHASE
-    if( ShowView) [ShowView RefreshItems];
-  
-    NSUserDefaults* def = [NSUserDefaults standardUserDefaults];
-  
-    NSString* key = [NSString stringWithFormat:@"Purchase%d", idx];
-    [def setBool:TRUE forKey:key];
-  #endif
   }
 
 //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -447,7 +487,7 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
 +(void) CalculateParameters
   {
   MaxDirWidth = 0;
-  Retore      = 0;
+  Restore     = 0;
   
   for(int i=0; i<N_PURCH; ++i )
     {
@@ -459,16 +499,18 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
     item.NoInst = ( !LGIsInstDir( item.lang1, item.lang2 ) ||
                     !LGIsInstDir( item.lang2, item.lang1 ) );
       
-    if( item.NoInst ) Retore = 1;
+    if( item.NoInst ) Restore = 1;
     }
     
+  if( Restore == 0 )  RequestStatus = REQUEST_ENDED;
+  
   CGSize sz = [@"$ 0.00" sizeWithAttributes:attrBuy];
 
   PriceWidth = sz.width+1;
     
   hRow  =  (7.0*LineHeight)/4.0;
   wList = SEP_BRD + MaxDirWidth + SEP_BRD + BTN_W + SEP_BRD + PriceWidth + SEP_BRD;
-  hList = (N_PURCH+Retore) * (hRow+SEP_ROW) - SEP_ROW;
+  hList = (N_PURCH+Restore) * (hRow+SEP_ROW) - SEP_ROW;
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -491,8 +533,7 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
 //=========================================================================================================================================================
 @interface PurchasesScreen()
   {
-  UILabel* title;
-  
+  ModuleHdrView* Header;
   PurchasesView* PurchList;
   }
 @end
@@ -542,14 +583,19 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
 // Crea la vista para mostrar el titulo
 - (void) CreateTitle
   {
-  title = [[UILabel alloc] initWithFrame: CGRectMake( 0, 0, 290, 20)];
+  Header = [[ModuleHdrView alloc] initWithFrame: CGRectMake( 0, 0, 290, 20)];
+  Header.Text = NSLocalizedString(@"TitlePurchases", nil);
   
-  title.font             = fontTitle;
-  title.textColor        = ColPanelTitle;
-  title.textAlignment    = NSTextAlignmentCenter;
-  title.text             = NSLocalizedString(@"TitlePurchases", nil);
+  [Header OnCloseBtn:@selector(OnCloseMod:) Target:self];
   
-  [self addSubview: title];
+  [self addSubview: Header];
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Se llama cuando se toca el boton de cerrar la pantalla y regresar a la anterior
+- (void)OnCloseMod:(id)sender
+  {
+  [self removeFromSuperview];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -581,39 +627,20 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
 // Organiza los controles dentro de la pantalla
 -(void)layoutSubviews
   {
-  CGSize sz  = self.bounds.size;                                        // Toda el arrea de la vista
+  CGSize   sz = self.bounds.size;                                      // Toda el arrea de la vista
+  float hPurc = SEP_BRD + hList + SEP_BRD;                             // Calcula altura de la lista de items
+  float     y = Header.Height + SEP_BRD;                               // Posicion en y para iniciar a poner vistas
+  float hDisp = sz.height - Header.Height;                             // Calcula altura disponible para poner las vistas
   
-  float hText = fontTitle.pointSize + FontSize;                         // Calcula altura del titulo
-  float hPurc = SEP_BRD + hList + SEP_BRD;                              // Calcula altura de la lista de items
-  float     h = hText + hPurc + SEP_BRD;                                // Altura total para acomodar las dos vistas
-  
-  float     y =  STUS_H;                                                // Se salta la altura de la barra de estado
-  float hDisp = sz.height - STUS_H;                                     // Calcula altura disponible para poner las vistas
-  
-  if( h <= hDisp )                                                      // Si hay espacio para todas las vistas
-    y += ((hDisp- h)/2);                                                // Las centra verticalmente
-  else                                                                  // No hay espacio
-    hPurc = hDisp - hText - SEP_BRD;                                    // Acorta la lista de items
+  if( hPurc <= hDisp )                                                 // Si hay mas espacio del necesario
+    y = Header.Height + ((hDisp-hList)/2);                             // Las centra verticalmente
+  else                                                                 // No hay espacio
+    hPurc = sz.height- y - SEP_BRD;                                    // Acorta la lista de items
     
   float w = SEP_BRD + wList + SEP_BRD;;                                 // Toma el ancho de la lista de items
   float x = (sz.width - w)/2;                                           // Centra horizontalmente
   
-  title.frame = CGRectMake( x, y, w, hText );                           // Pone el titulo
-  
-  y += hText;                                                           // Salta la altura del titulo
   PurchList.frame = CGRectMake( x, y, w, hPurc );                       // Pone la lista
-  }
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-  {
-  [self Close];
-  }
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
-- (void) Close
-  {
-  [self removeFromSuperview];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -667,10 +694,11 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-//
+// Crea la vista con la lista de productos
 -(void) CreateListItems
   {
   [Purchases setView:self];
+  [Purchases RequestProdInfo];
 
   self.backgroundColor = [UIColor clearColor];
   self.clipsToBounds   = TRUE;
@@ -692,7 +720,7 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   {
   [Purchases CalculateParameters];
 
-  int count = N_PURCH + Retore;
+  int count = N_PURCH + Restore;
   if( ListItems.Count != count )
     {
     ListItems.Count = count;
@@ -779,23 +807,7 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   PurchItem &item = Items[iRow];
   
   if( item.NoInst )
-    {
-    #ifndef PRU_PRURCHASE
-      [Purchases PurchaseProdIndex:iRow];
-    #else
-      [Purchases SetPurchasedItem:iRow];
-    
-      NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
-      [center postNotificationName:RefreshNotification object:self];
-    #endif
-    }
-  else
-    {
-    if( [self.superview isKindOfClass:[PurchasesScreen class]] )
-      {
-      [((PurchasesScreen*)self.superview) Close];
-      }
-    }
+    [Purchases PurchaseProdIndex:iRow];
   }
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

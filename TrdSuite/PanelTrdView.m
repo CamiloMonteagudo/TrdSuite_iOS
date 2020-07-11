@@ -66,6 +66,9 @@
   
   TrdText = [[UITextView alloc] initWithFrame: frm];
   TrdText.font  = fontEdit;
+
+  float mVert = (FontSize-1)/2;
+  TrdText.textContainerInset = UIEdgeInsetsMake(mVert, 0, mVert, 0);
   
   TrdText.delegate = self;                              // Pone delegado para el control de texto
   TrdText.layoutManager.delegate = self;                // Pone delegado para el layoutManager del control de texto
@@ -82,6 +85,9 @@
   TrdText.font = fontEdit;
   lbTrd.font   = fontPanelTitle;
                                           
+  float mVert = (FontSize-1)/2;
+  TrdText.textContainerInset = UIEdgeInsetsMake(mVert, 0, mVert, 0);
+  
   [LGBar RefreshView];
   
   lstWidth = 0;
@@ -278,25 +284,6 @@
 - (void)layoutManager:(NSLayoutManager *)layoutManager didCompleteLayoutForTextContainer:(NSTextContainer *)textContainer atEnd:(BOOL)layoutFinishedFlag
   {
   [self setNeedsLayout];                                // Recalcula distribución de los controles
-  }
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
--(float) GetHeightTxt:(NSString*)txt Width:(int) Width
-  {
-  float h = LineHeight;
-  if( txt.length*FontSize > Width )
-    {
-    CGSize  sz = CGSizeMake( Width, 5000);
-    CGRect rc1 = [txt boundingRectWithSize: sz
-                                     options: NSStringDrawingUsesLineFragmentOrigin
-                                  attributes: attrEdit
-                                     context: nil      ];
-  
-    int hTxt = rc1.size.height + FontSize-1;
-    if( hTxt>h ) h = hTxt;
-    }
-  
-  return h;
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------

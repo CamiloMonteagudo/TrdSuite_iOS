@@ -136,6 +136,7 @@
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Establece el modo de trabajo y el tipo de información a mostrar
+// MODE_CMDS - muestra comandos, MODE_MEANS - Muestra los significados, MODE_ROOTS - Muestra las raices
 - (void)setMode:(int)Mode
   {
   _Mode = Mode;
@@ -161,7 +162,8 @@
   if( super.hidden != hidded )
     {
     super.hidden = hidded;
-    if( hidded ) [_Ctrller ClearMarkText];
+    if( hidded )
+      [_Ctrller ClearMarkText];
     self.Mode = MODE_CMDS;
     }
   }
@@ -274,17 +276,21 @@
 - (void) UpdateButtons
   {
   int btnCMode = [_Ctrller GetBtnCenterMode];
-  if( btnCMode != _ModeBtnCenter )
+  if( btnCMode != _ModeBtnCenter )                // Solo si cambia la modo de mostrar el boton central
     {
     _ModeBtnCenter = btnCMode;
     
-    btnCenter.hidden = (btnCMode==0);
+    btnCenter.hidden = (btnCMode==BtnCenterHide);
   
     NSString *sImg;
-  
-         if( btnCMode==1 ) sImg = @"BtnMoveDown";
-    else if( btnCMode==2 ) sImg = LGFlagFile(LGDes,@"30");
-    else if( btnCMode==3 ) sImg = LGFlagFile(LGSrc,@"30");
+    
+    switch (btnCMode)
+      {
+      case BtnCenterHide   : return;
+      case BtnCenterDown   : sImg = @"BtnMoveDown";          break;
+      case BtnCenterInfoSrc: sImg = LGFlagFile(LGDes,@"30"); break;
+      case BtnCenterInfoTrd: sImg = LGFlagFile(LGSrc,@"30"); break;
+      }
     
     [btnCenter setImage: [UIImage imageNamed:sImg ] forState: UIControlStateNormal ];
   

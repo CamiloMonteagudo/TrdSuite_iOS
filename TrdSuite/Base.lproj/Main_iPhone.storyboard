@@ -61,19 +61,18 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.25098039215686274" green="0.64313725490196072" blue="0.96078431372549022" alpha="1" colorSpace="deviceRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" id="aiR-8Z-Vkt" userLabel="Module Label" customClass="ModuleLabelView">
-                                <rect key="frame" x="60" y="518" width="200" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="dBz-zW-jYW">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.25098039215686274" green="0.64313725490196072" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="FrameView" destination="KX3-fZ-e6g" id="Hay-77-YEv"/>
+                        <outlet property="LaunchImage" destination="dBz-zW-jYW" id="99Q-oO-ZcZ"/>
                         <outlet property="ListOras" destination="noz-e0-BcK" id="KQX-jw-1hP"/>
-                        <outlet property="ModuleTitle" destination="aiR-8Z-Vkt" id="1hc-Vi-a1K"/>
                         <outlet property="PanelSrc" destination="s3i-Ud-xCb" id="xeH-sT-F9S"/>
                         <outlet property="PanelTrd" destination="DrA-ne-2do" id="yQo-kO-fE1"/>
                         <outlet property="TrdEdit" destination="ugX-dp-aeg" id="f8l-eu-Zpt"/>
@@ -93,21 +92,15 @@
         <scene sceneID="AV9-wb-pFB">
             <objects>
                 <viewController id="Hub-sk-q4b" customClass="SettingController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xSk-5y-nGI">
+                    <view key="view" tag="999" contentMode="scaleToFill" id="xSk-5y-nGI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="T1e-GE-bV8" userLabel="btnClose">
-                                <rect key="frame" x="270" y="20" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="4" minY="-4" maxX="-4" maxY="4"/>
-                                <state key="normal" image="BntCloseMod.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="OnBtnClose:" destination="Hub-sk-q4b" eventType="touchUpInside" id="U4l-VY-F6d"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" id="aq6-Nb-SAZ" customClass="ModuleHdrView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tamaño de las letras" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="afT-Ra-Rzh">
                                 <rect key="frame" x="9" y="35" width="300" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -134,19 +127,13 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" id="qq9-fV-q2t" userLabel="Module Label" customClass="ModuleLabelView">
-                                <rect key="frame" x="60" y="520" width="200" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.25098039220000001" green="0.64313725489999995" blue="1" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <connections>
                         <outlet property="ListItems" destination="ecn-gN-tlb" id="Ghz-hm-302"/>
-                        <outlet property="ModuleTitle" destination="qq9-fV-q2t" id="kQP-SV-z51"/>
+                        <outlet property="ModuleLabel" destination="aq6-Nb-SAZ" id="mzD-Fh-rDY"/>
                         <outlet property="Slider" destination="GrI-Fx-WGm" id="hx1-zF-fOb"/>
-                        <outlet property="btnClose" destination="T1e-GE-bV8" id="8xh-Z9-RoY"/>
                         <outlet property="lbLangs" destination="IYk-Az-HeW" id="xVK-R2-Ctc"/>
                         <outlet property="lbSlider" destination="afT-Ra-Rzh" id="bJ9-V3-0uC"/>
                         <segue destination="zBo-ER-W2B" kind="unwind" identifier="Back" unwindAction="ReturnFromUnwind:" id="f2M-Ec-Fli"/>
@@ -160,22 +147,15 @@
         <scene sceneID="Yo1-Sr-EHE">
             <objects>
                 <viewController id="P49-OY-0aF" customClass="DictController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="AEX-Hk-qBq">
+                    <view key="view" tag="999" contentMode="scaleToFill" id="AEX-Hk-qBq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Rgt-FL-PXg" userLabel="btnClose">
-                                <rect key="frame" x="270" y="20" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <inset key="contentEdgeInsets" minX="4" minY="-4" maxX="-4" maxY="4"/>
-                                <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="5" maxY="0.0"/>
-                                <state key="normal" image="BntCloseMod.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="OnClose:" destination="P49-OY-0aF" eventType="touchUpInside" id="KFr-L0-pNr"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" id="flD-Dv-gH2" customClass="ModuleHdrView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7xQ-RZ-bOb" userLabel="btnFindRoots">
                                 <rect key="frame" x="270" y="70" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
@@ -199,7 +179,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="mbn-6z-pnP" userLabel="Panel texto fuente" customClass="LangsPanelView">
-                                <rect key="frame" x="0.0" y="20" width="270" height="85"/>
+                                <rect key="frame" x="0.0" y="40" width="270" height="85"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" tag="10" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" id="ejk-NT-XuE">
@@ -220,25 +200,20 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view tag="10" contentMode="scaleToFill" id="Het-IK-7ZS" customClass="LangsBar">
-                                <rect key="frame" x="0.0" y="110" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="130" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" id="WVw-fZ-HnT" customClass="TopLeading">
-                                <rect key="frame" x="0.0" y="138" width="320" height="30"/>
+                                <rect key="frame" x="0.0" y="158" width="320" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" tag="202" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" id="a7k-wQ-x33" customClass="VirtualListView">
-                                <rect key="frame" x="5" y="168" width="310" height="400"/>
+                                <rect key="frame" x="5" y="188" width="310" height="400"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </scrollView>
-                            <view contentMode="scaleToFill" id="kG4-Gb-HCk" userLabel="Module Label" customClass="ModuleLabelView">
-                                <rect key="frame" x="60" y="516" width="200" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.25098039215686274" green="0.60392156862745094" blue="1" alpha="1" colorSpace="deviceRGB"/>
                     </view>
@@ -248,7 +223,7 @@
                         <outlet property="LGBar" destination="Het-IK-7ZS" id="QX2-9G-N06"/>
                         <outlet property="Leading" destination="WVw-fZ-HnT" id="Wvx-l2-49m"/>
                         <outlet property="LstWords" destination="a7k-wQ-x33" id="15f-TU-Pk8"/>
-                        <outlet property="ModuleTitle" destination="kG4-Gb-HCk" id="RPo-Fy-CO6"/>
+                        <outlet property="ModuleLabel" destination="flD-Dv-gH2" id="B45-YP-JQx"/>
                         <outlet property="PanelSrc" destination="mbn-6z-pnP" id="i18-bo-dyc"/>
                         <segue destination="ETe-7k-jjt" kind="unwind" identifier="Back" unwindAction="ReturnFromUnwind:" id="7ei-T9-Eb6"/>
                     </connections>
@@ -262,30 +237,24 @@
         <scene sceneID="hWq-KI-Ehu">
             <objects>
                 <viewController id="6wW-uF-xc5" customClass="NumsController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8Uq-9A-dxH">
+                    <view key="view" tag="999" contentMode="scaleToFill" id="8Uq-9A-dxH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" id="awa-Qq-clh" customClass="ModuleHdrView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                             <view contentMode="scaleToFill" id="l4y-tg-Tr9" customClass="NumGroupView">
                                 <rect key="frame" x="0.0" y="30" width="270" height="38"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6dR-DY-dtN" userLabel="btnClose">
-                                <rect key="frame" x="270" y="20" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="4" minY="-4" maxX="-4" maxY="4"/>
-                                <state key="normal" image="BntCloseMod.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="OnBtnClose:" destination="6wW-uF-xc5" eventType="touchUpInside" id="J5I-R3-3ck"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lectura del número" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uyJ-sC-o9b">
                                 <rect key="frame" x="9" y="70" width="228" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -299,20 +268,14 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" id="J5y-YT-1yU" userLabel="Module Label" customClass="ModuleLabelView">
-                                <rect key="frame" x="60" y="520" width="200" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.25098039215686274" green="0.64313725490196072" blue="1" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <connections>
                         <outlet property="GrpNum" destination="l4y-tg-Tr9" id="N8v-cp-gMs"/>
                         <outlet property="LangBar" destination="pjZ-Yd-EBH" id="PYF-2T-B2H"/>
-                        <outlet property="ModuleTitle" destination="J5y-YT-1yU" id="amd-tm-kxs"/>
+                        <outlet property="ModuleLabel" destination="awa-Qq-clh" id="LQo-rG-qW0"/>
                         <outlet property="NumResult" destination="eeS-Vr-gLE" id="cKJ-Xd-mph"/>
-                        <outlet property="btnClose" destination="6dR-DY-dtN" id="7f2-mo-u3C"/>
                         <outlet property="lbNum" destination="uyJ-sC-o9b" id="Xgr-ae-ygK"/>
                         <segue destination="5DW-iy-7kA" kind="unwind" identifier="Back" unwindAction="ReturnFromUnwind:" id="qAJ-95-DQm"/>
                     </connections>
@@ -326,10 +289,15 @@
         <scene sceneID="d8h-7z-uE9">
             <objects>
                 <viewController id="Bu2-Ur-BhV" customClass="ConjController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="BHq-RT-lId">
+                    <view key="view" tag="999" contentMode="scaleToFill" id="BHq-RT-lId">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" id="AgK-Bi-y2h" customClass="ModuleHdrView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                             <view contentMode="scaleToFill" id="ouc-Hz-e0F" userLabel="Panel texto fuente" customClass="LangsPanelView">
                                 <rect key="frame" x="0.0" y="20" width="270" height="85"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -351,18 +319,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NuM-6F-9EX" userLabel="btnClose">
-                                <rect key="frame" x="270" y="20" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <inset key="contentEdgeInsets" minX="4" minY="-4" maxX="-4" maxY="4"/>
-                                <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="5" maxY="0.0"/>
-                                <state key="normal" image="BntCloseMod.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="OnBtnBack:" destination="Bu2-Ur-BhV" eventType="touchUpInside" id="85z-9r-ron"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bn9-71-R36" userLabel="btnFind">
                                 <rect key="frame" x="270" y="70" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
@@ -447,18 +403,13 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" id="2xY-Zl-cTR" userLabel="Module Label" customClass="ModuleLabelView">
-                                <rect key="frame" x="60" y="516" width="200" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.25098039215686274" green="0.64313725490196072" blue="1" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <connections>
                         <outlet property="HdrConjs" destination="YLC-Vw-RbX" id="Bgf-Y1-zxm"/>
                         <outlet property="LstConjs" destination="MhO-e8-Lco" id="Oqk-WR-nwT"/>
-                        <outlet property="ModuleTitle" destination="2xY-Zl-cTR" id="or9-TW-1aZ"/>
+                        <outlet property="ModuleLabel" destination="AgK-Bi-y2h" id="Ciq-N2-lxX"/>
                         <outlet property="PanelSrc" destination="ouc-Hz-e0F" id="kne-Hg-lAf"/>
                         <outlet property="btnConj" destination="bn9-71-R36" id="nYu-Y4-2Aw"/>
                         <segue destination="ByF-cf-tQe" kind="unwind" identifier="Back" unwindAction="ReturnFromUnwind:" id="Ria-Fy-Qw9"/>
@@ -471,7 +422,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BntCloseMod.png" width="50" height="50"/>
         <image name="BntFind.png" width="50" height="50"/>
         <image name="BtnGroup.png" width="50" height="50"/>
         <image name="BtnMeans2.png" width="50" height="50"/>

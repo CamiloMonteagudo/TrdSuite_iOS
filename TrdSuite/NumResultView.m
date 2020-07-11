@@ -18,8 +18,15 @@
   float hPanel;
   float wPanel;
   
-  UILabel* lbText;
+  UILabel* lbCardinal;
+  UILabel* txtCardinal;
   UISegmentedControl *SelType;
+  
+  UILabel* lbOrdinal;
+  UILabel* txtOrdinal;
+  
+  UILabel* lbRomano;
+  UILabel* txtRomano;
   }
 
 @end
@@ -50,15 +57,15 @@
   CGPoint pos = self.frame.origin;
   self.frame  = CGRectMake(pos.x, pos.y, wPanel, LineHeight );
   
+  lbCardinal  = [self CreateLabelWithText:@"lbCardinal" ];
+  txtCardinal = [self CreateLabelWithText:nil           ];
+  lbOrdinal   = [self CreateLabelWithText:@"lbOrdinal"  ];
+  txtOrdinal  = [self CreateLabelWithText:nil           ];
+  lbRomano    = [self CreateLabelWithText:@"lbRomano"   ];
+  txtRomano   = [self CreateLabelWithText:nil           ];
+  
   float  wText = wPanel-2*SEP_BRD - 2*SEP_TXT;                   // Calcula ancho del control del texto
   CGRect    rc = CGRectMake(SEP_BRD+SEP_TXT, SEP_TXT, wText, LineHeight);
-  
-  lbText = [[UILabel alloc] initWithFrame:rc];
-  lbText.font = fontEdit;
-  lbText.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-  lbText.numberOfLines = 0;
-  
-  [self addSubview:lbText];
   
   NSString* title1 = NSLocalizedString(@"GroupAll", nil);
   NSString* title2 = NSLocalizedString(@"Group2"  , nil);
@@ -71,10 +78,40 @@
   [SelType insertSegmentWithTitle:title1 atIndex:0 animated:FALSE];
   [SelType insertSegmentWithTitle:title2 atIndex:1 animated:FALSE];
   [SelType insertSegmentWithTitle:title3 atIndex:2 animated:FALSE];
+  
+  SelType.tintColor =  ColMeanGray;
 
   SelType.selectedSegmentIndex = 0;
 
   [self addSubview:SelType];
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Crea un label y opcionalmente le pone un texto
+-(UILabel*) CreateLabelWithText:(NSString*) txt
+  {
+  CGRect  rc = CGRectMake(0, 0, wPanel, LineHeight);                                  // Cualquier frame, en el layout se recalcuala
+  UILabel* lb = [[UILabel alloc] initWithFrame:rc];
+  
+  if( txt!=nil )
+    {
+    lb.font = fontPanelTitle;
+    lb.textColor = ColPanelTitle;
+    lb.numberOfLines = 1;
+    
+    lb.text = [@" " stringByAppendingString: NSLocalizedString(txt, nil) ];
+    lb.backgroundColor = ColMainBck;
+    }
+  else
+    {
+    lb.font = fontEdit;
+    lb.numberOfLines = 0;
+    lb.lineBreakMode = NSLineBreakByTruncatingHead;
+    }
+  
+  [self addSubview:lb];
+  
+  return lb;
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -90,14 +127,14 @@
 // Implementa la propiedad para poner/obtener el texto
 - (void)setText:(NSString *)Text
   {
-  lbText.attributedText = [[NSAttributedString alloc] initWithString:Text attributes:attrEdit];
+  txtCardinal.attributedText = [[NSAttributedString alloc] initWithString:Text attributes:attrEdit];
   
   [self setNeedsLayout];
   }
 
 - (NSString *)Text
   {
-  return lbText.text;
+  return txtCardinal.text;
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -135,12 +172,14 @@
   NSAttributedString* Text = nil;
   switch( SelType.selectedSegmentIndex )
     {
-    case 0: Text = [rn ReadAll];     break;
-    case 1: Text = [rn ReadGroup:2]; break;
-    case 2: Text = [rn ReadGroup:3]; break;
+    case 0: Text = [rn ReadCardinalAll      ]; break;
+    case 1: Text = [rn ReadCardinalByGroup:2]; break;
+    case 2: Text = [rn ReadCardinalByGroup:3]; break;
     }
   
-  lbText.attributedText = Text;
+  txtCardinal.attributedText = Text;
+  txtOrdinal.text  = [rn ReadOrdinal];
+  txtRomano.text   = [rn ReadRomano ];
   
   [self setNeedsLayout];
   }
@@ -148,32 +187,49 @@
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 - (void)layoutSubviews
   {
-  float wView = self.frame.size.width;
+  float wView = self.frame.size.width;                         // Ancho actual de la vista
+  float     x = SEP_BRD + SEP_TXT;                             // Posición en x para todos los controles
+  float     w = wView-(2*x);                                   // Ancho para todas las subvistas
   
-  CGPoint pos = self.frame.origin;
-  CGSize  sz  = lbText.frame.size;
-  
-  sz.height = 10000;
-  CGRect rc = [lbText.attributedText boundingRectWithSize:sz options:NSStringDrawingUsesLineFragmentOrigin context:nil];
+  CGRect rc = [txtCardinal.attributedText boundingRectWithSize: CGSizeMake(w, 10000)
+                                                       options: NSStringDrawingUsesLineFragmentOrigin
+                                                       context: nil ];
   
   float hTxt  = (int)(rc.size.height+1) + FontSize;
+  if( hTxt < LineHeight ) hTxt = LineHeight;
   
+  float hLabels = LineHeight;
   CGSize szSel = SelType.frame.size;
-  float  hView = SEP_TXT + hTxt + SEP_BRD + szSel.height + SEP_TXT;
+  float  hView = SEP_TXT +  hTxt + SEP_BRD + szSel.height + SEP_BRD + (5*LineHeight) + SEP_TXT;
   
   if( hView != hPanel || wView != wPanel )
     {
     hPanel = hView;
     wPanel = wView;
     
+    CGPoint pos = self.frame.origin;
     self.frame = CGRectMake(pos.x, pos.y, wPanel, hPanel);
     
-    lbText.frame = CGRectMake(SEP_BRD+SEP_TXT, SEP_TXT, sz.width, hTxt );
+    float y = SEP_TXT;
+    lbCardinal.frame  = CGRectMake(x, y, w, hLabels );
+    y += hLabels;
     
-    float x = (wPanel-szSel.width)/2;
-    float y = SEP_TXT + hTxt + SEP_BRD;
+    txtCardinal.frame = CGRectMake(x, y, w, hTxt );
+    y += hTxt;
     
-    SelType.frame = CGRectMake(x, y, szSel.width, szSel.height );
+    SelType.frame = CGRectMake((wPanel-szSel.width)/2, y, szSel.width, szSel.height );
+    y += szSel.height + SEP_BRD;
+    
+    lbOrdinal.frame  = CGRectMake(x, y, w, hLabels );
+    y += hLabels;
+    
+    txtOrdinal.frame  = CGRectMake(x, y, w, hLabels );
+    y += hLabels;
+    
+    lbRomano.frame  = CGRectMake(x, y, w, hLabels );
+    y += hLabels;
+    
+    txtRomano.frame  = CGRectMake(x, y, w, hLabels );
     
     [self setNeedsDisplay];
     [self.superview setNeedsLayout];                                              // Reorganiza los controles de la vista que contiene al panel

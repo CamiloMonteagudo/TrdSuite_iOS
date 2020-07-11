@@ -36,6 +36,8 @@ static int _Inst[LGCount][LGCount] =
   /*De*/{ 0, 0, 0, 0, 0 },
   /*Fr*/{ 0, 1, 0, 0, 0 }
 	};
+
+NSString* sPack = @"En";
 #endif
 #ifdef TrdSuiteEnEs
 static int _Inst[LGCount][LGCount] =
@@ -47,6 +49,8 @@ static int _Inst[LGCount][LGCount] =
   /*De*/{ 0, 0, 0, 0, 0 },
   /*Fr*/{ 0, 0, 0, 0, 0 }
 	};
+
+NSString* sPack = @"EnEs";
 #endif
 #ifdef TrdSuiteEnIt
 static int _Inst[LGCount][LGCount] =
@@ -58,6 +62,8 @@ static int _Inst[LGCount][LGCount] =
   /*De*/{ 0, 0, 0, 0, 0 },
   /*Fr*/{ 0, 0, 0, 0, 0 }
 	};
+
+NSString* sPack = @"EnIt";
 #endif
 #ifdef TrdSuiteEnFr
 static int _Inst[LGCount][LGCount] =
@@ -69,6 +75,8 @@ static int _Inst[LGCount][LGCount] =
   /*De*/{ 0, 0, 0, 0, 0 },
   /*Fr*/{ 0, 1, 0, 0, 0 }
 	};
+
+NSString* sPack = @"EnFr";
 #endif
 #ifdef TrdSuiteEs
 static int _Inst[LGCount][LGCount] =
@@ -80,6 +88,8 @@ static int _Inst[LGCount][LGCount] =
   /*De*/{ 0, 0, 0, 0, 0 },
   /*Fr*/{ 1, 0, 0, 0, 0 }
 	};
+
+NSString* sPack = @"Es";
 #endif
 #ifdef TrdSuiteEsIt
 static int _Inst[LGCount][LGCount] =
@@ -91,6 +101,8 @@ static int _Inst[LGCount][LGCount] =
   /*De*/{ 0, 0, 0, 0, 0 },
   /*Fr*/{ 0, 0, 0, 0, 0 }
 	};
+
+NSString* sPack = @"EsIt";
 #endif
 #ifdef TrdSuiteEsFr
 static int _Inst[LGCount][LGCount] =
@@ -102,6 +114,8 @@ static int _Inst[LGCount][LGCount] =
   /*De*/{ 0, 0, 0, 0, 0 },
   /*Fr*/{ 1, 0, 0, 0, 0 }
 	};
+
+NSString* sPack = @"EsFr";
 #endif
 #ifdef TrdSuiteIt
 static int _Inst[LGCount][LGCount] =
@@ -113,6 +127,8 @@ static int _Inst[LGCount][LGCount] =
   /*De*/{ 0, 0, 0, 0, 0 },
   /*Fr*/{ 0, 0, 1, 0, 0 }
 	};
+
+NSString* sPack = @"It";
 #endif
 #ifdef TrdSuiteItFr
 static int _Inst[LGCount][LGCount] =
@@ -124,6 +140,8 @@ static int _Inst[LGCount][LGCount] =
   /*De*/{ 0, 0, 0, 0, 0 },
   /*Fr*/{ 0, 0, 1, 0, 0 }
 	};
+
+NSString* sPack = @"ItFr";
 #endif
 #ifdef TrdSuiteFr
 static int _Inst[LGCount][LGCount] =
@@ -135,6 +153,8 @@ static int _Inst[LGCount][LGCount] =
   /*De*/{ 0, 0, 0, 0, 0 },
   /*Fr*/{ 1, 1, 1, 0, 0 }
 	};
+
+NSString* sPack = @"Fr";
 #endif
 #ifdef TrdSuiteAll
 static int _Inst[LGCount][LGCount] =
@@ -146,6 +166,8 @@ static int _Inst[LGCount][LGCount] =
   /*De*/{ 0, 0, 0, 0, 0 },
   /*Fr*/{ 1, 1, 1, 0, 0 }
 	};
+
+NSString* sPack = @"All";
 #endif
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -162,17 +184,6 @@ static NSString * _LngNames[5][5] =
     {@"Spanisch", @"Englisch", @"Italienisch", @"Deustch" , @"Französisch" },   // IUser Alemán
     {@"Espagnol", @"Anglais" , @"Italien"    , @"Allemand", @"Français"    },   // IUser Francés
   };
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Tamaño de los botones para cada una de los idiomas
-//static int _LngSizes[5][5] =
-//  {// Español, Ingles, Italiano, Aleman, Frances
-//    { 53     , 40    , 48      , 80    , 53 },   // IUser Español
-//    { 53     , 47    , 40      , 80    , 45 },   // IUser Inglés
-//    { 63     , 48    , 48      , 80    , 60 },   // IUser Italiano
-//    { 71     , 66    , 82      , 80    , 85 },   // IUser Alemán
-//    { 60     , 48    , 40      , 80    , 55 },   // IUser Francés
-//  };
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 NSString* LGAbrv( int lng )
@@ -394,5 +405,77 @@ void DrawRoundRect( CGRect rc, int Round, UIColor* ColBrd, UIColor* ColBody )
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
+static inline double radians (double degrees) {return degrees * M_PI/180;}
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+UIImage * RotateImg( UIImage* src, UIImageOrientation orientation)
+  {
+  UIGraphicsBeginImageContext( src.size );
+  
+  CGContextRef ct = UIGraphicsGetCurrentContext();
+  
+       if( orientation == UIImageOrientationRight ) CGContextRotateCTM( ct, radians(90 ) );
+  else if( orientation == UIImageOrientationLeft  ) CGContextRotateCTM( ct, radians(-90) );
+  else if (orientation == UIImageOrientationUp    ) CGContextRotateCTM( ct, radians(90)  );
+
+  [src drawAtPoint:CGPointMake(0, 0) ];
+  
+  UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+  
+  UIGraphicsEndImageContext();
+  
+  return image;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Carga la imagen del lanzamiento de la aplización
+UIImage* LoadLaunchImage()
+  {
+  NSDictionary *dOfLaunchImage = [NSDictionary dictionaryWithObjectsAndKeys:
+                                    @"-568h@2x.png"              ,@"568,320,2,8,p",  // ios 8 - iphone 5 - portrait
+                                    @"-568h@2x.png"              ,@"568,320,2,8,l",  // ios 8 - iphone 5 - landscape
+                                    @"-700-568h@2x.png"          ,@"568,320,2,7,p",  // ios 7 - iphone 5 - portrait
+                                    @"-700-568h@2x.png"          ,@"568,320,2,7,l",  // ios 7 - iphone 5 - landscape
+                                    @"-700-Landscape@2x~ipad.png",@"1024,768,2,7,l", // ios 7 - ipad retina - landscape
+                                    @"-700-Landscape~ipad.png"   ,@"1024,768,1,7,l", // ios 7 - ipad regular - landscape
+                                    @"-700-Portrait@2x~ipad.png" ,@"1024,768,2,7,p", // ios 7 - ipad retina - portrait
+                                    @"-700-Portrait~ipad.png"    ,@"1024,768,1,7,p", // ios 7 - ipad regular - portrait
+                                    @"-700@2x.png"               ,@"480,320,2,7,p",  // ios 7 - iphone 4/4s retina - portrait
+                                    @"-700@2x.png"               ,@"480,320,2,7,l",  // ios 7 - iphone 4/4s retina - landscape
+                                    @"-Landscape@2x~ipad.png"    ,@"1024,768,2,8,l", // ios 8 - ipad retina - landscape
+                                    @"-Landscape~ipad.png"       ,@"1024,768,1,8,l", // ios 8 - ipad regular - landscape
+                                    @"-Portrait@2x~ipad.png"     ,@"1024,768,2,8,p", // ios 8 - ipad retina - portrait
+                                    @"-Portrait~ipad.png"        ,@"1024,768,1,8,l", // ios 8 - ipad regular - portrait
+                                    @".png"                      ,@"480,320,1,7,p",  // ios 6 - iphone 3g/3gs - portrait
+                                    @".png"                      ,@"480,320,1,7,l",  // ios 6 - iphone 3g/3gs - landscape
+                                    @"@2x.png"                   ,@"480,320,2,8,p",  // ios 6,7,8 - iphone 4/4s - portrait
+                                    @"@2x.png"                   ,@"480,320,2,8,l",  // ios 6,7,8 - iphone 4/4s - landscape
+                                    @"-800-667h@2x.png"          ,@"667,375,2,8,p",  // ios 8 - iphone 6 - portrait
+                                    @"-800-667h@2x.png"          ,@"667,375,2,8,l",  // ios 8 - iphone 6 - landscape
+                                    @"-800-Portrait-736h@3x.png" ,@"736,414,3,8,p",  // ios 8 - iphone 6 plus - portrait
+                                    @"-800-Landscape-736h@3x.png",@"736,414,3,8,l",  // ios 8 - iphone 6 plus - landscape
+                                    nil];
+    
+  CGSize sz = [UIScreen mainScreen].bounds.size;
+  
+  int width  = (sz.width>sz.height)? sz.width : sz.height;
+  int height = (sz.width>sz.height)? sz.height: sz.width;
+  int os     = [[[[[UIDevice currentDevice] systemVersion] componentsSeparatedByString:@"."] objectAtIndex:0] integerValue];
+  int scale  = (int)[UIScreen mainScreen].scale;
+    
+  NSString *orient  = UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])? @"l": @"p";
+  NSString *ImgKey  = [NSString stringWithFormat : @"%d,%d,%d,%d,%@", width, height, scale, os, orient ];
+  NSString *ImgEnd  = [dOfLaunchImage valueForKey: ImgKey];
+  NSString *ImgName = [NSString stringWithFormat : @"LaunchImage%@%@", sPack, ImgEnd ];
+  
+  UIImage* Img = [UIImage imageNamed: ImgName];
+  
+  if( [orient isEqualToString:@"l"] && [ImgEnd rangeOfString:@"Landscape"].length==0)
+    Img = RotateImg( Img, UIImageOrientationRight );
+    
+  return Img;
+  }
+
+//---------------------------------------------------------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------

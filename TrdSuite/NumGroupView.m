@@ -134,7 +134,7 @@
   // Oculta el placeholder si no hay texto o no hay idioma seleccionado
   PlaceHolder.hidden = (TextCtl.text.length!=0);
   if( !PlaceHolder.hidden )                             // Si el placehoder esta visible
-    PlaceHolder.text = NSLocalizedString( @"WriteNum" , nil );
+    PlaceHolder.text = NSLocalizedString( @"NumTip" , nil );
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -252,7 +252,8 @@
     
     self.frame = CGRectMake(pos.x, pos.y, wPanel, hPanel);
     
-    TextCtl.frame = CGRectMake(SEP_BRD+SEP_TXT, SEP_TXT, wText, hTxt);
+    TextCtl.frame     = CGRectMake(SEP_BRD+SEP_TXT, SEP_TXT, wText, hTxt);
+    PlaceHolder.frame = CGRectMake(SEP_BRD+SEP_TXT+5, SEP_TXT, wText, hTxt);
     
     [self setNeedsDisplay];
     [self.superview setNeedsLayout];                                              // Reorganiza los controles de la vista que contiene al panel

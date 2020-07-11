@@ -42,7 +42,7 @@ NSDictionary* attrTitle = [NSDictionary dictionaryWithObjectsAndKeys:fontTitle, 
 // Editores de texto
 UIFont*  fontEdit      = [UIFont systemFontOfSize:FontSize];                                              // Fuente para los textos editados
 UIColor* ColTxtSel     = [UIColor colorWithRed:0.7 green:0.8 blue:0.95 alpha:1.00];                       // Color para las palabras seleccionadas
-UIColor* ColHolder = [UIColor colorWithRed:0.75 green:0.75 blue:0.75 alpha:1.0];                          // Color del los textos de place holder
+UIColor* ColHolder     = [UIColor colorWithRed:0.75 green:0.75 blue:0.75 alpha:1.0];                      // Color del los textos de place holder
 NSDictionary* attrEdit = [NSDictionary dictionaryWithObjectsAndKeys:fontEdit, NSFontAttributeName, nil];  // Atributo normales de los textos editados
 
 // Celulas de las tablas

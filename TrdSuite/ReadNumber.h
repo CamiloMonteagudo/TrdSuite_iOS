@@ -29,6 +29,20 @@ struct CentLangInfo
 
   // Irregularidades en los numeros de la mitad inferior de las decenas
   NSArray* FixDecenas;                                                       // Ajuste para las decenas Ej: 11, 12, 13 ....
+
+  // Números ordinales
+  NSArray* UnOrd;
+  NSArray* DecOrd;
+  NSArray* CenOrd;
+  NSArray* SufixOrd;
+  NSArray* FixDecOrd;
+
+  // Números Romanos
+  NSArray* UnRom;
+  NSArray* DecRom;
+  NSArray* CenRom;
+
+  NSArray* MilesRom;
   };
 
 //=========================================================================================================================================================
@@ -60,8 +74,10 @@ struct CentLangInfo
   +(id) NumberWithString:(NSString*) sNum Lang:(int) lang;
   +(int) MaxDigistInLang:(int) lang;
 
-  -(NSAttributedString*) ReadAll;
-  -(NSAttributedString*) ReadGroup:(int) grp;
+  -(NSAttributedString*) ReadCardinalAll;
+  -(NSAttributedString*) ReadCardinalByGroup:(int) grp;
+  -(NSString*) ReadOrdinal;
+  -(NSString*) ReadRomano;
 
 @end
 //=========================================================================================================================================================

@@ -13,9 +13,9 @@
 #import "LangsBar.h"
 #import "TopLeading.h"
 #import "WaitView.h"
-#import "ModuleLabelView.h"
 #import "ColAndFont.h"
 #import "ProxyConj.h"
+#import "ModuleHdrView.h"
 
 //=========================================================================================================================================================
 @interface DictController ()
@@ -35,9 +35,8 @@
 @property (weak, nonatomic) IBOutlet VirtualListView *LstWords;
 @property (weak, nonatomic) IBOutlet LangsBar *LGBar;
 @property (weak, nonatomic) IBOutlet TopLeading *Leading;
-@property (weak, nonatomic) IBOutlet ModuleLabelView *ModuleTitle;
+@property (weak, nonatomic) IBOutlet ModuleHdrView *ModuleLabel;
 
-- (IBAction)OnClose:(id)sender;
 - (IBAction)OnFindRoots:(id)sender;
 - (IBAction)OnNextRoot:(id)sender;
 
@@ -75,16 +74,11 @@
   
   _PanelSrc.Text = _Word;
   
-  [self SetActualDir];
-  }
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Se llama cuando la vista esta a punto de mostrarse
-- (void)viewWillAppear:(BOOL)animated
-  {
-  NSString* Title = NSLocalizedString(@"ModDitionary", nil);
+  _ModuleLabel.Text = NSLocalizedString(@"MnuDict", nil);
   
-  [_ModuleTitle ShowLabel:Title InFrame:self.view.bounds ];
+  [_ModuleLabel OnCloseBtn:@selector(OnCloseMod:) Target:self];
+  
+  [self SetActualDir];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -99,7 +93,18 @@
 - (void)viewDidLayoutSubviews
   {
   float w = self.view.bounds.size.width;
-  float y = _PanelSrc.frame.origin.y + _PanelSrc.frame.size.height + 5;
+  float y = _ModuleLabel.Height;
+  
+  float hSrc = _PanelSrc.frame.size.height;
+  _PanelSrc.frame = CGRectMake(0, y, w-50, hSrc);
+  
+  float xc = w-25;
+  float yc = y + BTN_H + LineHeight/2 + 10;  // 140;
+
+  _BtnNextRoot.center  = CGPointMake(xc, yc);
+  _BtnFindRoots.center = CGPointMake(xc, yc);
+
+  y += hSrc + 5;
   
   _LGBar.frame = CGRectMake( 0, y, w, 50);
   
@@ -306,7 +311,7 @@
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Se llama cuando se toca el boton de cerrar la pantalla y regresar a la anterior
-- (IBAction)OnClose:(id)sender
+- (void)OnCloseMod:(id)sender
   {
   [self performSegueWithIdentifier: @"Back" sender: self];
   }
@@ -368,8 +373,6 @@
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration
   {
   scrnWidth  = self.view.bounds.size.width;
-  
-  _ModuleTitle.hidden = TRUE;
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------

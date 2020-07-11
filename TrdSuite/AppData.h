@@ -85,6 +85,8 @@ extern void DrawRoundRect( CGRect rc, int Round, UIColor* ColBrd, UIColor* ColBo
 extern NSString* FlagSpaces;
 extern void GetFlagSpaces();
 
+extern UIImage* LoadLaunchImage();
+
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 

@@ -880,20 +880,24 @@ void DebugMsg(NSString* msg)
 // Se llama cunado el usuario toca en una fila
 - (void)OnSelectedRow:(int)iRow
   {
-  if( iRow>= N_PURCH )
+  if( iRow>= N_PURCH )                            // Si la fila sobrepasa el número de productos
     {
-    [Purchases RestorePurchases];
-    return;
+    [Purchases RestorePurchases];                 // Manda a restaurar los productos comprados
+    return;                                       // No hace mas nada
     }
   
-  PurchItem &item = Items[iRow];
+  PurchItem &item = Items[iRow];                  // Toma los datos del item seleccionado
+  if( item.NoInst == FALSE ) return;              // Ya el item esta instaldo, no hace nada
   
-  if( item.NoInst )
+  if( item.Prod != nil )                          // Si ya se obtuvo información del producto
+    [Purchases PurchaseProdIndex:iRow];           // Inicializa el proceso de compra
+  else                                            // Si no se ha obtenido información del producto
     {
-    if( RequestStatus == REQUEST_ENDED && item.Prod != nil )
-      [Purchases PurchaseProdIndex:iRow];
-    else
-      [Purchases RequestProdInfo];                                // Solicita la informacion sobre los items de compra
+    if( RequestStatus == REQUEST_INPROCESS )      // Si esta esperando por la información
+      return;                                     // No hace nada
+    
+    RequestStatus = REQUEST_NOSTART;              // Fuerza a la solicitud de información
+    [Purchases RequestProdInfo];                  // Solicita la informacion sobre los items de compra
     }
   }
 

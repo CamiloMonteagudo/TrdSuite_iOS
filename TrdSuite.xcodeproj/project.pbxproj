@@ -5005,6 +5005,38 @@
 			attributes = {
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Softlingo;
+				TargetAttributes = {
+					F0AC43271ADF51E200A5089F = {
+						DevelopmentTeam = VXW7R8862T;
+					};
+					F0E381B31BCDC81A002AF2B0 = {
+						DevelopmentTeam = VXW7R8862T;
+					};
+					F0E382F61BCDC832002AF2B0 = {
+						DevelopmentTeam = VXW7R8862T;
+					};
+					F0E384391BCDC849002AF2B0 = {
+						DevelopmentTeam = VXW7R8862T;
+					};
+					F0E3857C1BCDC859002AF2B0 = {
+						DevelopmentTeam = VXW7R8862T;
+					};
+					F0E386BF1BCDC867002AF2B0 = {
+						DevelopmentTeam = VXW7R8862T;
+					};
+					F0E388021BCDC878002AF2B0 = {
+						DevelopmentTeam = VXW7R8862T;
+					};
+					F0E38A881BCDC89C002AF2B0 = {
+						DevelopmentTeam = VXW7R8862T;
+					};
+					F0E38BCB1BCDC8A9002AF2B0 = {
+						DevelopmentTeam = VXW7R8862T;
+					};
+					F0E38D0E1BCDC8B8002AF2B0 = {
+						DevelopmentTeam = VXW7R8862T;
+					};
+				};
 			};
 			buildConfigurationList = F0AC43231ADF51E200A5089F /* Build configuration list for PBXProject "TrdSuite" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -8753,7 +8785,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconEn;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageEn;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -8764,7 +8797,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e11faf08-9edd-43e3-87f8-34115ad31951";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8774,14 +8807,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconEn;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageEn;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "479df3a4-c2f0-4353-a449-c2cd268deddd";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8791,6 +8825,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconEnEs;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageEnEs;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -8801,7 +8837,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a29421f5-c042-4483-a42f-4002079507f5";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8811,13 +8847,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconEnEs;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageEnEs;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a5afe81e-3875-4a4c-a1fb-ba88c3e5beba";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8827,6 +8865,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconEnIt;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageEnIt;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -8837,7 +8877,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "abcb5d12-60ec-4038-ad65-1515ea008d37";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8847,13 +8887,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconEnIt;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageEnIt;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9d85d597-c7cf-408a-9a32-30ec46b00931";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8863,6 +8905,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconEnFr;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageEnFr;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -8873,7 +8917,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b6dc37cc-ac92-4191-a72d-a711626b5974";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8883,13 +8927,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconEnFr;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageEnFr;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "32773f9e-e537-44b4-97e3-ce65b30e3866";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8899,6 +8945,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconEs;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageEs;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -8909,7 +8957,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "45d2e13f-2338-4bea-825e-4e2f5cdea5dd";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8919,13 +8967,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconEs;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageEs;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "709e5496-a20b-4ba1-bdec-cfb134b2d2e3";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8935,6 +8985,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconEsIt;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageEsIt;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -8945,7 +8997,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cb1ef44e-fd6c-49fa-b195-4a98549ad92f";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8955,13 +9007,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconEsIt;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageEsIt;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9f32bec8-216f-4448-b790-ded0cd6e5aa6";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8971,6 +9025,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconEsFr;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageEsFr;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -8981,7 +9037,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "356d9f6b-e16d-47db-b495-46790757cf49";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8991,13 +9047,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconEsFr;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageEsFr;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "10024880-cc3b-4524-a928-4d62a27a2200";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -9007,6 +9065,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconIt;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageIt;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -9017,7 +9076,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dc8a8d4d-7cad-4675-bcde-4859e71ca13d";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -9027,13 +9086,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconIt;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageIt;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3e3963c4-4a64-49d0-9df8-463a75645f92";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -9043,6 +9103,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconItFr;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageItFr;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -9053,7 +9115,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -9063,13 +9125,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconItFr;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageItFr;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -9079,6 +9143,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconFr;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageFr;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -9089,7 +9155,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -9099,13 +9165,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconFr;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageFr;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -9115,6 +9183,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconAll;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageAll;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -9125,7 +9195,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -9135,13 +9205,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconAll;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImageAll;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

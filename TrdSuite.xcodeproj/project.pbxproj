@@ -49,7 +49,6 @@
 		F0D910D71AE065D200C6871A /* FlagIt50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0D910C61AE065D200C6871A /* FlagIt50@2x.png */; };
 		F0D910DD1AE067B300C6871A /* LangsPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D910DC1AE067B300C6871A /* LangsPanelView.m */; };
 		F0D910E01AE0684300C6871A /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D910DF1AE0684300C6871A /* AppData.m */; };
-		F0D910E31AE068DE00C6871A /* TrdHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D910E21AE068DE00C6871A /* TrdHistory.m */; };
 		F0D910E61AE0B0CF00C6871A /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D910E51AE0B0CF00C6871A /* MainView.m */; };
 		F0D910E91AE0BA1400C6871A /* VirtualListView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D910E81AE0BA1400C6871A /* VirtualListView.m */; };
 		F0D948651B4070360031404C /* VirtualDictRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D948641B4070360031404C /* VirtualDictRowView.m */; };
@@ -66,6 +65,28 @@
 		F0DDC0841B8599D00005BD03 /* BtnClose1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0DDC0831B8599D00005BD03 /* BtnClose1@2x.png */; };
 		F0DDDF551AED3573000F9159 /* LangsBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DDDF541AED3573000F9159 /* LangsBar.m */; };
 		F0DDDF5A1AED5DEF000F9159 /* Leading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0DDDF591AED5DEF000F9159 /* Leading@2x.png */; };
+		F0DE5CFB1BEF86500016B1D4 /* Sentences.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE5CFA1BEF86500016B1D4 /* Sentences.m */; };
+		F0DE5CFC1BEF86500016B1D4 /* Sentences.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE5CFA1BEF86500016B1D4 /* Sentences.m */; };
+		F0DE5CFD1BEF86500016B1D4 /* Sentences.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE5CFA1BEF86500016B1D4 /* Sentences.m */; };
+		F0DE5CFE1BEF86500016B1D4 /* Sentences.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE5CFA1BEF86500016B1D4 /* Sentences.m */; };
+		F0DE5CFF1BEF86500016B1D4 /* Sentences.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE5CFA1BEF86500016B1D4 /* Sentences.m */; };
+		F0DE5D001BEF86500016B1D4 /* Sentences.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE5CFA1BEF86500016B1D4 /* Sentences.m */; };
+		F0DE5D011BEF86500016B1D4 /* Sentences.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE5CFA1BEF86500016B1D4 /* Sentences.m */; };
+		F0DE5D021BEF86500016B1D4 /* Sentences.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE5CFA1BEF86500016B1D4 /* Sentences.m */; };
+		F0DE5D031BEF86500016B1D4 /* Sentences.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE5CFA1BEF86500016B1D4 /* Sentences.m */; };
+		F0DE5D041BEF86500016B1D4 /* Sentences.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE5CFA1BEF86500016B1D4 /* Sentences.m */; };
+		F0DE5D051BEF86500016B1D4 /* Sentences.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE5CFA1BEF86500016B1D4 /* Sentences.m */; };
+		F0DE5D071BEFC9D60016B1D4 /* Sentences.txt in Resources */ = {isa = PBXBuildFile; fileRef = F0DE5D061BEFC9D60016B1D4 /* Sentences.txt */; };
+		F0DE5D081BEFC9D60016B1D4 /* Sentences.txt in Resources */ = {isa = PBXBuildFile; fileRef = F0DE5D061BEFC9D60016B1D4 /* Sentences.txt */; };
+		F0DE5D091BEFC9D60016B1D4 /* Sentences.txt in Resources */ = {isa = PBXBuildFile; fileRef = F0DE5D061BEFC9D60016B1D4 /* Sentences.txt */; };
+		F0DE5D0A1BEFC9D60016B1D4 /* Sentences.txt in Resources */ = {isa = PBXBuildFile; fileRef = F0DE5D061BEFC9D60016B1D4 /* Sentences.txt */; };
+		F0DE5D0B1BEFC9D60016B1D4 /* Sentences.txt in Resources */ = {isa = PBXBuildFile; fileRef = F0DE5D061BEFC9D60016B1D4 /* Sentences.txt */; };
+		F0DE5D0C1BEFC9D60016B1D4 /* Sentences.txt in Resources */ = {isa = PBXBuildFile; fileRef = F0DE5D061BEFC9D60016B1D4 /* Sentences.txt */; };
+		F0DE5D0D1BEFC9D60016B1D4 /* Sentences.txt in Resources */ = {isa = PBXBuildFile; fileRef = F0DE5D061BEFC9D60016B1D4 /* Sentences.txt */; };
+		F0DE5D0E1BEFC9D60016B1D4 /* Sentences.txt in Resources */ = {isa = PBXBuildFile; fileRef = F0DE5D061BEFC9D60016B1D4 /* Sentences.txt */; };
+		F0DE5D0F1BEFC9D60016B1D4 /* Sentences.txt in Resources */ = {isa = PBXBuildFile; fileRef = F0DE5D061BEFC9D60016B1D4 /* Sentences.txt */; };
+		F0DE5D101BEFC9D60016B1D4 /* Sentences.txt in Resources */ = {isa = PBXBuildFile; fileRef = F0DE5D061BEFC9D60016B1D4 /* Sentences.txt */; };
+		F0DE5D111BEFC9D60016B1D4 /* Sentences.txt in Resources */ = {isa = PBXBuildFile; fileRef = F0DE5D061BEFC9D60016B1D4 /* Sentences.txt */; };
 		F0DE63AD1AF6C5E200261762 /* DictController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63AC1AF6C5E200261762 /* DictController.m */; };
 		F0DE63B01AF6C5FD00261762 /* ConjController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63AF1AF6C5FD00261762 /* ConjController.m */; };
 		F0DE63B31AF6C61900261762 /* NumsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63B21AF6C61900261762 /* NumsController.m */; };
@@ -89,7 +110,6 @@
 		F0E381C01BCDC81A002AF2B0 /* CmdDcc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4331B1515F10035CAB4 /* CmdDcc.cpp */; };
 		F0E381C11BCDC81A002AF2B0 /* GramType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD45C1B1515F10035CAB4 /* GramType.cpp */; };
 		F0E381C21BCDC81A002AF2B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AC433B1ADF51E200A5089F /* AppDelegate.m */; };
-		F0E381C31BCDC81A002AF2B0 /* RowHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E449CC1AE40C7B00C0698A /* RowHistoryView.m */; };
 		F0E381C41BCDC81A002AF2B0 /* Cclave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4291B1515F10035CAB4 /* Cclave.cpp */; };
 		F0E381C51BCDC81A002AF2B0 /* Cora.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4431B1515F10035CAB4 /* Cora.cpp */; };
 		F0E381C61BCDC81A002AF2B0 /* TrdInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D6070F1B2000B80091411A /* TrdInfoView.m */; };
@@ -130,7 +150,6 @@
 		F0E381E91BCDC81A002AF2B0 /* RedWord.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4C61B1515F10035CAB4 /* RedWord.cpp */; };
 		F0E381EA1BCDC81A002AF2B0 /* ConjugateByPattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD43D1B1515F10035CAB4 /* ConjugateByPattern.cpp */; };
 		F0E381EB1BCDC81A002AF2B0 /* Wordesp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4881B1515F10035CAB4 /* Wordesp.cpp */; };
-		F0E381EC1BCDC81A002AF2B0 /* TrdHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D910E21AE068DE00C6871A /* TrdHistory.m */; };
 		F0E381ED1BCDC81A002AF2B0 /* DccDict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4491B1515F10035CAB4 /* DccDict.cpp */; };
 		F0E381EE1BCDC81A002AF2B0 /* ConjController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63AF1AF6C5FD00261762 /* ConjController.m */; };
 		F0E381EF1BCDC81A002AF2B0 /* NumsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63B21AF6C61900261762 /* NumsController.m */; };
@@ -401,7 +420,6 @@
 		F0E383031BCDC832002AF2B0 /* CmdDcc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4331B1515F10035CAB4 /* CmdDcc.cpp */; };
 		F0E383041BCDC832002AF2B0 /* GramType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD45C1B1515F10035CAB4 /* GramType.cpp */; };
 		F0E383051BCDC832002AF2B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AC433B1ADF51E200A5089F /* AppDelegate.m */; };
-		F0E383061BCDC832002AF2B0 /* RowHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E449CC1AE40C7B00C0698A /* RowHistoryView.m */; };
 		F0E383071BCDC832002AF2B0 /* Cclave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4291B1515F10035CAB4 /* Cclave.cpp */; };
 		F0E383081BCDC832002AF2B0 /* Cora.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4431B1515F10035CAB4 /* Cora.cpp */; };
 		F0E383091BCDC832002AF2B0 /* TrdInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D6070F1B2000B80091411A /* TrdInfoView.m */; };
@@ -442,7 +460,6 @@
 		F0E3832C1BCDC832002AF2B0 /* RedWord.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4C61B1515F10035CAB4 /* RedWord.cpp */; };
 		F0E3832D1BCDC832002AF2B0 /* ConjugateByPattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD43D1B1515F10035CAB4 /* ConjugateByPattern.cpp */; };
 		F0E3832E1BCDC832002AF2B0 /* Wordesp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4881B1515F10035CAB4 /* Wordesp.cpp */; };
-		F0E3832F1BCDC832002AF2B0 /* TrdHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D910E21AE068DE00C6871A /* TrdHistory.m */; };
 		F0E383301BCDC832002AF2B0 /* DccDict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4491B1515F10035CAB4 /* DccDict.cpp */; };
 		F0E383311BCDC832002AF2B0 /* ConjController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63AF1AF6C5FD00261762 /* ConjController.m */; };
 		F0E383321BCDC832002AF2B0 /* NumsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63B21AF6C61900261762 /* NumsController.m */; };
@@ -713,7 +730,6 @@
 		F0E384461BCDC849002AF2B0 /* CmdDcc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4331B1515F10035CAB4 /* CmdDcc.cpp */; };
 		F0E384471BCDC849002AF2B0 /* GramType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD45C1B1515F10035CAB4 /* GramType.cpp */; };
 		F0E384481BCDC849002AF2B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AC433B1ADF51E200A5089F /* AppDelegate.m */; };
-		F0E384491BCDC849002AF2B0 /* RowHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E449CC1AE40C7B00C0698A /* RowHistoryView.m */; };
 		F0E3844A1BCDC849002AF2B0 /* Cclave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4291B1515F10035CAB4 /* Cclave.cpp */; };
 		F0E3844B1BCDC849002AF2B0 /* Cora.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4431B1515F10035CAB4 /* Cora.cpp */; };
 		F0E3844C1BCDC849002AF2B0 /* TrdInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D6070F1B2000B80091411A /* TrdInfoView.m */; };
@@ -754,7 +770,6 @@
 		F0E3846F1BCDC849002AF2B0 /* RedWord.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4C61B1515F10035CAB4 /* RedWord.cpp */; };
 		F0E384701BCDC849002AF2B0 /* ConjugateByPattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD43D1B1515F10035CAB4 /* ConjugateByPattern.cpp */; };
 		F0E384711BCDC849002AF2B0 /* Wordesp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4881B1515F10035CAB4 /* Wordesp.cpp */; };
-		F0E384721BCDC849002AF2B0 /* TrdHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D910E21AE068DE00C6871A /* TrdHistory.m */; };
 		F0E384731BCDC849002AF2B0 /* DccDict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4491B1515F10035CAB4 /* DccDict.cpp */; };
 		F0E384741BCDC849002AF2B0 /* ConjController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63AF1AF6C5FD00261762 /* ConjController.m */; };
 		F0E384751BCDC849002AF2B0 /* NumsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63B21AF6C61900261762 /* NumsController.m */; };
@@ -1025,7 +1040,6 @@
 		F0E385891BCDC859002AF2B0 /* CmdDcc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4331B1515F10035CAB4 /* CmdDcc.cpp */; };
 		F0E3858A1BCDC859002AF2B0 /* GramType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD45C1B1515F10035CAB4 /* GramType.cpp */; };
 		F0E3858B1BCDC859002AF2B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AC433B1ADF51E200A5089F /* AppDelegate.m */; };
-		F0E3858C1BCDC859002AF2B0 /* RowHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E449CC1AE40C7B00C0698A /* RowHistoryView.m */; };
 		F0E3858D1BCDC859002AF2B0 /* Cclave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4291B1515F10035CAB4 /* Cclave.cpp */; };
 		F0E3858E1BCDC859002AF2B0 /* Cora.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4431B1515F10035CAB4 /* Cora.cpp */; };
 		F0E3858F1BCDC859002AF2B0 /* TrdInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D6070F1B2000B80091411A /* TrdInfoView.m */; };
@@ -1066,7 +1080,6 @@
 		F0E385B21BCDC859002AF2B0 /* RedWord.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4C61B1515F10035CAB4 /* RedWord.cpp */; };
 		F0E385B31BCDC859002AF2B0 /* ConjugateByPattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD43D1B1515F10035CAB4 /* ConjugateByPattern.cpp */; };
 		F0E385B41BCDC859002AF2B0 /* Wordesp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4881B1515F10035CAB4 /* Wordesp.cpp */; };
-		F0E385B51BCDC859002AF2B0 /* TrdHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D910E21AE068DE00C6871A /* TrdHistory.m */; };
 		F0E385B61BCDC859002AF2B0 /* DccDict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4491B1515F10035CAB4 /* DccDict.cpp */; };
 		F0E385B71BCDC859002AF2B0 /* ConjController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63AF1AF6C5FD00261762 /* ConjController.m */; };
 		F0E385B81BCDC859002AF2B0 /* NumsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63B21AF6C61900261762 /* NumsController.m */; };
@@ -1337,7 +1350,6 @@
 		F0E386CC1BCDC867002AF2B0 /* CmdDcc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4331B1515F10035CAB4 /* CmdDcc.cpp */; };
 		F0E386CD1BCDC867002AF2B0 /* GramType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD45C1B1515F10035CAB4 /* GramType.cpp */; };
 		F0E386CE1BCDC867002AF2B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AC433B1ADF51E200A5089F /* AppDelegate.m */; };
-		F0E386CF1BCDC867002AF2B0 /* RowHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E449CC1AE40C7B00C0698A /* RowHistoryView.m */; };
 		F0E386D01BCDC867002AF2B0 /* Cclave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4291B1515F10035CAB4 /* Cclave.cpp */; };
 		F0E386D11BCDC867002AF2B0 /* Cora.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4431B1515F10035CAB4 /* Cora.cpp */; };
 		F0E386D21BCDC867002AF2B0 /* TrdInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D6070F1B2000B80091411A /* TrdInfoView.m */; };
@@ -1378,7 +1390,6 @@
 		F0E386F51BCDC867002AF2B0 /* RedWord.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4C61B1515F10035CAB4 /* RedWord.cpp */; };
 		F0E386F61BCDC867002AF2B0 /* ConjugateByPattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD43D1B1515F10035CAB4 /* ConjugateByPattern.cpp */; };
 		F0E386F71BCDC867002AF2B0 /* Wordesp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4881B1515F10035CAB4 /* Wordesp.cpp */; };
-		F0E386F81BCDC867002AF2B0 /* TrdHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D910E21AE068DE00C6871A /* TrdHistory.m */; };
 		F0E386F91BCDC867002AF2B0 /* DccDict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4491B1515F10035CAB4 /* DccDict.cpp */; };
 		F0E386FA1BCDC867002AF2B0 /* ConjController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63AF1AF6C5FD00261762 /* ConjController.m */; };
 		F0E386FB1BCDC867002AF2B0 /* NumsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63B21AF6C61900261762 /* NumsController.m */; };
@@ -1649,7 +1660,6 @@
 		F0E3880F1BCDC878002AF2B0 /* CmdDcc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4331B1515F10035CAB4 /* CmdDcc.cpp */; };
 		F0E388101BCDC878002AF2B0 /* GramType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD45C1B1515F10035CAB4 /* GramType.cpp */; };
 		F0E388111BCDC878002AF2B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AC433B1ADF51E200A5089F /* AppDelegate.m */; };
-		F0E388121BCDC878002AF2B0 /* RowHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E449CC1AE40C7B00C0698A /* RowHistoryView.m */; };
 		F0E388131BCDC878002AF2B0 /* Cclave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4291B1515F10035CAB4 /* Cclave.cpp */; };
 		F0E388141BCDC878002AF2B0 /* Cora.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4431B1515F10035CAB4 /* Cora.cpp */; };
 		F0E388151BCDC878002AF2B0 /* TrdInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D6070F1B2000B80091411A /* TrdInfoView.m */; };
@@ -1690,7 +1700,6 @@
 		F0E388381BCDC878002AF2B0 /* RedWord.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4C61B1515F10035CAB4 /* RedWord.cpp */; };
 		F0E388391BCDC878002AF2B0 /* ConjugateByPattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD43D1B1515F10035CAB4 /* ConjugateByPattern.cpp */; };
 		F0E3883A1BCDC878002AF2B0 /* Wordesp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4881B1515F10035CAB4 /* Wordesp.cpp */; };
-		F0E3883B1BCDC878002AF2B0 /* TrdHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D910E21AE068DE00C6871A /* TrdHistory.m */; };
 		F0E3883C1BCDC878002AF2B0 /* DccDict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4491B1515F10035CAB4 /* DccDict.cpp */; };
 		F0E3883D1BCDC878002AF2B0 /* ConjController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63AF1AF6C5FD00261762 /* ConjController.m */; };
 		F0E3883E1BCDC878002AF2B0 /* NumsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63B21AF6C61900261762 /* NumsController.m */; };
@@ -1961,7 +1970,6 @@
 		F0E389521BCDC88B002AF2B0 /* CmdDcc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4331B1515F10035CAB4 /* CmdDcc.cpp */; };
 		F0E389531BCDC88B002AF2B0 /* GramType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD45C1B1515F10035CAB4 /* GramType.cpp */; };
 		F0E389541BCDC88B002AF2B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AC433B1ADF51E200A5089F /* AppDelegate.m */; };
-		F0E389551BCDC88B002AF2B0 /* RowHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E449CC1AE40C7B00C0698A /* RowHistoryView.m */; };
 		F0E389561BCDC88B002AF2B0 /* Cclave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4291B1515F10035CAB4 /* Cclave.cpp */; };
 		F0E389571BCDC88B002AF2B0 /* Cora.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4431B1515F10035CAB4 /* Cora.cpp */; };
 		F0E389581BCDC88B002AF2B0 /* TrdInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D6070F1B2000B80091411A /* TrdInfoView.m */; };
@@ -2002,7 +2010,6 @@
 		F0E3897B1BCDC88B002AF2B0 /* RedWord.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4C61B1515F10035CAB4 /* RedWord.cpp */; };
 		F0E3897C1BCDC88B002AF2B0 /* ConjugateByPattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD43D1B1515F10035CAB4 /* ConjugateByPattern.cpp */; };
 		F0E3897D1BCDC88B002AF2B0 /* Wordesp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4881B1515F10035CAB4 /* Wordesp.cpp */; };
-		F0E3897E1BCDC88B002AF2B0 /* TrdHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D910E21AE068DE00C6871A /* TrdHistory.m */; };
 		F0E3897F1BCDC88B002AF2B0 /* DccDict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4491B1515F10035CAB4 /* DccDict.cpp */; };
 		F0E389801BCDC88B002AF2B0 /* ConjController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63AF1AF6C5FD00261762 /* ConjController.m */; };
 		F0E389811BCDC88B002AF2B0 /* NumsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63B21AF6C61900261762 /* NumsController.m */; };
@@ -2273,7 +2280,6 @@
 		F0E38A951BCDC89C002AF2B0 /* CmdDcc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4331B1515F10035CAB4 /* CmdDcc.cpp */; };
 		F0E38A961BCDC89C002AF2B0 /* GramType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD45C1B1515F10035CAB4 /* GramType.cpp */; };
 		F0E38A971BCDC89C002AF2B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AC433B1ADF51E200A5089F /* AppDelegate.m */; };
-		F0E38A981BCDC89C002AF2B0 /* RowHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E449CC1AE40C7B00C0698A /* RowHistoryView.m */; };
 		F0E38A991BCDC89C002AF2B0 /* Cclave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4291B1515F10035CAB4 /* Cclave.cpp */; };
 		F0E38A9A1BCDC89C002AF2B0 /* Cora.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4431B1515F10035CAB4 /* Cora.cpp */; };
 		F0E38A9B1BCDC89C002AF2B0 /* TrdInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D6070F1B2000B80091411A /* TrdInfoView.m */; };
@@ -2314,7 +2320,6 @@
 		F0E38ABE1BCDC89C002AF2B0 /* RedWord.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4C61B1515F10035CAB4 /* RedWord.cpp */; };
 		F0E38ABF1BCDC89C002AF2B0 /* ConjugateByPattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD43D1B1515F10035CAB4 /* ConjugateByPattern.cpp */; };
 		F0E38AC01BCDC89C002AF2B0 /* Wordesp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4881B1515F10035CAB4 /* Wordesp.cpp */; };
-		F0E38AC11BCDC89C002AF2B0 /* TrdHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D910E21AE068DE00C6871A /* TrdHistory.m */; };
 		F0E38AC21BCDC89C002AF2B0 /* DccDict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4491B1515F10035CAB4 /* DccDict.cpp */; };
 		F0E38AC31BCDC89C002AF2B0 /* ConjController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63AF1AF6C5FD00261762 /* ConjController.m */; };
 		F0E38AC41BCDC89C002AF2B0 /* NumsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63B21AF6C61900261762 /* NumsController.m */; };
@@ -2585,7 +2590,6 @@
 		F0E38BD81BCDC8A9002AF2B0 /* CmdDcc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4331B1515F10035CAB4 /* CmdDcc.cpp */; };
 		F0E38BD91BCDC8A9002AF2B0 /* GramType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD45C1B1515F10035CAB4 /* GramType.cpp */; };
 		F0E38BDA1BCDC8A9002AF2B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AC433B1ADF51E200A5089F /* AppDelegate.m */; };
-		F0E38BDB1BCDC8A9002AF2B0 /* RowHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E449CC1AE40C7B00C0698A /* RowHistoryView.m */; };
 		F0E38BDC1BCDC8A9002AF2B0 /* Cclave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4291B1515F10035CAB4 /* Cclave.cpp */; };
 		F0E38BDD1BCDC8A9002AF2B0 /* Cora.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4431B1515F10035CAB4 /* Cora.cpp */; };
 		F0E38BDE1BCDC8A9002AF2B0 /* TrdInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D6070F1B2000B80091411A /* TrdInfoView.m */; };
@@ -2626,7 +2630,6 @@
 		F0E38C011BCDC8A9002AF2B0 /* RedWord.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4C61B1515F10035CAB4 /* RedWord.cpp */; };
 		F0E38C021BCDC8A9002AF2B0 /* ConjugateByPattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD43D1B1515F10035CAB4 /* ConjugateByPattern.cpp */; };
 		F0E38C031BCDC8A9002AF2B0 /* Wordesp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4881B1515F10035CAB4 /* Wordesp.cpp */; };
-		F0E38C041BCDC8A9002AF2B0 /* TrdHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D910E21AE068DE00C6871A /* TrdHistory.m */; };
 		F0E38C051BCDC8A9002AF2B0 /* DccDict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4491B1515F10035CAB4 /* DccDict.cpp */; };
 		F0E38C061BCDC8A9002AF2B0 /* ConjController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63AF1AF6C5FD00261762 /* ConjController.m */; };
 		F0E38C071BCDC8A9002AF2B0 /* NumsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63B21AF6C61900261762 /* NumsController.m */; };
@@ -2897,7 +2900,6 @@
 		F0E38D1B1BCDC8B8002AF2B0 /* CmdDcc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4331B1515F10035CAB4 /* CmdDcc.cpp */; };
 		F0E38D1C1BCDC8B8002AF2B0 /* GramType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD45C1B1515F10035CAB4 /* GramType.cpp */; };
 		F0E38D1D1BCDC8B8002AF2B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0AC433B1ADF51E200A5089F /* AppDelegate.m */; };
-		F0E38D1E1BCDC8B8002AF2B0 /* RowHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E449CC1AE40C7B00C0698A /* RowHistoryView.m */; };
 		F0E38D1F1BCDC8B8002AF2B0 /* Cclave.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4291B1515F10035CAB4 /* Cclave.cpp */; };
 		F0E38D201BCDC8B8002AF2B0 /* Cora.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4431B1515F10035CAB4 /* Cora.cpp */; };
 		F0E38D211BCDC8B8002AF2B0 /* TrdInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D6070F1B2000B80091411A /* TrdInfoView.m */; };
@@ -2938,7 +2940,6 @@
 		F0E38D441BCDC8B8002AF2B0 /* RedWord.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4C61B1515F10035CAB4 /* RedWord.cpp */; };
 		F0E38D451BCDC8B8002AF2B0 /* ConjugateByPattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD43D1B1515F10035CAB4 /* ConjugateByPattern.cpp */; };
 		F0E38D461BCDC8B8002AF2B0 /* Wordesp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4881B1515F10035CAB4 /* Wordesp.cpp */; };
-		F0E38D471BCDC8B8002AF2B0 /* TrdHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D910E21AE068DE00C6871A /* TrdHistory.m */; };
 		F0E38D481BCDC8B8002AF2B0 /* DccDict.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0FDD4491B1515F10035CAB4 /* DccDict.cpp */; };
 		F0E38D491BCDC8B8002AF2B0 /* ConjController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63AF1AF6C5FD00261762 /* ConjController.m */; };
 		F0E38D4A1BCDC8B8002AF2B0 /* NumsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0DE63B21AF6C61900261762 /* NumsController.m */; };
@@ -3206,8 +3207,18 @@
 		F0E38E991BCDD5FE002AF2B0 /* ImagesFr.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E38E591BCDD4B4002AF2B0 /* ImagesFr.xcassets */; };
 		F0E38E9A1BCDD609002AF2B0 /* ImagesIt.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E38E5A1BCDD4B4002AF2B0 /* ImagesIt.xcassets */; };
 		F0E38E9B1BCDD610002AF2B0 /* ImagesItFr.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E38E5B1BCDD4B4002AF2B0 /* ImagesItFr.xcassets */; };
+		F0E39A4D1BF14AA700110B5A /* RowSentenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E39A4C1BF14AA700110B5A /* RowSentenceView.m */; };
+		F0E39A4E1BF14AA700110B5A /* RowSentenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E39A4C1BF14AA700110B5A /* RowSentenceView.m */; };
+		F0E39A4F1BF14AA700110B5A /* RowSentenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E39A4C1BF14AA700110B5A /* RowSentenceView.m */; };
+		F0E39A501BF14AA700110B5A /* RowSentenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E39A4C1BF14AA700110B5A /* RowSentenceView.m */; };
+		F0E39A511BF14AA700110B5A /* RowSentenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E39A4C1BF14AA700110B5A /* RowSentenceView.m */; };
+		F0E39A521BF14AA700110B5A /* RowSentenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E39A4C1BF14AA700110B5A /* RowSentenceView.m */; };
+		F0E39A531BF14AA700110B5A /* RowSentenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E39A4C1BF14AA700110B5A /* RowSentenceView.m */; };
+		F0E39A541BF14AA700110B5A /* RowSentenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E39A4C1BF14AA700110B5A /* RowSentenceView.m */; };
+		F0E39A551BF14AA800110B5A /* RowSentenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E39A4C1BF14AA700110B5A /* RowSentenceView.m */; };
+		F0E39A561BF14AA800110B5A /* RowSentenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E39A4C1BF14AA700110B5A /* RowSentenceView.m */; };
+		F0E39A571BF14AA800110B5A /* RowSentenceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E39A4C1BF14AA700110B5A /* RowSentenceView.m */; };
 		F0E403041BC766CD0045B553 /* BuyOk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0E403031BC766CD0045B553 /* BuyOk@2x.png */; };
-		F0E449CD1AE40C7B00C0698A /* RowHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E449CC1AE40C7B00C0698A /* RowHistoryView.m */; };
 		F0E46D1F1BB48DFA000F1633 /* ReadNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E46D1E1BB48DFA000F1633 /* ReadNumber.m */; };
 		F0E4CB6A1BDB11C90052A99F /* ModuleHdrView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E4CB691BDB11C90052A99F /* ModuleHdrView.m */; };
 		F0E4CB6B1BDB11C90052A99F /* ModuleHdrView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0E4CB691BDB11C90052A99F /* ModuleHdrView.m */; };
@@ -3520,8 +3531,6 @@
 		F0D910DC1AE067B300C6871A /* LangsPanelView.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = LangsPanelView.m; sourceTree = "<group>"; };
 		F0D910DE1AE0684300C6871A /* AppData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppData.h; sourceTree = "<group>"; };
 		F0D910DF1AE0684300C6871A /* AppData.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = AppData.m; sourceTree = "<group>"; };
-		F0D910E11AE068DE00C6871A /* TrdHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrdHistory.h; sourceTree = "<group>"; };
-		F0D910E21AE068DE00C6871A /* TrdHistory.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = TrdHistory.m; sourceTree = "<group>"; };
 		F0D910E41AE0B0CF00C6871A /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MainView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		F0D910E51AE0B0CF00C6871A /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MainView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		F0D910E71AE0BA1400C6871A /* VirtualListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualListView.h; sourceTree = "<group>"; };
@@ -3543,6 +3552,9 @@
 		F0DDDF531AED3573000F9159 /* LangsBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LangsBar.h; sourceTree = "<group>"; };
 		F0DDDF541AED3573000F9159 /* LangsBar.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = LangsBar.m; sourceTree = "<group>"; };
 		F0DDDF591AED5DEF000F9159 /* Leading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Leading@2x.png"; path = "Images/Leading@2x.png"; sourceTree = "<group>"; };
+		F0DE5CF91BEF86500016B1D4 /* Sentences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sentences.h; sourceTree = "<group>"; };
+		F0DE5CFA1BEF86500016B1D4 /* Sentences.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = Sentences.m; sourceTree = "<group>"; };
+		F0DE5D061BEFC9D60016B1D4 /* Sentences.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Sentences.txt; path = Histories/Sentences.txt; sourceTree = "<group>"; };
 		F0DE63AB1AF6C5E200261762 /* DictController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictController.h; sourceTree = "<group>"; };
 		F0DE63AC1AF6C5E200261762 /* DictController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = DictController.m; sourceTree = "<group>"; };
 		F0DE63AE1AF6C5FD00261762 /* ConjController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConjController.h; sourceTree = "<group>"; };
@@ -3601,9 +3613,9 @@
 		F0E38E851BCDD502002AF2B0 /* TrdSuiteFr-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TrdSuiteFr-Prefix.pch"; sourceTree = "<group>"; };
 		F0E38E861BCDD502002AF2B0 /* TrdSuiteIt-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TrdSuiteIt-Prefix.pch"; sourceTree = "<group>"; };
 		F0E38E871BCDD502002AF2B0 /* TrdSuiteItFr-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TrdSuiteItFr-Prefix.pch"; sourceTree = "<group>"; };
+		F0E39A4B1BF14AA700110B5A /* RowSentenceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RowSentenceView.h; sourceTree = "<group>"; };
+		F0E39A4C1BF14AA700110B5A /* RowSentenceView.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = RowSentenceView.m; sourceTree = "<group>"; };
 		F0E403031BC766CD0045B553 /* BuyOk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "BuyOk@2x.png"; path = "Images/BuyOk@2x.png"; sourceTree = "<group>"; };
-		F0E449CB1AE40C7B00C0698A /* RowHistoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RowHistoryView.h; sourceTree = "<group>"; };
-		F0E449CC1AE40C7B00C0698A /* RowHistoryView.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = RowHistoryView.m; sourceTree = "<group>"; };
 		F0E46D1D1BB48DFA000F1633 /* ReadNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadNumber.h; sourceTree = "<group>"; };
 		F0E46D1E1BB48DFA000F1633 /* ReadNumber.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = ReadNumber.m; sourceTree = "<group>"; };
 		F0E4CB651BDA956F0052A99F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -4273,10 +4285,10 @@
 				F0AC433B1ADF51E200A5089F /* AppDelegate.m */,
 				F0D910DE1AE0684300C6871A /* AppData.h */,
 				F0D910DF1AE0684300C6871A /* AppData.m */,
-				F0D910E11AE068DE00C6871A /* TrdHistory.h */,
-				F0D910E21AE068DE00C6871A /* TrdHistory.m */,
 				F0E46D1D1BB48DFA000F1633 /* ReadNumber.h */,
 				F0E46D1E1BB48DFA000F1633 /* ReadNumber.m */,
+				F0DE5CF91BEF86500016B1D4 /* Sentences.h */,
+				F0DE5CFA1BEF86500016B1D4 /* Sentences.m */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -4343,8 +4355,8 @@
 				F0D948641B4070360031404C /* VirtualDictRowView.m */,
 				F0D910E71AE0BA1400C6871A /* VirtualListView.h */,
 				F0D910E81AE0BA1400C6871A /* VirtualListView.m */,
-				F0E449CB1AE40C7B00C0698A /* RowHistoryView.h */,
-				F0E449CC1AE40C7B00C0698A /* RowHistoryView.m */,
+				F0E39A4B1BF14AA700110B5A /* RowSentenceView.h */,
+				F0E39A4C1BF14AA700110B5A /* RowSentenceView.m */,
 			);
 			name = ListViews;
 			sourceTree = "<group>";
@@ -4352,6 +4364,7 @@
 		F0EC3B851B901A8E000AD440 /* Historias */ = {
 			isa = PBXGroup;
 			children = (
+				F0DE5D061BEFC9D60016B1D4 /* Sentences.txt */,
 				F0EC3B861B901ACA000AD440 /* HistoryEn-Es.txt */,
 				F0EC3B871B901ACA000AD440 /* HistoryEs-En.txt */,
 			);
@@ -4959,7 +4972,7 @@
 		F0AC43201ADF51E200A5089F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Softlingo;
 			};
 			buildConfigurationList = F0AC43231ADF51E200A5089F /* Build configuration list for PBXProject "TrdSuite" */;
@@ -5153,6 +5166,7 @@
 				F0DCAEEB1B1B8E4A0081D11F /* Localizable.strings in Resources */,
 				F0FDD62F1B15166C0035CAB4 /* It2En.idx in Resources */,
 				F0FDD6331B15166C0035CAB4 /* It2EnFCT.dcx in Resources */,
+				F0DE5D071BEFC9D60016B1D4 /* Sentences.txt in Resources */,
 				F0D910CD1AE065D200C6871A /* FlagEn30@2x.png in Resources */,
 				F0FDD5C81B15166C0035CAB4 /* En2FrVCT.dcx in Resources */,
 				F0FDD64A1B15166C0035CAB4 /* It2FrICT.dcx in Resources */,
@@ -5391,6 +5405,7 @@
 				F0E382A21BCDC81A002AF2B0 /* Localizable.strings in Resources */,
 				F0E382A31BCDC81A002AF2B0 /* It2En.idx in Resources */,
 				F0E382A41BCDC81A002AF2B0 /* It2EnFCT.dcx in Resources */,
+				F0DE5D081BEFC9D60016B1D4 /* Sentences.txt in Resources */,
 				F0E382A51BCDC81A002AF2B0 /* FlagEn30@2x.png in Resources */,
 				F0E382A61BCDC81A002AF2B0 /* En2FrVCT.dcx in Resources */,
 				F0E382A71BCDC81A002AF2B0 /* It2FrICT.dcx in Resources */,
@@ -5629,6 +5644,7 @@
 				F0E383E51BCDC832002AF2B0 /* Localizable.strings in Resources */,
 				F0E383E61BCDC832002AF2B0 /* It2En.idx in Resources */,
 				F0E383E71BCDC832002AF2B0 /* It2EnFCT.dcx in Resources */,
+				F0DE5D091BEFC9D60016B1D4 /* Sentences.txt in Resources */,
 				F0E383E81BCDC832002AF2B0 /* FlagEn30@2x.png in Resources */,
 				F0E383E91BCDC832002AF2B0 /* En2FrVCT.dcx in Resources */,
 				F0E383EA1BCDC832002AF2B0 /* It2FrICT.dcx in Resources */,
@@ -5867,6 +5883,7 @@
 				F0E385291BCDC849002AF2B0 /* It2En.idx in Resources */,
 				F0E3852A1BCDC849002AF2B0 /* It2EnFCT.dcx in Resources */,
 				F0E3852B1BCDC849002AF2B0 /* FlagEn30@2x.png in Resources */,
+				F0DE5D0A1BEFC9D60016B1D4 /* Sentences.txt in Resources */,
 				F0E3852C1BCDC849002AF2B0 /* En2FrVCT.dcx in Resources */,
 				F0E3852D1BCDC849002AF2B0 /* It2FrICT.dcx in Resources */,
 				F0E3852E1BCDC849002AF2B0 /* Fr2It.dax in Resources */,
@@ -6105,6 +6122,7 @@
 				F0E3866B1BCDC859002AF2B0 /* Localizable.strings in Resources */,
 				F0E3866C1BCDC859002AF2B0 /* It2En.idx in Resources */,
 				F0E3866D1BCDC859002AF2B0 /* It2EnFCT.dcx in Resources */,
+				F0DE5D0B1BEFC9D60016B1D4 /* Sentences.txt in Resources */,
 				F0E3866E1BCDC859002AF2B0 /* FlagEn30@2x.png in Resources */,
 				F0E3866F1BCDC859002AF2B0 /* En2FrVCT.dcx in Resources */,
 				F0E386701BCDC859002AF2B0 /* It2FrICT.dcx in Resources */,
@@ -6343,6 +6361,7 @@
 				F0E387AF1BCDC867002AF2B0 /* It2En.idx in Resources */,
 				F0E387B01BCDC867002AF2B0 /* It2EnFCT.dcx in Resources */,
 				F0E387B11BCDC867002AF2B0 /* FlagEn30@2x.png in Resources */,
+				F0DE5D0C1BEFC9D60016B1D4 /* Sentences.txt in Resources */,
 				F0E387B21BCDC867002AF2B0 /* En2FrVCT.dcx in Resources */,
 				F0E387B31BCDC867002AF2B0 /* It2FrICT.dcx in Resources */,
 				F0E387B41BCDC867002AF2B0 /* Fr2It.dax in Resources */,
@@ -6581,6 +6600,7 @@
 				F0E388F11BCDC878002AF2B0 /* Localizable.strings in Resources */,
 				F0E388F21BCDC878002AF2B0 /* It2En.idx in Resources */,
 				F0E388F31BCDC878002AF2B0 /* It2EnFCT.dcx in Resources */,
+				F0DE5D0D1BEFC9D60016B1D4 /* Sentences.txt in Resources */,
 				F0E388F41BCDC878002AF2B0 /* FlagEn30@2x.png in Resources */,
 				F0E388F51BCDC878002AF2B0 /* En2FrVCT.dcx in Resources */,
 				F0E388F61BCDC878002AF2B0 /* It2FrICT.dcx in Resources */,
@@ -6819,6 +6839,7 @@
 				F0E38A341BCDC88B002AF2B0 /* Localizable.strings in Resources */,
 				F0E38A351BCDC88B002AF2B0 /* It2En.idx in Resources */,
 				F0E38A361BCDC88B002AF2B0 /* It2EnFCT.dcx in Resources */,
+				F0DE5D0E1BEFC9D60016B1D4 /* Sentences.txt in Resources */,
 				F0E38A371BCDC88B002AF2B0 /* FlagEn30@2x.png in Resources */,
 				F0E38A381BCDC88B002AF2B0 /* En2FrVCT.dcx in Resources */,
 				F0E38A391BCDC88B002AF2B0 /* It2FrICT.dcx in Resources */,
@@ -7057,6 +7078,7 @@
 				F0E38B771BCDC89C002AF2B0 /* Localizable.strings in Resources */,
 				F0E38B781BCDC89C002AF2B0 /* It2En.idx in Resources */,
 				F0E38B791BCDC89C002AF2B0 /* It2EnFCT.dcx in Resources */,
+				F0DE5D0F1BEFC9D60016B1D4 /* Sentences.txt in Resources */,
 				F0E38B7A1BCDC89C002AF2B0 /* FlagEn30@2x.png in Resources */,
 				F0E38B7B1BCDC89C002AF2B0 /* En2FrVCT.dcx in Resources */,
 				F0E38B7C1BCDC89C002AF2B0 /* It2FrICT.dcx in Resources */,
@@ -7295,6 +7317,7 @@
 				F0E38CBB1BCDC8A9002AF2B0 /* It2En.idx in Resources */,
 				F0E38CBC1BCDC8A9002AF2B0 /* It2EnFCT.dcx in Resources */,
 				F0E38CBD1BCDC8A9002AF2B0 /* FlagEn30@2x.png in Resources */,
+				F0DE5D101BEFC9D60016B1D4 /* Sentences.txt in Resources */,
 				F0E38CBE1BCDC8A9002AF2B0 /* En2FrVCT.dcx in Resources */,
 				F0E38CBF1BCDC8A9002AF2B0 /* It2FrICT.dcx in Resources */,
 				F0E38CC01BCDC8A9002AF2B0 /* Fr2It.dax in Resources */,
@@ -7533,6 +7556,7 @@
 				F0E38DFD1BCDC8B8002AF2B0 /* Localizable.strings in Resources */,
 				F0E38DFE1BCDC8B8002AF2B0 /* It2En.idx in Resources */,
 				F0E38DFF1BCDC8B8002AF2B0 /* It2EnFCT.dcx in Resources */,
+				F0DE5D111BEFC9D60016B1D4 /* Sentences.txt in Resources */,
 				F0E38E001BCDC8B8002AF2B0 /* FlagEn30@2x.png in Resources */,
 				F0E38E011BCDC8B8002AF2B0 /* En2FrVCT.dcx in Resources */,
 				F0E38E021BCDC8B8002AF2B0 /* It2FrICT.dcx in Resources */,
@@ -7633,7 +7657,6 @@
 				F0FDD4CE1B1515F10035CAB4 /* CmdDcc.cpp in Sources */,
 				F0FDD4D71B1515F10035CAB4 /* GramType.cpp in Sources */,
 				F0AC433C1ADF51E200A5089F /* AppDelegate.m in Sources */,
-				F0E449CD1AE40C7B00C0698A /* RowHistoryView.m in Sources */,
 				F0FDD4CB1B1515F10035CAB4 /* Cclave.cpp in Sources */,
 				F0FDD4D21B1515F10035CAB4 /* Cora.cpp in Sources */,
 				F0D607101B2000B80091411A /* TrdInfoView.m in Sources */,
@@ -7649,6 +7672,7 @@
 				F0DDDF551AED3573000F9159 /* LangsBar.m in Sources */,
 				F00C80911B7E745C00946322 /* PanelRigthView.m in Sources */,
 				F0E26D471BBA18D900479ED7 /* NumResultView.m in Sources */,
+				F0DE5CFB1BEF86500016B1D4 /* Sentences.m in Sources */,
 				F0E46D1F1BB48DFA000F1633 /* ReadNumber.m in Sources */,
 				F0FDD4D31B1515F10035CAB4 /* CWORD.cpp in Sources */,
 				F0FDD6611B15246F0035CAB4 /* ProxyConj.mm in Sources */,
@@ -7675,7 +7699,6 @@
 				F0FDD4FD1B1515F10035CAB4 /* RedWord.cpp in Sources */,
 				F0FDD4D11B1515F10035CAB4 /* ConjugateByPattern.cpp in Sources */,
 				F0FDD4E51B1515F10035CAB4 /* Wordesp.cpp in Sources */,
-				F0D910E31AE068DE00C6871A /* TrdHistory.m in Sources */,
 				F0FDD4D41B1515F10035CAB4 /* DccDict.cpp in Sources */,
 				F0DE63B01AF6C5FD00261762 /* ConjController.m in Sources */,
 				F0DE63B31AF6C61900261762 /* NumsController.m in Sources */,
@@ -7694,6 +7717,7 @@
 				F0FDD4D61B1515F10035CAB4 /* FindRootWordInDic.cpp in Sources */,
 				F0D910E01AE0684300C6871A /* AppData.m in Sources */,
 				F0FDD4DE1B1515F10035CAB4 /* Orafun.cpp in Sources */,
+				F0E39A4D1BF14AA700110B5A /* RowSentenceView.m in Sources */,
 				F0E032AB1BB8782A00347EE0 /* NumGroupView.m in Sources */,
 				F0FDD6621B15246F0035CAB4 /* ProxyDict.mm in Sources */,
 				F0E9D1E81BC3314600DE66D9 /* PurchasesView.m in Sources */,
@@ -7719,7 +7743,6 @@
 				F0E381C01BCDC81A002AF2B0 /* CmdDcc.cpp in Sources */,
 				F0E381C11BCDC81A002AF2B0 /* GramType.cpp in Sources */,
 				F0E381C21BCDC81A002AF2B0 /* AppDelegate.m in Sources */,
-				F0E381C31BCDC81A002AF2B0 /* RowHistoryView.m in Sources */,
 				F0E381C41BCDC81A002AF2B0 /* Cclave.cpp in Sources */,
 				F0E381C51BCDC81A002AF2B0 /* Cora.cpp in Sources */,
 				F0E381C61BCDC81A002AF2B0 /* TrdInfoView.m in Sources */,
@@ -7735,6 +7758,7 @@
 				F0E381CF1BCDC81A002AF2B0 /* LangsBar.m in Sources */,
 				F0E381D01BCDC81A002AF2B0 /* PanelRigthView.m in Sources */,
 				F0E381D11BCDC81A002AF2B0 /* NumResultView.m in Sources */,
+				F0DE5CFC1BEF86500016B1D4 /* Sentences.m in Sources */,
 				F0E381D21BCDC81A002AF2B0 /* ReadNumber.m in Sources */,
 				F0E381D31BCDC81A002AF2B0 /* CWORD.cpp in Sources */,
 				F0E381D41BCDC81A002AF2B0 /* ProxyConj.mm in Sources */,
@@ -7761,7 +7785,6 @@
 				F0E381E91BCDC81A002AF2B0 /* RedWord.cpp in Sources */,
 				F0E381EA1BCDC81A002AF2B0 /* ConjugateByPattern.cpp in Sources */,
 				F0E381EB1BCDC81A002AF2B0 /* Wordesp.cpp in Sources */,
-				F0E381EC1BCDC81A002AF2B0 /* TrdHistory.m in Sources */,
 				F0E381ED1BCDC81A002AF2B0 /* DccDict.cpp in Sources */,
 				F0E381EE1BCDC81A002AF2B0 /* ConjController.m in Sources */,
 				F0E381EF1BCDC81A002AF2B0 /* NumsController.m in Sources */,
@@ -7780,6 +7803,7 @@
 				F0E381FD1BCDC81A002AF2B0 /* FindRootWordInDic.cpp in Sources */,
 				F0E381FE1BCDC81A002AF2B0 /* AppData.m in Sources */,
 				F0E381FF1BCDC81A002AF2B0 /* Orafun.cpp in Sources */,
+				F0E39A4E1BF14AA700110B5A /* RowSentenceView.m in Sources */,
 				F0E382001BCDC81A002AF2B0 /* NumGroupView.m in Sources */,
 				F0E382011BCDC81A002AF2B0 /* ProxyDict.mm in Sources */,
 				F0E382021BCDC81A002AF2B0 /* PurchasesView.m in Sources */,
@@ -7805,7 +7829,6 @@
 				F0E383031BCDC832002AF2B0 /* CmdDcc.cpp in Sources */,
 				F0E383041BCDC832002AF2B0 /* GramType.cpp in Sources */,
 				F0E383051BCDC832002AF2B0 /* AppDelegate.m in Sources */,
-				F0E383061BCDC832002AF2B0 /* RowHistoryView.m in Sources */,
 				F0E383071BCDC832002AF2B0 /* Cclave.cpp in Sources */,
 				F0E383081BCDC832002AF2B0 /* Cora.cpp in Sources */,
 				F0E383091BCDC832002AF2B0 /* TrdInfoView.m in Sources */,
@@ -7821,6 +7844,7 @@
 				F0E383121BCDC832002AF2B0 /* LangsBar.m in Sources */,
 				F0E383131BCDC832002AF2B0 /* PanelRigthView.m in Sources */,
 				F0E383141BCDC832002AF2B0 /* NumResultView.m in Sources */,
+				F0DE5CFD1BEF86500016B1D4 /* Sentences.m in Sources */,
 				F0E383151BCDC832002AF2B0 /* ReadNumber.m in Sources */,
 				F0E383161BCDC832002AF2B0 /* CWORD.cpp in Sources */,
 				F0E383171BCDC832002AF2B0 /* ProxyConj.mm in Sources */,
@@ -7847,7 +7871,6 @@
 				F0E3832C1BCDC832002AF2B0 /* RedWord.cpp in Sources */,
 				F0E3832D1BCDC832002AF2B0 /* ConjugateByPattern.cpp in Sources */,
 				F0E3832E1BCDC832002AF2B0 /* Wordesp.cpp in Sources */,
-				F0E3832F1BCDC832002AF2B0 /* TrdHistory.m in Sources */,
 				F0E383301BCDC832002AF2B0 /* DccDict.cpp in Sources */,
 				F0E383311BCDC832002AF2B0 /* ConjController.m in Sources */,
 				F0E383321BCDC832002AF2B0 /* NumsController.m in Sources */,
@@ -7866,6 +7889,7 @@
 				F0E383401BCDC832002AF2B0 /* FindRootWordInDic.cpp in Sources */,
 				F0E383411BCDC832002AF2B0 /* AppData.m in Sources */,
 				F0E383421BCDC832002AF2B0 /* Orafun.cpp in Sources */,
+				F0E39A4F1BF14AA700110B5A /* RowSentenceView.m in Sources */,
 				F0E383431BCDC832002AF2B0 /* NumGroupView.m in Sources */,
 				F0E383441BCDC832002AF2B0 /* ProxyDict.mm in Sources */,
 				F0E383451BCDC832002AF2B0 /* PurchasesView.m in Sources */,
@@ -7891,7 +7915,6 @@
 				F0E384461BCDC849002AF2B0 /* CmdDcc.cpp in Sources */,
 				F0E384471BCDC849002AF2B0 /* GramType.cpp in Sources */,
 				F0E384481BCDC849002AF2B0 /* AppDelegate.m in Sources */,
-				F0E384491BCDC849002AF2B0 /* RowHistoryView.m in Sources */,
 				F0E3844A1BCDC849002AF2B0 /* Cclave.cpp in Sources */,
 				F0E3844B1BCDC849002AF2B0 /* Cora.cpp in Sources */,
 				F0E3844C1BCDC849002AF2B0 /* TrdInfoView.m in Sources */,
@@ -7907,6 +7930,7 @@
 				F0E384551BCDC849002AF2B0 /* LangsBar.m in Sources */,
 				F0E384561BCDC849002AF2B0 /* PanelRigthView.m in Sources */,
 				F0E384571BCDC849002AF2B0 /* NumResultView.m in Sources */,
+				F0DE5CFE1BEF86500016B1D4 /* Sentences.m in Sources */,
 				F0E384581BCDC849002AF2B0 /* ReadNumber.m in Sources */,
 				F0E384591BCDC849002AF2B0 /* CWORD.cpp in Sources */,
 				F0E3845A1BCDC849002AF2B0 /* ProxyConj.mm in Sources */,
@@ -7933,7 +7957,6 @@
 				F0E3846F1BCDC849002AF2B0 /* RedWord.cpp in Sources */,
 				F0E384701BCDC849002AF2B0 /* ConjugateByPattern.cpp in Sources */,
 				F0E384711BCDC849002AF2B0 /* Wordesp.cpp in Sources */,
-				F0E384721BCDC849002AF2B0 /* TrdHistory.m in Sources */,
 				F0E384731BCDC849002AF2B0 /* DccDict.cpp in Sources */,
 				F0E384741BCDC849002AF2B0 /* ConjController.m in Sources */,
 				F0E384751BCDC849002AF2B0 /* NumsController.m in Sources */,
@@ -7952,6 +7975,7 @@
 				F0E384831BCDC849002AF2B0 /* FindRootWordInDic.cpp in Sources */,
 				F0E384841BCDC849002AF2B0 /* AppData.m in Sources */,
 				F0E384851BCDC849002AF2B0 /* Orafun.cpp in Sources */,
+				F0E39A501BF14AA700110B5A /* RowSentenceView.m in Sources */,
 				F0E384861BCDC849002AF2B0 /* NumGroupView.m in Sources */,
 				F0E384871BCDC849002AF2B0 /* ProxyDict.mm in Sources */,
 				F0E384881BCDC849002AF2B0 /* PurchasesView.m in Sources */,
@@ -7977,7 +8001,6 @@
 				F0E385891BCDC859002AF2B0 /* CmdDcc.cpp in Sources */,
 				F0E3858A1BCDC859002AF2B0 /* GramType.cpp in Sources */,
 				F0E3858B1BCDC859002AF2B0 /* AppDelegate.m in Sources */,
-				F0E3858C1BCDC859002AF2B0 /* RowHistoryView.m in Sources */,
 				F0E3858D1BCDC859002AF2B0 /* Cclave.cpp in Sources */,
 				F0E3858E1BCDC859002AF2B0 /* Cora.cpp in Sources */,
 				F0E3858F1BCDC859002AF2B0 /* TrdInfoView.m in Sources */,
@@ -7993,6 +8016,7 @@
 				F0E385981BCDC859002AF2B0 /* LangsBar.m in Sources */,
 				F0E385991BCDC859002AF2B0 /* PanelRigthView.m in Sources */,
 				F0E3859A1BCDC859002AF2B0 /* NumResultView.m in Sources */,
+				F0DE5CFF1BEF86500016B1D4 /* Sentences.m in Sources */,
 				F0E3859B1BCDC859002AF2B0 /* ReadNumber.m in Sources */,
 				F0E3859C1BCDC859002AF2B0 /* CWORD.cpp in Sources */,
 				F0E3859D1BCDC859002AF2B0 /* ProxyConj.mm in Sources */,
@@ -8019,7 +8043,6 @@
 				F0E385B21BCDC859002AF2B0 /* RedWord.cpp in Sources */,
 				F0E385B31BCDC859002AF2B0 /* ConjugateByPattern.cpp in Sources */,
 				F0E385B41BCDC859002AF2B0 /* Wordesp.cpp in Sources */,
-				F0E385B51BCDC859002AF2B0 /* TrdHistory.m in Sources */,
 				F0E385B61BCDC859002AF2B0 /* DccDict.cpp in Sources */,
 				F0E385B71BCDC859002AF2B0 /* ConjController.m in Sources */,
 				F0E385B81BCDC859002AF2B0 /* NumsController.m in Sources */,
@@ -8038,6 +8061,7 @@
 				F0E385C61BCDC859002AF2B0 /* FindRootWordInDic.cpp in Sources */,
 				F0E385C71BCDC859002AF2B0 /* AppData.m in Sources */,
 				F0E385C81BCDC859002AF2B0 /* Orafun.cpp in Sources */,
+				F0E39A511BF14AA700110B5A /* RowSentenceView.m in Sources */,
 				F0E385C91BCDC859002AF2B0 /* NumGroupView.m in Sources */,
 				F0E385CA1BCDC859002AF2B0 /* ProxyDict.mm in Sources */,
 				F0E385CB1BCDC859002AF2B0 /* PurchasesView.m in Sources */,
@@ -8063,7 +8087,6 @@
 				F0E386CC1BCDC867002AF2B0 /* CmdDcc.cpp in Sources */,
 				F0E386CD1BCDC867002AF2B0 /* GramType.cpp in Sources */,
 				F0E386CE1BCDC867002AF2B0 /* AppDelegate.m in Sources */,
-				F0E386CF1BCDC867002AF2B0 /* RowHistoryView.m in Sources */,
 				F0E386D01BCDC867002AF2B0 /* Cclave.cpp in Sources */,
 				F0E386D11BCDC867002AF2B0 /* Cora.cpp in Sources */,
 				F0E386D21BCDC867002AF2B0 /* TrdInfoView.m in Sources */,
@@ -8079,6 +8102,7 @@
 				F0E386DB1BCDC867002AF2B0 /* LangsBar.m in Sources */,
 				F0E386DC1BCDC867002AF2B0 /* PanelRigthView.m in Sources */,
 				F0E386DD1BCDC867002AF2B0 /* NumResultView.m in Sources */,
+				F0DE5D001BEF86500016B1D4 /* Sentences.m in Sources */,
 				F0E386DE1BCDC867002AF2B0 /* ReadNumber.m in Sources */,
 				F0E386DF1BCDC867002AF2B0 /* CWORD.cpp in Sources */,
 				F0E386E01BCDC867002AF2B0 /* ProxyConj.mm in Sources */,
@@ -8105,7 +8129,6 @@
 				F0E386F51BCDC867002AF2B0 /* RedWord.cpp in Sources */,
 				F0E386F61BCDC867002AF2B0 /* ConjugateByPattern.cpp in Sources */,
 				F0E386F71BCDC867002AF2B0 /* Wordesp.cpp in Sources */,
-				F0E386F81BCDC867002AF2B0 /* TrdHistory.m in Sources */,
 				F0E386F91BCDC867002AF2B0 /* DccDict.cpp in Sources */,
 				F0E386FA1BCDC867002AF2B0 /* ConjController.m in Sources */,
 				F0E386FB1BCDC867002AF2B0 /* NumsController.m in Sources */,
@@ -8124,6 +8147,7 @@
 				F0E387091BCDC867002AF2B0 /* FindRootWordInDic.cpp in Sources */,
 				F0E3870A1BCDC867002AF2B0 /* AppData.m in Sources */,
 				F0E3870B1BCDC867002AF2B0 /* Orafun.cpp in Sources */,
+				F0E39A521BF14AA700110B5A /* RowSentenceView.m in Sources */,
 				F0E3870C1BCDC867002AF2B0 /* NumGroupView.m in Sources */,
 				F0E3870D1BCDC867002AF2B0 /* ProxyDict.mm in Sources */,
 				F0E3870E1BCDC867002AF2B0 /* PurchasesView.m in Sources */,
@@ -8149,7 +8173,6 @@
 				F0E3880F1BCDC878002AF2B0 /* CmdDcc.cpp in Sources */,
 				F0E388101BCDC878002AF2B0 /* GramType.cpp in Sources */,
 				F0E388111BCDC878002AF2B0 /* AppDelegate.m in Sources */,
-				F0E388121BCDC878002AF2B0 /* RowHistoryView.m in Sources */,
 				F0E388131BCDC878002AF2B0 /* Cclave.cpp in Sources */,
 				F0E388141BCDC878002AF2B0 /* Cora.cpp in Sources */,
 				F0E388151BCDC878002AF2B0 /* TrdInfoView.m in Sources */,
@@ -8165,6 +8188,7 @@
 				F0E3881E1BCDC878002AF2B0 /* LangsBar.m in Sources */,
 				F0E3881F1BCDC878002AF2B0 /* PanelRigthView.m in Sources */,
 				F0E388201BCDC878002AF2B0 /* NumResultView.m in Sources */,
+				F0DE5D011BEF86500016B1D4 /* Sentences.m in Sources */,
 				F0E388211BCDC878002AF2B0 /* ReadNumber.m in Sources */,
 				F0E388221BCDC878002AF2B0 /* CWORD.cpp in Sources */,
 				F0E388231BCDC878002AF2B0 /* ProxyConj.mm in Sources */,
@@ -8191,7 +8215,6 @@
 				F0E388381BCDC878002AF2B0 /* RedWord.cpp in Sources */,
 				F0E388391BCDC878002AF2B0 /* ConjugateByPattern.cpp in Sources */,
 				F0E3883A1BCDC878002AF2B0 /* Wordesp.cpp in Sources */,
-				F0E3883B1BCDC878002AF2B0 /* TrdHistory.m in Sources */,
 				F0E3883C1BCDC878002AF2B0 /* DccDict.cpp in Sources */,
 				F0E3883D1BCDC878002AF2B0 /* ConjController.m in Sources */,
 				F0E3883E1BCDC878002AF2B0 /* NumsController.m in Sources */,
@@ -8210,6 +8233,7 @@
 				F0E3884C1BCDC878002AF2B0 /* FindRootWordInDic.cpp in Sources */,
 				F0E3884D1BCDC878002AF2B0 /* AppData.m in Sources */,
 				F0E3884E1BCDC878002AF2B0 /* Orafun.cpp in Sources */,
+				F0E39A531BF14AA700110B5A /* RowSentenceView.m in Sources */,
 				F0E3884F1BCDC878002AF2B0 /* NumGroupView.m in Sources */,
 				F0E388501BCDC878002AF2B0 /* ProxyDict.mm in Sources */,
 				F0E388511BCDC878002AF2B0 /* PurchasesView.m in Sources */,
@@ -8235,7 +8259,6 @@
 				F0E389521BCDC88B002AF2B0 /* CmdDcc.cpp in Sources */,
 				F0E389531BCDC88B002AF2B0 /* GramType.cpp in Sources */,
 				F0E389541BCDC88B002AF2B0 /* AppDelegate.m in Sources */,
-				F0E389551BCDC88B002AF2B0 /* RowHistoryView.m in Sources */,
 				F0E389561BCDC88B002AF2B0 /* Cclave.cpp in Sources */,
 				F0E389571BCDC88B002AF2B0 /* Cora.cpp in Sources */,
 				F0E389581BCDC88B002AF2B0 /* TrdInfoView.m in Sources */,
@@ -8251,6 +8274,7 @@
 				F0E389611BCDC88B002AF2B0 /* LangsBar.m in Sources */,
 				F0E389621BCDC88B002AF2B0 /* PanelRigthView.m in Sources */,
 				F0E389631BCDC88B002AF2B0 /* NumResultView.m in Sources */,
+				F0DE5D021BEF86500016B1D4 /* Sentences.m in Sources */,
 				F0E389641BCDC88B002AF2B0 /* ReadNumber.m in Sources */,
 				F0E389651BCDC88B002AF2B0 /* CWORD.cpp in Sources */,
 				F0E389661BCDC88B002AF2B0 /* ProxyConj.mm in Sources */,
@@ -8277,7 +8301,6 @@
 				F0E3897B1BCDC88B002AF2B0 /* RedWord.cpp in Sources */,
 				F0E3897C1BCDC88B002AF2B0 /* ConjugateByPattern.cpp in Sources */,
 				F0E3897D1BCDC88B002AF2B0 /* Wordesp.cpp in Sources */,
-				F0E3897E1BCDC88B002AF2B0 /* TrdHistory.m in Sources */,
 				F0E3897F1BCDC88B002AF2B0 /* DccDict.cpp in Sources */,
 				F0E389801BCDC88B002AF2B0 /* ConjController.m in Sources */,
 				F0E389811BCDC88B002AF2B0 /* NumsController.m in Sources */,
@@ -8296,6 +8319,7 @@
 				F0E3898F1BCDC88B002AF2B0 /* FindRootWordInDic.cpp in Sources */,
 				F0E389901BCDC88B002AF2B0 /* AppData.m in Sources */,
 				F0E389911BCDC88B002AF2B0 /* Orafun.cpp in Sources */,
+				F0E39A541BF14AA700110B5A /* RowSentenceView.m in Sources */,
 				F0E389921BCDC88B002AF2B0 /* NumGroupView.m in Sources */,
 				F0E389931BCDC88B002AF2B0 /* ProxyDict.mm in Sources */,
 				F0E389941BCDC88B002AF2B0 /* PurchasesView.m in Sources */,
@@ -8321,7 +8345,6 @@
 				F0E38A951BCDC89C002AF2B0 /* CmdDcc.cpp in Sources */,
 				F0E38A961BCDC89C002AF2B0 /* GramType.cpp in Sources */,
 				F0E38A971BCDC89C002AF2B0 /* AppDelegate.m in Sources */,
-				F0E38A981BCDC89C002AF2B0 /* RowHistoryView.m in Sources */,
 				F0E38A991BCDC89C002AF2B0 /* Cclave.cpp in Sources */,
 				F0E38A9A1BCDC89C002AF2B0 /* Cora.cpp in Sources */,
 				F0E38A9B1BCDC89C002AF2B0 /* TrdInfoView.m in Sources */,
@@ -8337,6 +8360,7 @@
 				F0E38AA41BCDC89C002AF2B0 /* LangsBar.m in Sources */,
 				F0E38AA51BCDC89C002AF2B0 /* PanelRigthView.m in Sources */,
 				F0E38AA61BCDC89C002AF2B0 /* NumResultView.m in Sources */,
+				F0DE5D031BEF86500016B1D4 /* Sentences.m in Sources */,
 				F0E38AA71BCDC89C002AF2B0 /* ReadNumber.m in Sources */,
 				F0E38AA81BCDC89C002AF2B0 /* CWORD.cpp in Sources */,
 				F0E38AA91BCDC89C002AF2B0 /* ProxyConj.mm in Sources */,
@@ -8363,7 +8387,6 @@
 				F0E38ABE1BCDC89C002AF2B0 /* RedWord.cpp in Sources */,
 				F0E38ABF1BCDC89C002AF2B0 /* ConjugateByPattern.cpp in Sources */,
 				F0E38AC01BCDC89C002AF2B0 /* Wordesp.cpp in Sources */,
-				F0E38AC11BCDC89C002AF2B0 /* TrdHistory.m in Sources */,
 				F0E38AC21BCDC89C002AF2B0 /* DccDict.cpp in Sources */,
 				F0E38AC31BCDC89C002AF2B0 /* ConjController.m in Sources */,
 				F0E38AC41BCDC89C002AF2B0 /* NumsController.m in Sources */,
@@ -8382,6 +8405,7 @@
 				F0E38AD21BCDC89C002AF2B0 /* FindRootWordInDic.cpp in Sources */,
 				F0E38AD31BCDC89C002AF2B0 /* AppData.m in Sources */,
 				F0E38AD41BCDC89C002AF2B0 /* Orafun.cpp in Sources */,
+				F0E39A551BF14AA800110B5A /* RowSentenceView.m in Sources */,
 				F0E38AD51BCDC89C002AF2B0 /* NumGroupView.m in Sources */,
 				F0E38AD61BCDC89C002AF2B0 /* ProxyDict.mm in Sources */,
 				F0E38AD71BCDC89C002AF2B0 /* PurchasesView.m in Sources */,
@@ -8407,7 +8431,6 @@
 				F0E38BD81BCDC8A9002AF2B0 /* CmdDcc.cpp in Sources */,
 				F0E38BD91BCDC8A9002AF2B0 /* GramType.cpp in Sources */,
 				F0E38BDA1BCDC8A9002AF2B0 /* AppDelegate.m in Sources */,
-				F0E38BDB1BCDC8A9002AF2B0 /* RowHistoryView.m in Sources */,
 				F0E38BDC1BCDC8A9002AF2B0 /* Cclave.cpp in Sources */,
 				F0E38BDD1BCDC8A9002AF2B0 /* Cora.cpp in Sources */,
 				F0E38BDE1BCDC8A9002AF2B0 /* TrdInfoView.m in Sources */,
@@ -8423,6 +8446,7 @@
 				F0E38BE71BCDC8A9002AF2B0 /* LangsBar.m in Sources */,
 				F0E38BE81BCDC8A9002AF2B0 /* PanelRigthView.m in Sources */,
 				F0E38BE91BCDC8A9002AF2B0 /* NumResultView.m in Sources */,
+				F0DE5D041BEF86500016B1D4 /* Sentences.m in Sources */,
 				F0E38BEA1BCDC8A9002AF2B0 /* ReadNumber.m in Sources */,
 				F0E38BEB1BCDC8A9002AF2B0 /* CWORD.cpp in Sources */,
 				F0E38BEC1BCDC8A9002AF2B0 /* ProxyConj.mm in Sources */,
@@ -8449,7 +8473,6 @@
 				F0E38C011BCDC8A9002AF2B0 /* RedWord.cpp in Sources */,
 				F0E38C021BCDC8A9002AF2B0 /* ConjugateByPattern.cpp in Sources */,
 				F0E38C031BCDC8A9002AF2B0 /* Wordesp.cpp in Sources */,
-				F0E38C041BCDC8A9002AF2B0 /* TrdHistory.m in Sources */,
 				F0E38C051BCDC8A9002AF2B0 /* DccDict.cpp in Sources */,
 				F0E38C061BCDC8A9002AF2B0 /* ConjController.m in Sources */,
 				F0E38C071BCDC8A9002AF2B0 /* NumsController.m in Sources */,
@@ -8468,6 +8491,7 @@
 				F0E38C151BCDC8A9002AF2B0 /* FindRootWordInDic.cpp in Sources */,
 				F0E38C161BCDC8A9002AF2B0 /* AppData.m in Sources */,
 				F0E38C171BCDC8A9002AF2B0 /* Orafun.cpp in Sources */,
+				F0E39A561BF14AA800110B5A /* RowSentenceView.m in Sources */,
 				F0E38C181BCDC8A9002AF2B0 /* NumGroupView.m in Sources */,
 				F0E38C191BCDC8A9002AF2B0 /* ProxyDict.mm in Sources */,
 				F0E38C1A1BCDC8A9002AF2B0 /* PurchasesView.m in Sources */,
@@ -8493,7 +8517,6 @@
 				F0E38D1B1BCDC8B8002AF2B0 /* CmdDcc.cpp in Sources */,
 				F0E38D1C1BCDC8B8002AF2B0 /* GramType.cpp in Sources */,
 				F0E38D1D1BCDC8B8002AF2B0 /* AppDelegate.m in Sources */,
-				F0E38D1E1BCDC8B8002AF2B0 /* RowHistoryView.m in Sources */,
 				F0E38D1F1BCDC8B8002AF2B0 /* Cclave.cpp in Sources */,
 				F0E38D201BCDC8B8002AF2B0 /* Cora.cpp in Sources */,
 				F0E38D211BCDC8B8002AF2B0 /* TrdInfoView.m in Sources */,
@@ -8509,6 +8532,7 @@
 				F0E38D2A1BCDC8B8002AF2B0 /* LangsBar.m in Sources */,
 				F0E38D2B1BCDC8B8002AF2B0 /* PanelRigthView.m in Sources */,
 				F0E38D2C1BCDC8B8002AF2B0 /* NumResultView.m in Sources */,
+				F0DE5D051BEF86500016B1D4 /* Sentences.m in Sources */,
 				F0E38D2D1BCDC8B8002AF2B0 /* ReadNumber.m in Sources */,
 				F0E38D2E1BCDC8B8002AF2B0 /* CWORD.cpp in Sources */,
 				F0E38D2F1BCDC8B8002AF2B0 /* ProxyConj.mm in Sources */,
@@ -8535,7 +8559,6 @@
 				F0E38D441BCDC8B8002AF2B0 /* RedWord.cpp in Sources */,
 				F0E38D451BCDC8B8002AF2B0 /* ConjugateByPattern.cpp in Sources */,
 				F0E38D461BCDC8B8002AF2B0 /* Wordesp.cpp in Sources */,
-				F0E38D471BCDC8B8002AF2B0 /* TrdHistory.m in Sources */,
 				F0E38D481BCDC8B8002AF2B0 /* DccDict.cpp in Sources */,
 				F0E38D491BCDC8B8002AF2B0 /* ConjController.m in Sources */,
 				F0E38D4A1BCDC8B8002AF2B0 /* NumsController.m in Sources */,
@@ -8554,6 +8577,7 @@
 				F0E38D581BCDC8B8002AF2B0 /* FindRootWordInDic.cpp in Sources */,
 				F0E38D591BCDC8B8002AF2B0 /* AppData.m in Sources */,
 				F0E38D5A1BCDC8B8002AF2B0 /* Orafun.cpp in Sources */,
+				F0E39A571BF14AA800110B5A /* RowSentenceView.m in Sources */,
 				F0E38D5B1BCDC8B8002AF2B0 /* NumGroupView.m in Sources */,
 				F0E38D5C1BCDC8B8002AF2B0 /* ProxyDict.mm in Sources */,
 				F0E38D5D1BCDC8B8002AF2B0 /* PurchasesView.m in Sources */,
@@ -8604,6 +8628,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -8672,7 +8697,7 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -8688,7 +8713,7 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -8708,6 +8733,7 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -8723,6 +8749,7 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -8742,6 +8769,7 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -8757,6 +8785,7 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -8776,6 +8805,7 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -8791,6 +8821,7 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -8810,6 +8841,7 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -8825,6 +8857,7 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -8844,6 +8877,7 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -8859,6 +8893,7 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -8878,6 +8913,7 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -8893,6 +8929,7 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -8912,6 +8949,7 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -8927,6 +8965,7 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -8946,6 +8985,7 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -8961,6 +9001,7 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -8980,6 +9021,7 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -8995,6 +9037,7 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -9014,6 +9057,7 @@
 					"$(TARGET_NAME)",
 				);
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;
@@ -9029,6 +9073,7 @@
 				GCC_PREFIX_HEADER = "TrdSuite/$(TARGET_NAME)-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(TARGET_NAME)";
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.softlingo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e7911ddf-5054-4bdf-b75b-6ae2bd0da22d";
 				WRAPPER_EXTENSION = app;

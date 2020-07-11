@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-#define BtnCenterHide         0
-#define BtnCenterDown         1
-#define BtnCenterInfoSrc      2
-#define BtnCenterInfoTrd      3
+#define InfoModeHide     0
+#define InfoModeDown     1
+#define InfoModeSrc      2
+#define InfoModeTrd      3
 
 @class MainController;
 
@@ -19,7 +19,7 @@
 @interface TrdInfoView : UIView
 
   @property (nonatomic) int Mode;                                     // Modo que se muestra la vista
-  @property (nonatomic) int ModeBtnCenter;                            // Modo actual del boton central
+  @property (nonatomic) int InfoMode;                                 // Modo del botón de información (Origen, fuente, mostrar traducción)
   @property (nonatomic) int ModeBtnRight;                             // Modo actual del boton derecho
 
   @property (weak, nonatomic) MainController* Ctrller;

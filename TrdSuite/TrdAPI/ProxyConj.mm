@@ -910,14 +910,13 @@ static void AddNSString( NSMutableAttributedString* Str, NSString* mStr,  NSDict
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Obtiene todas las raices de la palabra sWord y retorna una cadena formateada con todos los datos
-+(NSAttributedString*) GetRootWord: (NSString *)sWord
++(NSAttributedString*) GetRootWord: (NSString *)sWord With:(float) w
   {
   _IsVerb = FALSE;
   NSMutableAttributedString* Str = [[NSMutableAttributedString alloc] init];  // Crea cadena con palabra a reducir
   if( sWord.length == 0 ) return Str;
   
   AddNSString(Str, sWord, attrConjBold);
-  AddLPCSTR(Str, "\r\n" , attrConjBold);
   
   CStringA aWord = [sWord cStringUsingEncoding:NSISOLatin1StringEncoding];    // Convierte la cadenas a C++
   
@@ -944,10 +943,12 @@ static void AddNSString( NSMutableAttributedString* Str, NSString* mStr,  NSDict
     
     int nTipo = Dat->ClassType(i);
     
+    AddLPCSTR(Str, "\r\n" , attrConjBold);
+    
     if( nTipo==rVERBO )
       {
       _IsVerb = TRUE;
-      [ProxyConj AddVerboRootStr:Str Root:Root.c_str() Mood:Mood Time:Time Person:Person Number:Number];
+      [ProxyConj AddVerboRootStr:Str Root:Root.c_str() Mood:Mood Time:Time Person:Person Number:Number With:w];
       }
     else
       {
@@ -978,12 +979,12 @@ static void AddNSString( NSMutableAttributedString* Str, NSString* mStr,  NSDict
   
   AddNSString(Str, Strs.Nums3[Numero], attrPersItalicSmall);
   
-  AddNSString(Str, @"\r\n" , attrConjBold);
+ // AddNSString(Str, @"\n" , attrConjBold);
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Forma una cadena formateada con todos los datos suministrados
-+(void) AddVerboRootStr:(NSMutableAttributedString*) Str Root:(LPCSTR)sRoot Mood:(int)Modo Time:(int)Tiempo Person:(int)Persona Number:(int)Numero
++(void) AddVerboRootStr:(NSMutableAttributedString*) Str Root:(LPCSTR)sRoot Mood:(int)Modo Time:(int)Tiempo Person:(int)Persona Number:(int)Numero With:(float) wSize
   {
   cjData cnj;
   int i = 0;
@@ -1018,14 +1019,18 @@ static void AddNSString( NSMutableAttributedString* Str, NSString* mStr,  NSDict
     
     int idx = (3*cnj.num) + cnj.Per;
     
-    float w = sAttr.size.width;
-    if( w+115 < scrnWidth )                                                 // Si hay espacio
-      AddNSString(sAttr, Strs.PersNum2[idx], attrPersItalicSmall );         // Pone la descrición completa
+    NSString* PerLarge = Strs.PersNum2[idx];
+    
+    float w1 = sAttr.size.width;
+    float w2 = [PerLarge sizeWithAttributes:attrPersItalicSmall].width;
+    
+    if( w1 + w2 < wSize )                                                     // Si hay espacio
+      AddNSString(sAttr, PerLarge , attrPersItalicSmall );                    // Pone la descrición completa
     else
-      AddNSString(sAttr, Strs.PersNum1[idx], attrPersItalicSmall );         // Pone abreviaturas
+      AddNSString(sAttr, Strs.PersNum1[idx], attrPersItalicSmall );           // Pone abreviaturas
     }
   
-  AddNSString(sAttr, @"\r\n" , attrConjBold);
+ // AddNSString(sAttr, @"\n" , attrConjBold);
   
   [Str appendAttributedString: sAttr ];
   }

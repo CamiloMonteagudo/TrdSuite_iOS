@@ -226,7 +226,6 @@
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration
   {
-  scrnWidth  = self.view.bounds.size.width;
   }
 
 @end

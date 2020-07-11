@@ -9,7 +9,10 @@
 #import "MainController.h"
 #import "MainView.h"
 #import "AppData.h"
-#import "RowHistoryView.h"
+//#import "RowHistoryView.h"
+#import "RowSentenceView.h"
+#import "Sentences.h"
+
 #import "ProxyTrd.h"
 #import "TrdAPI/CommonSrc/WinUtil.h"
 #import "DictController.h"
@@ -29,7 +32,6 @@
   int lastLen;                            // Longitud del ultimo texto escrito
   
   NSString* lastTrdText;                  // Última traducción realizada a un texto fuente determinado
-  TrdHistory *SaveHist;                   // Salva de la historia cuando esta filtrada
   
   BOOL OutSelf;                           // Bandera que indica que el controlador principal es otro
   id Observer;
@@ -59,8 +61,6 @@
   
   self.view.backgroundColor  = ColMainBck;
   _FrameView.backgroundColor = ColMainBck;
-  
-  scrnWidth  = self.view.bounds.size.width;
   
   _TrdEdit.hidden  = TRUE;
   _TrdEdit.Ctrller = self;
@@ -109,11 +109,10 @@
                                           
                                           if( note.object == nil )    // Cambio el tamaño de las letras
                                             {
-                                            [_TrdInfo RefreshView];
-                                            [_TrdEdit RefreshView];
-                                          
-                                            [History ClearItemsHeight];
-                                            [_ListOras Refresh];
+                                            if( _TrdInfo.Mode != MODE_CMDS ) [_TrdInfo RefreshView];
+                                            
+                                            [_TrdEdit  RefreshView];
+                                            [_ListOras Refresh    ];
                                             }
                                           }];
   _ParamWord = @"";
@@ -153,7 +152,7 @@
   {
   _ListOras.MinHeight = LineHeight;                                   // Define la altura minima de las filas en la lista de oraciones
   
-  [self FindOnHistory];                                               // Busca en la historia la oración actual
+  [self FindOnSenteces];                                               // Busca en la lista de oraciones la oración actual
   }
 
 - (void)viewDidUnload
@@ -214,8 +213,7 @@
     [self ProcessMarkWord];                                           // La procesa
     }
     
-  [self LoadHistory];                                                 // Carga o inicializa la historia si es necesario
-  [self FindOnHistory];                                               // Busca la oracion actual en la historia
+  [self FindOnSenteces];                                               // Busca la oracion actual en la lista de oraciones
   [_FrameView setNeedsLayout];                                        // Actualiza la distribución de los controles
   
   LGSrcOld = LGSrc;                                                   // Guarda ultimo idioma origen procesado
@@ -249,7 +247,7 @@
       }
     
   lastLen = lenTxt;
-  [self FindOnHistory];                                               // Busca la oracion actual en la historia
+  [self FindOnSenteces];                                               // Busca la oracion actual en la lista de oraciones
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -270,11 +268,11 @@
   {
   VirtualRowView *newRow;
   float W = _ListOras.frame.size.width;
-  
+
   if( _ListOras.SelectedIndex == iRow )
-    newRow = [RowHistSelectedView RowWithOraIndex:iRow Width:W];
+    newRow = [RowSentSelectedView RowWithOraIndex:iRow Width:W];
   else
-    newRow = [RowHistSingleView RowWithOraIndex:iRow Width:W];
+    newRow = [RowSentSingleView RowWithOraIndex:iRow Width:W];
   
   return newRow;
   }
@@ -286,9 +284,9 @@
   HideKeyBoard();                                               // Oculta el teclado
   if( iRow<0 )                                                  // Si se toco sobre la fila ya seleccionada
     {
-    iRow = -iRow;                                               // Le cambia el signo al indice de la fila (dentro de la seleccion)
-    if( iRow>=20 ) [self OnDelTranslateLng:iRow-20 ];           // Fue sobre el icono de borrar, borra la oración
-    else           [self OnSelTranslateLng:iRow-10 ];           // Fue sobre el el texto de la oración, selecciona la oración
+    int SelRow = _ListOras.SelectedIndex;
+    if( iRow==-1 ) [self OnDelTranslateLng:SelRow ];           // Fue sobre el icono de borrar, borra la oración
+    else           [self OnSelTranslateLng:SelRow ];           // Fue sobre el el texto de la oración, selecciona la oración
     }
   else
     {
@@ -315,23 +313,21 @@
   _PanelTrd.NoText = FALSE;
   _PanelTrd.Text = trdText;                                               // Pone la tradución en el panel de texto traducido
   
-  BOOL exist = [History ExistTrdSrc:srcText Trd:trdText ToLang:LGDes];    // Determina si la traducción ya esta en la hostoria
-  
-  _TrdInfo.SaveHidden = exist;                                            // Si existe no muestra el boton para guardar
+  [self CheckSaveBtn];                                                    // Muestra o no el boton de guardar la traducción
     
-  if( _TrdInfo.ModeBtnCenter == BtnCenterInfoTrd )                        // Si se esta mostrando información sobre el texto trducido
+  if( _TrdInfo.InfoMode == InfoModeTrd )                                  // Si se esta mostrando información sobre el texto trducido
     {
     [self GetMarkedWord];                                                 // Obtiene una nueva, a partir de la primera palabra
     }
   else
     {
-    _TrdInfo.ModeBtnCenter = -1;                                          // Fuerza a que se redibuje el boton central
+    _TrdInfo.InfoMode = -1;                                               // Fuerza a que se redibuje el boton de cambiar información
     [_TrdInfo UpdateButtons];                                             // Recalacula y redibuja el boton central
     }
     
   [self ProcessMarkWord];                                                 // Procesa las palabra marcada
   
-  [self FindOnHistory];                                                   // Busca en la historia la oreción traducida
+  [self FindOnSenteces];                                                   // Busca en la lista de oraciones la oreción traducida
     
   // Pone parametros por defecto para otras vistas
   if( _ParamSrc != LGSrc )                                                // Si cambio el idioma de origen
@@ -347,12 +343,7 @@
 // Se llama cuando cambia el texto traducido
 - (void) OnChangedTextTrd
   {
-  NSString *srcText = _PanelSrc.Text;                                     // Toma el texto de origen
-  NSString *trdText = _PanelTrd.Text;                                     // Texto traducido
-    
-  BOOL exist = [History ExistTrdSrc:srcText Trd:trdText ToLang:LGDes];    // Si la traducción actual permanece en la historia
-  
-  _TrdInfo.SaveHidden = exist;                                            // Si existe no muestra el boton para guardar
+  [self CheckSaveBtn];                                                    // Muestra o no el boton de guardar la traducción
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -368,7 +359,8 @@
 // Se llama para ocultar las traduciones
 - (void) OnBtnHideTrd
   {
-  _PanelTrd.NoShow = TRUE;
+  _PanelTrd.NoShow    = TRUE;
+  _TrdInfo.SaveHidden = TRUE;
   
   [_FrameView setNeedsLayout];
   }
@@ -400,20 +392,39 @@
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Determina el modo que se debe mostrar el boton para cambiar la informacion que se muestra
-// BtnCenterHide    - No se muestra,               BtnCenterDown    - Muestra panel de traducción,
-// BtnCenterInfoSrc - Información de texto fuente, BtnCenterInfoTrd - Información de texto traducido
-- (int) GetChgInfoMode
+// Determina si hay que mostrar el botón de guardar o no
+- (void) CheckSaveBtn
   {
-  if( _PanelTrd.NoShow ) return BtnCenterDown;
+  BOOL hidden = TRUE;
   
-  if( _TrdInfo.Mode != MODE_CMDS )
+  if( _PanelTrd.NoShow==FALSE && _PanelTrd.NoText==FALSE )
     {
-    if( _OnTextTrd ) return BtnCenterInfoTrd;
-    else             return BtnCenterInfoSrc;
+    //OJO: aqui filtar la cadena de entrada
+    NSString *srcText = _PanelSrc.Text;                                     // Toma el texto de origen
+    //OJO: aqui filtar la cadena de entrada
+    NSString *trdText = _PanelTrd.Text;                                     // Texto traducido
+    
+    hidden = [[Sentences Actual] ExistTrdSrc:srcText Trd:trdText];          // Determina si la traducción ya esta en la lista de oraciones
     }
   
-  return BtnCenterHide;
+  _TrdInfo.SaveHidden = hidden;                                            // Si existe no muestra el boton para guardar
+  _TrdEdit.SaveHidden = hidden;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Determina el modo que se debe mostrar el boton para cambiar la informacion que se muestra
+// InfoModeHide - No se muestra,               InfoModeDown - Muestra panel de traducción,
+// InfoModeSrc  - Información de texto fuente, InfoModeTrd  - Información de texto traducido
+- (int) GetChgInfoMode
+  {
+  if( _TrdInfo.Mode != MODE_CMDS )
+    {
+    if( _OnTextTrd ) return InfoModeTrd;
+    else             return InfoModeSrc;
+    }
+  else if( _PanelTrd.NoShow ) return InfoModeDown;
+  
+  return InfoModeHide;
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -423,8 +434,8 @@
   {
   if( _PanelTrd.NoShow && _TrdInfo.Mode == MODE_CMDS)
     {
-    if( SaveHist==nil ) return 2;
-    else                return 3;
+    if( [[Sentences Actual] IsFiltered] ) return 3;
+    else                                  return 2;
     }
   
   if( !_PanelTrd.NoShow && !_PanelTrd.NoText)
@@ -434,14 +445,20 @@
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Se llama cuando se toca el boton central en TrdInfo
+// Se llama cuando se toca el boton de la derecha en TrdInfo
 - (void) OnBtnChgInfo
   {
-  switch (_TrdInfo.ModeBtnCenter)
+  switch (_TrdInfo.InfoMode)
     {
-    case BtnCenterDown   : _PanelTrd.NoShow = FALSE; break;
-    case BtnCenterInfoSrc: self.OnTextTrd   = TRUE ; break;
-    case BtnCenterInfoTrd: self.OnTextTrd   = FALSE; break;
+    case InfoModeDown : _PanelTrd.NoShow = FALSE;
+                        [self CheckSaveBtn];
+                        break;
+        
+    case InfoModeSrc  : if( !_PanelTrd.NoShow )
+                          self.OnTextTrd = TRUE;
+                        break;
+        
+    case InfoModeTrd  : self.OnTextTrd   = FALSE; break;
     }
   }
 
@@ -453,62 +470,68 @@
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Se llama cuando se toca el boton de la derecha
+// Se llama cuando se toca el ultimo boton de la derecha
 - (void) OnBtnEdFilter
   {
   switch (_TrdInfo.ModeBtnRight)
     {
-    case 1: [self IntoEditMode]; break;
+    case 1: [self SetEditMode ]; break;
     case 2: [self FilterOras  ]; break;
-    case 3: [self UnFilterOras]; [self FindOnHistory]; break;
+    case 3: [self UnFilterOras]; [self FindOnSenteces]; break;
     }
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Entra en el modo de edicción de las oraciones
-- (void) IntoEditMode
+- (void) SetEditMode
   {
-  _TrdEdit.TextSrc = _PanelSrc.Text;                                  // Copia texto fuente a la vista de edicción
-  _TrdEdit.TextTrd = _PanelTrd.Text;                                  // Copia texto traducido a la vista de edicción
+  _TrdEdit.TextSrc = _PanelSrc.Text;                                      // Copia texto fuente a la vista de edicción
+  _TrdEdit.TextTrd = _PanelTrd.Text;                                      // Copia texto traducido a la vista de edicción
   
-  _TrdEdit.hidden = FALSE;                                            // Muestra la vista de edicción
+  _TrdEdit.hidden = FALSE;                                                // Muestra la vista de edicción
   
-  [self CalculateEditMaxHeigth];                                      // Recalcula tamaño maximo de los editores
+  [self CalculateEditMaxHeigth];                                          // Recalcula tamaño maximo de los editores
   
-  [_FrameView setNeedsLayout];                                        // Reorganiza las vistas
+  [_FrameView setNeedsLayout];                                            // Reorganiza las vistas
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Se llama para filtar la lista de oraciones por el texto fuente
 - (void) FilterOras
   {
-  SaveHist = History;
+    //OJO: aqui filtar la cadena de entrada
+  Sentences* Ora = [[Sentences Actual] FilterByText:_PanelSrc.Text];      // Filtra las oraciones con el texto fuente
+  _ListOras.Count = Ora.Count;                                            // Inicializa la lista que muestra las oraciones
   
-  History = [History FilterByText:_PanelSrc.Text];
-  _ListOras.Count = History.Count;                                      // Inicializa la lista que muestra las oraciones
-  
-  [_TrdInfo UpdateButtons];                                             // Manda a actualizar el boton derecho
+  [_TrdInfo UpdateButtons];                                               // Manda a actualizar el boton derecho
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Quita el filtro de las oraciones filtradas
 - (void) UnFilterOras
   {
-  if( SaveHist == nil ) return;                                         // La historia no esta filtrada, no hace nada
+  Sentences* Oras = [Sentences Actual];                                   // Obtiene el objeto con la lista de oraciones
   
-  History  = SaveHist;
-  SaveHist = nil;
+  if( [Oras IsFiltered] )                                                 // Si la lista esta filtrada
+    {
+    Oras = [Oras RemoveFilter];                                           // Quita el filtro y retorna lista actualizada
+
+    _ListOras.Count = Oras.Count;                                         // Inicializa la lista que muestra las oraciones
   
-  _ListOras.Count = History.Count;                                      // Inicializa la lista que muestra las oraciones
-  
-  [_TrdInfo UpdateButtons];                                             // Manda a actualizar el boton derecho
+    [_TrdInfo UpdateButtons];                                             // Manda a actualizar el boton
+    }
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Cierra el modo de edicción de la traducción
 - (void) OnBtnCloseEditTrd
   {
-  [self FindOnHistory];                                               // Busca la oracion actual en la historia
+  _PanelSrc.Text = _TrdEdit.TextSrc;
+  _PanelTrd.Text = _TrdEdit.TextTrd;
+  
+  _TrdInfo.SaveHidden = _TrdEdit.SaveHidden;
+  
+  [self FindOnSenteces];                                               // Busca la oracion actual en la lista de oraciones
   
   _TrdEdit.hidden = TRUE;
   
@@ -527,20 +550,21 @@
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Guarda el texto traducido en la hostoria
+// Guarda el texto traducido en la lista de oraciones
 - (void) OnBtnSaveTrd
   {
   NSString *srcText = _PanelSrc.Text;                                     // Toma el texto de origen
   NSString *trdText = _PanelTrd.Text;                                     // Toma el texto traducido
     
-  int idx = [History AddTrdSrc:srcText Trd:trdText TrdLang:LGDes];        // Actualiza la traducción en la historia
+  Sentences* Oras = [Sentences Actual];                                   // Obtiene lista de oraciones
+  int         idx = [Oras AddSrcText:srcText TrdText:trdText];            // Adiciona la fuente y la traducción a la lista
   
   if( idx!= -1 )                                                          // La adicionó
     {
     _ListOras.SelectedIndex = idx;                                        // Pone la fila como seleccionada
     
-    if( !History.Found )                                                  // Si fue adicionada una oración nueva
-      [_ListOras UpdateCount:History.Count];                              // Actualiza la cantidad de oraciones de la lista
+    if( !Oras.Found )                                                     // Si fue adicionada una oración nueva
+      [_ListOras UpdateCount:Oras.Count];                                 // Actualiza la cantidad de oraciones de la lista
     else                                                                  // Se actualizo una oracion que ya existia
       [_ListOras Refresh];                                                // Fuerza a que se refresque el contenido de la lista
     
@@ -572,65 +596,60 @@
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
 // Se llama al borrar una traducción de una de las traduciones recientes
-- (void)OnDelTranslateLng:(int) lng;
+- (void)OnDelTranslateLng:(int) Idx
   {
-  int OraSel    = _ListOras.SelectedIndex;                                  // Obtiene el indice de la fila seleccionada
-  TrdItem *Trd  = [History TrdItemAtIndex:OraSel];                          // Obtiene traducción asociada a la fila
+  Sentences* Oras = [Sentences Actual];
+  [Oras RemoveAt:Idx];
   
-  [Trd SetTrd:nil ToLang:lng];                                              // Quita la traducción para el idioma seleccionado
-  if( [Trd IsNoTrds] )                                                      // Si se quitaron todas las traducciones
-    {
-    [History RemoveTrdItemAtIndex:OraSel];                                  // Elimina la oración de la historia
-    [_ListOras UpdateCount:History.Count];                                  // Actualiza la lista de oraciones
+  [_ListOras UpdateCount:Oras.Count];                                     // Actualiza la lista de oraciones
     
-    _ListOras.SelectedIndex = -1 ;                                          // Quita la seleccion
-    }
-  else
-    {
-    [_ListOras ChangeRow:OraSel];                                           // Actualiza la fila (quita la traducción borrada)
-    }
+  _ListOras.SelectedIndex = -1 ;                                          // Quita la seleccion
     
-  if( lng == LGDes )                                                        // Si se borro una traducción de idioma actual
-    {
-    NSString *srcText = _PanelSrc.Text;                                     // Toma el texto de origen
-    NSString *trdText = _PanelTrd.Text;                                     // Texto traducido
-    
-    BOOL exist = [History ExistTrdSrc:srcText Trd:trdText ToLang:LGDes];    // Si la traducción actual permanece en la historia
-  
-    _TrdInfo.SaveHidden = exist;                                            // Si existe no muestra el boton para guardar
-    _TrdEdit.SaveHidden = exist;
-    }
+  [self CheckSaveBtn];                                                    // Muestra o no el boton de guardar la traducción
   }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
-// Se llama cuando se selecciona una traducción de la posibles traduciones de una palabra
-- (void)OnSelTranslateLng:(int) lng;
+// Se llama cuando se selecciona una oración de la lista de oraciones
+- (void)OnSelTranslateLng:(int) Idx;
   {
-  int     OraSel = _ListOras.SelectedIndex;                           // Obtiene el indice de la oración seleccionada
-  TrdItem*   Trd = [History TrdItemAtIndex:OraSel];                   // Obtiene los datos de la traducción desde la hostoria
-  NSString* sTrd = [Trd GetTrdWithLang:lng];                          // Obtiene la traducción para el idioma 'lng'
+  Sentences* Oras = [Sentences Actual];                               // Toma la oración con indice 'Idx'
   
-  _PanelSrc.Text = Trd.Text;                                          // Pone el texto de origen en el panel
-
-  _PanelTrd.NoText = FALSE;
-  _PanelTrd.SelLng = lng;                                             // Pone el idioma de traducción actual
-  _PanelTrd.Text   = sTrd;                                            // Pone la tradución en el panel de texto traducido
-  _PanelTrd.NoShow = FALSE;                                           // Hace que se muestre la vista
+  NSString* srcText = [Oras GetSrcTextAt:Idx];                        // Toma el texto fuente
+  NSString* trdText = [Oras GetTrdTextAt:Idx];                        // Toma el texto traducido
   
-  [self SaveLastTrd: sTrd];                                           // Guarda último texto traducido
+  [_ListOras SetAtTopRow: Idx ];                                      // Pone la oración de primera en la lista
   
-  _TrdInfo.Mode = MODE_CMDS;                                          // Si esta mostrando opciones de traducción las quita
+  _PanelSrc.Text   = srcText;                                         // Pone el texto de origen en el panel
   [_PanelSrc ClearMarkText];                                          // Quita cualquier palabra que este seleccionada
   
-  if( !_TrdEdit.hidden )
+  _PanelTrd.NoText = FALSE;                                           // Garanrtiza que se muestre el texto
+  _PanelTrd.SelLng = Oras.LangDes;                                    // Pone el idioma de traducción actual
+  _PanelTrd.Text   = trdText;                                         // Pone la tradución en el panel de texto traducido
+  
+  _PanelTrd.NoShow = FALSE;                                           // Hace que se muestre la vista
+  
+  [self SaveLastTrd: srcText];                                        // Guarda último texto traducido
+  
+  _TrdInfo.Mode = MODE_CMDS;                                          // Si esta mostrando opciones de traducción las quita
+  
+  if( !_TrdEdit.hidden )                                              // Si esta en el modo de modificación
     {
-    _TrdEdit.TextSrc = Trd.Text;
-    _TrdEdit.TextTrd = sTrd;
+    _TrdEdit.TextSrc = srcText;                                       // Actualiza el texto fuente
+    _TrdEdit.TextTrd = trdText;                                       // Actualiza el texto traducido
     
-    [_TrdEdit UpdateData];
+    [_TrdEdit UpdateData];                                            // Actualiza datos de modificación
+    }
+  else                                                                // Si no esta en el modo de modificación
+    {
+    NSRange chrs = [srcText rangeOfString:@"<"];                      // Busca si hay alguna palabra para sustituir
+    if( chrs.length > 0 )                                             // Si la encontro
+      [self SetEditMode ];                                            // Pone el modo de modificación
     }
     
-  _ParamDes  = LGDes;
+  _ParamDes  = LGDes;                                                 // Guarda idioma destino
+  
+  _TrdInfo.SaveHidden = TRUE;                                         // Oculta boton de guardar en TrdInfo
+  _TrdEdit.SaveHidden = TRUE;                                         // Oculta boton de guardar en la vista de modificación
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -730,44 +749,40 @@
   }
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------
-// Carga o inicializa la historia si es necesario
-- (void) LoadHistory
+// Carga o inicializa la lista de oraciones si es necesario
+- (Sentences*) LoadSentences
   {
-  if( History==nil || History.Src!=LGSrc )                                // Si no hay historia o se cambio el idioma de origen
+  if( ![Sentences IsActualLangSrc: LGSrc AndLangDes:LGDes] )
     {
-    if( History != nil ) [History Save];                                  // Guarda la historia anterior
-    
-    History = [TrdHistory LoadWithSrc:LGSrc];                             // Carga la historia nueva
-    _ListOras.Count = History.Count;                                      // Inicializa la lista que muestra las oraciones
+    Sentences* Oras = [Sentences LoadWithLang1:LGSrc AndLang2:LGDes];
+    _ListOras.Count = Oras.Count;                                          // Inicializa la lista que muestra las oraciones
     }
+
+  return [Sentences Actual];
   }
       
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
-// Busca la oracion actual en la historia y posiciona la oración mas cercana de la lista en la parte superior
-- (void) FindOnHistory
+// Busca la oracion actual en la lista de oraciones y posiciona la oración mas cercana de la lista en la parte superior
+- (void) FindOnSenteces
   {
   [self.view layoutIfNeeded];
   
-  [self LoadHistory];                                                     // Carga la historia si es necesario
-    
+  Sentences* Oras = [self LoadSentences];                                 // Carga la lista de oraciones si es necesario
+  
+  //OJO: aqui filtar la cadena de entrada
   NSString *srcText = _PanelSrc.Text;                                     // Obtiene el texto de origen
   
-  int idx = [History FindTrdSrc:srcText];                                 // Lo busca en la historia
+  int idx = [Oras IndexForSrcText:srcText];                               // Lo busca en la lista de oraciones
   if( idx<0 ) idx = 0;                                                    // No pudo buscar, pone la primera oración
-  if( idx>=History.Count ) --idx;                                         // Se pasa del final, toma como actua el ultimo
+  if( idx>=Oras.Count ) --idx;                                            // Se pasa del final, toma como actua el ultimo
   
-  if( History.Found )                                                     // Se encontro la oracion
+  if( Oras.Found )                                                        // Se encontro la oracion
     _ListOras.SelectedIndex = idx;                                        // Pone la fila como seleccionada
   else                                                                    // No se encontro la oración
     _ListOras.SelectedIndex = -1;                                         // Quita la seleccion
     
   [_ListOras SetAtTopRow: idx ];                                          // Pone la fila mas cercana en la parte de arriba de la lista
   [_ListOras layoutIfNeeded];                                             // Fuerza el layaut inmediatamente
-  
-  // Parche para que se refresque correctamente
-  float off = _ListOras.contentOffset.y;                                  // Posición del scroll
-  if( off==0 && idx!=0 )                                                  // Si esta al inicio y no es el primer item
-    [_ListOras SetAtTopRow: idx ];                                        // Vuelve a repetir la operación, para refrescar la lista
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -917,7 +932,6 @@
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration
   {
-  scrnWidth  = self.view.bounds.size.width;
   }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation

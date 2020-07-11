@@ -25,13 +25,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[VirtualListView SetVisibleRow:]:VirtualListView.m">
+         contextName = "-[ConjHeaderView FindInDictWord:]:ConjHeaderView.m">
          <PersistentStrings>
             <PersistentString
-               value = "YOffFin">
+               value = "LGDes">
             </PersistentString>
             <PersistentString
-               value = "YOffIni">
+               value = "LGSrc">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -127,6 +127,9 @@
       </ContextState>
       <ContextState
          contextName = "-[DictController viewDidLoad]:DictController.m">
+      </ContextState>
+      <ContextState
+         contextName = "+[Sentences LoadWithLang1:AndLang2:]:Sentences.m">
       </ContextState>
       <ContextState
          contextName = "-[PanelTrdView initWithCoder:]:PanelTrdView.m">
@@ -227,6 +230,14 @@
          contextName = "+[ProxyConj IsNowConjugate:Lang:]:ProxyConj.mm">
       </ContextState>
       <ContextState
+         contextName = "-[Sentences Find:InIndex:ReturnIdx:]:Sentences.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "Items">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[ConjController viewDidLoad]:ConjController.m">
          <PersistentStrings>
             <PersistentString
@@ -325,6 +336,22 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[Sentences IndexForSrcText:]:Sentences.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "LoadedSent">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Sentences LoadFromApp]:Sentences.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "NowOras">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[TrdEditView StaticHeight]:TrdEditView.m">
          <PersistentStrings>
             <PersistentString
@@ -347,13 +374,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[ConjHeaderView FindInDictWord:]:ConjHeaderView.m">
+         contextName = "-[VirtualListView SetVisibleRow:]:VirtualListView.m">
          <PersistentStrings>
             <PersistentString
-               value = "LGDes">
+               value = "YOffFin">
             </PersistentString>
             <PersistentString
-               value = "LGSrc">
+               value = "YOffIni">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -113,7 +113,7 @@ class ReducData
 
 +(NSArray *) SortByConjList:(NSArray *) lstData;
 
-+(NSAttributedString*) GetRootWord: (NSString *)sWord;
++(NSAttributedString*) GetRootWord: (NSString *)sWord With:(float) w;
 +(NSAttributedString*) GetFormatedData:(int) idx;
 +(NSAttributedString*) GetAttrError:(NSString*) sMsg Prefix: (NSString*) prefix;
 

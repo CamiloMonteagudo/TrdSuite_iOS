@@ -10,7 +10,8 @@
 	#define map_class stlport::hash_map
 #elif defined(_IPHONE_)
 	#define MAP_TYPE_UNORDERED_MAP
-	#include <tr1/unordered_map>
+	#include <tr1/unordered_map>                        // SDK 7..
+//	#include <c++/v1/unordered_map>                     // SDK 8..
 	#define map_class std::tr1::unordered_map
 #else
 	#include <unordered_map>

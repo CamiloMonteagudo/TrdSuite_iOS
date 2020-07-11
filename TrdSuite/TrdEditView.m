@@ -10,6 +10,7 @@
 #import "AppData.h"
 #import "MainController.h"
 #import "ColAndFont.h"
+#import "Sentences.h"
 
 #define  LGNAME_W  180
 
@@ -220,7 +221,7 @@
   NSString *srcText = txSrc.text;                                           // Toma el texto de origen
   NSString *trdText = txTrd.text;                                           // Toma el texto traducido
   
-  BOOL exist = [History ExistTrdSrc:srcText Trd:trdText ToLang:LGDes];      // Determina si la traducción ya esta en la hostoria
+  BOOL exist = [[Sentences Actual] ExistTrdSrc:srcText Trd:trdText];        // Determina si la traducción ya esta en la lista de oraciones
 
   btnSaveTrd.hidden = exist;
   }

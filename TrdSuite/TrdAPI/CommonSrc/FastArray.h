@@ -50,9 +50,9 @@ protected:
 
 		// inicializar en cero el buffer de words
 		//memset(pWordData, 0, sizeof(WORD)*aWordSize);
-		TRACE("FastHeap created with %.1f Mbytes (%d bytes, %d words)", 
-			(aSize + aWordSize*2.0)/(1024.0*1024.0),
-			aSize, aWordSize);
+//		TRACE("FastHeap created with %.1f Mbytes (%d bytes, %d words)", 
+//			(aSize + aWordSize*2.0)/(1024.0*1024.0),
+//			aSize, aWordSize);
 		}
 
 	// Crea un nuevo Heap y lo convierte en el actual
@@ -376,7 +376,7 @@ class CFastArray: public CMFCObject
 			}
 		else
 			// inicializar en cero 
-			memset(pData, 0, sizeof(TYPE)*aNewSize);
+			memset((void*)pData, 0, sizeof(TYPE)*aNewSize);
 		}
 		
 	//inline TYPE operator[](TInt aIndex) const { return pData[aIndex]; };

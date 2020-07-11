@@ -270,7 +270,7 @@
       label.attributedText = data.AttrText;                             // Pone texto de los datos
       }
     else                                                                // No hay datos
-      label.Text = @"";                                                 // Pone texto vacio
+      label.text = @"";                                                 // Pone texto vacio
         
     ++idx;                                                              // Pasa al proximo dato
     }

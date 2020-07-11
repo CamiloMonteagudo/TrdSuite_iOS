@@ -49,8 +49,8 @@
   self = [super initWithCoder:aDecoder];
   if( !self ) return nil;
   
-  hPanel         = 50;                           // Altura por defecto del panel
-  _ModeBtnCenter = -1;                           // Modo actual del boton central (Sin especificar)
+  hPanel    = 50;                                // Altura por defecto del panel
+  _InfoMode = -1;                                // Modo del boton de información (Fuente, destino, Mostrar traducion)
   _ModeBtnRight  = -1;                           // Modo actual del boton derecho (Sin especificar)
   
   Frame = [[UIView alloc] initWithFrame: self.frame];
@@ -276,21 +276,21 @@
 // Actualiza lo que muestran los botones en función del contexto actual
 - (void) UpdateButtons
   {
-  int btnCMode = [_Ctrller GetChgInfoMode];
-  if( btnCMode != _ModeBtnCenter )                // Solo si cambia la modo de mostrar el boton central
+  int btnCMode = [_Ctrller GetChgInfoMode];       // Chequea modo de mostrar la información (Fuente, destino, Mostrar traducción)
+  if( btnCMode != _InfoMode )                     // Solo si cambia la modo de mostrar la información
     {
-    _ModeBtnCenter = btnCMode;
+    _InfoMode = btnCMode;
     
-    btnChgInfo.hidden = (btnCMode==BtnCenterHide);
+    btnChgInfo.hidden = (btnCMode==InfoModeHide);
   
     NSString *sImg = nil;
     
     switch (btnCMode)
       {
-      case BtnCenterHide   : break;
-      case BtnCenterDown   : sImg = @"BtnMoveDown";          break;
-      case BtnCenterInfoSrc: sImg = LGFlagFile(LGDes,@"30"); break;
-      case BtnCenterInfoTrd: sImg = LGFlagFile(LGSrc,@"30"); break;
+      case InfoModeHide : break;
+      case InfoModeDown : sImg = @"BtnMoveDown";          break;
+      case InfoModeSrc  : sImg = LGFlagFile(LGDes,@"30"); break;
+      case InfoModeTrd  : sImg = LGFlagFile(LGSrc,@"30"); break;
       }
 
     if( sImg != nil )
@@ -423,7 +423,7 @@
     NSString* sMsg = NSLocalizedString( @"WrdNoFound", nil);
     Info.attributedText = [ProxyDict FormatedMsg:sMsg Title:sWord];       // Pone mensaje de palabra no encontrada
     }
-    
+  
   [self ResizeWordHeight];                                                // Obtiene la altura del texto
   [self setNeedsLayout];                                                  // Reorganiza los controles
   }
@@ -459,8 +459,12 @@
   {
   [ProxyConj LoadConjLang:WSrc];
 
-  nowKey = [sWord lowercaseString];
-  Info.attributedText = [ProxyConj GetRootWord:nowKey];
+  float w = Info.frame.size.width;
+  nowKey  = [sWord lowercaseString];
+  
+  NSAttributedString* str =  [ProxyConj GetRootWord:nowKey With:w];
+  
+  Info.attributedText = str;
   
   btnShowRoots.hidden = ![ProxyConj IsVerb];
 

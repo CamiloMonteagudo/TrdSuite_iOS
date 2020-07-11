@@ -103,60 +103,60 @@ int LoadIndexFromFile()
 
 ////------------------------------------------------------------------------------------------------------
 //// Crea un indice para el diccionario, ordenado sin mayusculas ni acentos y sin llaves 'especiales'
-//void GenerateDictIndex()
-//  {
-//  if( Index     != NULL )   delete Index;
-//  if( SaveIndex != NULL ) { delete Index; SaveIndex=NULL; }
-//  
-//  Index = new CDictUserIndex();
-//  
-//  int count = _Dict->GetCount();
-//  Index->SetSize( count );
-//  
-//  CStringA csKey;
-//  for( int i=0; i<count; ++i )
-//    {
-//    [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate: [NSDate date] ];   // Procesa los mensajes
-//    
-//    _Dict->GetKeyAt( i, csKey);
-//    
-//    int iFind = csKey.Find( "xxxx" );
-//    if( iFind >= 0 ) continue;
-//    
-//    iFind = csKey.Find( '[' );
-//    if( iFind >= 0 ) continue;
-//    
-//    iFind = csKey.Find( '(' );
-//    if( iFind >= 0 ) continue;
-//    
-//    iFind = csKey.Find( ')' );
-//    if( iFind >= 0 ) continue;
-//    
-//    iFind = csKey.Find( '$' );
-//    if( iFind >= 0 ) continue;
-//    
-//    iFind = csKey.Find( '<' );
-//    if( iFind >= 0 ) continue;
-//    
-//    if( csKey[0] == ','   ) continue;
-//    if( csKey[0] == '\''  ) continue;
-//    if( csKey[0] == '-'   ) continue;
-//    if( csKey[0] == '"'   ) continue;
-//    if( csKey[0] == ';'   ) continue;
-//    if( isdigit(csKey[0]) ) continue;
-//    
-//    NSString* sKey = [NSString stringWithCString:csKey.c_str() encoding:NSISOLatin1StringEncoding ];
-//    
-//    int Idx;
-//    if( !Index->Find(_Dict, sKey, &Idx )  )
-//      Index->InsertAt(Idx, i);
-//    }
-//  
-//  NSLog(@"%d-%d de %8d a %8d eliminados %d",_openSrc, _openDes , count, Index->Count(), count-Index->Count());
-//  
+void GenerateDictIndex()
+  {
+  if( Index     != NULL )   delete Index;
+  if( SaveIndex != NULL ) { delete Index; SaveIndex=NULL; }
+  
+  Index = new CDictUserIndex();
+  
+  int count = _Dict->GetCount();
+  Index->SetSize( count );
+  
+  CStringA csKey;
+  for( int i=0; i<count; ++i )
+    {
+    [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate: [NSDate date] ];   // Procesa los mensajes
+    
+    _Dict->GetKeyAt( i, csKey);
+    
+    int iFind = csKey.Find( "xxxx" );
+    if( iFind >= 0 ) continue;
+    
+    iFind = csKey.Find( '[' );
+    if( iFind >= 0 ) continue;
+    
+    iFind = csKey.Find( '(' );
+    if( iFind >= 0 ) continue;
+    
+    iFind = csKey.Find( ')' );
+    if( iFind >= 0 ) continue;
+    
+    iFind = csKey.Find( '$' );
+    if( iFind >= 0 ) continue;
+    
+    iFind = csKey.Find( '<' );
+    if( iFind >= 0 ) continue;
+    
+    if( csKey[0] == ','   ) continue;
+    if( csKey[0] == '\''  ) continue;
+    if( csKey[0] == '-'   ) continue;
+    if( csKey[0] == '"'   ) continue;
+    if( csKey[0] == ';'   ) continue;
+    if( isdigit(csKey[0]) ) continue;
+    
+    NSString* sKey = [NSString stringWithCString:csKey.c_str() encoding:NSISOLatin1StringEncoding ];
+    
+    int Idx;
+    if( !Index->Find(_Dict, sKey, &Idx )  )
+      Index->InsertAt(Idx, i);
+    }
+  
+  NSLog(@"%d-%d de %8d a %8d eliminados %d",_openSrc, _openDes , count, Index->Count(), count-Index->Count());
+  
 //  SaveIndexToFile();
-//  }
-//
+  }
+
 ////------------------------------------------------------------------------------------------------------
 //// Guarda el indice generado en ese momento hacia un fichero
 //void SaveIndexToFile()

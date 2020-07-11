@@ -19,11 +19,9 @@ int iUser = 0;
 BOOL iPad = FALSE;
 int  iOS  = 7;
 
-float scrnWidth  = 320;           // Ancho de la pantalla
 float EditMaxHeigth = 150;        // Altura máxima de los controles de edicción
 float KbHeight = 0;               // Altura del teclado, si no esta desplegado es 0
 
-TrdHistory *History;              // Oraciones ya traducidas para el idioma fuente seleccionado
 UITextView* Responder;            // Vista donde se esta editando texto
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------

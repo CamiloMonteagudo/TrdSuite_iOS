@@ -51,3 +51,5 @@
 "lbCardinal" = "Número cardinal:";
 "lbOrdinal"  = "Número ordinal: ";
 "lbRomano"   = "Número romano:";
+
+"Delete"   = "Borrar";

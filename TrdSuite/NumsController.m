@@ -92,7 +92,6 @@
 // Se llama cuando se gira la pantalla
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation duration:(NSTimeInterval)duration
   {
-  scrnWidth  = self.view.bounds.size.width;
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------

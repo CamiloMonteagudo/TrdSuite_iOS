@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TrdHistory.h"
 
 #define LGCount 5
 
@@ -58,12 +57,12 @@ extern int  iUser;
 extern BOOL iPad;
 extern int  iOS;
 
-extern float scrnWidth;           // Ancho de la pantalla
 extern float EditMaxHeigth;       // Altura máxima de los controles de edicción
 extern float KbHeight;            // Altura del teclado, si no esta desplegado es 0
 
 extern UITextView* Responder;
-extern TrdHistory *History;
+
+extern void SetSpecialsChars();
 
 extern NSString*  LGFlagFile( int lng, NSString* Suxfix );
 extern BOOL       LGIsInstSrc( int lng );

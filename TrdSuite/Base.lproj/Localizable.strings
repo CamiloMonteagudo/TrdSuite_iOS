@@ -1,0 +1,46 @@
+/* 
+  En.strings
+  TrdSuite
+
+  Created by Camilo on 31/05/15.
+  Copyright (c) 2015 Softlingo. All rights reserved.
+*/
+"WrdNoFound" = "No se encontro en el diccionario";
+"IsVerb"     = "Es un verbo";
+"NoVerb"     = "No es un verbo";
+
+"TitleRoots" = "Raises";
+"TitleMeans" = "Significados";
+"TitleEdit"  = "Modificar";
+"Traslate"   = "Traducir a:";
+
+"TrdTipEs"   = "Escriba texto en ESPAÑOL";
+"TrdTipEn"   = "Escriba texto en INGLËS";
+"TrdTipIt"   = "Escriba texto en ITALIANO";
+"TrdTipFr"   = "Escriba texto en FRANCÉS";
+
+"ConjTipEs"  = "Verbo en ESPAÑOL";
+"ConjTipEn"  = "Verbo en INGLËS";
+"ConjTipIt"  = "Verbo en ITALIANO";
+"ConjTipFr"  = "Verbo en FRANCÉS";
+
+"DictTipEs"  = "Palabra o frase en ESPAÑOL";
+"DictTipEn"  = "Palabra o frase en INGLËS";
+"DictTipIt"  = "Palabra o frase en ITALIANO";
+"DictTipFr"  = "Palabra o frase en FRANCÉS";
+
+"btnConjugate" = "Conjugar";
+"ConjMode0"    = "Conjugaciones (por palabra)";
+"ConjMode1"    = "Conjugaciones (por modo)";
+"ConjMode2"    = "Conjugaciones (por persona)";
+
+"Options"  = "OPCIONES";
+"MnuDict"  = "Diccionario";
+"MnuConj"  = "Conjugar";
+"MnuNums"  = "Números";
+
+"ModTranlation"  = "Traducción";
+"ModConjugation" = "Conjugación";
+"ModDitionary"   = "Diccionario";
+"ModNumbers"     = "Números";
+

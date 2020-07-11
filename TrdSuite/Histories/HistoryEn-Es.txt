@@ -1,0 +1,3428 @@
+En|
+A few|
+Es|
+Un poco|
+En|
+A little|
+Es|
+Un poco|
+En|
+A long time ago|
+Es|
+Hace mucho tiempo|
+En|
+A one way ticket|
+Es|
+Un billete de ida|
+En|
+A round trip ticket|
+Es|
+Un billete de ida y vuelta|
+En|
+About 300 kilometers|
+Es|
+Mas o menos 300 kilometros|
+En|
+Across from the post office|
+Es|
+En frente al apartado de correos|
+En|
+All day|
+Es|
+Todo el dia|
+En|
+Am I pronouncing it correctly?|
+Es|
+Lo estoy pronunciando correctamente?|
+En|
+Amy is John's girlfriend|
+Es|
+Amy es la novia de John|
+En|
+And you?|
+Es|
+Y tu?|
+En|
+Anything else?|
+Es|
+Algo mas?|
+En|
+Are there any concerts?|
+Es|
+Hay algunos conciertos?|
+En|
+Are they coming this evening?|
+Es|
+Van a venir esta noche?|
+En|
+Are they the same?|
+Es|
+Son iguales?|
+En|
+Are you afraid?|
+Es|
+Tienes miedo?|
+En|
+Are you allergic to anything?|
+Es|
+Eres alergico a algo?|
+En|
+Are you American?|
+Es|
+Eres americano?|
+En|
+Are you busy?|
+Es|
+Estas ocupado?|
+En|
+Are you comfortable?|
+Es|
+Estas comodo?|
+En|
+Are you coming this evening?|
+Es|
+Vas a venir esta noche?|
+En|
+Are you free tonight?|
+Es|
+Estas libre esta noche?|
+En|
+Are you going to attend their wedding?|
+Es|
+Vas a asistir a su boda?|
+En|
+Are you going to help her?|
+Es|
+La vas a ayudar?|
+En|
+Are you going to take a plane or train?|
+Es|
+Vas a ir en avion o en tren?|
+En|
+Are you here alone?|
+Es|
+Estas aqui solo?|
+En|
+Are you hungry?|
+Es|
+Tienes hambre?|
+En|
+Are you married?|
+Es|
+Estas casado?|
+En|
+Are you okay?|
+Es|
+Estas bien?|
+En|
+Are you ready?|
+Es|
+Estas listo?|
+En|
+Are you sick?|
+Es|
+Estas enfermo?|
+En|
+Are you sure?|
+Es|
+Estas seguro?|
+En|
+Are you waiting for someone?|
+Es|
+Estas esperando a alguien?|
+En|
+Are you working today?|
+Es|
+Estas trabajando hoy?|
+En|
+Are you working Tomorrow?|
+Es|
+Vas a trabajar manana?|
+En|
+Are your children with you?|
+Es|
+Estan tus hijos contigo?|
+En|
+As soon as possible|
+Es|
+Lo mas rapido posible|
+En|
+At 3 o'clock|
+Es|
+A las 3 en punto|
+En|
+At 3 o'clock in the afternoon|
+Es|
+A las 3 de la tarde|
+En|
+At 5th street|
+Es|
+A la calle 5ta|
+En|
+At 7 o'clock at night|
+Es|
+A las 7 de la tarde/noche|
+En|
+At 7 o'clock in the morning|
+Es|
+A las 7 de la manana|
+En|
+At what time did it happen?|
+Es|
+A que hora pasó?|
+En|
+At what time?|
+Es|
+A que hora?|
+En|
+Be careful|
+Es|
+Ten cuidado|
+En|
+Be careful driving|
+Es|
+Ten cuidado conduciendo|
+En|
+Be quiet|
+Es|
+Callate (menos fuerte)|
+En|
+Behind the bank|
+Es|
+Detras del banco|
+En|
+Bring me my shirt please|
+Es|
+Traeme mi camisa por favor|
+En|
+Business is good|
+Es|
+La empresa va bien|
+En|
+Call me|
+Es|
+Llamame|
+En|
+Call the police|
+Es|
+Llama a la policia|
+En|
+Can I access the Internet here?|
+Es|
+Puedo usar el internet aqui?|
+En|
+Can I borrow some money?|
+Es|
+Me prestas un poco de dinero?|
+En|
+Can I bring my friend?|
+Es|
+Puedo llevar a mi amigo?|
+En|
+Can I have a glass of water please?|
+Es|
+Puedo tener un vaso de agua por favor?|
+En|
+Can I have a receipt please?|
+Es|
+Me puedes dar un recibio por favor?|
+En|
+Can I have the bill please?|
+Es|
+Me puedes dar la cuenta por favor?|
+En|
+Can I help you?|
+Es|
+Te puedo ayudar?|
+En|
+Can I make an appointment for next Wednesday?|
+Es|
+Puedo tener un apuntamento para el miercoles que viene?|
+En|
+Can I see your passport please?|
+Es|
+Puedo ver tu pasaporte por favor?|
+En|
+Can I take a message?|
+Es|
+Quieres dejar un mensaje?|
+En|
+Can I try it on?|
+Es|
+Lo puedo probar (ropa)?|
+En|
+Can I use your phone?|
+Es|
+Puedo usar tu telefono?|
+En|
+Can it be cheaper?|
+Es|
+Puede ser mas barato?|
+En|
+Can we have a menu please|
+Es|
+Nos puedes dar un menu por favor?|
+En|
+Can we have some more bread please?|
+Es|
+Nos puedes traer mas pan por favor?|
+En|
+Can we sit over there?|
+Es|
+Nos podemos sentar alli?|
+En|
+Can you call back later?|
+Es|
+Puedes llamar mas tarde?|
+En|
+Can you call me back later?|
+Es|
+Puedes llamarme mas tarde?|
+En|
+Can you carry this for me?|
+Es|
+Puedes llevar esto para mi?|
+En|
+Can you do me a favor?|
+Es|
+Me puedes hacer un favor?|
+En|
+Can you fix this?|
+Es|
+Puedes arreglar esto?|
+En|
+Can you give me an example?|
+Es|
+Me puedes dar un ejemplo?|
+En|
+Can you help me?|
+Es|
+Me puedes ayudar?|
+En|
+Can you hold this for me?|
+Es|
+Puedes sujetar esto para mi?|
+En|
+Can you please say that again?|
+Es|
+Puedes decir eso otra vez por favor?|
+En|
+Can you recommend a good restaurant?|
+Es|
+Puedes recomendar un buen restaurante?|
+En|
+Can you repeat that please?|
+Es|
+Puedes repetir eso por favor?|
+En|
+Can you show me?|
+Es|
+Puedes mostrarme?|
+En|
+Can you speak louder please?|
+Es|
+Puedes hablar mas alto por favor?|
+En|
+Can you swim?|
+Es|
+Puedes nadar?|
+En|
+Can you throw that away for me?|
+Es|
+Puedes tirar eso para mi?|
+En|
+Can you translate this for me?|
+Es|
+Puedes traducir esto para mi?|
+En|
+Certainly!|
+Es|
+Claro!|
+En|
+Cheers!|
+Es|
+Saulud!|
+En|
+Chicago is very different from Boston|
+Es|
+Chicago es muy diferente de Boston|
+En|
+Come here|
+Es|
+Ven aqui|
+En|
+Did it snow yesterday?|
+Es|
+Nevó ayer?|
+En|
+Did you come with your family?|
+Es|
+Viniste con tu familia?|
+En|
+Did you get my email?|
+Es|
+Recibiste mi email?|
+En|
+Did you send me flowers?|
+Es|
+Me mandaste flores?|
+En|
+Did you take your medicine?|
+Es|
+Tomaste tu medicina?|
+En|
+Did your wife like California?|
+Es|
+A tu mujer le gustó California?|
+En|
+Do you accept U.S. Dollars?|
+Es|
+Acceptas dolares americanos?|
+En|
+Do you believe that?|
+Es|
+Te crees eso?|
+En|
+Do you feel better?|
+Es|
+Te sientes mejor?|
+En|
+Do you go to Florida often?|
+Es|
+Vas a Florida frecuentemente?|
+En|
+Do you have a boyfriend?|
+Es|
+Tienes un novio?|
+En|
+Do you have a girlfriend?|
+Es|
+Tienes una novia?|
+En|
+Do you have a pencil?|
+Es|
+Tienes un lapiz?|
+En|
+Do you have a problem?|
+Es|
+Tienes un problema?|
+En|
+Do you have a swimming pool?|
+Es|
+Tienes una piscina?|
+En|
+Do you have an appointment?|
+Es|
+Tienes un apuntamento?|
+En|
+Do you have another one?|
+Es|
+Tienes otro?|
+En|
+Do you have any children?|
+Es|
+Tienes hijos?|
+En|
+Do you have any coffee?|
+Es|
+Tienes café?|
+En|
+Do you have any money?|
+Es|
+Tienes dinero?|
+En|
+Do you have any vacancies?|
+Es|
+Tienes sitios libres?|
+En|
+Do you have anything cheaper?|
+Es|
+Tienes algo mas barato?|
+En|
+Do you have enough money?|
+Es|
+Tienes bastante dinero?|
+En|
+Do you have the number for a taxi?|
+Es|
+Tienes un numero de un taxi?|
+En|
+Do you have this in size 11?|
+Es|
+Tienes eso en el tamaño 11?|
+En|
+Do you hear that?|
+Es|
+Oyes eso?|
+En|
+Do you know her?|
+Es|
+La conoces?|
+En|
+Do you know how much it costs?|
+Es|
+Sabes cuanto cuesta?|
+En|
+Do you know how to cook?|
+Es|
+Sabes cocinar?|
+En|
+Do you know how to get to the Marriott Hotel?|
+Es|
+Sabes como llegar al Marriott Hotel?|
+En|
+Do you know what this means?|
+Es|
+Sabes lo que significa?|
+En|
+Do you know what this says?|
+Es|
+Sabes lo que dice?|
+En|
+Do you know where I can get a taxi?|
+Es|
+Sabes donde puedo ir para coger un taxi?|
+En|
+Do you know where my glasses are?|
+Es|
+Sabes donde estan mis gafas?|
+En|
+Do you know where she is?|
+Es|
+Sabes donde esta ella?|
+En|
+Do you know where there's a store that sells towels?|
+Es|
+Sabes donde hay una tienda que vende toallas?|
+En|
+Do you like it here?|
+Es|
+Te gusta aqui?|
+En|
+Do you like the book?|
+Es|
+Te gusta el libro?|
+En|
+Do you like to watch TV?|
+Es|
+Te gusta ver la television?|
+En|
+Do you like your boss?|
+Es|
+Te cae bien tu jefe?|
+En|
+Do you like your co-workers?|
+Es|
+Te caen bien tus companeros de trabajo?|
+En|
+Do you need anything else?|
+Es|
+Necesitas algo mas?|
+En|
+Do you need anything?|
+Es|
+Necesitas algo?|
+En|
+Do you play any sports?|
+Es|
+Juegas a algunos deportes?|
+En|
+Do you play basketball?|
+Es|
+Juegas al baloncesto?|
+En|
+Do you sell batteries?|
+Es|
+Vendes pilas?|
+En|
+Do you sell medicine?|
+Es|
+Vendes medicina?|
+En|
+Do you smoke?|
+Es|
+Fumas?|
+En|
+Do you speak English?|
+Es|
+Hablas ingles?|
+En|
+Do you study English?|
+Es|
+Estudias ingles?|
+En|
+Do you take credit cards?|
+Es|
+Tomas cartas de credito?|
+En|
+Do you think it'll rain today?|
+Es|
+Piensas que va a llover hoy?|
+En|
+Do you think it's going to rain tomorrow?|
+Es|
+Piensas que va a llover manana?|
+En|
+Do you think it's possible?|
+Es|
+Crees que es posible?|
+En|
+Do you think you'll be back by 11:30?|
+Es|
+Crees que volveras a las 11:30?|
+En|
+Do you understand?|
+Es|
+Entiendes?|
+En|
+Do you want me to come and pick you up?|
+Es|
+Quieres que venga a recogerte?|
+En|
+Do you want to come with me?|
+Es|
+Quieres venir conmigo?|
+En|
+Do you want to go to the movies?|
+Es|
+Quieres ir al cine?|
+En|
+Do you want to go with me?|
+Es|
+Quieres ir conimigo?|
+En|
+Does anyone here speak English?|
+Es|
+Hay alguien aqui que hable ingles?|
+En|
+Does he like the school?|
+Es|
+Le gusta la escuela?|
+En|
+Does it often snow in the winter in Massachusetts?|
+Es|
+Nieva mucho en el invierno en Massachusetts?|
+En|
+Does this road go to New York?|
+Es|
+Esta carretara va a New York?|
+En|
+Don't do that|
+Es|
+No hagas eso|
+En|
+Don't worry|
+Es|
+No te preocupes|
+En|
+Every week|
+Es|
+Cada semana|
+En|
+Everyday I get up at 6AM|
+Es|
+Me levanto todos los dias a las 6AM|
+En|
+Everyone knows it|
+Es|
+Todos lo saben|
+En|
+Everything is ready|
+Es|
+Todo esta listo|
+En|
+Excellent|
+Es|
+Excelente|
+En|
+Excuse me|
+Es|
+Perdona|
+En|
+Excuse me, what did you say?|
+Es|
+Perdona, que has dicho?|
+En|
+Expiration date|
+Es|
+La fecha de caducidad|
+En|
+Fill it up, please|
+Es|
+Llenalo, por favor|
+En|
+Follow me|
+Es|
+Sigueme|
+En|
+For how many nights?|
+Es|
+Por cuantas noches?|
+En|
+Forget it|
+Es|
+Olvidalo|
+En|
+From here to there|
+Es|
+Desde aqui hasta alli|
+En|
+From time to time|
+Es|
+De vez en cuando|
+En|
+Give me a call|
+Es|
+Llamame|
+En|
+Give me the pen|
+Es|
+Dame el boligrafo|
+En|
+Go straight ahead|
+Es|
+Sigue recto|
+En|
+Good afternoon|
+Es|
+Buenas tardes|
+En|
+Good evening sir|
+Es|
+Buenas tardes senor|
+En|
+Good idea|
+Es|
+Buena idea|
+En|
+Good Luck|
+Es|
+Buena suerte|
+En|
+Good morning|
+Es|
+Buenos dias|
+En|
+Great|
+Es|
+Genial|
+En|
+Happy Birthday|
+Es|
+Feliz cumpleaños|
+En|
+Has your brother been to California?|
+Es|
+Tu hermano ha estado alguna vez en California?|
+En|
+Have a good trip|
+Es|
+Ten un buen viaje|
+En|
+Have they met her yet?|
+Es|
+La han conocido ya?|
+En|
+Have you arrived?|
+Es|
+Llegaste?|
+En|
+Have you been to Boston?|
+Es|
+Has estado alguna vez en Boston?|
+En|
+Have you been waiting long?|
+Es|
+Has estado esperando mucho tiempo?|
+En|
+Have you done this before?|
+Es|
+Has hecho esto antes?|
+En|
+Have you eaten at that restaurant?|
+Es|
+Has comido en este restaurante?|
+En|
+Have you eaten yet?|
+Es|
+Has comido ya?|
+En|
+Have you ever had Potato soup?|
+Es|
+Alguna vez has probado sopa de patata?|
+En|
+Have you finished studying?|
+Es|
+Has terminado de estudiar?|
+En|
+Have you seen this movie?|
+Es|
+Has visto esta pelicula?|
+En|
+He always does that for me|
+Es|
+Siempre me ayuda con eso|
+En|
+He broke the window|
+Es|
+Ha roto una ventana|
+En|
+He doesn't look like a nurse|
+Es|
+No parece una enfermera|
+En|
+He has a nice car|
+Es|
+Tiene un buen coche|
+En|
+He likes it very much|
+Es|
+Le gusta mucho|
+En|
+He likes juice but he doesn't like milk|
+Es|
+Le gusta el zumo, pero no le gusta la leche|
+En|
+He needs some new clothes|
+Es|
+Necesita nueva ropa|
+En|
+He never gives me anything|
+Es|
+Nunca me da nada|
+En|
+He said this is a nice place|
+Es|
+Dijo que esto era un buen sitio|
+En|
+He said you like to watch movies|
+Es|
+Dijo que te gusta ver peliculas|
+En|
+He studies at Boston University|
+Es|
+Estudia a la universidad de Boston|
+En|
+He thinks we don't want to go|
+Es|
+Piensa que no queremos ir|
+En|
+He works at a computer company in New York|
+Es|
+Trabaja en una empresa de ordenadores en New York|
+En|
+He'll be back in 20 minutes|
+Es|
+Volverá en 20 minutos|
+En|
+He's a very good student|
+Es|
+Es un estudiante muy bueno|
+En|
+He's an American|
+Es|
+Es un Americano|
+En|
+He's an Engineer|
+Es|
+Es un ingeniero|
+En|
+He's coming soon|
+Es|
+Viene pronto|
+En|
+He's faster than me|
+Es|
+Es mas rapido que yo|
+En|
+He's in the kitchen|
+Es|
+Esta en la cocina|
+En|
+He's never been to America|
+Es|
+Nunca ha estado en America|
+En|
+He's not in right now|
+Es|
+No esta aqui ahora|
+En|
+He's right|
+Es|
+Tiene razon|
+En|
+He's very annoying|
+Es|
+Es muy molestoso|
+En|
+He's very famous|
+Es|
+Es muy famoso|
+En|
+He's very hard working|
+Es|
+Es muy trabajador|
+En|
+Hello|
+Es|
+Hola|
+En|
+Help!|
+Es|
+Ayuda!|
+En|
+Here is your salad|
+Es|
+Aqui esta tu ensalada|
+En|
+Here it is|
+Es|
+Aqui esta|
+En|
+Here you are|
+Es|
+Aqui tienes|
+En|
+Here's my number|
+Es|
+Este es mi numero|
+En|
+Here's your order|
+Es|
+Aqui tienes lo que ordinaste|
+En|
+Hi, is Mrs. Smith there, please?|
+Es|
+Hola, esta la senora Smith, por favor?|
+En|
+His family is coming tomorrow|
+Es|
+Su familia viene manana|
+En|
+His room is very small|
+Es|
+Su cuarto es muy pequeno|
+En|
+His son|
+Es|
+Su hijo|
+En|
+How about Saturday?|
+Es|
+Y el sabado?|
+En|
+How are you paying?|
+Es|
+Como vas a pagar?|
+En|
+How are you?|
+Es|
+Como estas?|
+En|
+How are your parents?|
+Es|
+Como estan tus padres?|
+En|
+How do I get there?|
+Es|
+Como llego alli?|
+En|
+How do I get to Daniel Street?|
+Es|
+Como llego a la calle Daniel?|
+En|
+How do I get to the American Embassy?|
+Es|
+Como llego a la embajada americana?|
+En|
+How do I use this?|
+Es|
+Como uso esto?|
+En|
+How do you know?|
+Es|
+Como lo sabes?|
+En|
+How do you pronounce that?|
+Es|
+Como se pronuncia eso?|
+En|
+How do you say it in English?|
+Es|
+Como se dice en ingles?|
+En|
+How do you spell it?|
+Es|
+Como se escribe?|
+En|
+How do you spell the word Seattle?|
+Es|
+Como se escribe la palabra Seattle?|
+En|
+How does it taste?|
+Es|
+Como sabe? Que sabor tiene?|
+En|
+How far is it to Chicago?|
+Es|
+Cuan lejos esta Chicago?|
+En|
+How far is it?|
+Es|
+Cuan de lejos es?|
+En|
+How is she?|
+Es|
+Como esta ella?|
+En|
+How long are you going to stay in California?|
+Es|
+Cuanto tiempo te vas a quedar en California?|
+En|
+How long are you going to stay?|
+Es|
+Cuanto tiempo te vas a quedar?|
+En|
+How long does it take by car?|
+Es|
+Cuanto tiempo tarda en coche?|
+En|
+How long does it take to get to Georgia?|
+Es|
+Cuanto tiempo tarda en llegar a Georgia?|
+En|
+How long have you been here?|
+Es|
+Cuanto tiempo has estado alli?|
+En|
+How long have you been in America?|
+Es|
+Cuanto tiempo has estado en America?|
+En|
+How long have you lived here?|
+Es|
+Cuanto tiempo has vivido aqui?|
+En|
+How long have you worked here?|
+Es|
+Cuanto tiempo has trabajado aqui?|
+En|
+How long is it?|
+Es|
+Cuanto tarda?|
+En|
+How long is the flight?|
+Es|
+Cuanto tarda el vuelo?|
+En|
+How long will it take?|
+Es|
+Cuanto va a tardar?|
+En|
+How long will you be staying?|
+Es|
+Cuanto tiempo te vas a quedar?|
+En|
+How many children do you have?|
+Es|
+Cuantos hijos tienes?|
+En|
+How many hours a week do you work?|
+Es|
+Cuantas horas trabajas a la semana?|
+En|
+How many languages do you speak?|
+Es|
+Cuantos idiomas hablas?|
+En|
+How many miles is it to Pennsylvania?|
+Es|
+Cuantas millas es a Pennsylvania?|
+En|
+How many people are there in New York?|
+Es|
+Cuantos habitantes hay en New York?|
+En|
+How many people do you have in your family?|
+Es|
+Cuantas personas hay en tu familia?|
+En|
+How many people?|
+Es|
+Cuantas personas?|
+En|
+How many?|
+Es|
+Cuantos?|
+En|
+How much altogether?|
+Es|
+Cuanto todo junto?|
+En|
+How much are these earrings?|
+Es|
+Cuanto cuestan los pendientes?|
+En|
+How much do I owe you?|
+Es|
+Cuanto te debo?|
+En|
+How much does it cost per day?|
+Es|
+Cuanto cuesta cada dia?|
+En|
+How much does this cost?|
+Es|
+Cuanto cuesta esto?|
+En|
+How much is it to go to Miami?|
+Es|
+Cuanto cuesta para ir Miami?|
+En|
+How much is it?|
+Es|
+Cuanto es?|
+En|
+How much is that?|
+Es|
+Cuanto es eso?|
+En|
+How much is this?|
+Es|
+Cuanto es esto?|
+En|
+How much money do you have?|
+Es|
+Cuanto dinero tienes?|
+En|
+How much money do you make?|
+Es|
+Cuanto dinero ganas?|
+En|
+How much will it cost?|
+Es|
+Cuanto va a costar?|
+En|
+How much would you like?|
+Es|
+Cuanto quieres?|
+En|
+How old are you?|
+Es|
+Cuantos años tienes?|
+En|
+How tall are you?|
+Es|
+Cuan alto eres?|
+En|
+How was the movie?|
+Es|
+Como era la pelicula?|
+En|
+How was the trip?|
+Es|
+Como era el viaje?|
+En|
+How's business?|
+Es|
+Como va la empresa?|
+En|
+How's the weather?|
+Es|
+Como esta el tiempo?|
+En|
+How's work going?|
+Es|
+Como va el trabajo?|
+En|
+Hurry!|
+Es|
+Corre! Date prisa!|
+En|
+I agree|
+Es|
+Estoy de acuerdo|
+En|
+I ate already|
+Es|
+Ya comí|
+En|
+I believe you|
+Es|
+Te creo|
+En|
+I bought a shirt yesterday|
+Es|
+Compré una camisa ayer|
+En|
+I came with my family|
+Es|
+Vine con mi familia|
+En|
+I can swim|
+Es|
+Puedo nadar|
+En|
+I can't hear you|
+Es|
+No te oigo|
+En|
+I can't hear you clearly|
+Es|
+No te oigo claramente|
+En|
+I don't care|
+Es|
+No me importa|
+En|
+I don't feel well|
+Es|
+No me siento bien|
+En|
+I don't have a girlfriend|
+Es|
+No tengo una novia|
+En|
+I don't have any money|
+Es|
+No tengo dinero|
+En|
+I don't have enough money|
+Es|
+No tengo bastante dinero|
+En|
+I don't have time right now|
+Es|
+No tengo tiempo ahora|
+En|
+I don't know|
+Es|
+No lo se|
+En|
+I don't know how to use it|
+Es|
+No se come se usa|
+En|
+I don't like him|
+Es|
+No me cae bien|
+En|
+I don't like it|
+Es|
+No me gusta|
+En|
+I don't mind|
+Es|
+No es nada|
+En|
+I don't speak English very well|
+Es|
+No hablo ingles muy bien|
+En|
+I don't speak very well|
+Es|
+No hablo muy bien|
+En|
+I don't think so|
+Es|
+No creo|
+En|
+I don't understand|
+Es|
+No entiendo|
+En|
+I don't understand what your saying|
+Es|
+No entiendo lo que estas diciendo|
+En|
+I don't want it|
+Es|
+No lo quiero|
+En|
+I don't want that|
+Es|
+No quiero eso|
+En|
+I don't want to bother you|
+Es|
+No te quiero molestar|
+En|
+I feel good|
+Es|
+Me siento bien|
+En|
+I forget|
+Es|
+No me acuerdo|
+En|
+I get off of work at 6|
+Es|
+Salgo del trabajo a las 6|
+En|
+I give up|
+Es|
+Me rindo|
+En|
+I got in an accident|
+Es|
+Tuve un accidente|
+En|
+I have a cold|
+Es|
+Estoy resfriado|
+En|
+I have a headache|
+Es|
+Tengo un dolor de cabeza|
+En|
+I have a lot of things to do|
+Es|
+Tengo muchas cosas que hacer|
+En|
+I have a question I want to ask you|
+Es|
+Tengo una cosa que to quiero preguntar|
+En|
+I have a reservation|
+Es|
+Tengo una reservacion|
+En|
+I have money|
+Es|
+Tengo dinero|
+En|
+I have one in my car|
+Es|
+Tengo uno en mi coche|
+En|
+I have pain in my arm|
+Es|
+Tengo un dolor en mi brazo|
+En|
+I have three children, two girls and one boy|
+Es|
+Tengo tres hijos, dos ninas y un nino|
+En|
+I have to go to the post office|
+Es|
+Tengo que ir al apartado de correos|
+En|
+I have to wash my clothes|
+Es|
+Tengo que lavar mi ropa|
+En|
+I have two sisters|
+Es|
+Tengo dos hermanas|
+En|
+I haven't been there|
+Es|
+Nunca he estado alli|
+En|
+I haven't finished eating|
+Es|
+No he terminado de comer|
+En|
+I haven't had lunch yet|
+Es|
+Todavia no he comido (almuerzo)|
+En|
+I hope you and your wife have a nice trip|
+Es|
+Espero que tu y tu mujer tengais un buen viaje|
+En|
+I know|
+Es|
+Lo se|
+En|
+I like her|
+Es|
+Me gusta ella|
+En|
+I like it|
+Es|
+Me gusta|
+En|
+I like Italian food|
+Es|
+Me gusta la comida italiana|
+En|
+I like to watch TV|
+Es|
+Me gusta ver la television|
+En|
+I live in California|
+Es|
+Vivo en California|
+En|
+I lost my watch|
+Es|
+He perdido mi reloj|
+En|
+I love you|
+Es|
+Te quiero|
+En|
+I made a mistake|
+Es|
+Hice un error|
+En|
+I made this cake|
+Es|
+Hice una tarta|
+En|
+I need a doctor|
+Es|
+Necesito un doctor|
+En|
+I need another key|
+Es|
+Necesito otra llave|
+En|
+I need some tissues|
+Es|
+Necesito unos panuelos|
+En|
+I need this to get there by tomorrow|
+Es|
+Necesito que esto llegue para manana|
+En|
+I need to change clothes|
+Es|
+Necesito cambiar de ropa|
+En|
+I need to go home|
+Es|
+Necesito ir a casa|
+En|
+I need to go now|
+Es|
+Necesito irme ahora|
+En|
+I need to practice my English|
+Es|
+Tengo que practicar mi ingles|
+En|
+I only have 5 dollars|
+Es|
+Solo tengo 5 dolares|
+En|
+I only want a snack|
+Es|
+Solo quiero una merienda|
+En|
+I remember|
+Es|
+Me acuerdo|
+En|
+I speak a little English|
+Es|
+Hablo un poquito de ingles|
+En|
+I speak two languages|
+Es|
+Hablo dos lenguas|
+En|
+I still have a lot of things to buy|
+Es|
+Todavia tengo muchas cosas que comprar|
+En|
+I still have a lot to do|
+Es|
+Todavia tengo mucho que hacer|
+En|
+I still have to brush my teeth and take a shower|
+Es|
+Todavia tengo que cepillar mis dientes y tomar una ducha|
+En|
+I still haven't decided|
+Es|
+Todavia no he decidido|
+En|
+I think I need to see a doctor|
+Es|
+Creo que tengo que ver a un doctor|
+En|
+I think it tastes good|
+Es|
+Creo que sabe bien|
+En|
+I think it's very good|
+Es|
+Pienso que es muy bueno|
+En|
+I think so|
+Es|
+Creo que si|
+En|
+I think those shoes are very good looking|
+Es|
+Creo que esos zapatos son muy bonitos|
+En|
+I think you have too many clothes|
+Es|
+Pienso que tienes demasiada ropa|
+En|
+I thought he said something else|
+Es|
+Crei que dijo otra cosa|
+En|
+I thought the clothes were cheaper|
+Es|
+Pensaba que la ropa era mas barata|
+En|
+I trust you|
+Es|
+Me fio de ti|
+En|
+I understand|
+Es|
+Entiendo|
+En|
+I understand now|
+Es|
+Ahora entiendo|
+En|
+I usually drink coffee at breakfast|
+Es|
+Normalmente bebo café por el desayuno|
+En|
+I want to ask you a question|
+Es|
+Tengo una cosa que to quiero preguntar|
+En|
+I want to buy something|
+Es|
+Quiero comprar algo|
+En|
+I want to contact our embassy|
+Es|
+Quiero contactar a nuestra embajada|
+En|
+I want to give you a gift|
+Es|
+Te quiero dar un regalo|
+En|
+I want to send this package to the United States|
+Es|
+Quiero enviar este paquete a los Estados Unidos|
+En|
+I want to show you something|
+Es|
+Te quiero mostrar algo|
+En|
+I was about to leave the restaurant when my friends arrived|
+Es|
+Estaba a punto de salir del restaurante cuando llegaron mis amigos|
+En|
+I was going to the library|
+Es|
+Estaba iendo a la biblioteca|
+En|
+I was in the library|
+Es|
+Estaba en la biblioteca|
+En|
+I went to the supermarket, and then to the computer store|
+Es|
+Fui al supermercado, y despues a la tienda de ordenadores|
+En|
+I wish I had one|
+Es|
+Ojala que tuviera uno|
+En|
+I'd like a map of the city|
+Es|
+Me gustaria un mapa de la ciudad|
+En|
+I'd like a non-smoking room|
+Es|
+Queria un cuarto de no fumadores|
+En|
+I'd like a room|
+Es|
+Queria un cuarto|
+En|
+I'd like a room with two beds please|
+Es|
+Queria un cuarto con dos camas por favor|
+En|
+I'd like a single room|
+Es|
+Queria un cuarto individual|
+En|
+I'd like a table near the window|
+Es|
+Me gustaria una mesa cerca de la ventana|
+En|
+I'd like some water too, please|
+Es|
+Queria un poco de agua tambien, por favor|
+En|
+I'd like the number for the Hilton Hotel please|
+Es|
+Queria el numero del Hilton Hotel por favor|
+En|
+I'd like to buy a bottle of water, please|
+Es|
+Queria comprar una botella de agua por favor|
+En|
+I'd like to buy a phone card please|
+Es|
+Queria comprar una tarjeta para el telefono por favor|
+En|
+I'd like to buy something|
+Es|
+Me gustaria comprar algo|
+En|
+I'd like to call the United States|
+Es|
+Me gustaria llamar a los Estados Unidos|
+En|
+I'd like to eat at 5th street restaurant|
+Es|
+Queria comer en el restaurante de la calle 5ta|
+En|
+I'd like to exchange this for Dollars|
+Es|
+Queria cambiar esto para dolares|
+En|
+I'd like to go for a walk|
+Es|
+Me gustaria dar un paseo|
+En|
+I'd like to go home|
+Es|
+Me gustaria ir a casa|
+En|
+I'd like to go shopping|
+Es|
+Me gustaria ir de compras|
+En|
+I'd like to go to the store|
+Es|
+Queria ir a la tienda|
+En|
+I'd like to make a phone call|
+Es|
+Queria hacer una llamada|
+En|
+I'd like to make a reservation|
+Es|
+Queria hacer una reservacion (Queria o Querria por todas)|
+En|
+I'd like to rent a car|
+Es|
+Queria alquilar un coche|
+En|
+I'd like to send a fax|
+Es|
+Quieria enviar un fax|
+En|
+I'd like to send this to America|
+Es|
+Queria mandad esto a America|
+En|
+I'd like to speak to Mr. Smith please|
+Es|
+Queria hablar con la senora Smith por favor|
+En|
+I'd like to use the internet|
+Es|
+Me gustaria usar el internet|
+En|
+I'll be right back|
+Es|
+Volveré en seguida|
+En|
+I'll call back later|
+Es|
+Llamaré mas tarde|
+En|
+I'll call you on Friday|
+Es|
+Te llamaré el viernes|
+En|
+I'll call you when I leave|
+Es|
+Te llamaré en cuanto me vaya|
+En|
+I'll come back later|
+Es|
+Volveré mas tarde|
+En|
+I'll have a cup of tea please|
+Es|
+Una taza de té por favor|
+En|
+I'll have a glass of water please|
+Es|
+Un vaso de agua por favor|
+En|
+I'll have the same thing|
+Es|
+Tendré lo mismo|
+En|
+I'll pay|
+Es|
+Pago yo|
+En|
+I'll pay for dinner|
+Es|
+Pagaré por la cena|
+En|
+I'll pay for the tickets|
+Es|
+Pagaré por los billetes|
+En|
+I'll take it|
+Es|
+Lo tomaré yo|
+En|
+I'll take that one also|
+Es|
+Tomaré eso tambien|
+En|
+I'll take you to the bus stop|
+Es|
+Te llevaré a la parada de autobuses|
+En|
+I'll talk to you soon|
+Es|
+Te hableré pronto|
+En|
+I'll teach you|
+Es|
+Te enseñaré|
+En|
+I'll tell him you called|
+Es|
+Le diré que has llamado|
+En|
+I'm 26 years old|
+Es|
+Tengo 26 años|
+En|
+I'm 32|
+Es|
+Tengo 32 años|
+En|
+I'm 6'2"|
+Es|
+Mido 6 pies y 2 pulgadas|
+En|
+I'm a beginner|
+Es|
+Soy un principiante|
+En|
+I'm a size 8|
+Es|
+Mi tamaño es 8|
+En|
+I'm a teacher|
+Es|
+Soy un profesor|
+En|
+I'm allergic to seafood|
+Es|
+Tengo alergia a los mariscos|
+En|
+I'm American|
+Es|
+Soy Americano|
+En|
+I'm an American|
+Es|
+Soy un Americano|
+En|
+I'm bored|
+Es|
+Estoy aburrido|
+En|
+I'm cleaning my room|
+Es|
+Estoy limpiando mi cuarto|
+En|
+I'm cold|
+Es|
+Tengo frio|
+En|
+I'm coming right now|
+Es|
+Estoy viniendo ahora|
+En|
+I'm coming to pick you up|
+Es|
+Estoy viniendo a recogerte|
+En|
+I'm fine, and you?|
+Es|
+Estoy bien, y tu?|
+En|
+I'm from America|
+Es|
+Soy de America|
+En|
+I'm full|
+Es|
+Estoy lleno|
+En|
+I'm getting ready to go out|
+Es|
+Estoy preparando para salir|
+En|
+I'm going home in four days|
+Es|
+Vuelvo a casa en cuatro dias|
+En|
+I'm going to America next year|
+Es|
+Voy a America el año que viene|
+En|
+I'm going to bed|
+Es|
+Voy a dormir|
+En|
+I'm going to go have dinner|
+Es|
+Voy a cenar|
+En|
+I'm going to leave|
+Es|
+Voy a irme|
+En|
+I'm good|
+Es|
+Estoy bien|
+En|
+I'm happy|
+Es|
+Estoy feliz|
+En|
+I'm here on business|
+Es|
+Estoy aqui de trabajo|
+En|
+I'm hungry|
+Es|
+Tengo hambre|
+En|
+I'm just kidding|
+Es|
+Estoy de broma|
+En|
+I'm just looking|
+Es|
+Solo estoy mirando|
+En|
+I'm leaving Tomorrow|
+Es|
+Me voy manana|
+En|
+I'm looking for the post office|
+Es|
+Estoy buscando al apartado de correos|
+En|
+I'm lost|
+Es|
+Estoy perdido|
+En|
+I'm married|
+Es|
+Estoy casado|
+En|
+I'm not afraid|
+Es|
+No tengo miedo|
+En|
+I'm not American|
+Es|
+No soy Americano|
+En|
+I'm not busy|
+Es|
+No estoy ocupado|
+En|
+I'm not going|
+Es|
+No voy a ir|
+En|
+I'm not married|
+Es|
+No estoy casado|
+En|
+I'm not ready yet|
+Es|
+No estoy listo todavia|
+En|
+I'm not sure|
+Es|
+No estoy seguro|
+En|
+I'm ok|
+Es|
+Estoy bien|
+En|
+I'm on hold. (phone)|
+Es|
+Estoy pendiente (telefono)|
+En|
+I'm ready|
+Es|
+Estoy listo|
+En|
+I'm self-employed|
+Es|
+Soy autonomo|
+En|
+I'm sick|
+Es|
+Estoy enfermo|
+En|
+I'm single|
+Es|
+Estoy soltero|
+En|
+I'm sorry|
+Es|
+Lo siento|
+En|
+I'm sorry, we're sold out|
+Es|
+Perdoname, hemos vendido todo|
+En|
+I'm thirsty|
+Es|
+Tengo sed|
+En|
+I'm tired|
+Es|
+Estoy cansado|
+En|
+I'm very busy|
+Es|
+Estoy muy ocupado|
+En|
+I'm very busy. I don't have time now|
+Es|
+Estoy muy ocupado. No tengo tiempo ahora|
+En|
+I'm very well, thank you|
+Es|
+Estoy muy bien, gracias|
+En|
+I'm waiting for you|
+Es|
+Te estoy esperando|
+En|
+I'm worried too|
+Es|
+Yo tambien estoy preocupado|
+En|
+I've already seen it|
+Es|
+Ya lo he visto|
+En|
+I've been here for two days|
+Es|
+He estado aqui desde hace dos dias|
+En|
+I've been there|
+Es|
+He estado aqui|
+En|
+I've heard Texas is a beautiful place|
+Es|
+He oido que Texas es un sitio muy bonito|
+En|
+I've never done that|
+Es|
+Nunca he hecho eso|
+En|
+I've never seen that before|
+Es|
+Nunca he visto eso|
+En|
+I've seen it|
+Es|
+Lo he visto|
+En|
+I've worked there for five years|
+Es|
+He trabajado alli por cinco años|
+En|
+If you like it I can buy more|
+Es|
+Si te gusta, puedo comprar mas|
+En|
+If you need my help, please let me know|
+Es|
+Si necesitas mi ayuda, dimelo|
+En|
+In 30 minutes|
+Es|
+En 30 minutos|
+En|
+Is anyone else coming?|
+Es|
+Viene alguien mas?|
+En|
+Is everything ok?|
+Es|
+Todo esta bien?|
+En|
+Is it close?|
+Es|
+Esta cerca?|
+En|
+Is it cold outside?|
+Es|
+Hace frio fuera?|
+En|
+Is it far from here?|
+Es|
+Esta lejos de aqui?|
+En|
+Is it hot?|
+Es|
+Hace calor?|
+En|
+Is it nearby?|
+Es|
+Esta cerca?|
+En|
+Is it possible?|
+Es|
+Es posible?|
+En|
+Is it raining?|
+Es|
+Esta lloviendo?|
+En|
+Is it ready?|
+Es|
+Esta listo?|
+En|
+Is it suppose to rain tomorrow?|
+Es|
+Se supone que va a llover manana?|
+En|
+Is John here?|
+Es|
+Esta John aqui?|
+En|
+Is John there please?|
+Es|
+Esta John por favor?|
+En|
+Is Mr. Smith an American?|
+Es|
+Es el senor Smith un Americano?|
+En|
+Is that enough?|
+Es|
+Es bastante?|
+En|
+Is that ok?|
+Es|
+Esta bien eso?|
+En|
+Is the bank far?|
+Es|
+Esta lejos el banco?|
+En|
+Is there a movie theater nearby?|
+Es|
+Hay un cinema cerca de aqui?|
+En|
+Is there a nightclub in town?|
+Es|
+Hay una discoteca en el pueblo?|
+En|
+Is there a restaurant in the hotel?|
+Es|
+Hay un restaurante en el hotel?|
+En|
+Is there a store near here?|
+Es|
+Hay una tienda cerca de aqui?|
+En|
+Is there air conditioning in the room?|
+Es|
+Hay aire acondicionado en el cuarto?|
+En|
+Is there an English speaking guide?|
+Es|
+Hay una guia en ingles?|
+En|
+Is there any mail for me?|
+Es|
+Hay correo para mi?|
+En|
+Is there anything cheaper?|
+Es|
+Hay algo mas barato?|
+En|
+Is this a safe area?|
+Es|
+Es esto un lugar seguro?|
+En|
+Is this Mr. Smith?|
+Es|
+Es esto el senor Smith?|
+En|
+Is this pen yours?|
+Es|
+Esto es tu boligrafo?|
+En|
+Is this the bus to New York?|
+Es|
+Esto es el autobus a New York?|
+En|
+Is this your book?|
+Es|
+Esto es tu libro?|
+En|
+Is your father home?|
+Es|
+Esta tu padre en casa?|
+En|
+Is your house like this one?|
+Es|
+Tu casa es parecido a esta?|
+En|
+Is your husband also from Boston?|
+Es|
+Tu marido tambien es de Boston, no?|
+En|
+Is your son here?|
+Es|
+Esta tu hijo aqui?|
+En|
+Isn't it?|
+Es|
+No?|
+En|
+It costs 20 dollars per hour|
+Es|
+Cuesta 20 dolares por hora|
+En|
+It depends on the weather|
+Es|
+Depende del tiempo|
+En|
+It hurts here|
+Es|
+Duele aqui|
+En|
+It rained very hard today|
+Es|
+Llovió fuertemente hoy|
+En|
+It takes 2 hours by car|
+Es|
+Tarda 2 horas en coche|
+En|
+It will arrive shortly|
+Es|
+Llegaré dentro de poco|
+En|
+It'll be cold this evening|
+Es|
+Hará frio esta noche|
+En|
+It's 11:30pm|
+Es|
+Son las 11:30pm|
+En|
+It's 17 dollars|
+Es|
+Son 17 dolares|
+En|
+It's 6AM|
+Es|
+Son las 6AM|
+En|
+It's 8:45|
+Es|
+Son las 8:45|
+En|
+It's a quarter to 7|
+Es|
+Son las 7 menos cuarto|
+En|
+It's August 25th|
+Es|
+Es el 25 de Agosto|
+En|
+It's delicious!|
+Es|
+Es delicioso!|
+En|
+It's far from here|
+Es|
+Esta lejos aqui|
+En|
+It's going to be hot today|
+Es|
+Va a hacer calor hoy|
+En|
+It's going to snow today|
+Es|
+Va a nevar hoy|
+En|
+It's half past 11|
+Es|
+Son las 11 y media|
+En|
+It's here|
+Es|
+Esta aqui|
+En|
+It's is a quarter past nine|
+Es|
+Son las nueve y cuarto|
+En|
+It's less than 5 dollars|
+Es|
+Es menos de 5 dolares|
+En|
+It's longer than 2 miles|
+Es|
+Es mas de 2 millas|
+En|
+It's mine|
+Es|
+Es mio|
+En|
+It's more than 5 dollars|
+Es|
+Es mas de 5 dolares|
+En|
+It's near the Supermarket|
+Es|
+Esta cerca del supermercado|
+En|
+It's north of here|
+Es|
+Esta al norte de aqui|
+En|
+it's not suppose to rain today|
+Es|
+Se supone que no va a llover hoy|
+En|
+It's not too far|
+Es|
+No es demasiado lejos|
+En|
+It's not very expensive|
+Es|
+No es tan caro|
+En|
+It's ok|
+Es|
+Esta bien|
+En|
+It's on 7th street|
+Es|
+Esta en la calle 7ma|
+En|
+It's over there|
+Es|
+Esta alli|
+En|
+It's raining|
+Es|
+Esta lloviendo|
+En|
+It's really hot|
+Es|
+Hace mucho calor|
+En|
+It's shorter than 3 miles|
+Es|
+Es menos de 3 millas|
+En|
+It's suppose to rain tomorrow|
+Es|
+Se supone que va a llover manana|
+En|
+It's there|
+Es|
+Esta alli|
+En|
+It's too late|
+Es|
+Es demasiado tarde|
+En|
+It's very cold today|
+Es|
+Hace mucho frio hoy|
+En|
+It's very important|
+Es|
+Es muy importante|
+En|
+It's very windy|
+Es|
+Hace mucho viento|
+En|
+John is going on vacation tomorrow|
+Es|
+John se va de vacaciones manana|
+En|
+June 3rd|
+Es|
+El 3ro de Junio|
+En|
+Just a little|
+Es|
+Solo un poco|
+En|
+Just a moment|
+Es|
+Solo un momento|
+En|
+Let me check|
+Es|
+Dejame ver|
+En|
+Let me think about it|
+Es|
+Dejame pensar|
+En|
+Let's go|
+Es|
+Vamos|
+En|
+Let's go have a look|
+Es|
+Vamos a ver|
+En|
+Let's meet in front of the hotel|
+Es|
+Vamos a encontrarnos delante del hotel|
+En|
+Let's practice English|
+Es|
+Vamos a practicar el ingles|
+En|
+Let's share|
+Es|
+Vamos a compartir|
+En|
+Male or female?|
+Es|
+Macho o hembra?|
+En|
+May I speak to Mrs. Smith please?|
+Es|
+Puedo hablar con la senora Smith, por favor?|
+En|
+Maybe|
+Es|
+A lo mejor|
+En|
+More than 200 miles|
+Es|
+Mas de 200 millas|
+En|
+More than that|
+Es|
+Mas de eso|
+En|
+My birthday is August 27th|
+Es|
+Mi cumpleaños es el 27 de Agosto|
+En|
+My car isn't working|
+Es|
+Mi coche no esta funcionando|
+En|
+My car was hit by another car|
+Es|
+Mi coche ha estado chocado de otro coche|
+En|
+My cell phone doesn't have good reception|
+Es|
+Mi movil no tiene buena covertura|
+En|
+My cell phone doesn't work|
+Es|
+Mi movil no funciona|
+En|
+My daughter is here|
+Es|
+Mi hija esta aqui|
+En|
+My father has been there|
+Es|
+Mi padre siempre ha estado alli|
+En|
+My father is a lawyer|
+Es|
+Mi padre es un abogado|
+En|
+My friend is American|
+Es|
+Mi amigo es Americano|
+En|
+My grandmother passed away last year|
+Es|
+Mi abuela se murió el año pasado|
+En|
+My house is close to the bank|
+Es|
+Mi casa esta cerca del banco|
+En|
+My luggage is missing|
+Es|
+Falta mi equipaje|
+En|
+My name is John Smith|
+Es|
+Me llamo John Smith|
+En|
+My son|
+Es|
+Mi hijo|
+En|
+My son studies computers|
+Es|
+Mi hijo estudia ordenadores|
+En|
+My stomach hurts|
+Es|
+Me duele la tripa|
+En|
+My throat is sore|
+Es|
+Me duele la garganta|
+En|
+My watch has been stolen|
+Es|
+Me han robado el reloj|
+En|
+Near the bank|
+Es|
+Cerca del banco|
+En|
+Never mind|
+Es|
+No es nada|
+En|
+Next time|
+Es|
+La proxima vez|
+En|
+Nice to meet you|
+Es|
+Un placer conocerte|
+En|
+No|
+Es|
+No|
+En|
+No problem|
+Es|
+No es nada|
+En|
+No, I'm American|
+Es|
+No, soy Americano|
+En|
+No, thank you|
+Es|
+No, gracias|
+En|
+No, this is the first time|
+Es|
+No, este es la primera vez|
+En|
+Nobody is helping us|
+Es|
+Nadie nos esta ayudando|
+En|
+Nobody is there right now|
+Es|
+Nadie esta alli ahora|
+En|
+Nonsense|
+Es|
+Tonterias|
+En|
+Not recently|
+Es|
+Recentemente no|
+En|
+Not yet|
+Es|
+Todavia no|
+En|
+Nothing else|
+Es|
+Nada mas|
+En|
+Now or later?|
+Es|
+Ahora o mas tarde?|
+En|
+October 22nd|
+Es|
+El 22 de Octubre|
+En|
+Of course|
+Es|
+Claro|
+En|
+Okay|
+Es|
+Vale|
+En|
+On the left|
+Es|
+A la izquierda|
+En|
+On the right|
+Es|
+A la derecha|
+En|
+On the second floor|
+Es|
+En el segundo piso|
+En|
+One like that|
+Es|
+Uno como eso|
+En|
+One ticket to New York please|
+Es|
+Un billete a New York por favor|
+En|
+One way or round trip?|
+Es|
+Ida o ida y vuelta?|
+En|
+Open the door|
+Es|
+Abre la puerta|
+En|
+Open the window|
+Es|
+Abre la ventana|
+En|
+Our children are in America|
+Es|
+Nuestros hijos estan en America|
+En|
+Outside the hotel|
+Es|
+Fuera del hotel|
+En|
+Over here|
+Es|
+Alli|
+En|
+Over there|
+Es|
+Alla|
+En|
+Pick up your clothes|
+Es|
+Recoge tu ropa|
+En|
+Please|
+Es|
+Por favor|
+En|
+Please call me|
+Es|
+Llamame por favor|
+En|
+Please come in|
+Es|
+Entra por favor|
+En|
+Please count this for me|
+Es|
+Cuenta esto para mi por favor|
+En|
+Please fill out this form|
+Es|
+Rellena esta forma por favor|
+En|
+Please sit down|
+Es|
+Sientate por favor|
+En|
+Please speak English|
+Es|
+Habla en ingles por favor|
+En|
+Please speak more slowly|
+Es|
+Habla mas despacio por favor|
+En|
+Please speak slower|
+Es|
+Habla mas lento por favor|
+En|
+Please take me to the airport|
+Es|
+Llevame al aeropuerto por favor|
+En|
+Please take me to this address|
+Es|
+Llevame a esta direccion por favor|
+En|
+Please take off your shoes|
+Es|
+Quitate los zapatos por favor|
+En|
+Please tell her John called|
+Es|
+Dila que ha llamado John por favor|
+En|
+Please tell me|
+Es|
+Dimelo por favor|
+En|
+Please wait for me|
+Es|
+Esperame por favor|
+En|
+Please write it down|
+Es|
+Escribelo por favor|
+En|
+Really?|
+Es|
+De verdad?|
+En|
+Right here|
+Es|
+Aqui mismo|
+En|
+Right there|
+Es|
+Alli mismo|
+En|
+See you later|
+Es|
+Hasta luego|
+En|
+See you tomorrow|
+Es|
+Hasta manana|
+En|
+See you tonight|
+Es|
+Te veo esta noche|
+En|
+She wants to know when you're coming|
+Es|
+Quiere saber cuando vas a venir|
+En|
+She's an expert|
+Es|
+Es un experta|
+En|
+She's going with me tomorrow|
+Es|
+Viene conmigo manana|
+En|
+She's older than me|
+Es|
+Es mas mayor que yo|
+En|
+She's pretty|
+Es|
+Es bonita|
+En|
+Should I wait?|
+Es|
+Deberia esperar?|
+En|
+Some books|
+Es|
+Unos libros|
+En|
+Someone does that for me|
+Es|
+Alguien hace eso para mi|
+En|
+Someone is coming|
+Es|
+Alguien viene|
+En|
+Sometimes I go to sleep at 11PM, sometimes at 11:30PM|
+Es|
+A veces me voy a dormir a las 11PM, otras veces a las 11:30PM|
+En|
+Sorry to bother you|
+Es|
+Perdona por molestarte|
+En|
+Sorry, I didn't hear clearly|
+Es|
+Perdona, no te he oido bien|
+En|
+Sorry, I don't have a pencil|
+Es|
+Perdona, no tengo un lapiz|
+En|
+Sorry, I think I have the wrong number|
+Es|
+Perdona, creo que tengo el numero equivocado|
+En|
+Sorry, we don't accept credit cards|
+Es|
+Lo siento, no acceptamos cartas de credito|
+En|
+Sorry, we don't have any|
+Es|
+Lo siento, no tenemos ninguno|
+En|
+Sorry, we don't have any vacancies|
+Es|
+Perdona, no tenemos ningun sitio libre|
+En|
+Sorry, we only accept Cash|
+Es|
+Lo siento, solo acceptamos dinero|
+En|
+Start the car|
+Es|
+Arranca el coche|
+En|
+Stop!|
+Es|
+Para!|
+En|
+Take a chance|
+Es|
+Toma un riesgo|
+En|
+Take it outside|
+Es|
+Llevalo fuera|
+En|
+Take me downtown|
+Es|
+Llevame al centro (ciudad)|
+En|
+Take me to the Marriott Hotel|
+Es|
+Llevame al Marriott Hotel|
+En|
+Take this medicine|
+Es|
+Toma esta medicina|
+En|
+Tell him that I need to talk to him|
+Es|
+Dile que tengo que hablar con el|
+En|
+Tell me|
+Es|
+Dime|
+En|
+Thank you|
+Es|
+Gracias|
+En|
+Thank you miss|
+Es|
+Gracias senorita|
+En|
+Thank you sir|
+Es|
+Gracias senor|
+En|
+Thank you very much|
+Es|
+Muchas gracias|
+En|
+Thanks|
+Es|
+Gracias|
+En|
+Thanks for everything|
+Es|
+Gracias por todo|
+En|
+Thanks for your help|
+Es|
+Gracias por tu ayuda|
+En|
+That car is similar to my car|
+Es|
+Ese coche es parecido al mio|
+En|
+That car over there is mine|
+Es|
+El coche de alli es el mio|
+En|
+That looks great|
+Es|
+Eso queda genial|
+En|
+That looks old|
+Es|
+Eso parece viejo|
+En|
+That means friend|
+Es|
+Eso significa amigo|
+En|
+That restaurant is not expensive|
+Es|
+Ese restaurante no es caro|
+En|
+That smells bad|
+Es|
+Eso huele mal|
+En|
+That way|
+Es|
+De esa manera|
+En|
+That's a good school|
+Es|
+Eso es un buen colegio|
+En|
+That's alright|
+Es|
+Esta bien|
+En|
+That's enough|
+Es|
+Ya basta|
+En|
+That's fair|
+Es|
+Eso es justo|
+En|
+That's fine|
+Es|
+Esta bien|
+En|
+That's her book|
+Es|
+Eso es su libro|
+En|
+That's it|
+Es|
+Ya|
+En|
+That's not enough|
+Es|
+No es bastante|
+En|
+That's not fair|
+Es|
+No es justo|
+En|
+That's not right|
+Es|
+No esta bien|
+En|
+That's right|
+Es|
+Eso es correcto|
+En|
+That's too bad|
+Es|
+Que lastima|
+En|
+That's too expensive|
+Es|
+Eso es demasiado caro|
+En|
+That's too late|
+Es|
+Eso es demasiado tarde|
+En|
+That's too many|
+Es|
+Eso es demasiado|
+En|
+That's wrong|
+Es|
+Eso no esta bien|
+En|
+The accident happened at the intersection|
+Es|
+El accidente pasó en esa interseccion|
+En|
+The big one or the small one?|
+Es|
+El grande o el pequeno|
+En|
+The book is behind the table|
+Es|
+El libro esta detras de la mesa|
+En|
+The book is in front of the table|
+Es|
+El libro esta delante de la mesa|
+En|
+The book is near the table|
+Es|
+El libro esta cerca de la mesa|
+En|
+The book is next to the table|
+Es|
+El libro esta al lado de la mesa|
+En|
+The book is on the table|
+Es|
+El libro esta sobre la mesa|
+En|
+The book is on top of the table|
+Es|
+El libro esta encima de la mesa|
+En|
+The book is under the table|
+Es|
+El libro esta debajo de la mesa|
+En|
+The books are expensive|
+Es|
+Libros son caros|
+En|
+The car is fixed|
+Es|
+El coche esta arreglado|
+En|
+The cars are American|
+Es|
+Los coches son Americanos|
+En|
+The food was delicious|
+Es|
+La comida era deliciosa|
+En|
+The plane departs at 5:30PM|
+Es|
+El avion sale a las 5:30PM|
+En|
+The roads are slippery|
+Es|
+Las carreteras resbalan|
+En|
+The TV is broken|
+Es|
+La television esta rota|
+En|
+The whole day|
+Es|
+El dia entero|
+En|
+There are many people here|
+Es|
+Hay muchas personas aqui|
+En|
+There are some apples in the refrigerator|
+Es|
+Hay unas manzanas en la nevera|
+En|
+There are some books on the table|
+Es|
+Hay unos libros sobre la mesa|
+En|
+There has been a car accident|
+Es|
+Ha pasado un accidente de coches|
+En|
+There's a book under the table|
+Es|
+Hay un libro debajo de la mesa|
+En|
+There's a restaurant near here|
+Es|
+Hay un restaurante cerca de aqui|
+En|
+There's a restaurant over there, but I don't think it's very good|
+Es|
+Hay un restaurante alli, pero no creo que es muy bueno|
+En|
+There's plenty of time|
+Es|
+Hay mucho tiempo|
+En|
+These books are ours|
+Es|
+Estos libros son nuestros|
+En|
+They arrived yesterday|
+Es|
+Han llegado ayer|
+En|
+They charge 26 dollars per day|
+Es|
+Cobran 26 dolares por dia|
+En|
+They haven't met her yet|
+Es|
+Todavia no la han conocido|
+En|
+They'll be right back|
+Es|
+Volveran en seguida|
+En|
+They're planning to come next year|
+Es|
+Estan planeando para volver el año que viene|
+En|
+They're the same|
+Es|
+Son iguales|
+En|
+They're very busy|
+Es|
+Estan muy ocupados|
+En|
+They're waiting for us|
+Es|
+Nos estan esperando|
+En|
+This doesn't work|
+Es|
+Esto no funciona|
+En|
+This house is very big|
+Es|
+La casa es muy grande|
+En|
+This is Mrs. Smith|
+Es|
+Esta es la senora Smith|
+En|
+This is my mother|
+Es|
+Esta es mi madre|
+En|
+This is the first time I've been here|
+Es|
+Esta es la primera vez que estoy aqui|
+En|
+This is very difficult|
+Es|
+Esto es muy dificil|
+En|
+This is very important|
+Es|
+Esto es muy importante|
+En|
+This room is a mess|
+Es|
+Este cuarto esta desordenado|
+En|
+Those men are speaking English|
+Es|
+Esos hombres estan hablando en ingles|
+En|
+Try it|
+Es|
+Pruebalo|
+En|
+Try it on|
+Es|
+Metetelo (ropa)|
+En|
+Try to say it|
+Es|
+Intenta decirlo|
+En|
+Turn around|
+Es|
+Date la vuelta|
+En|
+Turn left|
+Es|
+Gira a la izquierda|
+En|
+Turn right|
+Es|
+Gira a la derecha|
+En|
+Very good, thanks|
+Es|
+Muy bien, gracias|
+En|
+Waiter!|
+Es|
+Camarero!|
+En|
+Waitress!|
+Es|
+Camarera!|
+En|
+We can eat Italian or Chinese food|
+Es|
+Podemos comer o comida italiana o comida china|
+En|
+We have two boys and one girl|
+Es|
+Tenemos dos ninos y una nina|
+En|
+We like it very much|
+Es|
+Nos gusta mucho|
+En|
+We'll have two glasses of water please|
+Es|
+Tendremos dos vasos de agua por favor|
+En|
+We're from California|
+Es|
+Somos de California|
+En|
+We're late|
+Es|
+Estamos retrasados|
+En|
+Were there any problems?|
+Es|
+Habian algunos problemas?|
+En|
+Were you at the library last night?|
+Es|
+Estabas en la biblioteca ayer por la noche?|
+En|
+What are you doing?|
+Es|
+Que estas haciendo?|
+En|
+What are you going to do tonight?|
+Es|
+Que vas a hacer esta noche?|
+En|
+What are you going to have?|
+Es|
+Que vas a tomar?|
+En|
+What are you thinking about?|
+Es|
+En que estas pensando?|
+En|
+What are you two talking about?|
+Es|
+De que estais hablando los dos?|
+En|
+What are your hobbies?|
+Es|
+Que son tus hobbys?|
+En|
+What can I do for you?|
+Es|
+Que puedo hacer para ti?|
+En|
+What color is that car?|
+Es|
+Que color es ese coche?|
+En|
+What day are they coming over?|
+Es|
+Que dia van a venir aqui?|
+En|
+What day of the week is it?|
+Es|
+Que dia de la semana es?|
+En|
+What did you do last night?|
+Es|
+Que hiciste anoche?|
+En|
+What did you do yesterday?|
+Es|
+Que hiciste ayer?|
+En|
+What did you think?|
+Es|
+Que pensaste?|
+En|
+What do people usually do in the summer in Los Angeles?|
+Es|
+Que hacen las personas normalmente durante el verano en Los Angeles?|
+En|
+What do they study?|
+Es|
+Que estudian?|
+En|
+What do you do for work?|
+Es|
+En que trabajas?|
+En|
+What do you have?|
+Es|
+Que tienes?|
+En|
+What do you recommend?|
+Es|
+Que recomiendas?|
+En|
+What do you study?|
+Es|
+Que estudias?|
+En|
+What do you think of these shoes?|
+Es|
+Que piensas de estas zapatillas?|
+En|
+What do you think?|
+Es|
+Que piensas?|
+En|
+What do you want to buy?|
+Es|
+Que quieres comprar?|
+En|
+What do you want to do?|
+Es|
+Que quieres hacer?|
+En|
+What do your parents do for work?|
+Es|
+Que hacer tus padres para trabajo?|
+En|
+What does he do for work?|
+Es|
+Que hace para trabajar?|
+En|
+What does this mean?|
+Es|
+Que significa esto?|
+En|
+What does this say?|
+Es|
+Que dice esto?|
+En|
+What does this word mean?|
+Es|
+Que significa esta palabra?|
+En|
+What does your father do for work?|
+Es|
+Que hace tu padre para trabajo?|
+En|
+What happened?|
+Es|
+Que pasó?|
+En|
+What is it?|
+Es|
+Que es?|
+En|
+What is that?|
+Es|
+Que es eso?|
+En|
+What is the area code?|
+Es|
+Cual es el prefijo?|
+En|
+What is today's date?|
+Es|
+Cual es la fecha de hoy?|
+En|
+What kind of music do you like?|
+Es|
+Que tipo de musica te gusta?|
+En|
+What school did you go to?|
+Es|
+A que escuela fuiste?|
+En|
+What should I wear?|
+Es|
+Que llevo (ropa)?|
+En|
+What size?|
+Es|
+Que tamaño?|
+En|
+What time are they arriving?|
+Es|
+A que hora van a llegar?|
+En|
+What time are you going to the bus station?|
+Es|
+A que hora vas a ir a la estacion de autobuses?|
+En|
+What time did you get up?|
+Es|
+A que hora te levantaste?|
+En|
+What time did you go to sleep?|
+Es|
+A que hora te fuiste a dormir?|
+En|
+What time did you wake up?|
+Es|
+A que hora te despertaste?|
+En|
+What time do you go to work everyday?|
+Es|
+A que hora vas al trabajo todos los dias?|
+En|
+What time do you think you'll arrive?|
+Es|
+A que hora crees que vas a llegar?|
+En|
+What time does it start?|
+Es|
+A que hora empieza?|
+En|
+What time does the movie start?|
+Es|
+A que hora empieza la pelicula?|
+En|
+What time does the store open?|
+Es|
+A que hora abre la tienda?|
+En|
+What time is check out?|
+Es|
+A que ora tenemos que dejar el hotel?|
+En|
+What time is it?|
+Es|
+Que hora es?|
+En|
+What will the weather be like tomorrow?|
+Es|
+Como va a estar el tiempo manana?|
+En|
+What would you like to drink?|
+Es|
+Que quieres de beber?|
+En|
+What would you like to eat?|
+Es|
+Que quieres de comer?|
+En|
+What's in it?|
+Es|
+Que hay dentro?|
+En|
+What's the address?|
+Es|
+Cual es la direccion?|
+En|
+What's the charge per night? (Hotel)|
+Es|
+Cuanto cuesta cada noche?|
+En|
+What's the date?|
+Es|
+Cual es la fecha?|
+En|
+What's the exchange rate for dollars?|
+Es|
+Cual es la tasa de cambio para dolares?|
+En|
+What's the exchange rate?|
+Es|
+Cual es la tasa de cambio?|
+En|
+What's the matter?|
+Es|
+Que pasa?|
+En|
+What's the name of the company you work for?|
+Es|
+Como se llama la empresa en donde trabajas?|
+En|
+What's the phone number?|
+Es|
+Cual es el numero de telefono?|
+En|
+What's the room rate?|
+Es|
+Cuanto cuesta el cuarto?|
+En|
+What's the temperature?|
+Es|
+Cual es la temperatura?|
+En|
+What's this?|
+Es|
+Que es esto?|
+En|
+What's today's date?|
+Es|
+Cual es la fecha de hoy?|
+En|
+What's up?|
+Es|
+Que tal?|
+En|
+What's wrong?|
+Es|
+Que pasa (de malo)?|
+En|
+Yes|
+Es|
+Si|
+En|
+Yes, really|
+Es|
+Si, de verdad|
+En|
+You have a very nice car|
+Es|
+Tienes un coche muy bueno|
+En|
+You look like my sister|
+Es|
+Te pareces a mi hermana|
+En|
+You look tired|
+Es|
+Pareces estar cansado|
+En|
+You speak English very well|
+Es|
+Hablas ingles muy bien|
+En|
+You're beautiful|
+Es|
+Eres bonita|
+En|
+You're right|
+Es|
+Tienes razon|
+En|
+You're smarter than him|
+Es|
+Eres mas listo que el|
+En|
+You're very nice|
+Es|
+Eres muy simpatico|
+En|
+You're very smart|
+Es|
+Eres muy listo|
+En|
+You're welcome|
+Es|
+De nada|
+En|
+Your children are very well behaved|
+Es|
+Tus hijos se comportan muy bien|
+En|
+Your daughter|
+Es|
+Tu hija|
+En|
+Your house is very nice|
+Es|
+Tu casa es muy bonita|
+En|
+Your things are all here|
+Es|
+Todas tus cosas estan aqui|

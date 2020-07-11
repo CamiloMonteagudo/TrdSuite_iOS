@@ -24,6 +24,7 @@
   +(void) SetViewParameters;
 
   +(void)setView:(PurchasesView*) view;
+  +(void) Remove;
 
 @end
 

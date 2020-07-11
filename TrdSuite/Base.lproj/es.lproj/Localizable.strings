@@ -43,6 +43,7 @@
 
 "NoInternet" = "Imposible conectarse a Internet";
 "NoAppStore" = "Imposible conectarse a App Store";
+"Connect"    = "Conectar";
 "lbClose"    = "OK";
 "Error"      = "Error";
 "Restore"    = "Restaurar las compras";

@@ -18,6 +18,17 @@
 		9B05078A1C2A18EB00887782 /* ShowInWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0507811C2A18EB00887782 /* ShowInWebView.m */; };
 		9B05078B1C2A18EB00887782 /* ShowInWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0507811C2A18EB00887782 /* ShowInWebView.m */; };
 		9B05078C1C2A18EB00887782 /* ShowInWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0507811C2A18EB00887782 /* ShowInWebView.m */; };
+		9BEA56581C430DB000A24654 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BEA56561C430DB000A24654 /* InfoPlist.strings */; };
+		9BEA565C1C430E3000A24654 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BEA56561C430DB000A24654 /* InfoPlist.strings */; };
+		9BEA565D1C430E3000A24654 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BEA56561C430DB000A24654 /* InfoPlist.strings */; };
+		9BEA565E1C430E3100A24654 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BEA56561C430DB000A24654 /* InfoPlist.strings */; };
+		9BEA565F1C430E3100A24654 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BEA56561C430DB000A24654 /* InfoPlist.strings */; };
+		9BEA56601C430E3200A24654 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BEA56561C430DB000A24654 /* InfoPlist.strings */; };
+		9BEA56611C430E3300A24654 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BEA56561C430DB000A24654 /* InfoPlist.strings */; };
+		9BEA56621C430E3300A24654 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BEA56561C430DB000A24654 /* InfoPlist.strings */; };
+		9BEA56631C430E3400A24654 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BEA56561C430DB000A24654 /* InfoPlist.strings */; };
+		9BEA56641C430E3500A24654 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BEA56561C430DB000A24654 /* InfoPlist.strings */; };
+		9BEA56651C430E3500A24654 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BEA56561C430DB000A24654 /* InfoPlist.strings */; };
 		F00C80911B7E745C00946322 /* PanelRigthView.m in Sources */ = {isa = PBXBuildFile; fileRef = F00C80901B7E745C00946322 /* PanelRigthView.m */; };
 		F00D9EF91B32887D00B8B21D /* ConjDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = F00D9EF81B32887D00B8B21D /* ConjDataView.m */; };
 		F017F4091B21381600650DFF /* BtnMeans2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F017F4071B21381600650DFF /* BtnMeans2@2x.png */; };
@@ -3488,6 +3499,10 @@
 /* Begin PBXFileReference section */
 		9B0507801C2A18EB00887782 /* ShowInWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowInWebView.h; sourceTree = "<group>"; };
 		9B0507811C2A18EB00887782 /* ShowInWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowInWebView.m; sourceTree = "<group>"; };
+		9BEA56571C430DB000A24654 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = InfoPlist.strings; sourceTree = "<group>"; };
+		9BEA56591C430DE700A24654 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9BEA565A1C430DFC00A24654 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9BEA565B1C430E0F00A24654 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F00C808F1B7E745C00946322 /* PanelRigthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelRigthView.h; sourceTree = "<group>"; };
 		F00C80901B7E745C00946322 /* PanelRigthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelRigthView.m; sourceTree = "<group>"; };
 		F00D9EF71B32887D00B8B21D /* ConjDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConjDataView.h; sourceTree = "<group>"; };
@@ -4284,6 +4299,7 @@
 		F0DCAEE61B1B8E4A0081D11F /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
+				9BEA56561C430DB000A24654 /* InfoPlist.strings */,
 				F0DCAEE71B1B8E4A0081D11F /* Localizable.strings */,
 			);
 			path = Base.lproj;
@@ -5190,6 +5206,7 @@
 				F0DB14811AF5946E004A872F /* BtnDict2@2x.png in Resources */,
 				F0FDD63D1B15166C0035CAB4 /* It2EsCT.dcx in Resources */,
 				F0FDD5DF1B15166C0035CAB4 /* Es2EnCC.dcx in Resources */,
+				9BEA56581C430DB000A24654 /* InfoPlist.strings in Resources */,
 				F0FDD5BE1B15166C0035CAB4 /* En2Fr.dax in Resources */,
 				F0FDD5AE1B15166C0035CAB4 /* CVDataDe.dat in Resources */,
 				F0FDD6311B15166C0035CAB4 /* It2EnCCD.dcx in Resources */,
@@ -5429,6 +5446,7 @@
 				F0E382AA1BCDC81A002AF2B0 /* BtnDict2@2x.png in Resources */,
 				F0E382AB1BCDC81A002AF2B0 /* It2EsCT.dcx in Resources */,
 				F0E382AC1BCDC81A002AF2B0 /* Es2EnCC.dcx in Resources */,
+				9BEA565C1C430E3000A24654 /* InfoPlist.strings in Resources */,
 				F0E382AD1BCDC81A002AF2B0 /* En2Fr.dax in Resources */,
 				F0E382AE1BCDC81A002AF2B0 /* CVDataDe.dat in Resources */,
 				F0E382AF1BCDC81A002AF2B0 /* It2EnCCD.dcx in Resources */,
@@ -5668,6 +5686,7 @@
 				F0E383ED1BCDC832002AF2B0 /* BtnDict2@2x.png in Resources */,
 				F0E383EE1BCDC832002AF2B0 /* It2EsCT.dcx in Resources */,
 				F0E383EF1BCDC832002AF2B0 /* Es2EnCC.dcx in Resources */,
+				9BEA565D1C430E3000A24654 /* InfoPlist.strings in Resources */,
 				F0E383F01BCDC832002AF2B0 /* En2Fr.dax in Resources */,
 				F0E383F11BCDC832002AF2B0 /* CVDataDe.dat in Resources */,
 				F0E383F21BCDC832002AF2B0 /* It2EnCCD.dcx in Resources */,
@@ -5907,6 +5926,7 @@
 				F0E385311BCDC849002AF2B0 /* It2EsCT.dcx in Resources */,
 				F0E385321BCDC849002AF2B0 /* Es2EnCC.dcx in Resources */,
 				F0E385331BCDC849002AF2B0 /* En2Fr.dax in Resources */,
+				9BEA565E1C430E3100A24654 /* InfoPlist.strings in Resources */,
 				F0E385341BCDC849002AF2B0 /* CVDataDe.dat in Resources */,
 				F0E385351BCDC849002AF2B0 /* It2EnCCD.dcx in Resources */,
 				F0E385361BCDC849002AF2B0 /* FlagEn50@2x.png in Resources */,
@@ -6146,6 +6166,7 @@
 				F0E386731BCDC859002AF2B0 /* BtnDict2@2x.png in Resources */,
 				F0E386741BCDC859002AF2B0 /* It2EsCT.dcx in Resources */,
 				F0E386751BCDC859002AF2B0 /* Es2EnCC.dcx in Resources */,
+				9BEA565F1C430E3100A24654 /* InfoPlist.strings in Resources */,
 				F0E386761BCDC859002AF2B0 /* En2Fr.dax in Resources */,
 				F0E386771BCDC859002AF2B0 /* CVDataDe.dat in Resources */,
 				F0E386781BCDC859002AF2B0 /* It2EnCCD.dcx in Resources */,
@@ -6385,6 +6406,7 @@
 				F0E387B71BCDC867002AF2B0 /* It2EsCT.dcx in Resources */,
 				F0E387B81BCDC867002AF2B0 /* Es2EnCC.dcx in Resources */,
 				F0E387B91BCDC867002AF2B0 /* En2Fr.dax in Resources */,
+				9BEA56601C430E3200A24654 /* InfoPlist.strings in Resources */,
 				F0E387BA1BCDC867002AF2B0 /* CVDataDe.dat in Resources */,
 				F0E387BB1BCDC867002AF2B0 /* It2EnCCD.dcx in Resources */,
 				F0E387BC1BCDC867002AF2B0 /* FlagEn50@2x.png in Resources */,
@@ -6624,6 +6646,7 @@
 				F0E388F91BCDC878002AF2B0 /* BtnDict2@2x.png in Resources */,
 				F0E388FA1BCDC878002AF2B0 /* It2EsCT.dcx in Resources */,
 				F0E388FB1BCDC878002AF2B0 /* Es2EnCC.dcx in Resources */,
+				9BEA56611C430E3300A24654 /* InfoPlist.strings in Resources */,
 				F0E388FC1BCDC878002AF2B0 /* En2Fr.dax in Resources */,
 				F0E388FD1BCDC878002AF2B0 /* CVDataDe.dat in Resources */,
 				F0E388FE1BCDC878002AF2B0 /* It2EnCCD.dcx in Resources */,
@@ -6863,6 +6886,7 @@
 				F0E38A3C1BCDC88B002AF2B0 /* BtnDict2@2x.png in Resources */,
 				F0E38A3D1BCDC88B002AF2B0 /* It2EsCT.dcx in Resources */,
 				F0E38A3E1BCDC88B002AF2B0 /* Es2EnCC.dcx in Resources */,
+				9BEA56621C430E3300A24654 /* InfoPlist.strings in Resources */,
 				F0E38A3F1BCDC88B002AF2B0 /* En2Fr.dax in Resources */,
 				F0E38A401BCDC88B002AF2B0 /* CVDataDe.dat in Resources */,
 				F0E38A411BCDC88B002AF2B0 /* It2EnCCD.dcx in Resources */,
@@ -7102,6 +7126,7 @@
 				F0E38B7F1BCDC89C002AF2B0 /* BtnDict2@2x.png in Resources */,
 				F0E38B801BCDC89C002AF2B0 /* It2EsCT.dcx in Resources */,
 				F0E38B811BCDC89C002AF2B0 /* Es2EnCC.dcx in Resources */,
+				9BEA56631C430E3400A24654 /* InfoPlist.strings in Resources */,
 				F0E38B821BCDC89C002AF2B0 /* En2Fr.dax in Resources */,
 				F0E38B831BCDC89C002AF2B0 /* CVDataDe.dat in Resources */,
 				F0E38B841BCDC89C002AF2B0 /* It2EnCCD.dcx in Resources */,
@@ -7341,6 +7366,7 @@
 				F0E38CC31BCDC8A9002AF2B0 /* It2EsCT.dcx in Resources */,
 				F0E38CC41BCDC8A9002AF2B0 /* Es2EnCC.dcx in Resources */,
 				F0E38CC51BCDC8A9002AF2B0 /* En2Fr.dax in Resources */,
+				9BEA56641C430E3500A24654 /* InfoPlist.strings in Resources */,
 				F0E38CC61BCDC8A9002AF2B0 /* CVDataDe.dat in Resources */,
 				F0E38CC71BCDC8A9002AF2B0 /* It2EnCCD.dcx in Resources */,
 				F0E38CC81BCDC8A9002AF2B0 /* FlagEn50@2x.png in Resources */,
@@ -7580,6 +7606,7 @@
 				F0E38E051BCDC8B8002AF2B0 /* BtnDict2@2x.png in Resources */,
 				F0E38E061BCDC8B8002AF2B0 /* It2EsCT.dcx in Resources */,
 				F0E38E071BCDC8B8002AF2B0 /* Es2EnCC.dcx in Resources */,
+				9BEA56651C430E3500A24654 /* InfoPlist.strings in Resources */,
 				F0E38E081BCDC8B8002AF2B0 /* En2Fr.dax in Resources */,
 				F0E38E091BCDC8B8002AF2B0 /* CVDataDe.dat in Resources */,
 				F0E38E0A1BCDC8B8002AF2B0 /* It2EnCCD.dcx in Resources */,
@@ -8614,6 +8641,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		9BEA56561C430DB000A24654 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BEA56571C430DB000A24654 /* Base */,
+				9BEA56591C430DE700A24654 /* es */,
+				9BEA565A1C430DFC00A24654 /* fr */,
+				9BEA565B1C430E0F00A24654 /* it */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		F0AC433D1ADF51E200A5089F /* Main_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -8726,7 +8764,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
+				PROVISIONING_PROFILE = "e11faf08-9edd-43e3-87f8-34115ad31951";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8743,7 +8781,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
+				PROVISIONING_PROFILE = "479df3a4-c2f0-4353-a449-c2cd268deddd";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8763,7 +8801,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
+				PROVISIONING_PROFILE = "a29421f5-c042-4483-a42f-4002079507f5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8779,7 +8817,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
+				PROVISIONING_PROFILE = "a5afe81e-3875-4a4c-a1fb-ba88c3e5beba";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8799,7 +8837,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
+				PROVISIONING_PROFILE = "abcb5d12-60ec-4038-ad65-1515ea008d37";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8815,7 +8853,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
+				PROVISIONING_PROFILE = "9d85d597-c7cf-408a-9a32-30ec46b00931";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8835,7 +8873,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
+				PROVISIONING_PROFILE = "b6dc37cc-ac92-4191-a72d-a711626b5974";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8851,7 +8889,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
+				PROVISIONING_PROFILE = "32773f9e-e537-44b4-97e3-ce65b30e3866";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8871,7 +8909,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
+				PROVISIONING_PROFILE = "45d2e13f-2338-4bea-825e-4e2f5cdea5dd";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8887,7 +8925,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
+				PROVISIONING_PROFILE = "709e5496-a20b-4ba1-bdec-cfb134b2d2e3";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8907,7 +8945,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
+				PROVISIONING_PROFILE = "cb1ef44e-fd6c-49fa-b195-4a98549ad92f";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8923,7 +8961,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
+				PROVISIONING_PROFILE = "9f32bec8-216f-4448-b790-ded0cd6e5aa6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8943,7 +8981,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
+				PROVISIONING_PROFILE = "356d9f6b-e16d-47db-b495-46790757cf49";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8959,7 +8997,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
+				PROVISIONING_PROFILE = "10024880-cc3b-4524-a928-4d62a27a2200";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -8979,7 +9017,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "28dd082b-3e1d-4437-a2d5-e6fadb3a6ab0";
+				PROVISIONING_PROFILE = "dc8a8d4d-7cad-4675-bcde-4859e71ca13d";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -8995,7 +9033,7 @@
 				INFOPLIST_FILE = "TrdSuite/$(TARGET_NAME)-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bigxsoft.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "18df5015-b944-4d19-aa1f-830c1d4aa81a";
+				PROVISIONING_PROFILE = "3e3963c4-4a64-49d0-9df8-463a75645f92";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

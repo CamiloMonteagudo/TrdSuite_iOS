@@ -33,7 +33,7 @@ struct PurchItem
   };
 
 //=========================================================================================================================================
-// Definición de todos los items que se pueden compra
+// Definición de todos los items que se pueden comprar
 static PurchItem Items[] =  { {@"", 1, 0, @"", @"", FALSE, nil, FALSE },        // EnEs
                               {@"", 1, 2, @"", @"", FALSE, nil, FALSE },        // EnIt
                               {@"", 1, 4, @"", @"", FALSE, nil, FALSE },        // EnFr
@@ -176,6 +176,22 @@ NSSet* LstProds = [NSSet setWithObjects:ITEM_EnEs,ITEM_EnIt,ITEM_EsIt,nil];
 NSSet* LstProds = [NSSet setWithObjects:nil];
 #endif
 
+//---------------------------------------------------------------------------------------------------------------------------------------------
+#ifdef DEBUG
+void DebugMsg(NSString* msg)
+  {
+  UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Debug Info"
+                                                  message: msg
+                                                 delegate: nil
+                                        cancelButtonTitle: @"Cerrar"
+                                        otherButtonTitles: nil];
+  [alert show];
+//  NSLog(@"%@",msg);
+  }
+#endif
+//---------------------------------------------------------------------------------------------------------------------------------------------
+
+
 //=========================================================================================================================================================
 @implementation Purchases
 
@@ -190,6 +206,14 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   [[SKPaymentQueue defaultQueue] addTransactionObserver:_Purchases];
   
   [Purchases RequestProdInfo];
+  }
+
+//---------------------------------------------------------------------------------------------------------------------------------------------
+// Quita el objeto que espera por las compras
++(void) Remove
+  {
+  if( _Purchases != nil )
+    [[SKPaymentQueue defaultQueue] removeTransactionObserver:_Purchases];
   }
 
 //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -210,18 +234,52 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
     [request setDelegate:_Purchases];
   
     [request start];
+    #ifdef DEBUG
+      NSString* Info = @"Solicitud Información de productos";
+  
+      for( NSString* ProdId in LstProds )
+        {
+        Info = [Info stringByAppendingString:@"\r\n"];
+        Info = [Info stringByAppendingString:ProdId ];
+        }
+  
+      DebugMsg( Info );
+    #endif
+  
   #else
     int tm = 3 + rand()%27;
     [NSTimer scheduledTimerWithTimeInterval:tm target:self selector:@selector(productsRequest_:) userInfo:nil repeats:NO];
   #endif
   
   RequestStatus = REQUEST_INPROCESS;
+  
+  if( ShowView) [ShowView RefreshItems];
   }
 
 //---------------------------------------------------------------------------------------------------------------------------------------------
 // Retorno desde AppStore de la información de los productos solicitados
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response
   {
+  #ifdef DEBUG
+    NSString* Info = [NSString stringWithFormat:@"Respuesta a solicitud de productos\r\n%d productos validos %d productos invalidos", (int)response.products.count, (int)response.invalidProductIdentifiers.count];
+
+    Info = [Info stringByAppendingString:@"\r\nValidos"];
+    for( SKProduct* Prod in response.products )
+      {
+      Info = [Info stringByAppendingString:@"\r\n"];
+      Info = [Info stringByAppendingString:Prod.productIdentifier];
+      }
+  
+    Info = [Info stringByAppendingString:@"\r\nNO VALIDOS"];
+    for( NSString* Prod in response.invalidProductIdentifiers )
+      {
+      Info = [Info stringByAppendingString:@"\r\n"];
+      Info = [Info stringByAppendingString:Prod];
+      }
+  
+    DebugMsg( Info );
+  #endif
+  
   for( SKProduct* Prod in response.products )
     {
     int index = [Purchases IndexOfProductId: Prod.productIdentifier];
@@ -239,8 +297,15 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
 // Llamada cuando se produce un error en la solicitud de información de los productos
 -(void)request:(SKRequest *)request didFailWithError:(NSError *)error
   {
+  #ifdef DEBUG
+    NSString* Info = [NSString stringWithFormat:@"Fallo la solicitud de información\r\n%@", error.localizedDescription];
+    DebugMsg( Info );
+  #endif
+  
   RequestStatus = REQUEST_NOSTART;
   [request cancel];
+  
+  if( ShowView) [ShowView RefreshItems];
   }
 
 #ifdef SIMULATE
@@ -277,7 +342,7 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   }
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
-// Obtiene con el indice del items en el arreglo el identificador del producto
+// Obtiene el identificador del producto que tiene indice 'Idx'
 +(NSString*) ProductIdOfIndex:(int) idx
   {
   static NSString* ListIds[] = { ITEM_EnEs, ITEM_EnIt, ITEM_EnFr, ITEM_EsIt, ITEM_EsFr, ITEM_ItFr};
@@ -311,6 +376,11 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   
   item.Precio = [numberFormatter stringFromNumber:price];
   item.Prod   = prod;
+
+  #ifdef DEBUG
+    NSString* Info = [NSString stringWithFormat:@"SetItem idx=%d Precio=%@ Title='%@' Desc='%@'", idx, item.Precio, prod.localizedTitle, prod.localizedDescription];
+    DebugMsg( Info );
+  #endif
   }
 
 //---------------------------------------------------------------------------------------------------------------------------------------------
@@ -358,22 +428,25 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
     int tm = 3 + rand()%27;
     [NSTimer scheduledTimerWithTimeInterval:tm target:self selector:@selector(Payment:) userInfo:ProdId repeats:NO];
   #else
-    SKProduct* Prod = Items[idx].Prod;
+    SKProduct* Prod = Items[idx].Prod;            // Obtiene informacion del producto con indice 'idx'
   
-    if( Prod == nil )
+    if( Prod == nil )                             // No existe información del producto
       {
-      [Purchases AlertMsg: @"NoAppStore"];
+      [Purchases AlertMsg: @"NoAppStore"];        // Pone cartel que no se ha conectado
+      
+      RequestStatus = REQUEST_NOSTART;            // Reinicia el proceso, de solicitud
+      [Purchases RequestProdInfo];                // Solicita información sobre los productos
       return FALSE;
       }
     
-    SKPayment* PayRequest = [SKPayment paymentWithProduct:Prod];
+    SKPayment* PayRequest = [SKPayment paymentWithProduct:Prod];  // Crea un pago con informacion del producto
   
-    [[SKPaymentQueue defaultQueue] addPayment:PayRequest];
+    [[SKPaymentQueue defaultQueue] addPayment:PayRequest];        // Envia el pago a App Store
   #endif
   
-  Items[idx].InProcess = TRUE;
+  Items[idx].InProcess = TRUE;                    // Pone el estado del item (en proceso de compra)
     
-  if( ShowView) [ShowView RefreshItems];                                                // Refresca la lista de productos
+  if( ShowView) [ShowView RefreshItems];          // Refresca la lista de productos (para poner cursor de espera)
   
   return TRUE;
   }
@@ -419,9 +492,9 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   
   SKMutablePayment *myPayment = [SKMutablePayment paymentWithProductIdentifier: ProdId];
   
-  [[SKPaymentQueue defaultQueue] addPayment:myPayment];
+//  [[SKPaymentQueue defaultQueue] addPayment:myPayment];
   
-//  [Purchases ProcessPayment:myPayment ];
+  [Purchases ProcessPayment:myPayment ];
     
   if( ShowView) [ShowView RefreshItems];                                                // Refresca la lista de productos
   }
@@ -816,7 +889,12 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   PurchItem &item = Items[iRow];
   
   if( item.NoInst )
-    [Purchases PurchaseProdIndex:iRow];
+    {
+    if( RequestStatus == REQUEST_ENDED && item.Prod != nil )
+      [Purchases PurchaseProdIndex:iRow];
+    else
+      [Purchases RequestProdInfo];                                // Solicita la informacion sobre los items de compra
+    }
   }
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -866,49 +944,65 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Crea la fila con indice 'iRow' en la lista de compras
 - (id)initWithFrame:(CGRect)frame AtIndex:(int)iRow
   {
-  self = [super initWithFrame:frame];
+  self = [super initWithFrame:frame];                               // Crea la vista
   if( !self ) return nil;
   
-  self.backgroundColor = ColCellBck;
+  self.backgroundColor = ColCellBck;                                // Le pone el color de fondo
   
-  float hRow = self.frame.size.height;
+  float hRow = self.frame.size.height;                              // Obtiene la altura de la fila
   
-  if( iRow >= N_PURCH )
+  if( iRow >= N_PURCH )                                             // Si sobrepasa el número de compras
     {
-    [self FillRestoreRow];
-    return self;
+    [self FillRestoreRow];                                          // Crea una fila para restaurar las compras
+    return self;                                                    // Termina
     }
     
-  float xlb = SEP_BRD;
-  float ylb = 0;
+  float xlb = SEP_BRD;                                              // Posición en x para primera subvista
+  float ylb = 0;                                                    // Posición en y para primera subvista
   
-  PurchItem &data = Items[iRow];
+  PurchItem &data = Items[iRow];                                    // Obtiene los datos para item de compra
 
-  lbDir1 = [self LabelWithText:data.strDir1 X:xlb Y:ylb W:MaxDirWidth H:LineHeight];
+  lbDir1 = [self LabelWithText:data.strDir1 X:xlb Y:ylb W:MaxDirWidth H:LineHeight];  // Pone primer idioma
   
   ylb += ((3.0*LineHeight) / 4.0);
   
-  lbDir2 = [self LabelWithText:data.strDir2 X:xlb Y:ylb W:MaxDirWidth H:LineHeight];
+  lbDir2 = [self LabelWithText:data.strDir2 X:xlb Y:ylb W:MaxDirWidth H:LineHeight];  // Pone segundo idioma
   
-  xlb += MaxDirWidth + SEP_BRD;
+  xlb += MaxDirWidth;                                               // Avanza posición en x para proxima subvista
   
-  if( data.NoInst )
+  if( data.NoInst )                                                 // No esta instalado el par de idiomas
     {
     ylb = 0;
   
     NSString* sPrice = data.Precio;
-    if( data.Precio.length==0 ) sPrice = @"$$.$$";
-  
-    lbPrecio = [self LabelWithText:sPrice X:xlb Y:ylb W:PriceWidth H:hRow];
-    
-    xlb += BTN_W + SEP_BRD;
+    if( data.Precio.length!=0 )                                     // Ya se obtubo la informacion del producto
+      {
+      xlb += SEP_BRD;
+      lbPrecio = [self LabelWithText:sPrice X:xlb Y:ylb W:PriceWidth H:hRow];  // Pone el precio
+      
+      ylb  = (hRow-BTN_H)/2;
+      xlb += PriceWidth + SEP_BRD;
+      [self BuyIconX:xlb Y:ylb Index:iRow];                         // Pone icono de comprar (o espera)
+      }
+    else                                                            // No se han obtenido los datos del producto
+      {
+      CGRect frm = CGRectMake( xlb, 0, frame.size.width-xlb, hRow );
+      
+      if( RequestStatus == REQUEST_INPROCESS )                      // Si esta en progreso la obtencion de los datos
+        [self ShowWaitInFrame:frm];                                 // Pone cursor de espera
+      else                                                          // No se esta esperando por la información
+        [self LbConectInFrame:frm];                                 // Pone cartel de 'Conectar'
+      }
     }
-
-  ylb  = (hRow-BTN_H)/2;
-  
-  [self BuyIconX:xlb Y:ylb W:BTN_W H:BTN_H Index:iRow];
+  else                                                              // El producto esta comprado
+    {
+    ylb = (hRow-BTN_H)/2;                                           // Centra en la vertical
+    xlb = xlb + (frame.size.width - xlb - BTN_W) / 2.0 ;            // Centra en el espacio restante
+    [self BuyIconX:xlb Y:ylb Index:iRow];                           // Dibuja el icono de comprado
+    }
   
   return self;
   }
@@ -963,23 +1057,36 @@ NSSet* LstProds = [NSSet setWithObjects:nil];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Crea los labes para el precio y las direcciones de traducción
+-(void) LbConectInFrame:(CGRect) frame
+  {
+  UILabel* lb = [[UILabel alloc] initWithFrame: frame];
+  
+  lb.font = fontBuyItem;
+  lb.textColor = ColTxtBtns;
+  lb.text = NSLocalizedString(@"Connect", nil);
+  lb.textAlignment = NSTextAlignmentCenter;
+  
+  [self addSubview:lb];
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Crea el icono que indica si el item esta comprado o no
--(void) BuyIconX:(float)x Y:(float)y W:(float)w H:(float)h Index:(int)idx
+-(void) BuyIconX:(float)x Y:(float)y Index:(int)idx
   {
   PurchItem &data = Items[idx];
   
-  CGRect rc = CGRectMake( x, y, w, h);
- 
-  if( !data.InProcess )
+  CGRect rc = CGRectMake( x, y, BTN_W, BTN_H);        // Marco para dibujar el icono
+  if( data.NoInst && data.InProcess )                 // El producto esta en proceso de compra
     {
-    UIImageView* img = [[UIImageView alloc] initWithFrame:rc];
-    
-    img.image = data.NoInst? imgBuyItem : imgBuyOk;
-    
-    [self addSubview:img];
+    [self ShowWaitInFrame:rc];                        // Pone cursor de espera
+    return;                                           // Termina
     }
-  else
-    [self ShowWaitInFrame:rc];
+  
+  UIImageView* img = [[UIImageView alloc] initWithFrame:rc];
+  
+  img.image = data.NoInst? imgBuyItem : imgBuyOk;     // Icono de comprado o por comprar según el caso
+  [self addSubview:img];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------

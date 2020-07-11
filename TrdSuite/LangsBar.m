@@ -10,6 +10,7 @@
 #import "AppData.h"
 #import "PanelRigthView.h"
 #import "ColAndFont.h"
+#import "PurchasesView.h"
 
 #define INI_SEP    5
 #define PANEL_MAX  300
@@ -67,8 +68,10 @@
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Crea una barra para la seleccon de los idiomas, a todo lo ancho de la vista 'view' a partir de 'yPos' en la vertical
-- (id)initWithView:(UIView*) view
+- (id)initWithView:(UIView*) view Trd:(BOOL) trd
   {
+  _Trd = trd;
+  
   CGRect rc = view.frame;
   
   CGRect frame = CGRectMake(0, 0, rc.size.width, BTN_H );        // Determina el marco que ocupará la barra
@@ -96,8 +99,8 @@
 // Inicializa los datos especifico de la barra de idiomas, una ves creada la vista
 - (void) initData
   {
-  ItemIDs  = [NSMutableArray new];                                // Arreglo vacio para los iconos de los items adicionales
-  BtnItems = [NSMutableArray new];                                // Arreglo vacio para los botones adicionales
+  ItemIDs  = [NSMutableArray new];                                  // Arreglo vacio para los iconos de los items adicionales
+  BtnItems = [NSMutableArray new];                                  // Arreglo vacio para los botones adicionales
   
   self.autoresizingMask = UIViewAutoresizingFlexibleWidth;          // Hace que se redimensione en la horizontal con la vista que la contiene
   
@@ -108,6 +111,20 @@
   [self addGestureRecognizer:gesture];
   
   self.SelLng =  ( _Trd )? LGDes : LGSrc;                           // Establece el idioma inicial
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Refresca el contenido de la vista cuando cambia el tamaño de las letras o los idiomas instalados
+-(void) RefreshView
+  {
+  for( int i=0; i<LGCount; ++i )
+    {
+    UIButton* btn = Btns[i];
+    btn.titleLabel.font = fontTxtBtns;
+    }
+
+  szTitleLang = LGNameSz(_SelLng);
+  [self RefreshLangsButtons];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -153,6 +170,22 @@
   [self setNeedsLayout];
   }
 
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Se llama cuando se toca una de la bandera que no esta activa
+- (void)OnPurchaseLang:(id)sender
+  {
+  HideKeyBoard();                                                                   // Se oculta el teclado si esta desplegado
+  
+  int src, des;
+  int Lng = (int)((UIButton*)sender).tag-100;                                  // Determina el idioma que representa el botón oprimido
+  
+  if( _Trd ) { src=LGSrc;  des=Lng;   }
+  else       { src=Lng;    des=LGDes; }
+  
+  PurchasesScreen* PutcView = [[PurchasesScreen alloc] initWithFromView:self ];
+  [PutcView SelPurchasesSrc:src Des:des];
+  }
+  
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Se llama cuando se toca una de la bandera que definen los idiomas
 - (void)OnSelLang:(id)sender
@@ -375,77 +408,94 @@
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Crea los botones de idiomas y las vistas realacionadas al iniciar la barra de idiomas
+// Crea los botones de idiomas y las vistas relacionadas al iniciar la barra de idiomas
 - (void) CreateLangsButtons
   {
-  CGRect frame = self.bounds;
-  frame.size.width -= 60;
-  wPanel = frame.size.width;
+  CGRect frame = self.bounds;                                           // Obtiene el espacio disponible
+  frame.size.width -= 60;                                               // Deja espacio para el botón del menú de la derecha
+  wPanel = frame.size.width;                                            // Pone el ancho del panel de idiomas
   
-  LGPanel = [[UIView alloc] initWithFrame:frame  ];
-  LGPanel.clipsToBounds = TRUE;
+  LGPanel = [[UIView alloc] initWithFrame:frame  ];                     // Crea el panel para idiomas
+  LGPanel.clipsToBounds = TRUE;                                         // Bandera para que oculte todo lo que quede por fuera
   
-  [self addSubview:LGPanel];
+  [self addSubview:LGPanel];                                            // Adiciona panel de idioma a la vista
   
-  frame = CGRectMake( INI_SEP+BTN_W, 33, 40, 28);                                 // Posiciona el indicador de idioma seleccionado
+  frame = CGRectMake( INI_SEP+BTN_W, 33, 40, 28);                       // Posiciona el indicador de idioma seleccionado
   
-  LGCur = [[UIImageView alloc] initWithFrame:frame ];
-  LGCur.image  = [UIImage imageNamed: @"Leading"];
-  LGCur.hidden = TRUE;
-  [LGPanel addSubview:LGCur];
+  LGCur = [[UIImageView alloc] initWithFrame:frame ];                   // Crea vista para indicador de idioma seleccionado
+  LGCur.image  = [UIImage imageNamed: @"Leading"];                      // Carga la imagen del indicador de idioma seleccionado
+  LGCur.hidden = TRUE;                                                  // Oculta temporalmente el indicador
+  [LGPanel addSubview:LGCur];                                           // Adiciona indicador de idioma a la vista
 
-  [self RefreshLangsButtons];
+  nLngs = ((_Trd)? 3 : 4);                                              // # de botones de idimas (Traducción 3, Fuente 4 )
+  
+  for( int i=0; i<nLngs; ++i )                                          // Crea todos los botones de idioma
+    {
+    CGRect rc = CGRectMake( 0, 0, BTN_W, BTN_H);                        // Rectangulo para boton (la posición de define despúes)
+    
+    UIButton* btn = [[UIButton alloc] initWithFrame:rc];                // Crea vista del tipo botón
+    
+    btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;   // Que de alinee a la izquierda
+    
+    btn.titleLabel.font = fontTxtBtns;                                  // Fuente para las etiqueta de los botones
+    btn.titleLabel.lineBreakMode = NSLineBreakByClipping;               // Si no cabe la etiqueta la corta
+    
+    [btn setTitleColor: ColTxtBtns forState: UIControlStateNormal ];    // Pone el color del titulo de los botones
+    
+    Btns[i] = btn;                                                      // Lo agrega a la lista de botones
+    
+    [LGPanel addSubview:btn];                                           // Lo adiciona a la vista del panel de botones
+    }
+
+  [self RefreshLangsButtons];                                           // Pone todas la banderas de acuerdo a los idiomas instalados
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Refresca los botones de idioma para reflejar los cambios en los idiomas instalados
 - (void) RefreshLangsButtons
   {
-  nLngs = 0;
+  if( _Trd && LGSrc<0 ) return;
+  
   LGCur.hidden = TRUE;                                                  // Oculta indicador del idioma actual
   
-  for( int lng=0; lng<LGCount; ++lng )                                  // Recorre todos los idiomas
+  int iBtn = 0;                                                         // Indice del boton que se esta actualizando
+  for( int lng=0; lng<LGCount; ++lng )                                  // Recorre todos los idiomas (Para poner idiomas para traducir)
     {
-    if( Btns[lng]==nil )
-      [self CreateButtonLang:lng];
-    else if( ![self IsValidLang:lng] )
-      {
-      [Btns[lng] removeFromSuperview];
-      Btns[lng] = nil;
-      }
-      
-    if( Btns[lng]!=nil ) ++nLngs;
+    if( ![self IsValidLang:lng] ) continue;                             // La tradución con 'lng' no es posible, lo salta
+    
+    [self RefreshButton:iBtn Lang:lng ForTrd:TRUE];                     // Pone el boton para traducir en idioma 'lng'
+    ++iBtn;                                                             // Corre al proximo boton
+    }
+    
+  for( int lng=0; lng<LGCount; ++lng )                                  // Recorre todos los idiomas (Para poner idiomas para comprar)
+    {
+    if( _Trd && lng==LGSrc     ) continue;                              // Salta cuando idioma fuente es igual a idioma destino
+    if( lng==3                 ) continue;                              // Salta cuando el idioma es alemán
+    if( [self IsValidLang:lng] ) continue;                              // Salta los idiomas instalados
+    
+    [self RefreshButton:iBtn Lang:lng ForTrd:FALSE];                    // Pone el boton para comprar en idioma 'lng'
+    ++iBtn;                                                             // Corre al proximo boton
     }
     
   [self setNeedsLayout];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Crea el boton que representa al idioma 'lang'
-- (BOOL) CreateButtonLang:(int)lng
+// Refresca los botones de idioma para reflejar los cambios en los idiomas instalados
+- (void) RefreshButton:(int)idx Lang:(int)lng ForTrd:(BOOL)trd
   {
-  if( ![self IsValidLang:lng] ) return FALSE;                                            // Se salta el idioma fuente
-    
-  CGRect rc = CGRectMake( 0, 0, BTN_W, BTN_H);
-    
-  UIButton* btn = [[UIButton alloc] initWithFrame:rc];
-    
-  [btn addTarget:self action:@selector(OnSelLang:) forControlEvents:UIControlEventTouchUpInside];
-    
-  btn.tag = lng + 100;
-  btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-    
-  btn.titleLabel.font = fontTxtBtns;
-  btn.titleLabel.lineBreakMode = NSLineBreakByClipping;
-    
-  [btn setTitleColor: ColTxtBtns                                   forState: UIControlStateNormal ];
-  [btn setTitle     : LGName(lng)                                  forState: UIControlStateNormal ];
-  [btn setImage     : [UIImage imageNamed: LGFlagFile(lng,@"50") ] forState: UIControlStateNormal ];
-    
-  Btns[lng] = btn;
-  [LGPanel addSubview:btn];
+  UIButton* btn = Btns[idx];                                                          // Toma el boton actual
+  [btn removeTarget:self action:NULL forControlEvents:UIControlEventTouchUpInside];   // Quita la acciones para el evento que tenia anteriormante
   
-  return TRUE;
+  btn.tag = lng + 100;                                                            // Le pone el idioma que representa
+  btn.alpha = trd? 1.0 : 0.5;                                                     // Atenua el boton si no es para traducción
+      
+  SEL fun = trd? @selector(OnSelLang:) : @selector(OnPurchaseLang:);              // Pone evento generado por el boton de acuerdo
+  
+  [btn addTarget:self action:fun forControlEvents:UIControlEventTouchUpInside];   // si se va usar para traducir o no
+    
+  [btn setTitle : LGName(lng)                                  forState: UIControlStateNormal ];    // Pone nombre del idioma
+  [btn setImage : [UIImage imageNamed: LGFlagFile(lng,@"50") ] forState: UIControlStateNormal ];    // Pone bandera del idioma
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -456,18 +506,16 @@
     
   return (_Trd? LGIsInstDes(lng) : LGIsInstSrc(lng));                        // Verifica si el idioma esta instalado
   }
-    
+
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Reorganiza los botones de idioma teniendo en cuenta el idioma seleccionado y el tamaño a mostrar
 - (void)LayoutButtons
   {
-  float w = INI_SEP + nLngs*(BTN_H+BTN_SEP) - BTN_SEP + szTitle;            // Ancho total de panel de botones
-  float x = (w<=wPanel || _SelLng<2)? INI_SEP : wPanel-w;                   // Separación del borde del primer boton
+  float x = [self GetXOffset];                                              // Obteine desplazamiento del primer boton
   
   for( int i=0; i<LGCount; ++i )                                            // Recorre todos los botones de idioma posibles
     {
     UIButton* btn = Btns[i];                                                // Toma el boton actual
-    if( btn == nil ) continue;                                              // Si no existe, lo salta
     
     int lng = (int)btn.tag-100;                                             // Obtiene le idioma que representa (por el Tag)
     
@@ -481,9 +529,37 @@
       LGCur.frame = CGRectMake( x+BTN_W-2, 33, 40, 28);                     // Posiciona el indicador de idioma seleccionado
       }
     
-    btn.frame = CGRectMake( x, 0, w, BTN_H);                                 // Posiciona el boton de idioma
-    x += w + BTN_SEP;                                                        // Calcula posición para el proximo boton
+    btn.frame = CGRectMake( x, 0, w, BTN_H);                                // Posiciona el boton de idioma
+    x += w + BTN_SEP;                                                       // Calcula posición para el proximo boton
     }
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Obtiene el desplazamiento del primer boton de la barra
+-(float) GetXOffset
+  {
+  float w = INI_SEP + nLngs*(BTN_H+BTN_SEP) - BTN_SEP + szTitle;            // Ancho total requerido para todos los botones
+  if( w <= wPanel )                                                         // Si alcanza el espacio para todos los botones
+    return INI_SEP;                                                         // Separa el valor normal
+  
+  float x = INI_SEP;                                                        // Separación del borde del primer boton
+  
+  for( int i=0; i<LGCount; ++i )                                            // Recorre botones hasta encontrar el seleccionado
+    {
+    UIButton* btn = Btns[i];                                                // Toma el boton actual
+    
+    if( ((int)btn.tag-100) == _SelLng )                                     // Si es el idioma seleccionado
+      {
+      x += ((BTN_W+szTitle)/2.0);                                           // Calcula posicion del centro del boton
+        
+      if( x>(wPanel/2)) return wPanel-w;                                    // Si es mayor que el centro del panel, corre hacia la izquierda
+      else              return INI_SEP;                                     // Menor corre hacia la dercha
+      }
+        
+    x += (BTN_W+BTN_SEP);                                                   // Posición del proximo boton
+    }
+    
+  return INI_SEP;                                                           // No hay ninguno seleccionado
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------

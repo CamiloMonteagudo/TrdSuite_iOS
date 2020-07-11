@@ -21,7 +21,7 @@ static NSMutableArray *DictRowCache;                               // Filas que 
 // Crea una fila con una cadena con atributos, el ancho de la fila y el indice
 +(VirtualDictRowView *) RowWithIndex:(int)iRow Width:(float)w Select:(BOOL) sel
   {
-  NSAttributedString* WordData = [ProxyDict getWDataFromIndex:iRow];  // Obtine los datos de la llave en una cadena formateada
+  NSAttributedString* WordData = [ProxyDict getWDataFromIndex:iRow NoKey:FALSE];  // Obtine los datos de la llave en una cadena formateada
   
   // Determina el rectangulo que ocupan los datos, fijando el ancho disponible
   CGSize sz = CGSizeMake( w-10, 10000 );

@@ -1,0 +1,193 @@
+//=========================================================================================================================================================
+//  NumResultView.m
+//  TrdSuite
+//
+//  Created by Camilo on 28/09/15.
+//  Copyright (c) 2015 Softlingo. All rights reserved.
+//=========================================================================================================================================================
+
+#import "NumResultView.h"
+#import "AppData.h"
+#import "ColAndFont.h"
+#import "ReadNumber.h"
+#import "NumGroupView.h"
+
+//=========================================================================================================================================================
+@interface NumResultView ()
+  {
+  float hPanel;
+  float wPanel;
+  
+  UILabel* lbText;
+  UISegmentedControl *SelType;
+  }
+
+@end
+
+//=========================================================================================================================================================
+// Permite editar texto o número separando los grupos con un espacio
+
+@implementation NumResultView
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+- (id)initWithCoder:(NSCoder *)aDecoder
+  {
+  self = [super initWithCoder:aDecoder];                // Clase base hace la inicializacion del objeto
+  if( !self ) return nil;
+
+  [self initData];
+  
+  return self;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Inicializa los datos especifico de la barra de idiomas, una ves creada la vista
+- (void) initData
+  {
+  self.backgroundColor = [UIColor clearColor];
+
+  wPanel = self.frame.size.width;
+  
+  CGPoint pos = self.frame.origin;
+  self.frame  = CGRectMake(pos.x, pos.y, wPanel, LineHeight );
+  
+  float  wText = wPanel-2*SEP_BRD - 2*SEP_TXT;                   // Calcula ancho del control del texto
+  CGRect    rc = CGRectMake(SEP_BRD+SEP_TXT, SEP_TXT, wText, LineHeight);
+  
+  lbText = [[UILabel alloc] initWithFrame:rc];
+  lbText.font = fontEdit;
+  lbText.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+  lbText.numberOfLines = 0;
+  
+  [self addSubview:lbText];
+  
+  NSString* title1 = NSLocalizedString(@"GroupAll", nil);
+  NSString* title2 = NSLocalizedString(@"Group2"  , nil);
+  NSString* title3 = NSLocalizedString(@"Group3"  , nil);
+  
+  SelType = [[UISegmentedControl alloc] initWithFrame:rc];
+  
+  [SelType addTarget:self action:@selector(ChangeType:) forControlEvents:UIControlEventValueChanged];
+  
+  [SelType insertSegmentWithTitle:title1 atIndex:0 animated:FALSE];
+  [SelType insertSegmentWithTitle:title2 atIndex:1 animated:FALSE];
+  [SelType insertSegmentWithTitle:title3 atIndex:2 animated:FALSE];
+
+  SelType.selectedSegmentIndex = 0;
+
+  [self addSubview:SelType];
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Se llama al cambiar el tipo de agrupamiento
+- (void) ChangeType:(id)sender
+  {
+  HideKeyBoard();
+  
+  [self SetGroupType];
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Implementa la propiedad para poner/obtener el texto
+- (void)setText:(NSString *)Text
+  {
+  lbText.attributedText = [[NSAttributedString alloc] initWithString:Text attributes:attrEdit];
+  
+  [self setNeedsLayout];
+  }
+
+- (NSString *)Text
+  {
+  return lbText.text;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Pone el tipo de agrupado y el tipo de pronuciación del número
+- (void) SetGroupType
+  {
+  switch( SelType.selectedSegmentIndex )
+    {
+    case 0: _NumEdit.NGroup = GrpAll;  break;
+    case 1: _NumEdit.NGroup = GrpBy2;  break;
+    case 2: _NumEdit.NGroup = GrpBy3;  break;
+    }
+    
+  [self SetNumberReading];
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Lee el número en el idioma actual y pone el reslutado en la vista 'NumText'
+- (void) SetNumberReading
+  {
+  int lng = (LGSrc==4)? 3 : LGSrc;
+  
+  int MaxChar = [ReadNumber MaxDigistInLang:lng];
+  _NumEdit.MaxChars = MaxChar;
+  
+  NSString* txt = _NumEdit.Text;
+  if( txt.length >= MaxChar )
+    {
+    txt = [txt substringToIndex:MaxChar];
+    _NumEdit.Text = txt;
+    }
+  
+  ReadNumber* rn = [ReadNumber NumberWithString:txt Lang:lng];
+  
+  NSAttributedString* Text = nil;
+  switch( SelType.selectedSegmentIndex )
+    {
+    case 0: Text = [rn ReadAll];     break;
+    case 1: Text = [rn ReadGroup:2]; break;
+    case 2: Text = [rn ReadGroup:3]; break;
+    }
+  
+  lbText.attributedText = Text;
+  
+  [self setNeedsLayout];
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+- (void)layoutSubviews
+  {
+  float wView = self.frame.size.width;
+  
+  CGPoint pos = self.frame.origin;
+  CGSize  sz  = lbText.frame.size;
+  
+  sz.height = 10000;
+  CGRect rc = [lbText.attributedText boundingRectWithSize:sz options:NSStringDrawingUsesLineFragmentOrigin context:nil];
+  
+  float hTxt  = (int)(rc.size.height+1) + FontSize;
+  
+  CGSize szSel = SelType.frame.size;
+  float  hView = SEP_TXT + hTxt + SEP_BRD + szSel.height + SEP_TXT;
+  
+  if( hView != hPanel || wView != wPanel )
+    {
+    hPanel = hView;
+    wPanel = wView;
+    
+    self.frame = CGRectMake(pos.x, pos.y, wPanel, hPanel);
+    
+    lbText.frame = CGRectMake(SEP_BRD+SEP_TXT, SEP_TXT, sz.width, hTxt );
+    
+    float x = (wPanel-szSel.width)/2;
+    float y = SEP_TXT + hTxt + SEP_BRD;
+    
+    SelType.frame = CGRectMake(x, y, szSel.width, szSel.height );
+    
+    [self setNeedsDisplay];
+    [self.superview setNeedsLayout];                                              // Reorganiza los controles de la vista que contiene al panel
+    }
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Dibuja el borde redondiado alrededor del la vista de edicción
+- (void)drawRect:(CGRect)rect
+  {
+  CGRect rc = CGRectMake(SEP_BRD, 0, wPanel-(2*SEP_BRD), hPanel );
+  
+  DrawRoundRect( rc, R_ALL, ColBrdRound2, ColFillRound2);
+  }
+
+
+@end

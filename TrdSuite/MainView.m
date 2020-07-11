@@ -1,10 +1,10 @@
-//
+//=========================================================================================================================================================
 //  MainView.m
 //  TrdSuite
 //
 //  Created by Camilo on 16/04/15.
 //  Copyright (c) 2015 Softlingo. All rights reserved.
-//
+//=========================================================================================================================================================
 
 #import "MainView.h"
 #import "AppData.h"
@@ -71,16 +71,16 @@
     y += hTrd;                                                      // Posicionamiento en la vertical del proximo control
     }
     
-  if(  !_TrdInfo.hidden )                                        // Si la informacion sobre la traducción es visible
+  if(  !_TrdInfo.hidden )                                           // Si la informacion sobre la traducción es visible
     {
-    float hOpt = _TrdInfo.frame.size.height;                     // Calula su altura actual
+    float hOpt = _TrdInfo.frame.size.height;                        // Calula su altura actual
     
-    _TrdInfo.frame = CGRectMake(0, y-5, sz.width, hOpt);         // Posiciona la vista adecuamente
+    _TrdInfo.frame = CGRectMake(0, y-5, sz.width, hOpt);            // Posiciona la vista adecuamente
     
-    y += hOpt-5;                                                  // Posicionamiento en la vertical del proximo control
+    y += hOpt-5;                                                    // Posicionamiento en la vertical del proximo control
     }
     
-  float h =  sz.height - y;                                               // Altura que queda libre hacia abajo
+  float h =  sz.height - y;                                         // Altura que queda libre hacia abajo
   _ListOras.hidden = (h<LineHeight);                                // La lista de oraciones se muestra, si queda espacio
   
   if( yOff==0 && h<0 )                                              // Si no hay desplazamiento, y el ultimo control no cabe

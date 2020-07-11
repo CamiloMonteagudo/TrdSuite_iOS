@@ -20,8 +20,8 @@
 LPCSTR   GetTypeDesc( TGramMean &sType );
 void     AddFixMean( NSMutableAttributedString* Str, CStringA &Mean );
 
-NSAttributedString* WordDataFormated(CStringA &csKey, CStringA &csData);
-NSAttributedString* WordDataKeyFormated(CStringA &csKey, CStringA &csData);
+NSAttributedString* WordDataFormated(CStringA &csKey, CStringA &csData, BOOL noKey);
+NSAttributedString* WordDataKeyFormated(CStringA &csKey, CStringA &csData, BOOL noKey);
 
 static void AddNSString( NSMutableAttributedString* Str, NSString* mStr,  NSDictionary* attrDict );
 
@@ -211,7 +211,7 @@ int LoadIndexFromFile()
     return;                                                 // Retorna
     }
   
-  int fLen = sFilter.length;
+  int fLen = (int)sFilter.length;
   if( sFilter==nil || fLen==0 ) return;                     // Si el filtros es nulo o vacio no hace nada
   
   SaveIndex = Index;                                        // Guarda el indice original
@@ -280,8 +280,8 @@ int LoadIndexFromFile()
   }
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------
-// Obtiene los datos de una palabra en el diccionario actual
-+(NSAttributedString*) getWDataFromIndex: (int)idx
+// Obtiene los datos de una palabra en el diccionario actual, 'NoKey' inidica que no se incluya la llave en los datos
++(NSAttributedString*) getWDataFromIndex: (int)idx NoKey:(BOOL) noKy
   {
   if( _openSrc==-1 || _openDes==-1 ) return nil;
   
@@ -294,7 +294,7 @@ int LoadIndexFromFile()
   _Dict->GetDataAt(idx, sData);
    
   if( sData.Length()>0 )
-    return WordDataFormated( sKey, sData );
+    return WordDataFormated( sKey, sData, noKy );
     
   return nil;
   }
@@ -390,7 +390,7 @@ static void AddNSString( NSMutableAttributedString* Str, NSString* mStr,  NSDict
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------
 // Obtiene los datos de una palabra formateados
-NSAttributedString* WordDataFormated(CStringA &csKey, CStringA &csData)
+NSAttributedString* WordDataFormated(CStringA &csKey, CStringA &csData, BOOL noKey)
   {
   CDictData* oDictData = new CDictData();
   oDictData->ParseTxt(csData);
@@ -398,11 +398,12 @@ NSAttributedString* WordDataFormated(CStringA &csKey, CStringA &csData)
   TInt nTypes = oDictData->GetTypesCount();
   
   if( nTypes <= 0 )
-    return WordDataKeyFormated( csKey, csData );
+    return WordDataKeyFormated( csKey, csData, noKey );
 
   NSMutableAttributedString* Str = [[NSMutableAttributedString alloc] init];
   
-  AddCString ( Str, csKey, attrKey );
+  if( noKey==FALSE )
+    AddCString ( Str, csKey, attrKey );
   
   // para cada tipo gramatical
   for( int idxType=0; idxType < nTypes; idxType++)
@@ -412,8 +413,8 @@ NSAttributedString* WordDataFormated(CStringA &csKey, CStringA &csData)
     TGramType sType;
     oDictData->get_ActualType(sType);
     
-    AddNSString( Str, @"\r\n", attrBody );
-//    AddNSString( Str, @" || ", attrBody );
+    if( Str.length > 0 )
+      AddNSString( Str, @"\r\n", attrBody );
     
     AddLPCSTR  ( Str, GetTypeDesc(sType), attrType );
     AddNSString( Str, @" "              , attrBody );
@@ -500,7 +501,7 @@ void AddFixMean( NSMutableAttributedString* Str, CStringA &Mean )
 
 //------------------------------------------------------------------------------------------------------
 // Adiciona todo lo que este entre comillas a la cadena formateada 'Str'
-void AddEntreComillas( NSMutableAttributedString* Str, CStringA &aDataText)
+void AddEntreComillas( NSMutableAttributedString* Str, CStringA &aDataText, BOOL noKey)
   {
   int  pos1 = 0;
   bool first = true;
@@ -516,8 +517,8 @@ void AddEntreComillas( NSMutableAttributedString* Str, CStringA &aDataText)
     
     CStringA sMean = aDataText.Mid( pos1+1, pos2-(pos1+1) );
     
-    if( first ) AddNSString( Str, @"\r\n", attrBody );
-    else        AddNSString( Str, @", "  , attrBody );
+    if( first && !noKey ) AddNSString( Str, @"\r\n", attrBody );
+    else                  AddNSString( Str, @", "  , attrBody );
     
     AddFixMean( Str, sMean );
     
@@ -551,14 +552,15 @@ void AddEntreComillas( NSMutableAttributedString* Str, CStringA &aDataText)
 
 //------------------------------------------------------------------------------------------------------
 // Obtiene una cadena formateada con los datos de una entrada que tiene una palabra clave
-NSAttributedString* WordDataKeyFormated(CStringA &csKey, CStringA &csData)
+NSAttributedString* WordDataKeyFormated(CStringA &csKey, CStringA &csData, BOOL noKey)
   {
 //  CStringA cpy = csData;
   RemoveParenthesis(csData);
     
   NSMutableAttributedString* Str = [[NSMutableAttributedString alloc] init];
   
-  AddCString ( Str, csKey  , attrKey  );
+  if( noKey==FALSE )
+    AddCString ( Str, csKey  , attrKey  );
     
   int pos1 = 0, pos2 = 0;
   int len = csData.Length();
@@ -579,7 +581,7 @@ NSAttributedString* WordDataKeyFormated(CStringA &csKey, CStringA &csData)
       }
       
     CStringA sMeans = csData.Mid( pos1+1, pos2-(pos1+1) );        // Coge el contenido
-    AddEntreComillas( Str, sMeans );                              // Adiciona solo lo que esta entre comillas
+    AddEntreComillas( Str, sMeans, noKey );                       // Adiciona solo lo que esta entre comillas
     
     pos1  = pos2 + 1;                                             // Pasa a buscar la otra llave
     first = FALSE;                                                // Quita bandera de primera ves

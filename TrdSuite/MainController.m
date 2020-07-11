@@ -32,6 +32,7 @@
   TrdHistory *SaveHist;                   // Salva de la historia cuando esta filtrada
   
   BOOL OutSelf;                           // Bandera que indica que el controlador principal es otro
+  id Observer;
   }
 
 @property (weak, nonatomic) IBOutlet LangsPanelView *PanelSrc;
@@ -59,6 +60,7 @@
   [super viewDidLoad];
   
   InitMFCSystem();
+  GetFlagSpaces();
   
   self.view.backgroundColor  = ColMainBck;
   _FrameView.backgroundColor = ColMainBck;
@@ -80,8 +82,9 @@
   [_PanelSrc AddItemID:@"Dict"];
   [_PanelSrc AddItemID:@"Conj"];
   [_PanelSrc AddItemID:@"Nums"];
+  [_PanelSrc AddItemID:@"Setting"];
 
-  _PanelSrc.SelLng = 0;                                               // Pone por defecto el español como idioma fuente
+  _PanelSrc.SelLng = LGFirstSrc();                                    // Pone por defecto el primer idioma fuente instalado
   LGSrcOld = _PanelSrc.SelLng;                                        // Lo guarda como último idioma fuente
   
   _PanelTrd.Ctrller = self;
@@ -101,6 +104,25 @@
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
   
+  
+  NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
+  Observer = [center addObserverForName: RefreshNotification  object:nil queue:nil
+                             usingBlock:^(NSNotification *note)
+                                          {
+                                          [_PanelSrc RefreshView];    // Cambio el tamaño de las letras o idiomas instalados
+                                          [_PanelTrd RefreshView];
+                                          
+                                          if( note.object == nil )    // Cambio el tamaño de las letras
+                                            {
+                                            [_TrdInfo RefreshView];
+                                            [_TrdEdit RefreshView];
+                                          
+                                            [History ClearItemsHeight];
+                                            [_ListOras Refresh];
+                                            
+                                            [_ModuleTitle RefreshLabel];
+                                            }
+                                          }];
   _ParamWord = @"";
   _ParamSrc  = LGSrc;
   _ParamDes  = LGDes;
@@ -117,6 +139,12 @@
   
   [self FindOnHistory];                                               // Busca en la historia la oración actual
   }
+
+//- (void)viewDidDisappear:(BOOL)animated
+//  {
+//  NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
+//  [center removeObserver:Observer];
+//  }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 - (void)CalculateEditMaxHeigth
@@ -157,7 +185,7 @@
   if( LGSrc == LGSrcOld ) return;                                     // Si es el mismo idioma no hace nada
     
   [self SaveLastTrd: nil];                                            // Guarda último texto traducido
-  lastLen = _PanelSrc.Text.length;                                    // Longitud del texto actual
+  lastLen = (int)_PanelSrc.Text.length;                                    // Longitud del texto actual
     
   _PanelTrd.SelLng = LGInferedDes(LGSrcOld);                          // Obtiene un idioma destino
   _PanelTrd.NoText = TRUE;                                            // Quita el idioma de traducción
@@ -189,7 +217,7 @@
   _PanelTrd.NoText = TRUE;                                            // Quita texto traducido (la tradución ya no es valida)
   [self UnFilterOras];                                                // Quita el filtro, para buscar por todas la oraciones
       
-  int lenTxt = _PanelSrc.Text.length;                                 // Longitud del texto actual
+  int lenTxt = (int)_PanelSrc.Text.length;                                 // Longitud del texto actual
   if( (lastLen==0 && lenTxt==1) ||                                    // Cuando se empieza desde un texto vacio
       (lastLen==1 && lenTxt==0) )                                     // Cuando el texto se convierte en vacio
       {
@@ -579,7 +607,7 @@
   LGSrcOld = LGSrc;
   LGDesOld = LGDes;
   
-  NSString* idSegue[] = { @"DictSegue", @"ConjSegue", @"NumsSegue" };
+  NSString* idSegue[] = { @"DictSegue", @"ConjSegue", @"NumsSegue", @"SettingSegue" };
   
   [self performSegueWithIdentifier: idSegue[n] sender: self];
   }
@@ -610,6 +638,9 @@
     NumsController* NumsCtrller = segue.destinationViewController;
     
     NumsCtrller.sNum = _ParamWord;
+    }
+  else if( [sID isEqualToString:@"SettingSegue"] )
+    {
     }
     
   OutSelf = TRUE;

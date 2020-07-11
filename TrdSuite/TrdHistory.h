@@ -32,6 +32,7 @@
   - (int)      FindIndexSrc:(NSString*) src;
 
   - (void) RemoveTrdItemAtIndex:(int) idx;
+  - (void) ClearItemsHeight;
 
   - (BOOL) Save;
 @end

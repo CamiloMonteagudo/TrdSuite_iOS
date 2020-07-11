@@ -115,6 +115,7 @@ class ReducData
 
 +(NSAttributedString*) GetRootWord: (NSString *)sWord;
 +(NSAttributedString*) GetFormatedData:(int) idx;
++(NSAttributedString*) GetAttrError:(NSString*) sMsg Prefix: (NSString*) prefix;
 
 +(BOOL) IsVerb;
 +(BOOL) IsNowConjugate: (NSString *)sVerb Lang:(int) lng;

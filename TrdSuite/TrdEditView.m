@@ -12,7 +12,6 @@
 #import "ColAndFont.h"
 
 #define  LGNAME_W  180
-#define  Y_INI     20
 
 //=========================================================================================================================================================
 @interface TrdEditView()
@@ -26,6 +25,7 @@
   UIImageView *FgSrc, *FgTrd;
   UILabel     *lbSrc, *lbTrd;
   UITextView  *txSrc, *txTrd;
+  UILabel* title;
   
   UIButton* btnSaveTrd;                         // Guarda los cambios realizados hasta el momento
   UIButton* btnClose;                           // Cierra la vista de notificación sin guardar los cambio
@@ -103,12 +103,37 @@
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Refresca el contenido de  la vista cuando cambia el tamaño de las letras
+-(void) RefreshView
+  {
+  title.font = fontPanelTitle;
+  lbSrc.font = fontTxtBtns;
+  lbTrd.font = fontTxtBtns;
+  
+  txSrc.font = fontEdit;
+  txTrd.font = fontEdit;
+  
+  [self RefreshViewHeight:title];
+  [self RefreshViewHeight:lbSrc];
+  [self RefreshViewHeight:lbTrd];
+  
+  [self setNeedsLayout];
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+//
+-(void) RefreshViewHeight:(UIView*) view
+  {
+  CGRect rc = view.frame;
+  rc.size.height = LineHeight;
+  
+  view.frame = rc;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
 - (UIImageView*) MakeFlagView
   {
-  float x = SEP_BRD + SEP_TXT;
-  float y = Y_INI + (LineHeight-FLAG_H)/2;
-  
-  CGRect frame = CGRectMake( x, y, FLAG_W, FLAG_H);
+  CGRect frame = CGRectMake( 0, 0, FLAG_W, FLAG_H);
   
   UIImageView* img = [[UIImageView alloc] initWithFrame: frame];
   
@@ -120,7 +145,7 @@
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 - (void) MakeTitle
   {
-  UILabel* title         = [[UILabel alloc] initWithFrame: CGRectMake( 0, 0, Width, LineHeight)];
+  title                  = [[UILabel alloc] initWithFrame: CGRectMake( 0, 0, Width, LineHeight)];
   title.font             = fontPanelTitle;
   title.textColor        = ColPanelTitle;
   title.textAlignment    = NSTextAlignmentCenter;
@@ -133,10 +158,7 @@
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 - (UILabel*) MakeLabelView
   {
-  float hText = LineHeight;                         // Obtiene altura del texto
-  float x = SEP_BRD + SEP_TXT + FLAG_W + SEP_BRD;
-  
-  UILabel* Lb  = [[UILabel alloc] initWithFrame: CGRectMake( x, Y_INI, LGNAME_W, hText)];
+  UILabel* Lb  = [[UILabel alloc] initWithFrame: CGRectMake( 0, 0, LGNAME_W, LineHeight)];
   Lb.font      = fontTxtBtns;
   Lb.textColor = ColTxtBtns;
   
@@ -270,7 +292,21 @@
   float xIni = SEP_BRD+BRD_W;
   float wAll = w - 2*xIni;
     
-  float y = Y_INI + LineHeight - 2;
+//  title.backgroundColor = [UIColor grayColor];
+//  Lb.backgroundColor = [UIColor lightGrayColor];
+    
+  float y = LineHeight/2;
+  
+  if( (11*LineHeight/8) < BTN_H )
+    y = BTN_H - (7*LineHeight/8);
+  
+  float xFg = SEP_BRD + SEP_TXT;
+  float yFg = y + (LineHeight-FLAG_H)/2;
+  
+  FgSrc.frame =  CGRectMake( xFg, yFg, FLAG_W, FLAG_H );
+  lbSrc.frame =  CGRectMake( xFg+FLAG_W+SEP_BRD, y, LGNAME_W, LineHeight );
+    
+  y += (7*LineHeight/8);
   
   float hSrc = [self GetHeightTex:txSrc];
   if( hSrc != HEdSrc || w != Width )
@@ -282,20 +318,17 @@
     chgSrc = true;
     }
     
-  y += hSrc + 3;
-  
-  float hLb = lbTrd.frame.size.height;
+  y += hSrc;
   
   if( chgSrc )
     {
-    float xFg = SEP_BRD + SEP_TXT;
-    float yFg = y + (hLb-FLAG_H)/2;
+    float yFg = y + (LineHeight-FLAG_H)/2;
     
     FgTrd.frame =  CGRectMake( xFg               , yFg,   FLAG_W, FLAG_H );
-    lbTrd.frame =  CGRectMake( xFg+FLAG_W+SEP_BRD,   y, LGNAME_W, hLb    );
+    lbTrd.frame =  CGRectMake( xFg+FLAG_W+SEP_BRD,   y, LGNAME_W, LineHeight );
     }
   
-  y += hLb-2;
+  y += (7*LineHeight/8);
 
   float hTrd = [self GetHeightTex:txTrd];
   if( hTrd != HEdTrd || chgSrc  || w != Width )

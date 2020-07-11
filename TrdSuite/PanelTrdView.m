@@ -52,9 +52,7 @@
   [self addSubview: lbTrd];
   
   // Crea la barra de idiomas
-  LGBar = [[LangsBar alloc] initWithView:self];  // Crea la barra de idiomas en la parte superior
-  
-  LGBar.Trd = TRUE;                                         // Establece que es el texto traducido
+  LGBar = [[LangsBar alloc] initWithView:self Trd:TRUE];    // Crea la barra de idiomas en la parte superior
   
   [LGBar OnSelLang:@selector(OnSelLang:) Target:self];      // Pone callback para cuando se seleccione un idioma
 
@@ -73,7 +71,21 @@
   TrdText.layoutManager.delegate = self;                // Pone delegado para el layoutManager del control de texto
   
   [self addSubview:TrdText];
+  
   return self;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Se llama cuando se va a liberar la vista
+-(void) RefreshView
+  {
+  TrdText.font = fontEdit;
+  lbTrd.font   = fontPanelTitle;
+                                          
+  [LGBar RefreshView];
+  
+  lstWidth = 0;
+  [self setNeedsLayout];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -215,7 +227,7 @@
   NSMutableAttributedString* Txt = [[NSMutableAttributedString alloc] initWithString:TrdText.text attributes:attrEdit];
     
   // Le aplica un color de fondo al texto que esta marcado
-  [Txt addAttribute:NSBackgroundColorAttributeName value:SelTxtCol range:range];
+  [Txt addAttribute:NSBackgroundColorAttributeName value:ColTxtSel range:range];
     
   NoSelMsg  = TRUE;                                     // Pone bandera para no enviar mensaje de cambio de selección
   TrdText.attributedText = Txt;                         // Reasigna el texto con los atributos nuevos
@@ -341,29 +353,30 @@
   float w = self.bounds.size.width;                           // Ancho disponible en la vista
   if( w == lstWidth ) return;                                 // Si ya se posiciono para ese ancho no hace nada
   
-  lstWidth = w;                                               // Guarda el ancho para el que se va a posicionar
+  lstWidth = w;
+    
+  float xLabel = SEP_BRD + SEP_TXT;                           // Magnitud en la x donde se va a posicionar el label de traducir
   
-  float hText  = FontSize + ROUND;                            // Obtiene altura del label de traducir
-  float xlbTrd = lbTrd.center.x;                              // Obtiene poción en x del label de traducir
-  
-  float yBar, xBar, ylbTrd;
+  float yBar, xBar;
   if( w>370 )                                                 // Si hay mucho espacio, pone el label al lado
     {
     yBar = 0;                                                 // Y, la barra en la parte superior de la vista
     
     CGSize sz = lbTrd.attributedText.size;
-    xBar = sz.width + SEP_BRD;                                // X, de la barra a continuación del label de traducción
+    xBar = sz.width + xLabel;                                 // X, de la barra a continuación del label de traducción
     
-    ylbTrd = LGBar.frame.size.height/2 - SEP_TXT;             // Pone el label, centrado con la barra
+    float hText = LGBar.frame.size.height- SEP_TXT;
+    lbTrd.frame = CGRectMake(xLabel, 0, sz.width+1, hText);   // Mueve el lavel de traducción
     }
   else                                                        // Si hay poco espacio, pone le label y la barra uno arriba del otro
     {
+    float hText  = FontSize + ROUND;                          // Obtiene altura del label de traducir
+  
     xBar   = SEP_TXT;                                         // X, de la barra pegada a la izquierda
     yBar   = hText - SEP_BRD;                                 // Y, de la barra debajo del label de traducción
-    ylbTrd = hText/2;                                         // Pone el label de traducción pegado a la parte superior
+    
+    lbTrd.frame = CGRectMake(xLabel, 0, w, hText);            // Mueve el lavel de traducción
     }
-  
-  lbTrd.center = CGPointMake(xlbTrd, ylbTrd);                 // Mueve el lavel de traducción
   
   [LGBar MoveToX:xBar Y:yBar];                                // Mueve la barra
   }

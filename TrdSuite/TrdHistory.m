@@ -31,8 +31,6 @@
   history->Items = [NSMutableArray new];
   history->_Src = src;
   
-  [history GetIndexSpaces];                       // Calcula espacio que hay que dejar, para poner la bandera delante de las traducciones
-  
   return history;
   }
 
@@ -145,11 +143,11 @@
   hist->Items = [NSMutableArray new];
   hist->_Src = History.Src;
   
-  int len1 = txt.length;
+  int len1 = (int)txt.length;
   for (TrdItem* Trd in Items)
     {
     NSString* src = Trd.Text;
-    int len2 = src.length;
+    int len2 = (int)src.length;
     
     NSRange rgFind = NSMakeRange(0, len2);                                  // Rango de busqueda la cadena completa
     for(;;)                                                                 // Repite el proceso
@@ -157,8 +155,8 @@
       NSRange rg = [src rangeOfString:txt options:FindOpt range:rgFind];    // Busca la cadena dentro del texto
       if( rg.length==0 ) break;                                             // Pasa a la proxima oración
       
-      int ini = rg.location;                                                // Indice al primer caracter encontrado
-      int fin = ini + rg.length - 1;                                        // Indice al ultimo caracter encontrado
+      int ini = (int)rg.location;                                           // Indice al primer caracter encontrado
+      int fin = ini + (int)rg.length - 1;                                   // Indice al ultimo caracter encontrado
       
       if( (ini==0      || !IsLetter(ini-1, src)) &&                         // Frontera de palabra al inicio
           (fin==len2-1 || !IsLetter(fin+1, src)) )                          // Frontera de palabra al final
@@ -250,7 +248,19 @@
   return Items[idx];
   }
 
-NSString* Ident = @"        ";
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Quita la informacion del tamaño a todos los items que esten en la lista
+- (void) ClearItemsHeight
+  {
+  for( int i=0; i<Items.count; ++i )
+    {
+    TrdItem* item = Items[i];
+  
+    item.Height = 0;
+    item.Width  = 0;
+    }
+  }
+
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Obtiene un arreglo con la cadena original y todas sus traduciones
 - (NSArray*) TrdRowsAtIndex:(int) idx
@@ -270,35 +280,14 @@ NSString* Ident = @"        ";
       {
       int lng = (i==3)? 4 : i;
       
-      Txt = [Ident stringByAppendingString: Txt ];
+      Txt = [FlagSpaces stringByAppendingString: Txt ];
       [rows addObject:[TrdRow RowWithText: Txt Lang:lng] ];
       }
     }
   
   return rows;
   }
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Obtiene la cantidad de espacios necesarios que hay que adicional a principio de la cadena, para que no se sobreponga con la bandera
-- (void) GetIndexSpaces
-  {
-  NSMutableString* Txt = [NSMutableString stringWithString: @"    "];
   
-  for(;;)
-    {
-    CGSize sz = [Txt sizeWithAttributes:attrHistory];
-    
-    if( sz.width >= 25 )
-      {
-      Ident = Txt;
-      return;
-      }
-      
-    [Txt appendString:@" "];
-    }
-    
-  }
-
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Borra la traducción con el indice idx
 - (void) RemoveTrdItemAtIndex:(int) idx

@@ -874,6 +874,24 @@ static void AddNSString( NSMutableAttributedString* Str, NSString* mStr,  NSDict
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
++(NSAttributedString*) GetAttrError:(NSString*) sMsg Prefix: (NSString*) prefix
+  {
+  NSMutableAttributedString* Str = [[NSMutableAttributedString alloc] init];
+
+  if( prefix != nil )
+    {
+    AddNSString( Str, prefix, attrKey );
+    AddNSString( Str, @": " , attrKey );
+    }
+
+  NSString* Txt = NSLocalizedString(sMsg, nil);
+  
+  AddNSString( Str, Txt, attrErr );
+  
+  return Str;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
 +(NSString*) GetInfinitive
   {
   cjData cnj = _CData.Conjs[0];
@@ -896,6 +914,8 @@ static void AddNSString( NSMutableAttributedString* Str, NSString* mStr,  NSDict
   {
   _IsVerb = FALSE;
   NSMutableAttributedString* Str = [[NSMutableAttributedString alloc] init];  // Crea cadena con palabra a reducir
+  if( sWord.length == 0 ) return Str;
+  
   AddNSString(Str, sWord, attrConjBold);
   AddLPCSTR(Str, "\r\n" , attrConjBold);
   

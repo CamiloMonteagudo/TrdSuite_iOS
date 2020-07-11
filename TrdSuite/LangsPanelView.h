@@ -56,5 +56,8 @@
 - (void) AddItemID:(NSString*) strItem;
 - (void) ClearAllItems;
 
+- (UITextView*) GetTextView;
+- (void)    RefreshView;
+
 @end
 //=========================================================================================================================================================

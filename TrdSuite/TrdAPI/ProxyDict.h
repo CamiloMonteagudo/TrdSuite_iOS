@@ -16,7 +16,7 @@
 +(bool) OpenDictSrc:(int) src Dest:(int) des;
 +(void) CloseDict;
 
-+(NSAttributedString*) getWDataFromIndex: (int)idx;
++(NSAttributedString*) getWDataFromIndex: (int)idx NoKey:(BOOL) noKy;
 +(NSAttributedString*) FormatedMsg:(NSString*) sMsg Title:(NSString*) sTitle;
 
 +(int) getSize;

@@ -59,11 +59,23 @@
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Refresca el contenido del label cuando cambia el tamaño de la letra
+- (void) RefreshLabel
+  {
+  if( Title != nil )
+    Title.font = fontTitle;                                               // Pone el tipo de letra a utilizar
+    
+  self.hidden = TRUE;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Muestra el titulo del modulo
 - (void) ShowLabel:(NSString *)Text InFrame:(CGRect) frm
   {
-  CGFloat w = self.frame.size.width;
-  CGFloat h = 2.0 * LineHeight;
+  CGSize sz = [Text sizeWithAttributes:attrTitle];
+  
+  CGFloat w = sz.width + sz.height;
+  CGFloat h = 1.8 * sz.height;
   CGFloat x = (frm.size.width-w)/2;
   CGFloat y = frm.origin.y + frm.size.height;
   
@@ -72,6 +84,7 @@
   self.frame  = rcIni;
   [self CreateLabel:Text];
   
+  Title.frame = CGRectMake( 0, 0, w, h );;
   self.hidden = FALSE;
 
   rcFin          = rcIni;

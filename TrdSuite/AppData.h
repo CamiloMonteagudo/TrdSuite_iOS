@@ -11,6 +11,8 @@
 
 #define LGCount 5
 
+extern NSString *const RefreshNotification;
+
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Constantes para DrawRoundRect
 #define ROUND  8                  // Radio de redondeo de las esquinas
@@ -25,6 +27,8 @@
 // Separacion de las vistas
 #define SEP_BRD   5               // Sepatación de los bordes
 #define SEP_TXT   3               // Separación de los bordes del control de texto
+#define SEP_ROW   0.5             // Separación entre las filas de la lista
+
 
 #define BTN_W      50             // Ancho de los botones de la barra de botones
 #define BTN_H      50             // Alto de los botones de la barra de botones
@@ -62,16 +66,24 @@ extern NSString*  LGFlagFile( int lng, NSString* Suxfix );
 extern BOOL       LGIsInstSrc( int lng );
 extern BOOL       LGIsInstDes( int lng );
 extern int        LGInferedDes( int lng );
+extern int        LGFirstSrc();
+extern int        LGNextDes();
+
+extern BOOL       LGIsInstDir( int src, int des );
+extern void       LGSetInstDir( int src, int des );
 
 extern NSString*  LGAbrv( int lng );
 extern NSString*  LGName( int lng );
 extern int        LGNameSz( int lng );
+extern void       LGSetNamesSize();
 extern UIColor*   LGCol( int lng );
-extern void       SetFontSize( CGFloat szFont );
 
 extern void HideKeyBoard();
 extern BOOL IsLetter( NSInteger idx, NSString* Txt );
 extern void DrawRoundRect( CGRect rc, int Round, UIColor* ColBrd, UIColor* ColBody );
+
+extern NSString* FlagSpaces;
+extern void GetFlagSpaces();
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 

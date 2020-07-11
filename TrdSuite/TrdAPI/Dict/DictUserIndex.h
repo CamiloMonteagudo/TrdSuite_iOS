@@ -59,9 +59,9 @@ public:
 	
 		if( nIndex> 0 )                                               // Si hay mas de uno indice
 			{
-			iIndex.SetSize( nIndex, FALSE );                            // Redimensiona el arreglo para recepcionar todos los indices
+			iIndex.SetSize( (TInt)nIndex, FALSE );                      // Redimensiona el arreglo para recepcionar todos los indices
       
-      UINT indexSize = nIndex * sizeof(DWORD);                    // Tama–o en memoria de los indices
+      UINT indexSize = (UINT)(nIndex * sizeof(DWORD));            // Tama–o en memoria de los indices
 			File.ReadBuffer(iIndex.GetBuffer(), indexSize);             // Lee contenido del fichero para el arreglo
 			}
 
@@ -101,14 +101,14 @@ public:
   // Inserta un elemento en el arreglo
 	void InsertAt(TInt aIdx, const DWORD aValue)
 		{ 
-    iIndex.InsertAt( aIdx, aValue );
+    iIndex.InsertAt( aIdx, (TInt)aValue );
 		}
 	
   //---------------------------------------------------------------------------------------------------------------------------
   // Adiciona un elemento al final del arreglo
 	void Add( const DWORD aValue)
 		{ 
-    iIndex.Add( aValue );
+    iIndex.Add( (TInt)aValue );
 		}
 	
   //---------------------------------------------------------------------------------------------------------------------------

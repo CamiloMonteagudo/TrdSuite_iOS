@@ -125,7 +125,6 @@
    [self CreateFlagLang:row.Lng InView:rowView];
    [self CreateDelRowInView:rowView];
    }
-   
   
   return row.Height;
   }
@@ -133,7 +132,7 @@
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 - (void) CreateFlagLang:(int) Lng InView:(UIView*)rowView
   {
-  CGRect frame = CGRectMake( 5, FontSize-(FLAG_H/2.0)+1, FLAG_W, FLAG_H);
+  CGRect frame = CGRectMake( 5, (LineHeight-FLAG_H)/2.0, FLAG_W, FLAG_H);
   
   UIImageView* img = [[UIImageView alloc] initWithFrame: frame];
   img.image   = [UIImage imageNamed: LGFlagFile(Lng,@"30") ];

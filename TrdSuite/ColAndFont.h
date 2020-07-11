@@ -22,13 +22,23 @@ extern UIColor* ColPanelItemTxt;                      // Color de los textos del
 // Texto para los botones
 extern UIColor* ColTxtBtns;                           // Color del texto de los botones
 extern UIFont*  fontTxtBtns;                          // Fuente para los botones
+extern NSDictionary* attrBtns;                        // Atributo para el texto de los botones
 
+// Texto para compras
+extern UIColor* ColBuyItem;                           // Item de compra nornal
+extern UIColor* ColBuyItemSel;                        // Item de compra seleccionado
+extern UIColor* ColBoughtItem;                        // Item comprado
+extern UIFont*  fontBuyItem;                          // Fuente usada para los items
+extern NSDictionary* attrBuy;
+
+// Titulos
 extern UIFont*       fontTitle;                       // Fuente para los titulos de los modulos
 extern NSDictionary* attrTitle;                       // Atributo para los titulo de los modulos
 
 // Editores de texto
-extern UIFont*  fontEdit;                             // Fuente para los textos editados
-extern UIColor* SelTxtCol;                            // Color para los textos seleccionados
+extern UIFont*       fontEdit;                        // Fuente para los textos editados
+extern UIColor*      ColTxtSel;                       // Color para los textos seleccionados
+extern UIColor*      ColHolder;                       // Color para los place holder de los textos
 extern NSDictionary* attrEdit;                        // Atributo normales de los textos editados
 
 // Diccionario
@@ -51,6 +61,16 @@ extern NSDictionary* attrBody;
 extern NSDictionary* attrBody2;
 extern NSDictionary* attrType;
 extern NSDictionary* attrAttr;
+
+extern UIColor*   ColErrInfo;                        // Color para mostrar infomación de errores
+extern NSDictionary* attrErr;
+
+// Números
+extern UIColor* ColNum1;
+extern UIColor* ColNum2;
+
+extern NSDictionary* attrNum1;
+extern NSDictionary* attrNum2;
 
 // Historial
 extern UIFont*       fontHistory;                     // Fuente para la historia de las oraciones
@@ -92,10 +112,13 @@ extern UIColor* ColBrdRound2;                         // Color del borde de las 
 extern UIColor* ColFillRound1;                        // Color de relleno de las zonas con borde redondeado
 extern UIColor* ColFillRound2;                        // Color de relleno de las zonas con borde redondeado
 
-extern UIColor* ColBckTrdInfo;                        // Color de background para la zona de información de la traducción
+extern UIColor* ColBckTrdInfo1;                        // Color de background para la zona de información de la traducción
+extern UIColor* ColBckTrdInfo2;                        // Color de background para la zona de información de la traducción
 
 extern UIColor* ColPanelTitle;                        // Color del titulo de los paneles
 extern UIFont*  fontPanelTitle;                       // Fuente para los titulos de los paneles
+
+extern void SetFontSize( CGFloat szFont );
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 

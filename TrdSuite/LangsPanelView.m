@@ -14,8 +14,8 @@
 //=========================================================================================================================================================
 @interface LangsPanelView()
   {
-  UITextView* TextCtl;
-  UILabel*    PlaceHolder;
+  __weak UITextView* TextCtl;
+  __weak UILabel*    PlaceHolder;
   
   NSRange MarkRange;                                    // Si hay un texto seleccionado y esta marcado
   BOOL    NoSelMsg;                                     // No envia mensaje cuando cambia la selección
@@ -44,10 +44,8 @@
   _BoxInit = SEP_BRD;
   _BoxMaxWidth = 50000;
   
-  LGBar = [[LangsBar alloc] initWithView:self];         // Crea la barra de idiomas en la parte superior
+  LGBar = [[LangsBar alloc] initWithView:self Trd:FALSE];  // Crea la barra de idiomas en la parte superior
 
-  LGBar.Trd = FALSE;                                    // Los idioma a mostrar en la barra son los de origen
-  
   [self addSubview:LGBar];                              // Adiciona la barra a la lista
   
   [LGBar OnSelLang:@selector(OnSelLang:) Target:self];  // Pone callback para cuando se seleccione un idioma
@@ -57,8 +55,9 @@
   PlaceHolder = (UILabel*   )[self viewWithTag:20];     // Obtiene el control que representa al placa holder
   
   // Pone la letra que usarén el texto y el placehorder
-  TextCtl.font     = fontEdit;
-  PlaceHolder.font = fontEdit;
+  TextCtl.font          = fontEdit;
+  PlaceHolder.font      = fontEdit;
+  PlaceHolder.textColor = ColHolder;
   
   TextCtl.delegate = self;                              // Pone delegado para el control de texto
   TextCtl.layoutManager.delegate = self;                // Pone delegado para el layoutManager del control de texto
@@ -68,6 +67,21 @@
   _Round = R_ALL;
   return self;
   }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Refresca el contenido de  la vista cuando cambia el tamaño de las letras
+-(void) RefreshView
+  {
+  TextCtl.font     = fontEdit;
+  PlaceHolder.font = fontEdit;
+  
+  [LGBar RefreshView];
+  
+  [self setNeedsLayout];
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+- (UITextView*) GetTextView {return TextCtl;}
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Función para establecer la propiedad 'Back' (Poner/Quitar boton de retroceso)
@@ -238,7 +252,7 @@
   NSMutableAttributedString* Txt = [[NSMutableAttributedString alloc] initWithString:TextCtl.text attributes:attrEdit];
     
   // Le aplica un color de fondo al texto que esta marcado
-  [Txt addAttribute:NSBackgroundColorAttributeName value:SelTxtCol range:range];
+  [Txt addAttribute:NSBackgroundColorAttributeName value:ColTxtSel range:range];
     
   NoSelMsg  = TRUE;                                     // Pone bandera para no enviar mensaje de cambio de selección
   TextCtl.attributedText = Txt;                         // Reasigna el texto con los atributos nuevos

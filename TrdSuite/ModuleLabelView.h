@@ -12,6 +12,7 @@
 @interface ModuleLabelView : UIView
 
 - (void) ShowLabel:(NSString *)Text InFrame:(CGRect) frm;
+- (void) RefreshLabel;
 
 @end
 //=========================================================================================================================================================

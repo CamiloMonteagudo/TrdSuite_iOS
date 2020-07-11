@@ -13,9 +13,8 @@
 
   @property (nonatomic) int ViewMode;
 
-  - (void)UpdateConjugate;
+  - (void) UpdateConjugate;
   - (void) SelectConj:(NSString*) Conj;
-  - (void) ClearConjs;
   - (void) MakeCellsForCols:(int) cols Heigth:(int) h Count:(int) n;
 
 @end

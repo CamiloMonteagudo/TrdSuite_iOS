@@ -4,10 +4,60 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>TrdSuite.xcscheme</key>
+		<key>TrdSuiteAll.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
+		<key>TrdSuiteEn.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>TrdSuiteEnEs.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>TrdSuiteEnFr.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>TrdSuiteEnIt.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>TrdSuiteEs.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>TrdSuiteEsFr.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>TrdSuiteEsIt.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>TrdSuiteFr.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>TrdSuiteIt.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>TrdSuiteItFr.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -18,6 +68,56 @@
 			<true/>
 		</dict>
 		<key>F0AC434B1ADF51E200A5089F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0E381B31BCDC81A002AF2B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0E382F61BCDC832002AF2B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0E384391BCDC849002AF2B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0E3857C1BCDC859002AF2B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0E386BF1BCDC867002AF2B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0E388021BCDC878002AF2B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0E389451BCDC88B002AF2B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0E38A881BCDC89C002AF2B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0E38BCB1BCDC8A9002AF2B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0E38D0E1BCDC8B8002AF2B0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

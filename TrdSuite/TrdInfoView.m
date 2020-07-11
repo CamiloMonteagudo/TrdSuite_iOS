@@ -54,7 +54,7 @@
   _ModeBtnRight  = -1;                           // Modo actual del boton derecho (Sin especificar)
   
   Frame = [[UIView alloc] initWithFrame: self.frame];
-  Frame.backgroundColor = ColBckTrdInfo;
+  Frame.backgroundColor = ColBckTrdInfo1;
   
   float w = self.frame.size.width - 2*SEP_TXT;
   float h = self.frame.size.height;
@@ -63,7 +63,6 @@
   
   Info.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
   Info.numberOfLines    = 0;
-  Info.backgroundColor  = ColBckTrdInfo;
     
   [Frame addSubview: Info];
   [self addSubview: Frame];
@@ -84,6 +83,17 @@
   btnSaveTrd.hidden = TRUE;
   
   return self;
+  }
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Refresca el contenido de  la vista cuando cambia el tamaño de las letras
+-(void) RefreshView
+  {
+  title.font = fontPanelTitle;
+  
+  if( self.Mode == MODE_MEANS ) [self ShowMeans];
+  else                          [self ShowRoots];
+  
+  [self setNeedsLayout];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -347,7 +357,7 @@
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Muestra los significados por primera ves
+// Muestra las raises de la palabar por primera ves
 - (void)ShowRoots
   {
   self.Mode = MODE_ROOTS;
@@ -397,7 +407,7 @@
     }
 
   if( fOK )                                                               // Si la palabra fue encontrada
-    Info.attributedText = [ProxyDict getWDataFromIndex:nowIdx];           // Obtiene los significado de la palabra
+    Info.attributedText = [ProxyDict getWDataFromIndex:nowIdx NoKey:FALSE];           // Obtiene los significado de la palabra
   else                                                                    // Si no encontro, la palabra
     {
     NSString* sMsg = NSLocalizedString( @"WrdNoFound", nil);

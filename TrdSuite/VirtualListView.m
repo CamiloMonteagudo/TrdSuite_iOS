@@ -8,8 +8,7 @@
 
 #import "VirtualListView.h"
 #import "ColAndFont.h"
-
-#define RowSep  0.5               // Separación entre las filas de la lista
+#import "AppData.h"
 
 //=========================================================================================================================================================
 @interface VirtualListView ()
@@ -36,6 +35,26 @@
   self = [super initWithCoder:aDecoder];
   if( !self ) return nil;
 
+  [self initData];
+  
+  return self;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+- (id)initWithFrame:(CGRect)frame
+  {
+  self = [super initWithFrame:frame];
+  if( !self ) return self;
+  
+  [self initData];
+  
+  return self;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Inicializa los datos especificos de la vista de compras
+- (void) initData
+  {
   _MinHeight = 30;
   _SelectedIndex = -1;
   
@@ -46,8 +65,6 @@
   
   self.showsHorizontalScrollIndicator = NO;
   self.showsVerticalScrollIndicator   = YES;
-  
-  return self;
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -58,7 +75,7 @@
 
   lastWidth = self.bounds.size.width;
   
-  self.contentSize = CGSizeMake(lastWidth, (_MinHeight+RowSep) * Count );
+  self.contentSize = CGSizeMake(lastWidth, (_MinHeight+SEP_ROW) * Count );
   self.contentOffset = CGPointMake(0, 0);                 // Pone la lista en el origen
   
   [self UpdateCount:Count];                               // Actualiza la lista con la nueva cantidad de item
@@ -139,7 +156,7 @@
 // Crea la primera fila, basandose en la posición del scroll
 - (void) CreateFirstRow
   {
-  float IdxPos = YOffIni / (_MinHeight+RowSep);                           // Elemento y fracción, correspondiente al borde superior
+  float IdxPos = YOffIni / (_MinHeight+SEP_ROW);                           // Elemento y fracción, correspondiente al borde superior
   int   iRow   = (int) IdxPos;                                            // Elemento exacto, correspondiente al borde superior
 
   if( iRow>=_Count )                                                      // Se estima incorrectamente la primera fila, posiblemente
@@ -155,16 +172,17 @@
   
   
   VirtualRowView* vRow = [_VirtualListDelegate GetRowViewAt:iRow];        // Obtiene una vista nueva para la fila 'iRow'
+  vRow.Index = iRow;
     
   float H = vRow.frame.size.height;                                       // Toma la altura que tiene la fila
-  float dtH  = (IdxPos-iRow) * (H+RowSep);                                // Parte de la fila que queda por encima del origen
+  float dtH  = (IdxPos-iRow) * (H+SEP_ROW);                               // Parte de la fila que queda por encima del origen
 
   YPosIni = YOffIni - dtH;                                                // Posición de la primera fila en el contenido del scroll
   vRow.frame = CGRectMake(0, YPosIni, lastWidth, H);                      // Posiciona la vista adecuadamnete
   
   [self addSubview:vRow];                                                 // Adiciona al scroll
   
-  YPosFin = YPosIni + H + RowSep;                                         // Calcula la posición para la proxima fila
+  YPosFin = YPosIni + H + SEP_ROW;                                        // Calcula la posición para la proxima fila
 
   ItemIni = iRow;                                                         // Indice del primer item de la lista
   }
@@ -178,13 +196,14 @@
     ++iRow;                                                               // Toma la proxima fila
     
     VirtualRowView* vRow = [_VirtualListDelegate GetRowViewAt:iRow];      // Obtiene una vista nueva para la fila 'iRow'
-  
+    vRow.Index = iRow;
+
     float H = vRow.frame.size.height;                                     // Toma la altura que tiene la vista
     vRow.frame = CGRectMake(0, YPosFin, lastWidth, H);                    // Posiciona la vista adecuadamnete
 
     [self addSubview:vRow];                                               // Adiciona al scroll
       
-    YPosFin += H + RowSep;                                                // Avanza en la vertical el alto de la fila
+    YPosFin += H + SEP_ROW;                                               // Avanza en la vertical el alto de la fila
     }
     
   ItemFin = iRow;                                                         // Indice del ultimo inidice de la lista
@@ -195,7 +214,7 @@
 // Ajusta el tamaño del scroll de acuerdo al tamaño de la zona visible
 - (void) FixScrollSize
   {
-  float H  = YPosFin + (_Count-ItemFin-1) * (_MinHeight+RowSep);            // Calcula la altura teniendo en cuanta los items que estan en la pantalla
+  float H  = YPosFin + (_Count-ItemFin-1) * (_MinHeight+SEP_ROW);           // Calcula la altura teniendo en cuanta los items que estan en la pantalla
   
   if( H != self.contentSize.height )                                        // Si la altura diferente a la altura actual del scroll
     {
@@ -224,7 +243,7 @@
       continue;                                                           // Continua con la proxima
     
     yi = view.frame.origin.y;                                             // Obtiene la posición inicial
-    yf = yi + view.frame.size.height + RowSep;                            // Obtiene la posicion final
+    yf = yi + view.frame.size.height + SEP_ROW;                           // Obtiene la posicion final
 
     VirtualRowView* vRow = (VirtualRowView*)view;                         // Castea la subview a una fila de la lista
       
@@ -261,9 +280,10 @@
     --iRow;                                                               // Toma la fila previa
     
     VirtualRowView* vRow = [_VirtualListDelegate GetRowViewAt:iRow];      // Obtiene una vista nueva para la fila 'iRow'
-  
+    vRow.Index = iRow;
+ 
     float H = vRow.frame.size.height;                                     // Toma la altura que tiene la vista
-    YPosIni -= (RowSep + H);                                              // Avanza en la vertical el alto de la fila
+    YPosIni -= (SEP_ROW + H);                                             // Avanza en la vertical el alto de la fila
     
     vRow.frame = CGRectMake(0, YPosIni, lastWidth, H);                    // Posiciona la vista adecuadamnete
 
@@ -401,6 +421,7 @@
   [nowRow removeFromSuperview];                                     // La quita de la lista
   
   nowRow = [_VirtualListDelegate GetRowViewAt:iRow];                // Obtiene una fila nueva con indice iRow
+  nowRow.Index = iRow;
   
   CGRect rc = nowRow.frame;                                         // Obtiene el rectangulo que la enmarca
   rc.origin.y = YPos;                                               // Le pone la posición en y
@@ -423,7 +444,7 @@
   {
   if( iRow<0 || iRow >= _Count ) return;                            // Si la fila no esta dentro del rango, no hace nada
   
-  float yPos = iRow * (_MinHeight+RowSep);                          // Calcula la posición de la fila
+  float yPos = iRow * (_MinHeight+SEP_ROW);                         // Calcula la posición de la fila
   if( yPos == self.contentOffset.y ) return;                        // Si ya el scroll esta en esa posición, no hace nada
   
   [self ClearRowsView];                                             // Fuerza a que se redibujen todas las filas
@@ -462,6 +483,17 @@
 
 //=========================================================================================================================================================
 @implementation VirtualRowView
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+- (id)initWithFrame:(CGRect)frame
+  {
+  self = [super initWithFrame:frame];
+  if( !self ) return nil;
+  
+  self.tag = -1;
+  
+  return self;
+  }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Pone la fila actual en el cache para poder reusarla

@@ -37,7 +37,7 @@
                                                 <rect key="frame" x="12" y="55" width="265" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" white="0.75072938280000001" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -59,7 +59,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.074509806930000005" green="0.79215693470000004" blue="0.96078437569999997" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.25098039215686274" green="0.64313725490196072" blue="0.96078431372549022" alpha="1" colorSpace="deviceRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="aiR-8Z-Vkt" userLabel="Module Label" customClass="ModuleLabelView">
                                 <rect key="frame" x="60" y="518" width="200" height="50"/>
@@ -68,6 +68,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.25098039215686274" green="0.64313725490196072" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="FrameView" destination="KX3-fZ-e6g" id="Hay-77-YEv"/>
@@ -80,10 +81,80 @@
                         <segue destination="P49-OY-0aF" kind="modal" identifier="DictSegue" modalTransitionStyle="flipHorizontal" id="pyg-aH-Xb6"/>
                         <segue destination="6wW-uF-xc5" kind="modal" identifier="NumsSegue" modalTransitionStyle="flipHorizontal" id="B9U-Q1-Bn3"/>
                         <segue destination="Bu2-Ur-BhV" kind="modal" identifier="ConjSegue" modalTransitionStyle="flipHorizontal" id="vNs-Rg-eRy"/>
+                        <segue destination="Hub-sk-q4b" kind="modal" identifier="SettingSegue" modalTransitionStyle="flipHorizontal" id="aPo-BW-5Z9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <exit id="zBo-ER-W2B" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
+            <point key="canvasLocation" x="267" y="189"/>
+        </scene>
+        <!--Setting Controller-->
+        <scene sceneID="AV9-wb-pFB">
+            <objects>
+                <viewController id="Hub-sk-q4b" customClass="SettingController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xSk-5y-nGI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="T1e-GE-bV8" userLabel="btnClose">
+                                <rect key="frame" x="270" y="20" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="4" minY="-4" maxX="-4" maxY="4"/>
+                                <state key="normal" image="BntCloseMod.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="OnBtnClose:" destination="Hub-sk-q4b" eventType="touchUpInside" id="U4l-VY-F6d"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tamaño de las letras" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="afT-Ra-Rzh">
+                                <rect key="frame" x="9" y="35" width="300" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="14" minValue="10" maxValue="25" id="GrI-Fx-WGm">
+                                <rect key="frame" x="7" y="59" width="295" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="OnChangeFonSize:" destination="Hub-sk-q4b" eventType="valueChanged" id="n4F-6d-tW6"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Idiomas disponibles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IYk-Az-HeW">
+                                <rect key="frame" x="9" y="103" width="228" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" id="ecn-gN-tlb" customClass="PurchasesView">
+                                <rect key="frame" x="5" y="132" width="310" height="436"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="qq9-fV-q2t" userLabel="Module Label" customClass="ModuleLabelView">
+                                <rect key="frame" x="60" y="520" width="200" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25098039220000001" green="0.64313725489999995" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="ListItems" destination="ecn-gN-tlb" id="Ghz-hm-302"/>
+                        <outlet property="ModuleTitle" destination="qq9-fV-q2t" id="kQP-SV-z51"/>
+                        <outlet property="Slider" destination="GrI-Fx-WGm" id="hx1-zF-fOb"/>
+                        <outlet property="btnClose" destination="T1e-GE-bV8" id="8xh-Z9-RoY"/>
+                        <outlet property="lbLangs" destination="IYk-Az-HeW" id="xVK-R2-Ctc"/>
+                        <outlet property="lbSlider" destination="afT-Ra-Rzh" id="bJ9-V3-0uC"/>
+                        <segue destination="zBo-ER-W2B" kind="unwind" identifier="Back" unwindAction="ReturnFromUnwind:" id="f2M-Ec-Fli"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zg3-mV-9pA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="702" y="189"/>
         </scene>
         <!--Dict Controller-->
         <scene sceneID="Yo1-Sr-EHE">
@@ -96,6 +167,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Rgt-FL-PXg" userLabel="btnClose">
                                 <rect key="frame" x="270" y="20" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="4" minY="-4" maxX="-4" maxY="4"/>
                                 <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="5" maxY="0.0"/>
                                 <state key="normal" image="BntCloseMod.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -168,7 +240,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.25098039215686274" green="0.60392156862745094" blue="1" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <connections>
                         <outlet property="BtnFindRoots" destination="7xQ-RZ-bOb" id="JHf-dk-KOr"/>
@@ -184,7 +256,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="STF-eu-3mc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ETe-7k-jjt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="749" y="-601"/>
+            <point key="canvasLocation" x="267" y="-519"/>
         </scene>
         <!--Nums Controller-->
         <scene sceneID="hWq-KI-Ehu">
@@ -194,53 +266,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="k4z-hP-9iK" userLabel="Panel texto fuente" customClass="LangsPanelView">
-                                <rect key="frame" x="0.0" y="20" width="320" height="85"/>
+                            <view contentMode="scaleToFill" id="l4y-tg-Tr9" customClass="NumGroupView">
+                                <rect key="frame" x="0.0" y="30" width="270" height="38"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" tag="10" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" id="CeY-Rm-Mbc">
-                                        <rect key="frame" x="10" y="50" width="300" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="20" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escriba en español" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RaY-fU-Qtk" userLabel="Place Holder">
-                                        <rect key="frame" x="12" y="55" width="265" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Sjz-74-lYq">
-                                <rect key="frame" x="-19" y="136" width="138" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Números">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6dR-DY-dtN" userLabel="btnClose">
+                                <rect key="frame" x="270" y="20" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="4" minY="-4" maxX="-4" maxY="4"/>
+                                <state key="normal" image="BntCloseMod.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="OnBtnClose:" destination="6wW-uF-xc5" eventType="touchUpInside" id="J5I-R3-3ck"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lectura del número" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uyJ-sC-o9b">
+                                <rect key="frame" x="9" y="70" width="228" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" id="pjZ-Yd-EBH" customClass="LangsBar">
+                                <rect key="frame" x="0.0" y="96" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="eeS-Vr-gLE" customClass="NumResultView">
+                                <rect key="frame" x="0.0" y="152" width="320" height="284"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                             <view contentMode="scaleToFill" id="J5y-YT-1yU" userLabel="Module Label" customClass="ModuleLabelView">
                                 <rect key="frame" x="60" y="520" width="200" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.25098039215686274" green="0.64313725490196072" blue="1" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <connections>
+                        <outlet property="GrpNum" destination="l4y-tg-Tr9" id="N8v-cp-gMs"/>
+                        <outlet property="LangBar" destination="pjZ-Yd-EBH" id="PYF-2T-B2H"/>
                         <outlet property="ModuleTitle" destination="J5y-YT-1yU" id="amd-tm-kxs"/>
-                        <outlet property="PanelSrc" destination="k4z-hP-9iK" id="MMM-hX-WT2"/>
+                        <outlet property="NumResult" destination="eeS-Vr-gLE" id="cKJ-Xd-mph"/>
+                        <outlet property="btnClose" destination="6dR-DY-dtN" id="7f2-mo-u3C"/>
+                        <outlet property="lbNum" destination="uyJ-sC-o9b" id="Xgr-ae-ygK"/>
                         <segue destination="5DW-iy-7kA" kind="unwind" identifier="Back" unwindAction="ReturnFromUnwind:" id="qAJ-95-DQm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="99l-ko-1tP" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5DW-iy-7kA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="749" y="823"/>
+            <point key="canvasLocation" x="716" y="882"/>
         </scene>
         <!--Conj Controller-->
         <scene sceneID="d8h-7z-uE9">
@@ -274,6 +354,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NuM-6F-9EX" userLabel="btnClose">
                                 <rect key="frame" x="270" y="20" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="4" minY="-4" maxX="-4" maxY="4"/>
                                 <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="5" maxY="0.0"/>
                                 <state key="normal" image="BntCloseMod.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -339,9 +420,19 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="e7e-Kc-lKB" userLabel="BtnFindMeans">
-                                        <rect key="frame" x="270" y="32" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="270" y="30" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                         <state key="normal" image="BtnMeans2.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" tag="107" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kzu-FG-Jn4" userLabel="BtnLang">
+                                        <rect key="frame" x="220" y="30" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                        <state key="normal" image="FlagEn30.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -362,7 +453,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.25098039215686274" green="0.64313725490196072" blue="1" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <connections>
                         <outlet property="HdrConjs" destination="YLC-Vw-RbX" id="Bgf-Y1-zxm"/>
@@ -376,7 +467,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cyn-hU-rK7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ByF-cf-tQe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="749" y="99"/>
+            <point key="canvasLocation" x="716" y="-519"/>
         </scene>
     </scenes>
     <resources>
@@ -386,6 +477,7 @@
         <image name="BtnMeans2.png" width="50" height="50"/>
         <image name="BtnMoveDown.png" width="50" height="50"/>
         <image name="BtnRoots2.png" width="50" height="50"/>
+        <image name="FlagEn30.png" width="23" height="15"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

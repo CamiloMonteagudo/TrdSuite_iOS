@@ -42,24 +42,8 @@ static float PopUpWidth;                 // Ancho del mené
   RowHeight  = 50;                  // Altura de las filas del menú
   PopUpWidth = 200;                 // Ancho del menú
   
-  UpView  = nil;
-  for(;;)                                                                     // Itera para encontrar la vista de mayor jerarquia
-    {
-    if( view.tag == 999 )
-      {
-      UpView = view;
-      break;
-      }
-      
-    view = view.superview;
-    }
-    
-  if( UpView == nil )
-    {
-    NSLog(@"No encontro la vista superior");
-    return nil;
-    
-    }
+  UpView  = [self FindTopView:view];
+  if( !UpView ) return nil;
   
   UpView.clipsToBounds = FALSE;
   
@@ -84,6 +68,22 @@ static float PopUpWidth;                 // Ancho del mené
 
   _SelectedItem = -1;                                                         // Por defecto no se selecciono ningun item
   return self;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Encuentra la vista definida como el tope superior
+- (UIView*) FindTopView:(UIView*) view
+  {
+  for( ; view!=nil; )                                                                     // Itera para encontrar la vista de mayor jerarquia
+    {
+    if( view.tag == 999 )
+      return view;
+      
+    view = view.superview;
+    }
+    
+  NSLog(@"No encontro la vista superior");
+  return nil;
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------

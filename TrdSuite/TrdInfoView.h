@@ -22,6 +22,7 @@
 
   -(void) FindWord:(NSString*) txt;
   -(void) UpdateButtons;
+  -(void) RefreshView;
 
 @end
 

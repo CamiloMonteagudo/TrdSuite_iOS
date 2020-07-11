@@ -17,7 +17,7 @@
   @property (nonatomic         ) BOOL HideTitle;               // No muestra titulo del idioma
   @property (nonatomic         ) BOOL NoCur;                   // Inica si se muestra la flechita del idioma actual o no
 
-  - (id)initWithView:(UIView*) view;
+  - (id)initWithView:(UIView*) view Trd:(BOOL) trd;
 
   - (void) AddItemId:(NSString*) strItem;
   - (void) ClearAllItems;
@@ -27,6 +27,7 @@
   - (void) OnOnBack:(SEL)action Target:(id)target;
 
   - (void) RefreshLangsButtons;
+  - (void) RefreshView;
 
   - (void) MoveToX:(float) x Y:(float) y;
 

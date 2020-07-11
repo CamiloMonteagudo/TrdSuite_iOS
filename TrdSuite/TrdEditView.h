@@ -23,6 +23,7 @@
   @property (nonatomic, readonly ) float StaticHeight;  // Retorna altura de la vista que no varia
 
   - (void) UpdateData;
+  - (void) RefreshView;
 
 @end
 

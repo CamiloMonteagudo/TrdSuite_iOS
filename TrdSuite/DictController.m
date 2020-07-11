@@ -321,7 +321,7 @@
   NSString* word = _PanelSrc.Text;
   Roots = [ProxyConj GetRootListForWord:word Lang:LGSrc];
   
-  int nRoots = Roots.count;
+  int nRoots = (int)Roots.count;
   if( nRoots == 0 ) return;
   
   _PanelSrc.Text = Roots[0];

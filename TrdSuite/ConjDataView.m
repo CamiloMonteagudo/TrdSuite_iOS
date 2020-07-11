@@ -15,16 +15,11 @@
 //=========================================================================================================================================================
 @interface ConjDataView()
   {
-  NSAttributedString *hdrTxts[3];
-  float               hdrLens[3];
-  float               hdrHeight;
-  
   int nCol;
   int hCell;
   int Count;
   int WLayout;
   
-  UIView* hdrView;
   NSArray* CnjCells;
   }
 @end
@@ -36,7 +31,7 @@
 // Actualiza el contenido de la conjugación
 - (void)UpdateConjugate
   {
-  [self GetHeaderData];
+//  [self GetHeaderData];
   [self UpdateInActualViewMode];
   }
 
@@ -98,36 +93,6 @@
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-- (void) ClearConjs
-  {
-  int nVRows = (int)self.subviews.count;                                // Guarda la cantidad de vistas en el scroll
-    
-  for( int i=0; i<nVRows; ++i )
-    {
-    UIView* view = self.subviews[i];                                    // Toma la vista actual
-    
-    if( view.tag != -1 ) continue;                                      // Si la vista no es una celda, la salta
-    if( view == hdrView )                                               // Este es el header
-      {
-      for( int j=0; j<3; ++j )                                          // Recorre todos lo label
-        {
-        UILabel* lb = view.subviews[j];                                 // Coje label actual
-        lb.text = @"";                                                  // Le pone el texto
-        }
-      }
-    else                                                                // Cualquier otra celda
-      {
-      UILabel* label = view.subviews[0];                                // Obtiene label para los datos
-
-      label.text = @"";                                                 // Pone texto vacio
-      
-      if( view.backgroundColor != ColCellBck )                       // Si la celda estaba seleccionada
-        view.backgroundColor = ColCellBck;                           // Quita la marca de selección
-      }
-    }
-  }
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
 - (void) MakeCellsForCols:(int) cols Heigth:(int) h Count:(int) n
   {
   if( Count == n  )                                                     // Ya estan todas las celdas creadas
@@ -137,16 +102,6 @@
       [self setNeedsLayout];                                            // Manda a redistribuir a las celdas
       return;                                                           // Termina
       }
-      
-    float h1 = hdrView.frame.size.height;                               // Obtiene la altura actual del header
-    float h2 = [self LayoutHeaderView];                                 // Redistribuye las vistas dentro del header
-    
-    if( h1 != h2 )                                                      // Si la altura del header cambio
-      {
-      WLayout = 0;                                                      // Fuerza, que se tengan que redistribuir las celdas
-      [self setNeedsLayout];                                            // Manda a redistribuir a las celdas
-      }
-      
     return;                                                             // No crea ninguna celda
     }
   
@@ -162,7 +117,7 @@
   UIView* back = [self CreateCellWithFrame:rc];                         // Crea la celda, inicial de fondo
   back.tag = -2;
   
-  float y = [self CreateHeader];                                        // Crea la celda de encamezamiento
+  float y = SEP;
   float w = (WLayout - (SEP*(cols-1))) / cols;                          // Calcula en ancho de las celdas
 
   for( int i=0; i<n; )                                                  // Ciclo para las filas
@@ -238,51 +193,6 @@
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Obtiene los datos de los textos del encabezamiento
-- (void) GetHeaderData
-  {
-  for( int i=0; i<3; ++i )                                                // Recorre los 3 elementos del encabezammiento
-    {
-    hdrTxts[i] = [ProxyConj GetFormatedData:i];                           // Obtiene el texto que lo representa
-    hdrLens[i] = hdrTxts[i].size.width + 10;                              // Obtiene el tamaño del texto
-    }
-    
-  hdrHeight = hdrTxts[0].size.height + 3;                                 // Obtiene alto de una linea del encabezamiento
-  }
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Obtiene le encabezamiento para las conjugaciones
-- (float) CreateHeader
-  {
-  CGRect frms[3];
-  
-  float W = self.frame.size.width;
-  
-  float x = 5;
-  float y = 5;
-
-  for( int i=0; i<3; ++i )
-    {
-    float len = hdrLens[i];
-    if( x+len > W ) {x=5; y += hdrHeight;}
-    
-    frms[i] = CGRectMake( x, y, len, hdrHeight );
-    x += len;
-    }
-  
-  int idxLast = (_ViewMode==BY_MODES)? 2 : 0;
-  
-  float h = (frms[idxLast].origin.y + frms[idxLast].size.height + 5);
-  
-  hdrView = [self CreateCellWithFrame:CGRectMake(0, SEP, W, h)];
-      
-  for( int i=0; i<3; ++i )
-    [self AddLabelToCell:hdrView WithFrame:frms[i]];
-  
-  return h + SEP + SEP;
-  }
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
 - (void)layoutSubviews
   {
   int   W  = self.frame.size.width;
@@ -322,11 +232,6 @@
         view.frame = CGRectMake(0, -200, WLayout, 200);               // Redimesiona la celda
         --col;                                                        // No la cuenta como columna
         }
-      else if( view == hdrView )                                      // Es la celda de encabezamiento
-        {
-        y = [self LayoutHeaderView] + SEP;                            // La redimesiona y pone 'y' segun su altura
-        --col;                                                        // No la toma como columna
-        }
       else                                                            // Es una celda normal
         {
         view.frame = CGRectMake(x, y, w, hCell);                      // La mueve para la posición actual
@@ -344,34 +249,6 @@
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Relocaliza los label dentro del encabezamiento, y lo redimesiona si es necesario
-- (float) LayoutHeaderView
-  {
-  float  x = 5;                                                       // Posición del label inicial
-  float  y = 5;
-  CGRect lstFrm;                                                      // Frame del ultimo label a mostrar
-  
-  for( int i=0; i<3; ++i )                                            // Recorre todos lo label, en el encabezamiento
-    {
-    UILabel* lb = hdrView.subviews[i];                                // Coje label actual
-    
-    float len = hdrLens[i];                                           // Obtiene longitud del label correspondiente
-    if( x+len > WLayout ) {x=5; y += hdrHeight;}                      // Si sobrepasa el ancho disponible, pasa la proxima fila
-    
-    lb.frame = CGRectMake( x, y, len, hdrHeight );                    // Posiona el label
-    x += len;                                                         // Salta la longituda del label actual
-    
-    if( !lb.hidden ) lstFrm = lb.frame;                               // Si no esta oculto, lo toma como el último
-    }
-
-  float h = (lstFrm.origin.y + lstFrm.size.height + 5);               // Calcula la altura, según el ultimo label visible
-  
-  hdrView.frame = CGRectMake(0, SEP, WLayout, h);                     // Redimensiona la celda de encabezamiento
-      
-  return h + SEP;                                                     // Retorna la altura del encabezamiento
-  }
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Busca todas las celdas en la vista y le pone el contenido, con la conjugación correspondiente
 - (void) FillConjList
   {
@@ -383,33 +260,19 @@
     UIView* view = self.subviews[i];                                    // Toma la vista actual
     
     if( view.tag != -1 ) continue;                                      // Si la vista no es una celda, la salta
-    if( view == hdrView )                                               // Este es el header
-      {
-      int idxLast = (_ViewMode==BY_MODES)? 2:0;                         // Último elemento visible en el header
-  
-      for( int j=0; j<3; ++j )                                          // Recorre todos lo label
-        {
-        UILabel* lb = view.subviews[j];                                 // Coje label actual
-        lb.attributedText = hdrTxts[j];                                 // Le pone el texto
-    
-        lb.hidden = (j>idxLast);                                        // Lo muestra/oculta según el caso
-        }
-      }
-    else                                                                // Cualquier otra celda
-      {
-      UILabel* label = view.subviews[0];                                // Obtiene label para los datos
 
-      int iData = idx;                                                  // Obtiene el indice a los datos
-      if( iData < CnjCells.count )                                      // Si esta dentro del rango de los datos
-        {
-        ConjAndTxt* data = CnjCells[iData];                             // Obtiene los datos
-        label.attributedText = data.AttrText;                           // Pone texto de los datos
-        }
-      else                                                              // No hay datos
-        label.Text = @"";                                               // Pone texto vacio
-        
-      ++idx;                                                            // Pasa al proximo dato
+    UILabel* label = view.subviews[0];                                  // Obtiene label para los datos
+
+    int iData = idx;                                                    // Obtiene el indice a los datos
+    if( iData < CnjCells.count )                                        // Si esta dentro del rango de los datos
+      {
+      ConjAndTxt* data = CnjCells[iData];                               // Obtiene los datos
+      label.attributedText = data.AttrText;                             // Pone texto de los datos
       }
+    else                                                                // No hay datos
+      label.Text = @"";                                                 // Pone texto vacio
+        
+    ++idx;                                                              // Pasa al proximo dato
     }
   }
 
@@ -428,14 +291,14 @@
     {
     UIView* view = self.subviews[i];                                    // Toma la vista actual
     
-    if( view.tag != -1 || view == hdrView ) continue;                   // Si la vista no es una celda, o es el encabezamiento, la salta
+    if( view.tag != -1 /*|| view == hdrView*/ ) continue;              // Si la vista no es una celda, o es el encabezamiento, la salta
 
     int iData = idx;                                                    // Obtiene el indice a los datos
     if( iData >= CnjCells.count ) break;                                // Llego al final de los datos, termina
     
     ConjAndTxt* data = CnjCells[iData];                                 // Obtiene los datos, para el indice actual
         
-    int ret = [Conj compare:data.Conj options:NSCaseInsensitiveSearch]; // Compara conjuagacion actual, con la buscada
+    int ret = (int)[Conj compare:data.Conj options:NSCaseInsensitiveSearch]; // Compara conjuagacion actual, con la buscada
           
     if( ret == NSOrderedSame )                                          // Son iguales las conjugaciones
       {

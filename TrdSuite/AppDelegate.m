@@ -8,14 +8,32 @@
 
 #import "AppDelegate.h"
 #import "AppData.h"
+#import "ColAndFont.h"
+#import "PurchasesView.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
   {
-  if( [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad )
-    SetFontSize(20);
-    
+  NSUserDefaults* def = [NSUserDefaults standardUserDefaults];
+  
+  for( int i=0; i<N_PURCH; ++i)
+    {
+    NSString* key = [NSString stringWithFormat:@"Purchase%d", i];
+    if( [def boolForKey:key] )
+      [Purchases SetPurchasedItem:i ];
+    }
+  
+  int szFont = (int)[def integerForKey:@"FontSize"];
+  if( szFont == 0 )
+    {
+    if( [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad )
+      SetFontSize(20);
+    }
+  else
+    SetFontSize(szFont);
+
+  [Purchases Initialize];
   return YES;
   }
 							

@@ -7,6 +7,10 @@
 //
 
 #import "AppData.h"
+#import "ColAndFont.h"
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+NSString *const RefreshNotification = @"RefreshNotification";
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 int LGSrc = -1;
@@ -22,6 +26,117 @@ UITextView* Responder;            // Vista donde se esta editando texto
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Matrix de direcciones de traduccion instaladas
+#ifdef TrdSuiteEn
+static int _Inst[LGCount][LGCount] =
+	{
+  //     Es,En,It,De,Fr
+  /*Es*/{ 0, 1, 0, 0, 0 },
+  /*En*/{ 1, 0, 1, 0, 1 },
+  /*It*/{ 0, 1, 0, 0, 0 },
+  /*De*/{ 0, 0, 0, 0, 0 },
+  /*Fr*/{ 0, 1, 0, 0, 0 }
+	};
+#endif
+#ifdef TrdSuiteEnEs
+static int _Inst[LGCount][LGCount] =
+	{
+  //     Es,En,It,De,Fr
+  /*Es*/{ 0, 1, 0, 0, 0 },
+  /*En*/{ 1, 0, 0, 0, 0 },
+  /*It*/{ 0, 0, 0, 0, 0 },
+  /*De*/{ 0, 0, 0, 0, 0 },
+  /*Fr*/{ 0, 0, 0, 0, 0 }
+	};
+#endif
+#ifdef TrdSuiteEnIt
+static int _Inst[LGCount][LGCount] =
+	{
+  //     Es,En,It,De,Fr
+  /*Es*/{ 0, 0, 0, 0, 0 },
+  /*En*/{ 0, 0, 1, 0, 0 },
+  /*It*/{ 0, 1, 0, 0, 0 },
+  /*De*/{ 0, 0, 0, 0, 0 },
+  /*Fr*/{ 0, 0, 0, 0, 0 }
+	};
+#endif
+#ifdef TrdSuiteEnFr
+static int _Inst[LGCount][LGCount] =
+	{
+  //     Es,En,It,De,Fr
+  /*Es*/{ 0, 0, 0, 0, 0 },
+  /*En*/{ 0, 0, 0, 0, 1 },
+  /*It*/{ 0, 0, 0, 0, 0 },
+  /*De*/{ 0, 0, 0, 0, 0 },
+  /*Fr*/{ 0, 1, 0, 0, 0 }
+	};
+#endif
+#ifdef TrdSuiteEs
+static int _Inst[LGCount][LGCount] =
+	{
+  //     Es,En,It,De,Fr
+  /*Es*/{ 0, 1, 1, 0, 1 },
+  /*En*/{ 1, 0, 0, 0, 0 },
+  /*It*/{ 1, 0, 0, 0, 0 },
+  /*De*/{ 0, 0, 0, 0, 0 },
+  /*Fr*/{ 1, 0, 0, 0, 0 }
+	};
+#endif
+#ifdef TrdSuiteEsIt
+static int _Inst[LGCount][LGCount] =
+	{
+  //     Es,En,It,De,Fr
+  /*Es*/{ 0, 0, 1, 0, 0 },
+  /*En*/{ 0, 0, 0, 0, 0 },
+  /*It*/{ 1, 0, 0, 0, 0 },
+  /*De*/{ 0, 0, 0, 0, 0 },
+  /*Fr*/{ 0, 0, 0, 0, 0 }
+	};
+#endif
+#ifdef TrdSuiteEsFr
+static int _Inst[LGCount][LGCount] =
+	{
+  //     Es,En,It,De,Fr
+  /*Es*/{ 0, 0, 0, 0, 1 },
+  /*En*/{ 0, 0, 0, 0, 0 },
+  /*It*/{ 0, 0, 0, 0, 0 },
+  /*De*/{ 0, 0, 0, 0, 0 },
+  /*Fr*/{ 1, 0, 0, 0, 0 }
+	};
+#endif
+#ifdef TrdSuiteIt
+static int _Inst[LGCount][LGCount] =
+	{
+  //     Es,En,It,De,Fr
+  /*Es*/{ 0, 0, 1, 0, 0 },
+  /*En*/{ 0, 0, 1, 0, 0 },
+  /*It*/{ 1, 1, 0, 0, 1 },
+  /*De*/{ 0, 0, 0, 0, 0 },
+  /*Fr*/{ 0, 0, 1, 0, 0 }
+	};
+#endif
+#ifdef TrdSuiteItFr
+static int _Inst[LGCount][LGCount] =
+	{
+  //     Es,En,It,De,Fr
+  /*Es*/{ 0, 0, 0, 0, 0 },
+  /*En*/{ 0, 0, 0, 0, 0 },
+  /*It*/{ 0, 0, 0, 0, 1 },
+  /*De*/{ 0, 0, 0, 0, 0 },
+  /*Fr*/{ 0, 0, 1, 0, 0 }
+	};
+#endif
+#ifdef TrdSuiteFr
+static int _Inst[LGCount][LGCount] =
+	{
+  //     Es,En,It,De,Fr
+  /*Es*/{ 0, 0, 0, 0, 1 },
+  /*En*/{ 0, 0, 0, 0, 1 },
+  /*It*/{ 0, 0, 0, 0, 1 },
+  /*De*/{ 0, 0, 0, 0, 0 },
+  /*Fr*/{ 1, 1, 1, 0, 0 }
+	};
+#endif
+#ifdef TrdSuiteAll
 static int _Inst[LGCount][LGCount] =
 	{
   //     Es,En,It,De,Fr
@@ -31,6 +146,7 @@ static int _Inst[LGCount][LGCount] =
   /*De*/{ 0, 0, 0, 0, 0 },
   /*Fr*/{ 1, 1, 1, 0, 0 }
 	};
+#endif
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Abreviatura de de los idiomas segun el codigo ISO
@@ -49,14 +165,14 @@ static NSString * _LngNames[5][5] =
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Tamaño de los botones para cada una de los idiomas
-static int _LngSizes[5][5] =
-  {// Español, Ingles, Italiano, Aleman, Frances
-    { 53     , 40    , 48      , 80    , 53 },   // IUser Español
-    { 53     , 47    , 40      , 80    , 45 },   // IUser Inglés
-    { 63     , 48    , 48      , 80    , 60 },   // IUser Italiano
-    { 71     , 66    , 82      , 80    , 85 },   // IUser Alemán
-    { 60     , 48    , 40      , 80    , 55 },   // IUser Francés
-  };
+//static int _LngSizes[5][5] =
+//  {// Español, Ingles, Italiano, Aleman, Frances
+//    { 53     , 40    , 48      , 80    , 53 },   // IUser Español
+//    { 53     , 47    , 40      , 80    , 45 },   // IUser Inglés
+//    { 63     , 48    , 48      , 80    , 60 },   // IUser Italiano
+//    { 71     , 66    , 82      , 80    , 85 },   // IUser Alemán
+//    { 60     , 48    , 40      , 80    , 55 },   // IUser Francés
+//  };
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 NSString* LGAbrv( int lng )
@@ -75,11 +191,24 @@ NSString* LGName( int lng )
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Tamaño de los botones de los diferentes idiomas
+static int _LngSizes[LGCount] = { 53, 40, 48, 80, 53 };
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+void LGSetNamesSize()
+  {
+  for( int i=0; i<LGCount; ++i )
+    {
+    CGSize sz = [_LngNames[iUser][i] sizeWithAttributes:attrBtns];
+    _LngSizes[i] = sz.width + 1;
+    }
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
 int LGNameSz( int lng )
   {
   if( lng<0 || lng>4 ) return 0;
 
-	return _LngSizes[iUser][lng];
+	return _LngSizes[lng];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -116,6 +245,23 @@ BOOL LGIsInstDes( int lng )
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Determina si la direccion de traducción src -> des esta instalada o no
+BOOL LGIsInstDir( int src, int des )
+  {
+  if( src<0 || src>=LGCount || des<0 || des>=LGCount ) return false;
+  
+  return _Inst[src][des];
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+void LGSetInstDir( int src, int des )
+  {
+  if( src<0 || src>=LGCount || des<0 || des>=LGCount ) return;
+  
+  _Inst[src][des] = 1;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Obtiene un idioma destino inferido entre los idiomas instalados
 int LGInferedDes( int srcOld )
   {
@@ -123,6 +269,29 @@ int LGInferedDes( int srcOld )
   if( LGIsInstDes(LGDes) ) return LGDes;
   
   for( int j=0; j<LGCount; ++j )
+    if( LGIsInstDes(j) ) return j;
+    
+  return -1;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Obtiene un idioma destino inferido entre los idiomas instalados
+int LGFirstSrc()
+  {
+  for( int j=0; j<LGCount; ++j )
+    if( LGIsInstSrc(j) ) return j;
+    
+  return -1;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Obtiene el proximo idioma destino disponible
+int LGNextDes()
+  {
+  for( int j=LGDes+1; j<LGCount; ++j )
+    if( LGIsInstDes(j) ) return j;
+    
+  for( int j=0; j<LGDes; ++j )
     if( LGIsInstDes(j) ) return j;
     
   return -1;
@@ -145,6 +314,28 @@ BOOL IsLetter( NSInteger idx, NSString* Txt )
   {
   unichar c = [Txt characterAtIndex:idx];
   return [[NSCharacterSet alphanumericCharacterSet] characterIsMember:c];
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+NSString* FlagSpaces = @"       ";
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Obtiene la cantidad de espacios necesarios que hay que adicional a principio de la cadena, para que no se sobreponga con la bandera
+void GetFlagSpaces()
+  {
+  NSMutableString* Txt = [NSMutableString stringWithString: @"    "];
+  
+  for(;;)
+    {
+    CGSize sz = [Txt sizeWithAttributes:attrHistory];
+    
+    if( sz.width >= 25 )
+      {
+      FlagSpaces = Txt;
+      return;
+      }
+      
+    [Txt appendString:@" "];
+    }
   }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------

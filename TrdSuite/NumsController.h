@@ -10,9 +10,11 @@
 #import "LangsPanelView.h"
 
 //=========================================================================================================================================================
-@interface NumsController : UIViewController <LangsPanelDelegate>
+@interface NumsController : UIViewController 
 
   @property (nonatomic, copy) NSString* sNum;
+
+  - (void) OnChageNum;
 
 @end
 //=========================================================================================================================================================

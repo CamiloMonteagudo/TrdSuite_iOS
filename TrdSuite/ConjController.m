@@ -19,9 +19,7 @@
 //=========================================================================================================================================================
 @interface ConjController ()
   {
-  NSAttributedString *hdrTxts[3];
-  float               hdrLens[3];
-  float               hdrHeight;
+  BOOL IsVerb;
   }
 
   @property (weak, nonatomic) IBOutlet LangsPanelView *PanelSrc;
@@ -61,6 +59,8 @@
   if( [ProxyConj IsVerbWord:_Verb InLang:_lngSrc] )       // Si el parameto recibido es un verbo
     {
     _PanelSrc.Text = _Verb;                               // Lo pone en el editor
+    
+    IsVerb = [ProxyConj IsVerbWord:_Verb InLang:_lngSrc]; // Determina si el texto es un verbo o alguna conjugación
     [self Conjugate];                                     // Lo manda a conjugar
     }
   else
@@ -89,7 +89,7 @@
 - (void)viewDidLayoutSubviews
   {
   float y = _PanelSrc.frame.origin.y + _PanelSrc.frame.size.height;
-  float w = self.view.frame.size.width;
+  float w = self.view.bounds.size.width;
   float h = _HdrConjs.frame.size.height;
   
   _HdrConjs.frame = CGRectMake(0, y, w, h);
@@ -106,6 +106,8 @@
 - (void) OnSelLang:(LangsPanelView *)Panel;
   {
   [ProxyConj LoadConjLang:_PanelSrc.SelLng];          // Carga la conjugacion para el idiom actual
+  
+  LGDes = LGInferedDes(-1);
   
   [self ConjugateIfVerb];
   }
@@ -133,6 +135,9 @@
   HideKeyBoard();
   
   [self Conjugate];
+  
+  if( !_btnConj.hidden )
+    [_HdrConjs ShowMessage:NSLocalizedString(@"NoConjWord", nil) Color:ColErrInfo];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -164,10 +169,10 @@
   NSString* sVerb = _PanelSrc.Text;                       // Toma el contenido del editor
   int         lng = _PanelSrc.SelLng;
   
-  BOOL show = [ProxyConj IsVerbWord:sVerb InLang:lng];    // Determina si el texto es un verbo o alguna conjugación
+  IsVerb = [ProxyConj IsVerbWord:sVerb InLang:lng];    // Determina si el texto es un verbo o alguna conjugación
   
-  if( show ) [self Conjugate];
-  else       [self ClearConjData];
+  if( IsVerb ) [self Conjugate];
+  else         [self ClearConjData];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -176,7 +181,7 @@
   {
   NSString* sVerb = _PanelSrc.Text;                         // Toma el texto que hay en el editor
   
-  if( [ProxyConj ConjVerb:sVerb] )                               // Si se puedo obtener las conjugaciones
+  if( [ProxyConj ConjVerb:sVerb] )                          // Si se puedo obtener las conjugaciones
     [self ShowConjData:sVerb];
    else                                                     // No se puedo obtener las conjugaciones
     [self ClearConjData];
@@ -192,18 +197,22 @@
   [_LstConjs SelectConj:sVerb  ];                         // Selecciona las conjugaciones tecleadas
     
   _btnConj.hidden = TRUE;
-  [_HdrConjs ShowData];
+  [_HdrConjs ShowDataVerb:IsVerb];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Quita los datos de las conjugaciones
 - (void) ClearConjData
   {
-  _btnConj.hidden = (_PanelSrc.Text.length==0);
-  
   [_HdrConjs ClearData];
-  
-//  [_LstConjs ClearConjs];
+
+  if( _PanelSrc.Text.length==0 )
+    _btnConj.hidden = TRUE;
+  else
+    {
+    _btnConj.hidden = FALSE;
+    [_HdrConjs ShowMessage:NSLocalizedString(@"NoVerb", nil) Color:ColErrInfo];
+    }
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------

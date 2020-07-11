@@ -3,21 +3,27 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[TrdInfoView FindWord:]:TrdInfoView.m">
+         contextName = "-[ConjDataView SelectConj:]:ConjDataView.m">
          <PersistentStrings>
             <PersistentString
-               value = "LGSrc">
+               value = "data.Conj">
             </PersistentString>
             <PersistentString
-               value = "LGDes">
+               value = "Conj">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[ConjController willAnimateRotationToInterfaceOrientation:duration:]:ConjController.m">
+         contextName = "-[VirtualListView layoutSubviews]:VirtualListView.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[VirtualListView SetVisibleRow:]:VirtualListView.m">
          <PersistentStrings>
             <PersistentString
-               value = "scrnWidth">
+               value = "YOffFin">
+            </PersistentString>
+            <PersistentString
+               value = "YOffIni">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -36,10 +42,179 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[MainController LoadHistory]:MainController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "History">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LangsBar RefreshLangsButtons]:LangsBar.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "nLngs">
+            </PersistentString>
+            <PersistentString
+               value = "LGSrc">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[VirtualListView UpdateVisiblesRows]:VirtualListView.m">
          <PersistentStrings>
             <PersistentString
                value = "_Count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainController ReturnFromUnwind:]:MainController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "LGSrc">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LangsPanelView textView:shouldChangeTextInRange:replacementText:]:LangsPanelView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_ReturnType">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LangsBar setSelLng:]:LangsBar.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "LGDes">
+            </PersistentString>
+            <PersistentString
+               value = "_Trd">
+            </PersistentString>
+            <PersistentString
+               value = "LGSrc">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[DictController SetActualDir]:DictController.m">
+      </ContextState>
+      <ContextState
+         contextName = "+[ProxyConj AddVerboRootStr:Root:Mood:Time:Person:Number:]:ProxyConj.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "scrnWidth">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ConjController OnConjugate:]:ConjController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "ProxyConj.WMax">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[DictController viewDidLoad]:DictController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PanelTrdView initWithCoder:]:PanelTrdView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "scrnWidth">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[VirtualListView FixScrollSize]:VirtualListView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_NoLayaut">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LangsBar LayoutButtons]:LangsBar.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_Trd">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[ProxyDict getWDataFromIndex:NoKey:]:ProxyDict.mm">
+      </ContextState>
+      <ContextState
+         contextName = "-[MainController OnDelTranslateLng:]:MainController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "LGDes">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LabelText SetSizeWithWidth:]:TrdHistory.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "LineHeight">
+            </PersistentString>
+            <PersistentString
+               value = "FontSize">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LangsBar CreateLangsButtons]:LangsBar.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "LGSrc">
+            </PersistentString>
+            <PersistentString
+               value = "_Trd">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainController CalculateEditMaxHeigth]:MainController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "KbHeight">
+            </PersistentString>
+            <PersistentString
+               value = "EditMaxHeigth">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MainController FindOnHistory]:MainController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "History">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[ProxyConj IsNowConjugate:Lang:]:ProxyConj.mm">
+      </ContextState>
+      <ContextState
+         contextName = "-[LangsBar RefreshButton:Lang:ForTrd:]:LangsBar.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "LGSrc">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PurchasesScreen GetPurchasesItems]:PurchasesView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "LGSrc">
+            </PersistentString>
+            <PersistentString
+               value = "lng">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -61,74 +236,6 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[VirtualListView FixScrollSize]:VirtualListView.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "_NoLayaut">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[MainController OnDelTranslateLng:]:MainController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "LGDes">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[ConjController OnConjugate:]:ConjController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "ProxyConj.WMax">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[MainController FindOnHistory]:MainController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "History">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[VirtualListView SetVisibleRow:]:VirtualListView.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "YOffFin">
-            </PersistentString>
-            <PersistentString
-               value = "YOffIni">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[TrdEditView StaticHeight]:TrdEditView.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "sz1.height - sz2.height- sz3.height">
-            </PersistentString>
-            <PersistentString
-               value = "20 + LineHeight + LineHeight + 8">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[LabelText SetSizeWithWidth:]:TrdHistory.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "LineHeight">
-            </PersistentString>
-            <PersistentString
-               value = "FontSize">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[DictController viewDidLoad]:DictController.m">
-      </ContextState>
-      <ContextState
          contextName = "-[VirtualListView ChangeSubView:At:]:VirtualListView.m">
          <PersistentStrings>
             <PersistentString
@@ -137,84 +244,26 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[LangsBar LayoutButtons]:LangsBar.m">
+         contextName = "-[ConjHeaderView ShowData]:ConjHeaderView.m">
          <PersistentStrings>
             <PersistentString
-               value = "_Trd">
+               value = "isVerb">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "+[ProxyConj IsNowConjugate:Lang:]:ProxyConj.mm">
-      </ContextState>
-      <ContextState
-         contextName = "-[VirtualListView layoutSubviews]:VirtualListView.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[DictController SetActualDir]:DictController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[LangsPanelView textView:shouldChangeTextInRange:replacementText:]:LangsPanelView.m">
+         contextName = "-[PurchasesView layoutSubviews]:PurchasesView.m">
          <PersistentStrings>
             <PersistentString
-               value = "_ReturnType">
+               value = "LineHeight">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[PanelTrdView initWithCoder:]:PanelTrdView.m">
+         contextName = "-[ConjController willAnimateRotationToInterfaceOrientation:duration:]:ConjController.m">
          <PersistentStrings>
             <PersistentString
                value = "scrnWidth">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[LangsPanelView layoutSubviews]:LangsPanelView.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "EditMaxHeigth">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "+[ProxyConj AddVerboRootStr:Root:Mood:Time:Person:Number:]:ProxyConj.mm">
-         <PersistentStrings>
-            <PersistentString
-               value = "scrnWidth">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[MainController CalculateEditMaxHeigth]:MainController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "KbHeight">
-            </PersistentString>
-            <PersistentString
-               value = "EditMaxHeigth">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[LangsBar setSelLng:]:LangsBar.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "LGDes">
-            </PersistentString>
-            <PersistentString
-               value = "_Trd">
-            </PersistentString>
-            <PersistentString
-               value = "LGSrc">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[MainController LoadHistory]:MainController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "History">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -230,10 +279,40 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[MainController ReturnFromUnwind:]:MainController.m">
+         contextName = "-[LangsBar layoutSubviews]:LangsBar.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_Trd">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TrdEditView StaticHeight]:TrdEditView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "sz1.height - sz2.height- sz3.height">
+            </PersistentString>
+            <PersistentString
+               value = "20 + LineHeight + LineHeight + 8">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[TrdInfoView FindWord:]:TrdInfoView.m">
          <PersistentStrings>
             <PersistentString
                value = "LGSrc">
+            </PersistentString>
+            <PersistentString
+               value = "LGDes">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LangsPanelView layoutSubviews]:LangsPanelView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "EditMaxHeigth">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

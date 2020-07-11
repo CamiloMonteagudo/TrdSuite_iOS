@@ -24,10 +24,10 @@
 
 - (void)RefreshLangs;
 
-- (NSRange)   GetMarkText;
-- (void)      SetMarkText:(NSRange) range;
-- (void)      ClearMarkText;
-
+- (NSRange) GetMarkText;
+- (void)    SetMarkText:(NSRange) range;
+- (void)    ClearMarkText;
+- (void)    RefreshView;
 
 @end
 //=========================================================================================================================================================

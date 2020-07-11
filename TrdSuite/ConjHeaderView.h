@@ -18,7 +18,8 @@
   @property (nonatomic) int Mode;                                     // Modo que se muestra la vista
 
   - (void) ClearData;
-  - (void) ShowData;
+  - (void) ShowDataVerb:(BOOL) isVerb;
+  - (void) ShowMessage:(NSString*) sMsg Color:(UIColor*) col;
 
 @end
 //=========================================================================================================================================================

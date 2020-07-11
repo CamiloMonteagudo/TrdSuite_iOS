@@ -8,7 +8,7 @@
 "UserLang" = "0";
 
 "WrdNoFound" = "La palabra no se encuentra en el diccionario";
-"NoVerb"     = "La palabra no parece ser un verbo";
+"NoVerb"     = "No parece ser un verbo";
 "NoConjWord" = "La palabra no se pudo conjugar";
 
 "TitlePurchases" = "Compras";

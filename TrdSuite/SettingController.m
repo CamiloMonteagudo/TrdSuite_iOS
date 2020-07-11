@@ -42,10 +42,16 @@
   sSlider       = NSLocalizedString( @"lbFontSize", nil );
   _lbLangs.text = NSLocalizedString( @"lbLangs"   , nil );
   
-  if( [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad )
-    _Slider.maximumValue = 25;
+  if( iPad )
+    {
+    _Slider.minimumValue = 15;
+    _Slider.maximumValue = 30;
+    }
   else
+    {
+    _Slider.minimumValue = 12;
     _Slider.maximumValue = 20;
+    }
   
   _Slider.value = FontSize;
   

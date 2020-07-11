@@ -52,9 +52,12 @@ extern NSString *const RefreshNotification;
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 #define FindOpt    (NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch)
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-extern int LGSrc;
-extern int LGDes;
-extern int iUser;
+extern int  LGSrc;
+extern int  LGDes;
+extern int  iUser;
+extern BOOL iPad;
+extern int  iOS;
+
 extern float scrnWidth;           // Ancho de la pantalla
 extern float EditMaxHeigth;       // Altura máxima de los controles de edicción
 extern float KbHeight;            // Altura del teclado, si no esta desplegado es 0

@@ -31,8 +31,8 @@
 - (NSString *) GetMarkedWord;
 - (void)       ClearMarkText;
 
-- (int) GetBtnCenterMode;                                           // Obtiene el modo que debe trabajar el boton central
-- (int) GetBtnRightMode;                                            // Obtiene el modo que debe trabajar el boton derecho
+- (int) GetChgInfoMode;                                             // Obtiene el modo que debe trabajar el boton de para cambiar información
+- (int) GetEdFilterMode;                                            // Obtiene el modo que debe trabajar el boton de filtrar / editar
 
 - (void) UpdateButtons;                                              // Actualiza los botones de la barra de comandos
 
@@ -43,10 +43,10 @@
 
 - (void) OnBtnTrd;
 
-- (void) OnBtnRight;
+- (void) OnBtnEdFilter;
 - (void) OnBtnCloseEditTrd;
 - (void) OnBtnSaveEditTrd;
-- (void) OnBtnCenter;
+- (void) OnBtnChgInfo;
 
 //- (void) OnBtnFilterOras;
 //- (void) OnBtnUnFilterOras;

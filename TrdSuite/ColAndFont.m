@@ -19,6 +19,7 @@ CGFloat LineHeight = 2*FontSize;                                                
 //UIColor* ColMainBck = [UIColor colorWithRed:0.25 green:0.65 blue:0.85 alpha:0.75];                    // Define color de fondo de la aplicación en general
 UIColor* ColMainBck       = [UIColor colorWithRed:0.25 green:0.65 blue:1 alpha:1];                      // Define color de fondo de la aplicación en general
 
+UIColor* ColHeaderBck    = [UIColor colorWithRed:0.00 green:0.0 blue:0.8 alpha:0.2];                    // Color de fondo para el encabezamiento de las pantallas
 UIColor* ColPanelBck     = [UIColor colorWithRed:0.05 green:0.2 blue:0.75 alpha:1.0];                   // Color de fondo para el menú lateral
 UIColor* ColPanelItemBck = [UIColor colorWithRed:0.25 green:0.65 blue:1 alpha:1];                       // Color de fondo para los items del menú lateral
 UIColor* ColPanelItemTxt = [UIColor whiteColor];                                                        // Color de los textos del menú lateral
@@ -36,7 +37,7 @@ UIFont*  fontBuyItem   = [UIFont boldSystemFontOfSize:FontSize];                
 NSDictionary* attrBuy  = [NSDictionary dictionaryWithObjectsAndKeys:fontBuyItem, NSFontAttributeName, nil];
 
 // Titulos
-UIFont*       fontTitle = [UIFont boldSystemFontOfSize:1.5*FontSize];                                       // Fuente para los titulos de los modulos
+UIFont*       fontTitle = [UIFont boldSystemFontOfSize:1.2*FontSize];                                       // Fuente para los titulos de los modulos
 NSDictionary* attrTitle = [NSDictionary dictionaryWithObjectsAndKeys:fontTitle, NSFontAttributeName, nil];  // Atributo para los titulo de los modulos
 
 // Editores de texto
@@ -142,7 +143,7 @@ void SetFontSize( CGFloat szFont )
   attrBuy      = [NSDictionary dictionaryWithObjectsAndKeys:fontBuyItem, NSFontAttributeName, nil];
 
   // Titulos
-  fontTitle = [UIFont boldSystemFontOfSize:1.5*FontSize];                                       // Fuente para los titulos de los modulos
+  fontTitle = [UIFont boldSystemFontOfSize:1.2*FontSize];                                       // Fuente para los titulos de los modulos
   attrTitle = [NSDictionary dictionaryWithObjectsAndKeys:fontTitle, NSFontAttributeName, nil];  // Atributo para los titulo de los modulos
 
   // Editores de texto

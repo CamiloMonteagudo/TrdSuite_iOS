@@ -15,7 +15,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
   {
+  UIDevice* Device = [UIDevice currentDevice];
+  
   iUser = [NSLocalizedString(@"UserLang", nil) intValue];
+  iPad  = (Device.userInterfaceIdiom == UIUserInterfaceIdiomPad);
+  iOS   = [[[Device systemVersion] componentsSeparatedByString:@"."][0] integerValue];
   
   NSUserDefaults* def = [NSUserDefaults standardUserDefaults];
   
@@ -29,7 +33,7 @@
   int szFont = (int)[def integerForKey:@"FontSize"];
   if( szFont == 0 )
     {
-    if( [UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad )
+    if( iPad )
       SetFontSize(20);
     }
   else

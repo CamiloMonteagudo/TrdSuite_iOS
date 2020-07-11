@@ -400,10 +400,10 @@
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Determina el modo que se debe mostrar el boton central
+// Determina el modo que se debe mostrar el boton para cambiar la informacion que se muestra
 // BtnCenterHide    - No se muestra,               BtnCenterDown    - Muestra panel de traducción,
 // BtnCenterInfoSrc - Información de texto fuente, BtnCenterInfoTrd - Información de texto traducido
-- (int) GetBtnCenterMode
+- (int) GetChgInfoMode
   {
   if( _PanelTrd.NoShow ) return BtnCenterDown;
   
@@ -419,7 +419,7 @@
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Determina el modo que se debe mostrar el boton de la derecha
 // 0- No se muestra, 1- Modificación del texto, 2- Filtar las oraciones, 3-Quitar filtro de las oraciones
-- (int) GetBtnRightMode
+- (int) GetEdFilterMode
   {
   if( _PanelTrd.NoShow && _TrdInfo.Mode == MODE_CMDS)
     {
@@ -435,7 +435,7 @@
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Se llama cuando se toca el boton central en TrdInfo
-- (void) OnBtnCenter
+- (void) OnBtnChgInfo
   {
   switch (_TrdInfo.ModeBtnCenter)
     {
@@ -454,7 +454,7 @@
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Se llama cuando se toca el boton de la derecha
-- (void) OnBtnRight
+- (void) OnBtnEdFilter
   {
   switch (_TrdInfo.ModeBtnRight)
     {

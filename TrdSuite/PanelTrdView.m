@@ -17,7 +17,7 @@
   UILabel*    lbTrd;                // Control con el titulo del panel
   LangsBar*   LGBar;                // Vista de la barra de idiomas
   UITextView* TrdText;              // Vista donde se muestran los resultados de la traducción
-  UIButton*   btnRight;             // Boton de la derecha para filtrado y cerrar la traducción
+  UIButton*   btnRight;             // Boton de la derecha para cerrar la traducción
   
   float lstWText;                   // Ancho del ultimo texto mostrado
   float lstWidth;                   // El último ancho que se redimesiono la vista
@@ -45,7 +45,7 @@
   float hText = FontSize + ROUND;                         // Obtiene altura del texto
   
   lbTrd           = [[UILabel alloc] initWithFrame: CGRectMake(SEP_BRD+SEP_TXT, 0, 200, hText)];
-  lbTrd.font      = fontPanelTitle;
+  lbTrd.font      = fontTxtBtns;
   lbTrd.textColor = ColPanelTitle;
   lbTrd.text      = slbTrd;
   
@@ -83,7 +83,7 @@
 -(void) RefreshView
   {
   TrdText.font = fontEdit;
-  lbTrd.font   = fontPanelTitle;
+  lbTrd.font   = fontTxtBtns;
                                           
   float mVert = (FontSize-1)/2;
   TrdText.textContainerInset = UIEdgeInsetsMake(mVert, 0, mVert, 0);

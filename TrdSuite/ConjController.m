@@ -44,13 +44,13 @@
 
   _HdrConjs.Ctrller = self;                               // Pone esta clase como controlador de la vista de encabezamiento
   
-  _PanelSrc.Delegate = self;                              // Pone delegado para atender los eventos
-  _PanelSrc.BoxMaxWidth = 350;                            // Limita el tamaño del recuadro con el texto
-  _PanelSrc.NoSaveText = TRUE;                            // No guarda el ultimo texto escrito para el idioma seleccionado
-  _PanelSrc.HideTitle = TRUE;                             // Por defecto aculta el nombre del idioma seleccionado
+  _PanelSrc.Delegate       = self;                        // Pone delegado para atender los eventos
+//  _PanelSrc.BoxMaxWidth    = 350;                         // Limita el tamaño del recuadro con el texto
+  _PanelSrc.NoSaveText     = TRUE;                        // No guarda el ultimo texto escrito para el idioma seleccionado
+  _PanelSrc.HideTitle      = TRUE;                        // Por defecto aculta el nombre del idioma seleccionado
   _PanelSrc.PlaceHolderKey = @"ConjTip";                  // Clave para los tectos en el place holder
-  _PanelSrc.ReturnType  = UIReturnKeySearch;              // Pone el botón de buscar el teclado
-  _PanelSrc.SelLng = _lngSrc;                             // Fuerza a que se inicialice con el idioma de origen
+  _PanelSrc.ReturnType     = UIReturnKeySearch;           // Pone el botón de buscar el teclado
+  _PanelSrc.SelLng         = _lngSrc;                     // Fuerza a que se inicialice con el idioma de origen
  
   LGDes = _lngDes;
   [ProxyConj LoadConjLang:_PanelSrc.SelLng];              // Carga la conjugacion para el idiom actual
@@ -131,6 +131,7 @@
 - (void)OnKeyBoardReturn
   {
   [self Conjugate];
+  HideKeyBoard();
   }
 
 //+++++++++++++++++++++++++++++++++++++++++++ Fin LangsPanelDelegate +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

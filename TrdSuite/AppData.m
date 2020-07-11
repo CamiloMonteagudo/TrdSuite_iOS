@@ -16,6 +16,8 @@ NSString *const RefreshNotification = @"RefreshNotification";
 int LGSrc = -1;
 int LGDes = -1;
 int iUser = 0;
+BOOL iPad = FALSE;
+int  iOS  = 7;
 
 float scrnWidth  = 320;           // Ancho de la pantalla
 float EditMaxHeigth = 150;        // Altura máxima de los controles de edicción
@@ -460,11 +462,10 @@ UIImage* LoadLaunchImage()
   
   int width  = (sz.width>sz.height)? sz.width : sz.height;
   int height = (sz.width>sz.height)? sz.height: sz.width;
-  int os     = [[[[[UIDevice currentDevice] systemVersion] componentsSeparatedByString:@"."] objectAtIndex:0] integerValue];
   int scale  = (int)[UIScreen mainScreen].scale;
     
   NSString *orient  = UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation])? @"l": @"p";
-  NSString *ImgKey  = [NSString stringWithFormat : @"%d,%d,%d,%d,%@", width, height, scale, os, orient ];
+  NSString *ImgKey  = [NSString stringWithFormat : @"%d,%d,%d,%d,%@", width, height, scale, iOS, orient ];
   NSString *ImgEnd  = [dOfLaunchImage valueForKey: ImgKey];
   NSString *ImgName = [NSString stringWithFormat : @"LaunchImage%@%@", sPack, ImgEnd ];
   

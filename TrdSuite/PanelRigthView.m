@@ -28,6 +28,8 @@ static float PopUpWidth;                 // Ancho del mené
   
   SEL OnSelAction;                  // Acción que se ejecuta cuando se selecciona un item en el menu
   id  OnTarget;                     // Objeto donde se va a ejecutar la accion
+  
+  BOOL inClose;                     // Bandera que indica que se esta cerrando el panel
   }
 
 @end
@@ -39,8 +41,9 @@ static float PopUpWidth;                 // Ancho del mené
 // Crea un PopUp Menu, debajo de la vista view, con las listas de Iconos de cada uno de los items del menú
 - (id)initInView:(UIView*)view ItemIDs:(NSArray*) Items
   {
-  RowHeight  = 50;                  // Altura de las filas del menú
-  PopUpWidth = 200;                 // Ancho del menú
+  inClose = FALSE;
+  
+  [self PopUpWidthForItems:Items];
   
   UpView  = [self FindTopView:view];
   if( !UpView ) return nil;
@@ -57,7 +60,7 @@ static float PopUpWidth;                 // Ancho del mené
   
   [UpView.superview addSubview:self];                                                   // Adiciona esta vista a de mayor jerarquia (La cubre de forna trasparente)
   
-  [self CreatePanelWithItems:Items];                                  // Crea el panel en la parte derecha de la vista
+  [self CreatePanelWithItems:Items];                                            // Crea el panel en la parte derecha de la vista
   
   [UpView addSubview:Panel];                                                    // Adiciona el menú a la vista de fondo
   
@@ -68,6 +71,34 @@ static float PopUpWidth;                 // Ancho del mené
 
   _SelectedItem = -1;                                                         // Por defecto no se selecciono ningun item
   return self;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Calcula el ancho del menú según el tamaño de la fuente actual
+- (void) PopUpWidthForItems:(NSArray*) ItemsId
+  {
+  float wTxt = 0;
+  CGSize  sz = CGSizeMake( 5000, 5000);
+  
+  for( int i=0; i<ItemsId.count; ++i )                                          // Recorre todo los nombres de los items
+    {
+    NSString* sItem = ItemsId[i];
+    
+    NSString* IdTitle = [@"Mnu" stringByAppendingString:sItem];                 // Obtiene identificador del titulo
+    NSString* strTitle = NSLocalizedString( IdTitle, nil);                      // Obtiene el titulo localizado
+    
+    CGRect rc = [strTitle boundingRectWithSize: sz
+                                       options: NSStringDrawingUsesLineFragmentOrigin
+                                    attributes: attrEdit
+                                       context: nil      ];
+    if( rc.size.width > wTxt )
+       wTxt = rc.size.width;
+    }
+  
+  RowHeight  = 1.2 * LineHeight;                                                  // Altura de las filas del menú
+  if( RowHeight < ICON_HEIGHT ) RowHeight = ICON_HEIGHT;
+  
+  PopUpWidth = ICON_WIDTH + SEP_HOZ + wTxt + 4*SEP_HOZ;                           // Ancho del menú
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -98,6 +129,9 @@ static float PopUpWidth;                 // Ancho del mené
 // Se llama cuando se toca en cualquier lugar de la pantalla
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
   {
+  if( inClose ) return;
+  inClose = TRUE;
+  
   CGPoint pnt = [[touches anyObject] locationInView: self];                   // Punto de la vista en la que se produjo el toque
   [self OnToucheMenuItem:pnt];                                                // Determina si el toque se produjo sobre un item del menú
   
@@ -162,7 +196,7 @@ static float PopUpWidth;                 // Ancho del mené
   
   [self CreateMenuTitle];
   
-  float yPos = 50;                                                              // Posición inicial para el primer item del menú
+  float yPos = RowHeight;                                                       // Posición inicial para el primer item del menú
   for( int i=0; i<ItemsId.count; ++i )                                          // Recorre todo los nombres de los items
     {
     UIView* vRow = [[PanelItemView alloc] initWithItem:ItemsId[i] YPos: yPos];  // Crea la fila con el item de menu actual
@@ -210,15 +244,16 @@ static float PopUpWidth;                 // Ancho del mené
   
   self.backgroundColor = [UIColor clearColor];
   
-  CGRect rcImg = CGRectMake( 10, 5, ICON_WIDTH, ICON_HEIGHT);                 // Determina el recuadro para el icono
+  float      y = (RowHeight - ICON_HEIGHT) / 2.0;
+  CGRect rcImg = CGRectMake( SEP_HOZ, y, ICON_WIDTH, ICON_HEIGHT);            // Determina el recuadro para el icono
   
   UIImageView* img = [[UIImageView alloc] initWithFrame: rcImg];              // Crea la vista para el icono
   img.image         = [UIImage imageNamed: IdIcon ];                          // Carga el icono en la vista
   
   [self addSubview: img];                                                     // Agrega la vista del icono a la fila
   
-  CGFloat xTitle  = ICON_WIDTH + SEP_HOZ;                                     // Determina la posicion donde empieza el titulo
-  CGRect rcTitle  = CGRectMake( xTitle, 0, PopUpWidth-xTitle, ICON_HEIGHT);   // Determina el recuadro para el titulo
+  CGFloat xTitle  = ICON_WIDTH + SEP_HOZ - 5;                                 // Determina la posicion donde empieza el titulo
+  CGRect rcTitle  = CGRectMake( xTitle, 0, PopUpWidth-xTitle, RowHeight);     // Determina el recuadro para el titulo
   UILabel* Title  = [[UILabel alloc] initWithFrame: rcTitle];                 // Crea la vista para el titulo
   
   NSString* strTitle = NSLocalizedString( IdTitle, nil);                      // Obtiene el titulo localizado
@@ -227,6 +262,7 @@ static float PopUpWidth;                 // Ancho del mené
   Title.font         = fontEdit;                                              // Pone el tipo de letra a utilizar
   
   [self addSubview: Title];                                                   // Agrega la vista del titulo a la fila
+  
   
   return self;
   }

@@ -29,11 +29,11 @@
   UIButton* btnShowMean;                        // Muestra los significados
   UIButton* btnShowRoots;                       // Muestra las raices de las palabras
   UIButton* btnSaveTrd;                         // Guarda la traducción
-  UIButton* btnRight;                           // Boton derecho, edita traducción, Poner/Quitar fitrado de oraciones
+  UIButton* btnEdFilter;                        // Boton de editar traducción, Poner/Quitar fitrado de oraciones
   UIButton* btnPrevios;                         // Pasa a la palabra anterior
   UIButton* btnNext;                            // Pasa al proxima palabra
   UIButton* btnClose;                           // Cierra la información que esta mostrando
-  UIButton* btnCenter;                          // Boton central, muestra traducción, cambian información entre el texto fuente y destino
+  UIButton* btnChgInfo;                         // Muestra traducción, cambian información entre el texto fuente y destino
   
   int WSrc;                                     // Idioma fuente de la palabra que se esta analizando
   int WDes;                                     // Idioma fuente de la palabra que se esta analizando
@@ -70,11 +70,11 @@
   btnShowMean  = [self CreateButtonWithImage:@"BtnMeans2"   ];
   btnShowRoots = [self CreateButtonWithImage:@"BtnRoots2"   ];
   btnSaveTrd   = [self CreateButtonWithImage:@"BtnSave"     ];
-  btnRight     = [self CreateButtonWithImage:@"BtnEdit"     ];
+  btnEdFilter  = [self CreateButtonWithImage:@"BtnEdit"     ];
   btnPrevios   = [self CreateButtonWithImage:@"BtnPrev2"    ];
   btnNext      = [self CreateButtonWithImage:@"BtnNext2"    ];
   btnClose     = [self CreateButtonWithImage:@"BtnMoveUp"   ];
-  btnCenter    = [self CreateButtonWithImage:@"BtnMoveDown" ];
+  btnChgInfo   = [self CreateButtonWithImage:@"BtnMoveDown" ];
   
   [self CreateTitle];
   
@@ -140,12 +140,11 @@
 - (void)setMode:(int)Mode
   {
   _Mode = Mode;
-  
+
+  [self UpdateButtons];
   [self ResizeWordHeight];
   [self setNeedsLayout  ];
   [self setNeedsDisplay ];
-  
-//  self.Ctrller.PanelTrd.Mode = Mode;
   
   [self.superview setNeedsLayout];                                              // Reorganiza los controles de la vista que contiene al panel
   }
@@ -215,10 +214,11 @@
     CGSize sz = CGSizeMake( w, 1000 );
     CGRect rc1 = [Info.attributedText boundingRectWithSize:sz options:NSStringDrawingUsesLineFragmentOrigin context:nil];
   
-    int h = (int)(rc1.size.height + FontSize);
-    if( h<LineHeight ) h = LineHeight;
+    int h = (int)(rc1.size.height + FontSize);                                    // Obtiene la altura del texto
+    if( h<LineHeight    ) h = LineHeight;                                         // Si la altura es pequeña
+    if( h>EditMaxHeigth ) h = EditMaxHeigth;                                      // Si la altura es muy grabde
   
-    hPanel = h + 80;
+    hPanel = h + 80;                                                              // Pone la altura del panel
     }
   
   [self SetButtonPositions];
@@ -238,20 +238,23 @@
 // Posiciona los botones en su correspondientes lugares según el modo de trabajo
 - (void) SetButtonPositions
   {
-  btnPrevios.frame = CGRectMake( SEP_BRD       , 0, 50, 50);                    // Botones arriba y a la izquierda
-  btnNext.frame    = CGRectMake( 2*SEP_BRD + 50, 0, 50, 50);
+  btnPrevios.frame = CGRectMake( SEP_BRD       , 0, BTN_W, BTN_H);                    // Botones arriba y a la izquierda
+  btnNext.frame    = CGRectMake( 2*SEP_BRD + 50, 0, BTN_W, BTN_H);
   
-  btnClose.frame   = CGRectMake( wPanel-50-SEP_BRD, 0, 50, 50);                 // Botones arriba y a derecha
+  btnClose.frame   = CGRectMake( wPanel-50-SEP_BRD, 0, BTN_W, BTN_H);                 // Botones arriba y a derecha
   
-  float y = (_Mode==MODE_CMDS)? 0 : hPanel-47;
+  float y  = (_Mode==MODE_CMDS)? 0 : hPanel-47;
+  float x1 = SEP_BRD;
+  float x2 = x1 + SEP_BRD + BTN_W;
+  float x3 = x2 + SEP_BRD + BTN_W;
+  float x4 = x3 + SEP_BRD + BTN_W;
   
-  btnShowMean.frame  = CGRectMake( SEP_BRD       , y, 50, 50);                  // Botones de abajo y a la izquierda
-  btnShowRoots.frame = CGRectMake( 2*SEP_BRD + 50, y, 50, 50);
+  btnShowMean.frame  = CGRectMake( x1, y, BTN_W, BTN_H);                              // Botones de abajo y a la izquierda
+  btnShowRoots.frame = CGRectMake( x2, y, BTN_W, BTN_H);
+  btnEdFilter.frame  = CGRectMake( x3, y, BTN_W, BTN_H);
+  btnSaveTrd.frame   = CGRectMake( x4, y, BTN_W, BTN_H);
   
-  btnCenter.frame    = CGRectMake( (wPanel-50)/2 , y, 50, 50);                  // Boton central
-  
-  btnSaveTrd.frame   = CGRectMake( wPanel-100-(2*SEP_BRD), y, 50, 50);          // Botones abajo y a la derecha
-  btnRight.frame     = CGRectMake( wPanel-50-SEP_BRD     , y, 50, 50);
+  btnChgInfo.frame   = CGRectMake( wPanel-BTN_W-SEP_BRD, y, BTN_W, BTN_H);            // Boton de abajo a la derecha
 
   BOOL hide = (_Mode == MODE_CMDS);
   
@@ -267,42 +270,43 @@
     
   [btnShowMean  setImage: [UIImage imageNamed:MeanImg ] forState: UIControlStateNormal ];
   [btnShowRoots setImage: [UIImage imageNamed:RootsImg] forState: UIControlStateNormal ];
-  
-  [self UpdateButtons];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Actualiza lo que muestran los botones en función del contexto actual
 - (void) UpdateButtons
   {
-  int btnCMode = [_Ctrller GetBtnCenterMode];
+  int btnCMode = [_Ctrller GetChgInfoMode];
   if( btnCMode != _ModeBtnCenter )                // Solo si cambia la modo de mostrar el boton central
     {
     _ModeBtnCenter = btnCMode;
     
-    btnCenter.hidden = (btnCMode==BtnCenterHide);
+    btnChgInfo.hidden = (btnCMode==BtnCenterHide);
   
-    NSString *sImg;
+    NSString *sImg = nil;
     
     switch (btnCMode)
       {
-      case BtnCenterHide   : return;
+      case BtnCenterHide   : break;
       case BtnCenterDown   : sImg = @"BtnMoveDown";          break;
       case BtnCenterInfoSrc: sImg = LGFlagFile(LGDes,@"30"); break;
       case BtnCenterInfoTrd: sImg = LGFlagFile(LGSrc,@"30"); break;
       }
-    
-    [btnCenter setImage: [UIImage imageNamed:sImg ] forState: UIControlStateNormal ];
+
+    if( sImg != nil )
+      {
+      [btnChgInfo setImage: [UIImage imageNamed:sImg ] forState: UIControlStateNormal ];
   
-    btnCenter.contentEdgeInsets = UIEdgeInsetsMake(-3,0,3,0);
+      btnChgInfo.contentEdgeInsets = UIEdgeInsetsMake(-3,0,3,0);
+      }
     }
     
-  int btnRMode = [_Ctrller GetBtnRightMode];
+  int btnRMode = [_Ctrller GetEdFilterMode];
   if( btnRMode != _ModeBtnRight )
     {
     _ModeBtnRight = btnRMode;
     
-    btnRight.hidden = (btnRMode==0);
+    btnEdFilter.hidden = (btnRMode==0);
   
     NSString *sImg;
   
@@ -310,7 +314,7 @@
     else if( btnRMode==2 ) sImg = @"BtnFilterOn";
     else if( btnRMode==3 ) sImg = @"BtnFilterOff";
     
-    [btnRight setImage: [UIImage imageNamed:sImg ] forState: UIControlStateNormal ];
+    [btnEdFilter setImage: [UIImage imageNamed:sImg ] forState: UIControlStateNormal ];
     }
   }
 
@@ -342,11 +346,11 @@
 
     self.Mode = MODE_CMDS;
     }
-  else if( sender == btnCenter  ) {[_Ctrller OnBtnCenter  ];}
-  else if( sender == btnSaveTrd ) {[_Ctrller OnBtnSaveTrd ];}
-  else if( sender == btnRight   ) {[_Ctrller OnBtnRight   ];}
-  else if( sender == btnNext    ) {[_Ctrller OnBtnNextWord];}
-  else if( sender == btnPrevios ) {[_Ctrller OnBtnPrevWord];}
+  else if( sender == btnChgInfo   ) {[_Ctrller OnBtnChgInfo ];}
+  else if( sender == btnSaveTrd   ) {[_Ctrller OnBtnSaveTrd ];}
+  else if( sender == btnEdFilter  ) {[_Ctrller OnBtnEdFilter];}
+  else if( sender == btnNext      ) {[_Ctrller OnBtnNextWord];}
+  else if( sender == btnPrevios   ) {[_Ctrller OnBtnPrevWord];}
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------

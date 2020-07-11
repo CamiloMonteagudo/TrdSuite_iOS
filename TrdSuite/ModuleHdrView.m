@@ -78,7 +78,7 @@
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Crea un label y opcionalmente le pone un texto
+// Crea un label con el nombre del modulo
 -(UILabel*) CreateLabel
   {
   CGRect  rc = CGRectMake( 0, STUS_H, 320, LineHeight);                                  // Cualquier frame, en el layout se recalcuala
@@ -142,7 +142,7 @@
 - (void)drawRect:(CGRect)rect
   {
   CGContextRef ct = UIGraphicsGetCurrentContext();
-  CGContextSetFillColorWithColor(ct, ColPanelBck.CGColor);
+  CGContextSetFillColorWithColor(ct, ColHeaderBck.CGColor);
 
   float w = self.superview.bounds.size.width;
   

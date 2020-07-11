@@ -577,17 +577,16 @@
   
   if( ItemIDs.count != 0 )                                                    // Hay iconos adicionales
     {
-    wItem = (ItemIDs.count * (BTN_W+BTN_SEP)) - BTN_SEP + INI_SEP;            // Calcual ancho de los iconos adicionales
+//    wItem = (ItemIDs.count * (BTN_W+BTN_SEP)) - BTN_SEP + INI_SEP;            // Calcual ancho de los iconos adicionales
   
-    wPanel -= 60;                                                             // Deja un espacio minimo para boton de menú
-    if( wPanel>PANEL_MAX ) wPanel = PANEL_MAX;                                // Si el tamaño de para idiomas es suficiente, lo ajusta al maxino
+    wPanel -= (BTN_W+BTN_SEP);                                                // Deja un espacio minimo para boton de menú
+    //if( wPanel>PANEL_MAX ) wPanel = PANEL_MAX;                              // Si el tamaño de para idiomas es suficiente, lo ajusta al maxino
     }
 
   LGPanel.frame = CGRectMake(xPanel, 0, wPanel, 50);                          // Ajusta el rectangulo de los botones de idioma
   [self LayoutButtons];                                                       // Refresca la distribución de los botones de idioma
   
   float resto = Width - wPanel - xPanel;                                      // Espacio disponible para botones adicionales
-//  float resto = 0;                                                          // Fuerzo a que siempre ponga el boton de menú
   if( resto >= wItem && ItemIDs.count<=1 )                                    // Hay suficiente espacio
     {
     if( BtnItems.count != ItemIDs.count )                                     // Cambio el número de botones actuales

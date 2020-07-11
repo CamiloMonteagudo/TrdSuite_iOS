@@ -18,6 +18,7 @@ extern UIColor* ColMainBck;                           // Define color de fondo d
 extern UIColor* ColPanelBck;                          // Color de fondo para el menú lateral
 extern UIColor* ColPanelItemBck;                      // Color de fondo para los items del menú lateral
 extern UIColor* ColPanelItemTxt;                      // Color de los textos del menú lateral
+extern UIColor* ColHeaderBck;                         // Color de fondo para el encabezamiento de las pantallas
 
 // Texto para los botones
 extern UIColor* ColTxtBtns;                           // Color del texto de los botones
